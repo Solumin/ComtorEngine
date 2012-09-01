@@ -103,7 +103,7 @@ importDeclaration
         (s+='.' s+='*'
         )?
         ';'
-        -> ^('import' 'static'? $i+ $s?) comments*
+        -> ^('import' 'static'? $i+ $s*) comments*
     ;
 
 qualifiedImportName 
