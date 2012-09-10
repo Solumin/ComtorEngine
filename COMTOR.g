@@ -44,8 +44,8 @@ grammar COMTOR;
 options {
 	output=AST;
 	ASTLabelType=CommonTree; // type of $stat.tree, etc.
-    backtrack=true;
-    memoize=true;
+	backtrack=true;
+	memoize=true;
 }
 
 //Imaginary tokens for tree building

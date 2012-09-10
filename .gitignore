@@ -2,7 +2,10 @@
 ## ANTLR
 #################
 output/
-
+compile/
+*Lexer.java
+*Parser.java
+*.tokens
 
 #################
 ## Eclipse
