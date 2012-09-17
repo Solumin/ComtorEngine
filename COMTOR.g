@@ -60,7 +60,7 @@ tokens { UNIT; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
 	TRY_STATEMENT; INITIAL_VALUE; 
 	COMMENT_STATEMENT; CONSTRUCTOR;
 	//Used for methods/fields that have no modifier.
-	PACKAGE_PRIVATE;}
+	PACKAGE_PRIVATE; INNER_CLASS;}
 
 /********************************************************************************************
                           Parser section
@@ -141,7 +141,7 @@ modifiers
     |   'volatile'
     |   'strictfp'
     |	annotation
-    )*
+    )+
     ;
 
 
@@ -305,9 +305,13 @@ memberDecl
     |    classDeclaration
     |    interfaceDeclaration
     |	 comments
-    |	 normalClassDeclaration //inner class!
+    |	 innerClassOrInterfaceDeclaration //inner class!
     ;
 
+innerClassOrInterfaceDeclaration
+    :   comments* classDeclaration -> INNER_CLASS ^(COMMENT comments*) classDeclaration
+    |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) interfaceDeclaration
+    ;
 
 methodDeclaration 
     :
@@ -366,13 +370,13 @@ methodDeclaration
     ;
 
 fieldDeclaration 
-    :   modifiers
+    :   modifiers*
         type
         variableDeclarator
         (',' variableDeclarator
         )*
         ';'
-        -> ^(VAR_DEF variableDeclarator+ ^(ACCESS_MODIFIER modifiers)* ^(TYPE type))
+        -> ^(VAR_DEF variableDeclarator+ ^(ACCESS_MODIFIER modifiers)? ^(TYPE type))
     ;
 
 variableDeclarator 
@@ -382,6 +386,12 @@ variableDeclarator
         ('=' variableInitializer 
         )?
         -> IDENTIFIER ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
+    |   j=IDENTIFIER '.' i=IDENTIFIER
+        (b+='[' b+=']'
+        )*
+        ('=' variableInitializer 
+        )?
+        -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
     ;
 
 /**
@@ -1057,18 +1067,20 @@ arrayCreator
     ;
 
 variableInitializer 
-    :   arrayInitializer
-    |   expression
+    :   arrayInitializer comments? -> arrayInitializer ^(COMMENT comments)?
+    |   expression comments? -> expression ^(COMMENT comments)?
+    |   comments -> ^(COMMENT comments)
     ;
 
 arrayInitializer 
     :   '{' 
-            (variableInitializer
-                (',' variableInitializer
+            (v+=variableInitializer
+                (',' c+=comments? v+=variableInitializer
                 )*
             )? 
             (',')? 
         '}'             //Yang's fix, position change.
+         -> $v? ^(COMMENT $c)?
     ;
 
 
