@@ -4,6 +4,7 @@
 output/
 compile/
 tomcat/
+difficult/
 *Lexer.java
 *Parser.java
 *.tokens

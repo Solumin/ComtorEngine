@@ -61,11 +61,9 @@ public class MultiFile {
 		try {
             COMTORParser.start_return result = parser.start();
 			return (CommonTree)result.getTree();
-        } catch (RecognitionException e) {
-            e.printStackTrace();
+        } catch (RecognitionException|RewriteEmptyStreamException e) {
+            throw new RecognitionException();
         }
-
-        return null;
 	}
 
 	public static String[] getJavaFiles(File dir) {
@@ -94,9 +92,14 @@ public class MultiFile {
 			for (int i = 0; i < files.length; i++) {
 				packageName = "";
 
-				System.out.println(files[i]);
+				System.out.print(files[i]+"\n\t");
 				//Run the parser on the child file.
-				temp = runParser(dir.getPath()+"\\"+files[i]);
+				try {
+					temp = runParser(dir.getPath()+"\\"+files[i]);
+				} catch (RecognitionException e) {
+					System.out.println("Error parsing " + files[i]+". File skipped.");
+					continue;
+				}
 
 				List treeChildren = temp.getChildren();
 				child = (CommonTree)treeChildren.get(1); //should be PACKAGE

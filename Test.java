@@ -1,3 +1,7 @@
+/*
+	Dummy file!
+*/
+
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
 

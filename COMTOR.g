@@ -168,7 +168,7 @@ classDeclaration
 
 
 normalClassDeclaration 
-    :   modifiers  'class' IDENTIFIER
+    :   modifiers?  'class' IDENTIFIER
         (typeParameters
         )?
         ('extends' type
@@ -305,6 +305,7 @@ memberDecl
     |    classDeclaration
     |    interfaceDeclaration
     |	 comments
+    |	 normalClassDeclaration //inner class!
     ;
 
 
@@ -397,7 +398,7 @@ interfaceBodyDeclaration
     ;
 
 interfaceMethodDeclaration 
-    :   modifiers
+    :   modifiers?
         (typeParameters
         )?
         (t=type
@@ -409,7 +410,7 @@ interfaceMethodDeclaration
         )*
         ('throws' qualifiedNameList
         )? ';'
-        -> ^(METHOD_DEC IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^(TYPE_PARAMS typeParameters)? ^(TYPE $t? $v?) ^(PARAMS formalParameters)?
+        -> ^(METHOD_DEC IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(TYPE_PARAMS typeParameters)? ^(TYPE $t? $v?) ^(PARAMS formalParameters)?
         	^(THROWS qualifiedNameList)?)
     ;
 
