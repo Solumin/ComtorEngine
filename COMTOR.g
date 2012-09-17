@@ -58,13 +58,16 @@ tokens { UNIT; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
 	SYNCHRONIZED_BLOCK; RETURN_STATEMENT;
 	LABEL; FOR_BLOCK; INIT; CAST; CONDITION;
 	TRY_STATEMENT; INITIAL_VALUE; 
-	COMMENT_STATEMENT;}
+	COMMENT_STATEMENT; CONSTRUCTOR;
+	//Used for methods/fields that have no modifier.
+	PACKAGE_PRIVATE;}
 
 /********************************************************************************************
                           Parser section
 *********************************************************************************************/
 
-start	:	compilationUnit {System.out.println($compilationUnit.tree.toStringTree());} ;
+start	:	compilationUnit		{System.out.println("Parsing complete.");} ;
+//{System.out.println($compilationUnit.tree.toStringTree());}
 
 compilationUnit 
     :   c=comments*
@@ -262,7 +265,7 @@ normalInterfaceDeclaration
         ('extends' typeList
         )?
         interfaceBody
-        -> ^(INTERFACE IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^(TYPE_PARAMS typeParameters) ^('extends' typeList) ^(BODY interfaceBody))
+        -> ^(INTERFACE IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^(TYPE_PARAMS typeParameters)? ^('extends' typeList)? ^(BODY interfaceBody))
     ;
 
 typeList 
@@ -321,8 +324,25 @@ methodDeclaration
         (blockStatement
         )*
         '}'
-        -> ^(METHOD_DEC IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(PARAMS formalParameters)? ^(TYPE_PARAMS typeParameters)?
+        -> ^(CONSTRUCTOR IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(PARAMS formalParameters)? ^(TYPE_PARAMS typeParameters)?
         	^(THROWS qualifiedNameList)? ^(BODY explicitConstructorInvocation? blockStatement*))
+    | //no modifiers
+    	(typeParameters)?
+    	(t=type
+    	|   v='void'
+        )
+        IDENTIFIER
+        formalParameters
+        ('[' ']'
+        )*
+        ('throws' qualifiedNameList
+        )?            
+        (        
+            block
+        |   ';' 
+        )
+        -> ^(METHOD_DEC IDENTIFIER ^(ACCESS_MODIFIER PACKAGE_PRIVATE) ^(TYPE $t? $v?) ^(PARAMS formalParameters)? ^(TYPE_PARAMS typeParameters)?
+        	^(THROWS qualifiedNameList)? ^(BODY block? (';')?) )
     |   modifiers
         (typeParameters
         )?
@@ -339,8 +359,9 @@ methodDeclaration
             block
         |   ';' 
         )
-        -> ^(METHOD_DEC IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^(TYPE $t? $v?) ^(PARAMS formalParameters)? ^(TYPE_PARAMS typeParameters)?
+        -> ^(METHOD_DEC IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(TYPE $t? $v?) ^(PARAMS formalParameters)? ^(TYPE_PARAMS typeParameters)?
         	^(THROWS qualifiedNameList)? ^(BODY block? (';')?) )
+
     ;
 
 fieldDeclaration 
@@ -745,8 +766,8 @@ catches
 
 catchClause 
     :   'catch' '(' formalParameter
-        ')' block 
-        -> 'catch' ^(PARAMS formalParameter) ^(BODY block)
+        ')' block?
+        -> 'catch' ^(PARAMS formalParameter) ^(BODY block)?
     ;
 
 formalParameter 
