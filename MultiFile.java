@@ -45,7 +45,7 @@ public class MultiFile {
 		CommonTree root = new CommonTree();
 		root = processDirectory(root, dir);
 		
-		System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child (packages)");
+		System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child(ren) (packages)");
 	}
 
 	public static CommonTree runParser(String file) throws Exception {
@@ -92,7 +92,11 @@ public class MultiFile {
 			for (int i = 0; i < files.length; i++) {
 				packageName = "";
 
+<<<<<<< HEAD
 				System.out.print(files[i]+"\n\t");
+=======
+				//System.out.print(files[i]+"\n\t");
+>>>>>>> Safe point. Committing for sanity.
 				//Run the parser on the child file.
 				try {
 					temp = runParser(dir.getPath()+"\\"+files[i]);
@@ -110,7 +114,7 @@ public class MultiFile {
 					packageName += child.getText();
 				}
 
-				System.out.println("\tpackage: "+packageName);
+				//System.out.println("\tpackage: "+packageName);
 				//System.out.println("\tToken type: "+child.getType());
 				//System.out.println("\tLine number: "+ child.getLine());
 

@@ -66,7 +66,7 @@ tokens { UNIT; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
                           Parser section
 *********************************************************************************************/
 
-start	:	compilationUnit		{System.out.println("Parsing complete.");} ;
+start	:	compilationUnit	;	//{System.out.println("Parsing complete.");} ;
 //{System.out.println($compilationUnit.tree.toStringTree());}
 
 compilationUnit 
@@ -305,6 +305,7 @@ memberDecl
     |    classDeclaration
     |    interfaceDeclaration
     |	 comments
+<<<<<<< HEAD
     |	 innerClassOrInterfaceDeclaration //inner class!
     ;
 
@@ -312,6 +313,15 @@ innerClassOrInterfaceDeclaration
     :   comments* classDeclaration -> INNER_CLASS ^(COMMENT comments*) classDeclaration
     |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) interfaceDeclaration
     ;
+=======
+    //|	 innerClassOrInterfaceDeclaration //inner class!
+    ;
+
+//innerClassOrInterfaceDeclaration
+//    :   comments* classDeclaration -> INNER_CLASS ^(COMMENT comments*) classDeclaration
+//    |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) //interfaceDeclaration
+//    ;
+>>>>>>> Safe point. Committing for sanity.
 
 methodDeclaration 
     :
@@ -386,12 +396,21 @@ variableDeclarator
         ('=' variableInitializer 
         )?
         -> IDENTIFIER ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
+<<<<<<< HEAD
     |   j=IDENTIFIER '.' i=IDENTIFIER
         (b+='[' b+=']'
         )*
         ('=' variableInitializer 
         )?
         -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
+=======
+//    |   j=IDENTIFIER '.' i=IDENTIFIER
+//        (b+='[' b+=']'
+//        )*
+//        ('=' variableInitializer 
+//        )?
+//        -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
+>>>>>>> Safe point. Committing for sanity.
     ;
 
 /**
