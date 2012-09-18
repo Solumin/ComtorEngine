@@ -6,6 +6,7 @@ import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
 
 public class MultiFile {
+	private static int errorCount = 0;
 
 	private static FilenameFilter javaFilter = new FilenameFilter() { 
 		public boolean accept(File dir, String name) {
@@ -46,6 +47,7 @@ public class MultiFile {
 		root = processDirectory(root, dir);
 		
 		System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child(ren) (packages)");
+		System.out.println(errorCount + " errors were encountered.");
 	}
 
 	public static CommonTree runParser(String file) throws Exception {
@@ -61,8 +63,8 @@ public class MultiFile {
 		try {
             COMTORParser.start_return result = parser.start();
 			return (CommonTree)result.getTree();
-        } catch (RecognitionException|RewriteEmptyStreamException e) {
-            throw new RecognitionException();
+        } catch (Exception e) {
+            throw new Exception();
         }
 	}
 
@@ -89,19 +91,18 @@ public class MultiFile {
 			CommonTree child;
 			String packageName;
 
+
 			for (int i = 0; i < files.length; i++) {
 				packageName = "";
 
-<<<<<<< HEAD
-				System.out.print(files[i]+"\n\t");
-=======
-				//System.out.print(files[i]+"\n\t");
->>>>>>> Safe point. Committing for sanity.
+				//System.out.println(files[i]);
+				
 				//Run the parser on the child file.
 				try {
 					temp = runParser(dir.getPath()+"\\"+files[i]);
-				} catch (RecognitionException e) {
+				} catch (Exception e) {
 					System.out.println("Error parsing " + files[i]+". File skipped.");
+					errorCount++;
 					continue;
 				}
 

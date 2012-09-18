@@ -71,14 +71,10 @@ start	:	compilationUnit	;	//{System.out.println("Parsing complete.");} ;
 
 compilationUnit 
     :   c=comments*
-    	(   (annotations
-            )?
-            packageDeclaration
-        )?
-        (importDeclaration
-        )*
-        (typeDeclaration
-        )* -> ^(UNIT $c? annotations? packageDeclaration? ^(IMPORTS importDeclaration+)?
+    	((annotations)? packageDeclaration)?
+        (importDeclaration)*
+        (typeDeclaration)*
+	 -> ^(UNIT $c? annotations? packageDeclaration? ^(IMPORTS importDeclaration+)?
         	typeDeclaration*)
     ;
     
@@ -122,8 +118,8 @@ typeDeclaration
     ;
 
 classOrInterfaceDeclaration 
-    :   comments* classDeclaration
-    |   comments* interfaceDeclaration
+    :   comments* classDeclaration comments*
+    |   comments* interfaceDeclaration comments*
     ;
     
   
@@ -305,23 +301,13 @@ memberDecl
     |    classDeclaration
     |    interfaceDeclaration
     |	 comments
-<<<<<<< HEAD
-    |	 innerClassOrInterfaceDeclaration //inner class!
-    ;
-
-innerClassOrInterfaceDeclaration
-    :   comments* classDeclaration -> INNER_CLASS ^(COMMENT comments*) classDeclaration
-    |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) interfaceDeclaration
-    ;
-=======
-    //|	 innerClassOrInterfaceDeclaration //inner class!
+//    |	 innerClassOrInterfaceDeclaration //inner class!
     ;
 
 //innerClassOrInterfaceDeclaration
 //    :   comments* classDeclaration -> INNER_CLASS ^(COMMENT comments*) classDeclaration
-//    |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) //interfaceDeclaration
+//    |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) interfaceDeclaration
 //    ;
->>>>>>> Safe point. Committing for sanity.
 
 methodDeclaration 
     :
@@ -380,7 +366,7 @@ methodDeclaration
     ;
 
 fieldDeclaration 
-    :   modifiers*
+    :   modifiers?
         type
         variableDeclarator
         (',' variableDeclarator
@@ -396,21 +382,12 @@ variableDeclarator
         ('=' variableInitializer 
         )?
         -> IDENTIFIER ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
-<<<<<<< HEAD
-    |   j=IDENTIFIER '.' i=IDENTIFIER
-        (b+='[' b+=']'
-        )*
-        ('=' variableInitializer 
-        )?
-        -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
-=======
-//    |   j=IDENTIFIER '.' i=IDENTIFIER
-//        (b+='[' b+=']'
-//        )*
-//        ('=' variableInitializer 
-//        )?
-//        -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
->>>>>>> Safe point. Committing for sanity.
+    //|   j=IDENTIFIER '.' i=IDENTIFIER
+    //    (b+='[' b+=']'
+    //    )*
+    //    ('=' variableInitializer 
+    //    )?
+    //    -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
     ;
 
 /**
@@ -774,8 +751,8 @@ switchBlockStatementGroup
     ;
 
 switchLabel 
-    :   'case' expression ';'
-    |   'default' ';'
+    :   'case' expression ':' -> ^(CASE expression)
+    |   'default' ':' -> ^(CASE 'default')
     ;
 
 
@@ -820,8 +797,8 @@ forstatement
                 (expression
                 )? ';' 
                 (expressionList
-                )? ')' statement
-        -> ^(FOR_BLOCK forInit? expression? expressionList? ^(BODY statement))
+                )? ')' statement?
+        -> ^(FOR_BLOCK forInit? expression? expressionList? ^(BODY statement)?)
     ;
 
 forInit 
