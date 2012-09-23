@@ -1292,6 +1292,18 @@ WS
             }          
     ;
     
+
+LINE_COMMENT
+    :   '//' c=(~('\n'|'\r')*)  ('\r\n' | '\r' | '\n') 
+           {
+               skip();
+          }
+    |   '//' ~('\n'|'\r')*     // a line comment could appear at the end of the file without CR/LF
+           {
+              skip();
+          }
+    ; 
+
 COMMENT
 //         @init{
 //           boolean isJavaDoc = false;
@@ -1304,25 +1316,16 @@ COMMENT
 //            }
         (options {greedy=false;} : . )* 
         '*/'
-           // {
+            {
 //                if(isJavaDoc==true){
      //               $channel=HIDDEN;
 //                }else{
-                    //skip();
+                    skip();
 //                }
-            //}
+            }
     ;
 
-LINE_COMMENT
-    :   '//' c=(~('\n'|'\r')*)  ('\r\n' | '\r' | '\n') 
-           {
-              // skip();
-          }
-    |   '//' ~('\n'|'\r')*     // a line comment could appear at the end of the file without CR/LF
-           {
-             // skip();
-          }
-    ;   
+ 
 
 ABSTRACT
     :   'abstract'
