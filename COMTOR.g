@@ -1119,6 +1119,7 @@ literal
     |   FLOATLITERAL
     |   DOUBLELITERAL
     |   CHARLITERAL
+    |	UNICODECHARLITERAL
     |   STRINGLITERAL
     |   TRUE
     |   FALSE
@@ -1249,7 +1250,11 @@ CHARLITERAL
         |   ~( '\'' | '\\' | '\r' | '\n' )
         ) 
         '\''
-    ; 
+    ;
+
+UNICODECHARLITERAL
+    : '\'' '\\' 'u' HexDigit HexDigit HexDigit HexDigit '\''
+    ;
 
 STRINGLITERAL
     :   '"' 

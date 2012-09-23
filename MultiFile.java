@@ -7,6 +7,7 @@ import org.antlr.runtime.tree.*;
 
 public class MultiFile {
 	private static int errorCount = 0;
+	private static int COMMENT_STATEMENT=33; //token type for comments
 
 	private static FilenameFilter javaFilter = new FilenameFilter() { 
 		public boolean accept(File dir, String name) {
@@ -39,7 +40,9 @@ public class MultiFile {
 		if (dir.isFile()) {
 			CommonTree temp = new CommonTree();
 			System.out.println("Parsing "+dir.getName());
-			temp = runParser(dir.getPath());
+			temp = processFile(temp, dir.getPath());
+			System.out.println("\nFinished parsing " + dir.getName());
+			//System.out.println(temp.toStringTree());
 			return;
 		}
 
@@ -48,10 +51,11 @@ public class MultiFile {
 
 		System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child(ren) (packages)");
 		System.out.println(errorCount + " errors were encountered.");
+		//System.out.println("\nThe tree:\n");
+		//System.out.println(root.toStringTree());
 	}
 
 	public static CommonTree runParser(String file) throws Exception {
-		//ANTLRFileStream input = new ANTLRFileStream("E:\\My Documents\\ANTLR\\Comtor\\PercentageMethods.java", "UTF8");
 		ANTLRFileStream input = new ANTLRFileStream(file);
 		
 		COMTORLexer lexer = new COMTORLexer(input);
@@ -102,23 +106,38 @@ public class MultiFile {
 	}
 
 	public static CommonTree addComments(CommonTree root, CommonTree comments) {
-		// comments is a flat tree, while root is nested.
-		// If comment.getLine() <= node.getLine(), insert the comment as a child of node.
-		// TODO: Add COMMENT_STATEMENT token #
-		// TODO: Loop through Root, add comments as children, check that root actually has it!
 		// Returns modified root. (Java passes by value, so no side-effects.)
 
-		int i = 0;
-		CommonTree curr = new CommonTree(root);
+		CommonTree temp;
 		CommonTree comm;
-		List comms = comments.getChildren();
-		System.out.println("\t" + root.getText() + "\n\t" + comments.getText() + " " + comments.getChildCount());
-		// while (i < comments.getChildCount()) {
-		// 	if (comm.getLine() <= curr.getLine()) {
-		// 		curr.
-		// 	}
-		// }
+		// System.out.println("In add comments");
+		// System.out.println("\t" + root.getText() + " " + root.getChildCount() + " " + root.getLine());
+		// System.out.println("\t" + comments.getText() + " " + comments.getChildCount() + " " + comments.getLine());
 
+		if (comments.getChildCount() > 0) {
+			comm = (CommonTree)comments.getChild(0);
+
+			if (comm.getLine() == 1) {
+				root.addChild(getCommentChild(comm));
+				comments.deleteChild(0);
+			}
+
+			for (int i = 0; i < root.getChildCount() && comments.getChildCount() > 0; i++) {
+				temp = (CommonTree)root.getChild(i);
+				comm = (CommonTree)comments.getChild(0);
+				if (comm.getLine() <= temp.getLine()) {
+					temp.addChild(getCommentChild(comm));
+					comments.deleteChild(0);
+				}
+			}
+
+			List ch = root.getChildren();
+			if (ch != null) {
+				for (int i = 0; i < ch.size(); i++) {
+					addComments((CommonTree)ch.get(i), comments);
+				}
+			}
+		}
 		return root;
 	}
 
@@ -134,7 +153,7 @@ public class MultiFile {
 			for (int i = 0; i < files.length; i++) {
 				packageName = "";
 
-				System.out.println(files[i]);
+				//System.out.println(files[i]);
 				
 				//Run the parser on the child file.
 				try {
@@ -160,10 +179,11 @@ public class MultiFile {
 
 				child = (CommonTree)treeChildren.get(1); //should be PACKAGE
 				treeChildren = child.getChildren();
-
-				for (int j = 0; j < treeChildren.size(); j++) {
-					child = (CommonTree)treeChildren.get(j);
-					packageName += child.getText();
+				if (treeChildren != null) {
+					for (int j = 0; j < treeChildren.size(); j++) {
+						child = (CommonTree)treeChildren.get(j);
+						packageName += child.getText();
+					}
 				}
 
 				//System.out.println("\tpackage: "+packageName);
@@ -193,5 +213,36 @@ public class MultiFile {
 			}
 		}
 		return root;
+	}
+
+	public static CommonTree processFile(CommonTree root, String file) throws Exception {
+		// Run parser on file
+		try {
+			root = runParser(file);
+		} catch (Exception e) {
+			System.out.println("Error parsing " + file + ". File skipped.");
+			return null;
+		}
+		// Run comment parser on file
+		CommonTree comments;
+		try {
+			comments = runCommentParser(file);
+		} catch (Exception e) {
+			System.out.println("Error parsing comments in " + file + ". Processing aborted.");
+			return null;
+		}
+		// Mix in comments
+		root = addComments(root, comments);
+
+		// Return tree.
+		return root;
+	}
+
+	private static CommonTree getCommentChild(CommonTree comm) {
+		CommonToken tempToken = new CommonToken(COMMENT_STATEMENT, "COMMENT_STATEMENT");
+		tempToken.setLine(comm.getLine());
+		CommonTree tempTree = new CommonTree(tempToken);
+		tempTree.addChild(comm);
+		return tempTree;
 	}
 }
