@@ -1,10 +1,10 @@
 #################
 ## ANTLR
 #################
-output/
 compile/
-tomcat/
 difficult/
+output/
+test/
 *Lexer.java
 *Parser.java
 *.tokens

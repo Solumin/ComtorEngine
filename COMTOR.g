@@ -86,14 +86,14 @@ packageDeclaration
     ;
 
 importDeclaration  
-    :   comments*
+    :   
     	'import' 
         ('static'
         )?
         (IDENTIFIER '.' '*')
         ';'    
-        -> ^('import' 'static'? IDENTIFIER '.' '*') comments*
-    |   comments*
+        -> ^('import' 'static'? IDENTIFIER '.' '*') 
+    |  
     	'import' 
         ('static'
         )?
@@ -103,7 +103,7 @@ importDeclaration
         (s+='.' s+='*'
         )?
         ';'
-        -> ^('import' 'static'? $i+ $s*) comments*
+        -> ^('import' 'static'? $i+ $s*)
     ;
 
 qualifiedImportName 
@@ -119,8 +119,8 @@ typeDeclaration
     ;
 
 classOrInterfaceDeclaration 
-    :   comments* classDeclaration comments*
-    |   comments* interfaceDeclaration comments*
+    :   classDeclaration
+    |   interfaceDeclaration
     ;
     
   
@@ -209,15 +209,13 @@ enumDeclaration
 
 enumBody 
     :   '{'
-    	comments?
         (enumConstants
         )? 
-        comments?
         ','? 
         (enumBodyDeclarations
         )? 
         '}'
-        -> comments* enumConstants? enumBodyDeclarations?
+        -> enumConstants? enumBodyDeclarations?
     ;
 
 enumConstants 
@@ -301,13 +299,12 @@ memberDecl
     |    methodDeclaration
     |    classDeclaration
     |    interfaceDeclaration
-    |	 comments
 //    |	 innerClassOrInterfaceDeclaration //inner class!
     ;
 
 //innerClassOrInterfaceDeclaration
-//    :   comments* classDeclaration -> INNER_CLASS ^(COMMENT comments*) classDeclaration
-//    |   comments* interfaceDeclaration -> INNER_CLASS ^(COMMENT comments*) interfaceDeclaration
+//    :    classDeclaration -> INNER_CLASS classDeclaration
+//    |   interfaceDeclaration -> INNER_CLASS interfaceDeclaration
 //    ;
 
 methodDeclaration 
@@ -383,12 +380,6 @@ variableDeclarator
         ('=' variableInitializer 
         )?
         -> IDENTIFIER ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
-    //|   j=IDENTIFIER '.' i=IDENTIFIER
-    //    (b+='[' b+=']'
-    //    )*
-    //    ('=' variableInitializer 
-    //    )?
-    //    -> $i ^(CLASS $j) ^(INITIAL_VALUE variableInitializer)? ^(ARRAY $b*)?
     ;
 
 /**
@@ -399,7 +390,6 @@ interfaceBodyDeclaration
     |   interfaceMethodDeclaration
     |   interfaceDeclaration
     |   classDeclaration
-    |	comments
     |   ';'
     ;
 
@@ -680,7 +670,6 @@ blockStatement
     :   localVariableDeclarationStatement
     |   classOrInterfaceDeclaration
     |   statement
-    |	comments
     ;
 
 
@@ -715,9 +704,9 @@ statement
     |   trystatement
     	-> trystatement
     |   'switch' parExpression '{' switchBlockStatementGroups '}'
-    	-> ^(SWITCH_STATEMENT ^(CONDITION parExpression) ^(BODY switchBlockStatementGroups))
+    	-> ^(SWITCH_STATEMENT ^(CONDITION parExpression) ^(BODY switchBlockStatementGroups)?)
     |   'synchronized' parExpression block
-    	-> ^(SYNCHRONIZED_BLOCK parExpression ^(BODY block) )
+    	-> ^(SYNCHRONIZED_BLOCK parExpression ^(BODY block)? )
     |   'return' (expression )? ';'
     	-> ^(RETURN_STATEMENT expression?)
     |   'throw' expression ';'
@@ -734,7 +723,6 @@ statement
     |   IDENTIFIER ':' statement
     	-> ^(statement ^(LABEL IDENTIFIER))
     |   ';' ->
-    |	comments
     ;
 
 
@@ -756,12 +744,12 @@ switchLabel
 
 
 trystatement 
-    :   'try' block comments*
+    :   'try' block
         (   c=catches f='finally' b=block
         |   c=catches
         |   f='finally' b=block
         )
-        -> ^(TRY_STATEMENT ^(BODY block) comments* ^(CATCH $c? $f? ^(BODY $b)?))
+        -> ^(TRY_STATEMENT ^(BODY block) ^(CATCH $c? $f? ^(BODY $b)?))
      ;
 
 catches 
@@ -786,7 +774,7 @@ formalParameter
 forstatement 
     :   
         // enhanced for loop
-        'for' '(' variableModifiers? type IDENTIFIER ':' 
+        'for' '(' variableModifiers? type variableDeclarator ':' 
         expression ')' statement
         -> ^(FOR_BLOCK ^(INIT IDENTIFIER ^(ACCESS_MODIFIER variableModifiers)? ^(TYPE type) expression) ^(BODY statement))
         // normal for loop
@@ -1251,13 +1239,18 @@ CHARLITERAL
     ;
 
 UNICODECHARLITERAL
-    : '\'' '\\' 'u' HexDigit HexDigit HexDigit HexDigit '\''
+    : '\'' UNICODECHAR '\''
     ;
+
+UNICODECHAR
+	:	'\\' 'u' HexDigit HexDigit HexDigit HexDigit
+	;
 
 STRINGLITERAL
     :   '"' 
         (   EscapeSequence
-        |   ~( '\\' | '"' | '\r' | '\n' )        
+        |   ~( '\\' | '"' | '\r' | '\n' )
+        | UNICODECHAR      
         )* 
         '"' 
     ;
@@ -1283,8 +1276,7 @@ EscapeSequence
 ;     
 
 WS  
-    :   (
-             ' '
+    :   (    ' '
         |    '\r'
         |    '\t'
         |    '\u000C'
