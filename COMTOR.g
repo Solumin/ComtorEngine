@@ -71,11 +71,11 @@ start	:	compilationUnit	;	//{System.out.println("Parsing complete.");} ;
 //{System.out.println($compilationUnit.tree.toStringTree());}
 
 compilationUnit 
-    :   c=comments*
+    :   
     	((annotations)? packageDeclaration)?
         (importDeclaration)*
         (typeDeclaration)*
-	 -> ^(UNIT $c? annotations? packageDeclaration? ^(IMPORTS importDeclaration+)?
+	 -> ^(UNIT annotations? packageDeclaration? ^(IMPORTS importDeclaration+)?
         	typeDeclaration*)
     ;
     
@@ -196,14 +196,14 @@ typeBound
 
 
 enumDeclaration 
-    :   modifiers 
+    :   modifiers? 
         ('enum'
         ) 
         IDENTIFIER
         ('implements' typeList
         )?
         enumBody
-        -> ^('enum' IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^('implements' typeList)? ^(BODY enumBody))
+        -> ^('enum' IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^('implements' typeList)? ^(BODY enumBody))
     ;
     
 
