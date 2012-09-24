@@ -695,7 +695,6 @@ statement
     |   'do' statement 'while' parExpression ';'
     	-> ^(DO_WHILE_BLOCK ^(CONDITION parExpression) ^(BODY statement)?)
     |   trystatement
-    	-> trystatement
     |   'switch' parExpression '{' switchBlockStatementGroups '}'
     	-> ^(SWITCH_STATEMENT ^(CONDITION parExpression) ^(BODY switchBlockStatementGroups)?)
     |   'synchronized' parExpression block
@@ -758,10 +757,9 @@ catchClause
     ;
 
 formalParameter 
-    :   variableModifiers type IDENTIFIER
-        (b+='[' b+=']'
-        )*
-        -> ^(VAR_DEF IDENTIFIER ^(ACCESS_MODIFIER variableModifiers)? ^(TYPE type ^(ARRAY $b*)?))
+    :   variableModifiers type ('|' type)* IDENTIFIER
+        ('[' ']')*
+        -> ^(VAR_DEF IDENTIFIER ^(ACCESS_MODIFIER variableModifiers)? ^(TYPE type)* )
     ;
 
 forstatement 

@@ -70,7 +70,6 @@ public class MultiFile {
             COMTORParser.start_return result = parser.start();
 			return (CommonTree)result.getTree();
 		} catch (RecognitionException|RewriteEmptyStreamException e) {
-            //throw new Exception(e);
             throw e;
         } /*catch (RewriteEmtpyExceptionStream r)*/
 	}
