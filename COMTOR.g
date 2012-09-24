@@ -229,13 +229,7 @@ enumConstants
  * EnumeratorDeclaration = AnnotationsOpt [TypeArguments] IDENTIFIER [ Arguments ] [ "{" ClassBody "}" ]
  */
 enumConstant 
-    :   (annotations
-        )?
-        IDENTIFIER
-        (arguments
-        )?
-        (classBody
-        )?
+    :   (annotations)? IDENTIFIER (arguments)? (classBody)?
         -> IDENTIFIER annotations? arguments? ^(BODY classBody)?
         /* TODO: $GScope::name = names.empty. enum constant body is actually
         an anonymous class, where constructor isn't allowed, have to add this check*/
@@ -243,8 +237,7 @@ enumConstant
 
 enumBodyDeclarations 
     :   ';' 
-        (classBodyDeclaration
-        )*
+        (classBodyDeclaration)*
         -> ^(BODY classBodyDeclaration)?
     ;
 
@@ -749,7 +742,7 @@ trystatement
         |   c=catches
         |   f='finally' b=block
         )
-        -> ^(TRY_STATEMENT ^(BODY block) ^(CATCH $c? $f? ^(BODY $b)?))
+        -> ^(TRY_STATEMENT ^(BODY block)? ^(CATCH $c? $f? ^(BODY $b)?))
      ;
 
 catches 

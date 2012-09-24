@@ -69,7 +69,7 @@ public class MultiFile {
 		try {
             COMTORParser.start_return result = parser.start();
 			return (CommonTree)result.getTree();
-		} catch (RecognitionException e) {
+		} catch (RecognitionException|RewriteEmptyStreamException e) {
             //throw new Exception(e);
             throw e;
         } /*catch (RewriteEmtpyExceptionStream r)*/
@@ -156,7 +156,7 @@ public class MultiFile {
 			for (int i = 0; i < files.length; i++) {
 				packageName = "";
 
-				//System.out.println(files[i]);
+				//System.out.println(dir.getPath()+"\\"+files[i]);
 				
 				//Run the parser on the child file.
 				try {
