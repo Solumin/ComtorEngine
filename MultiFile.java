@@ -7,6 +7,7 @@ import org.antlr.runtime.tree.*;
 
 public class MultiFile {
 	private static int errorCount = 0;
+	private static int fileCount = 0;
 	private static int COMMENT_STATEMENT=33; //token type for comments
 
 	private static FilenameFilter javaFilter = new FilenameFilter() { 
@@ -50,6 +51,7 @@ public class MultiFile {
 		root = processDirectory(root, dir);
 
 		System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child(ren) (packages)");
+		System.out.println(fileCount + " files were processed.");
 		System.out.println(errorCount + " errors were encountered.");
 		//System.out.println("\nThe tree:\n");
 		//System.out.println(root.toStringTree());
@@ -175,35 +177,39 @@ public class MultiFile {
 					continue;
 				}
 				temp = addComments(temp, comments);
+				fileCount++;
+				
 
-				// Generate package information
-				List treeChildren = temp.getChildren();
-
-				child = (CommonTree)treeChildren.get(1); //should be PACKAGE
-				treeChildren = child.getChildren();
-				if (treeChildren != null) {
-					for (int j = 0; j < treeChildren.size(); j++) {
-						child = (CommonTree)treeChildren.get(j);
-						packageName += child.getText();
+				if (hasChild(temp, "package")) {
+					// Generate package information
+					List treeChildren = temp.getChildren();
+					child = (CommonTree)treeChildren.get(1); //should be PACKAGE
+					treeChildren = child.getChildren();
+					if (treeChildren != null) {
+						for (int j = 0; j < treeChildren.size(); j++) {
+							child = (CommonTree)treeChildren.get(j);
+							packageName += child.getText();
+						}
 					}
-				}
+			
 
-				//System.out.println("\tpackage: "+packageName);
-				//System.out.println("\tToken type: "+child.getType());
-				//System.out.println("\tLine number: "+ child.getLine());
+					//System.out.println("\tpackage: "+packageName);
+					//System.out.println("\tToken type: "+child.getType());
+					//System.out.println("\tLine number: "+ child.getLine());
 
-				// Add parsed file to root under the package name subtree
-				if (!hasChild(root, packageName)) {
-					CommonTree newChild = new CommonTree(new CommonToken(child.getType(), packageName));
-					root.addChild(newChild);
-					((CommonTree)(root.getChild(0))).addChild(temp);
-				} else {
-					List c = root.getChildren();
-					for (int j = 0; j < c.size(); j++) {
-						child = (CommonTree)c.get(j);
-						if (packageName.equals(child.getText())) {
-							child.addChild(temp);
-							break;
+					// Add parsed file to root under the package name subtree
+					if (!hasChild(root, packageName)) {
+						CommonTree newChild = new CommonTree(new CommonToken(child.getType(), packageName));
+						root.addChild(newChild);
+						((CommonTree)(root.getChild(0))).addChild(temp);
+					} else {
+						List c = root.getChildren();
+						for (int j = 0; j < c.size(); j++) {
+							child = (CommonTree)c.get(j);
+							if (packageName.equals(child.getText())) {
+								child.addChild(temp);
+								break;
+							}
 						}
 					}
 				}
