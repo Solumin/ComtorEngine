@@ -60,7 +60,8 @@ tokens { UNIT; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
 	TRY_STATEMENT; INITIAL_VALUE; 
 	COMMENT_STATEMENT; CONSTRUCTOR;
 	//Used for methods/fields that have no modifier.
-	PACKAGE_PRIVATE; INNER_CLASS;}
+	PACKAGE_PRIVATE; INNER_CLASS; 
+	EMPTY_ARRAY;}
 
 /********************************************************************************************
                           Parser section
@@ -183,7 +184,7 @@ typeParameter
     :   IDENTIFIER
         ('extends' typeBound
         )?
-        -> ^(IDENTIFIER ^('extends' typeBound))
+        -> ^(IDENTIFIER ^('extends' typeBound)?)
     ;
 
 
@@ -202,7 +203,7 @@ enumDeclaration
         ('implements' typeList
         )?
         enumBody
-        -> ^('enum' IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^('implements' typeList) ^(BODY enumBody))
+        -> ^('enum' IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^('implements' typeList)? ^(BODY enumBody))
     ;
     
 
@@ -255,13 +256,13 @@ interfaceDeclaration
     ;
     
 normalInterfaceDeclaration 
-    :   modifiers 'interface' IDENTIFIER
+    :   modifiers? 'interface' IDENTIFIER
         (typeParameters
         )?
         ('extends' typeList
         )?
         interfaceBody
-        -> ^(INTERFACE IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^(TYPE_PARAMS typeParameters)? ^('extends' typeList)? ^(BODY interfaceBody))
+        -> ^(INTERFACE IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(TYPE_PARAMS typeParameters)? ^('extends' typeList)? ^(BODY interfaceBody))
     ;
 
 typeList 
@@ -283,7 +284,7 @@ interfaceBody
         (interfaceBodyDeclaration
         )* 
         '}'
-        -> interfaceBodyDeclaration*
+        //-> interfaceBodyDeclaration*
     ;
 
 classBodyDeclaration 
@@ -394,8 +395,7 @@ variableDeclarator
  *TODO: add predicates
  */
 interfaceBodyDeclaration 
-    :
-        interfaceFieldDeclaration
+    :   interfaceFieldDeclaration
     |   interfaceMethodDeclaration
     |   interfaceDeclaration
     |   classDeclaration
@@ -426,11 +426,11 @@ interfaceMethodDeclaration
  * But this gives better diagnostic message, or antlr won't predict this rule.
  */
 interfaceFieldDeclaration 
-    :   modifiers type variableDeclarator
+    :   modifiers? type variableDeclarator
         (',' variableDeclarator
         )*
         ';'
-        -> ^(VAR_DEF modifiers type variableDeclarator)+
+        -> ^(VAR_DEF modifiers? type variableDeclarator)+
     ;
 
 
@@ -484,7 +484,7 @@ typeArgument
             )
             type
         )?
-        -> $e? $s? type
+        -> $e? $s? '?'? type?
     ;
 
 qualifiedNameList 
@@ -526,7 +526,7 @@ ellipsisParameterDecl
     :   variableModifiers
         type  '...'
         IDENTIFIER
-        -> IDENTIFIER ^(ACCESS_MODIFIER variableModifiers) ^(TYPE type)
+        -> IDENTIFIER ^(ACCESS_MODIFIER variableModifiers)? ^(TYPE type)
     ;
 
 
@@ -593,11 +593,12 @@ elementValue
     ;
 
 elementValueArrayInitializer 
-    :   '{'
+    :   '{' '}' -> EMPTY_ARRAY
+    |   '{'
         (elementValue
             (',' elementValue
             )*
-        )? (',')? '}'
+        ) (',')? '}'
         -> elementValue+
     ;
 
@@ -635,11 +636,11 @@ annotationTypeElementDeclaration
     ;
 
 annotationMethodDeclaration 
-    :   modifiers type IDENTIFIER
+    :   modifiers? type IDENTIFIER
         '(' ')' ('default' elementValue
                 )?
         ';'
-        -> IDENTIFIER ^(ACCESS_MODIFIER modifiers) ^(TYPE type) ^('default' elementValue)?
+        -> IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(TYPE type) ^('default' elementValue)?
         ;
 
 block 
@@ -700,19 +701,17 @@ localVariableDeclaration
 statement 
     :   block
             
-    |   ('assert'
-        )
-        expression (':' expression)? ';'
+    |   'assert' expression (':' expression)? ';'
         -> ^(ASSERT expression+)
     |   'assert'  expression (':' expression)? ';'
     	-> ^(ASSERT expression+)    
-    |   'if' parExpression statement ('else' el=statement)?
-    	-> ^(IF_STATEMENT ^(CONDITION parExpression) ^(BODY statement) ^(ELSE_STATEMENT ^(BODY $el))?)        
+    |   'if' parExpression statement? ('else' el=statement)?
+    	-> ^(IF_STATEMENT ^(CONDITION parExpression) ^(BODY statement)? ^(ELSE_STATEMENT ^(BODY $el))?)        
     |   forstatement
     |   'while' parExpression statement
-    	-> ^(WHILE_BLOCK ^(CONDITION parExpression) ^(BODY statement))
+    	-> ^(WHILE_BLOCK ^(CONDITION parExpression) ^(BODY statement)?)
     |   'do' statement 'while' parExpression ';'
-    	-> ^(DO_WHILE_BLOCK ^(CONDITION parExpression) ^(BODY statement))
+    	-> ^(DO_WHILE_BLOCK ^(CONDITION parExpression) ^(BODY statement)?)
     |   trystatement
     	-> trystatement
     |   'switch' parExpression '{' switchBlockStatementGroups '}'
@@ -1063,20 +1062,19 @@ arrayCreator
     ;
 
 variableInitializer 
-    :   arrayInitializer comments? -> arrayInitializer ^(COMMENT comments)?
-    |   expression comments? -> expression ^(COMMENT comments)?
-    |   comments -> ^(COMMENT comments)
+    :   arrayInitializer
+    |   expression
     ;
 
 arrayInitializer 
     :   '{' 
-            (v+=variableInitializer
-                (',' c+=comments? v+=variableInitializer
+            (variableInitializer
+                (',' variableInitializer
                 )*
             )? 
             (',')? 
         '}'             //Yang's fix, position change.
-         -> $v? ^(COMMENT $c)?
+         -> variableInitializer*
     ;
 
 

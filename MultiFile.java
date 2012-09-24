@@ -67,9 +67,10 @@ public class MultiFile {
 		try {
             COMTORParser.start_return result = parser.start();
 			return (CommonTree)result.getTree();
-        } catch (Exception e) {
-            throw new Exception();
-        }
+		} catch (RecognitionException e) {
+            //throw new Exception(e);
+            throw e;
+        } /*catch (RewriteEmtpyExceptionStream r)*/
 	}
 
 	public static String[] getJavaFiles(File dir) {
@@ -158,8 +159,9 @@ public class MultiFile {
 				//Run the parser on the child file.
 				try {
 					temp = runParser(dir.getPath()+"\\"+files[i]);
-				} catch (Exception e) {
+				} catch (RecognitionException e) {
 					System.out.println("Error parsing " + files[i]+". File skipped.");
+					System.out.println("\t"+e);
 					errorCount++;
 					continue;
 				}
@@ -221,6 +223,8 @@ public class MultiFile {
 			root = runParser(file);
 		} catch (Exception e) {
 			System.out.println("Error parsing " + file + ". File skipped.");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 			return null;
 		}
 		// Run comment parser on file
@@ -229,6 +233,7 @@ public class MultiFile {
 			comments = runCommentParser(file);
 		} catch (Exception e) {
 			System.out.println("Error parsing comments in " + file + ". Processing aborted.");
+
 			return null;
 		}
 		// Mix in comments
