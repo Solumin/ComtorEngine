@@ -3,6 +3,7 @@
 #################
 compile/
 difficult/
+modules/
 output/
 test/
 *Lexer.java
