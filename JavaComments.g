@@ -15,16 +15,38 @@ findComments
     : BLOCK_COMMENT -> ^(BLOCK_COMMENT)
     | LINE_COMMENT -> ^(LINE_COMMENT)
     ;
-    
+
 LINE_COMMENT
-    :   ({!inString}? => '//' (~('\n'|'\r')*)  ('\r\n' | '\r' | '\n'))
-    |   ({!inString}? => '//' (~('\n'|'\r')*))  // a line comment could appear at the end of the file without CR/LF
-    ; 
+@after{
+	String g = getText();
+	//remove '//' at start of string
+	String s = g.substring(2);
+	//remove leading and trailing whitespace.
+	s = s.trim();
+	setText(s);
+}
+    :   ({!inString}? => '//' (~('\n'|'\r')*)) 
+	;
 
 BLOCK_COMMENT
+@after{
+	String g = getText();
+	//remove leading '/*' and trailing '*/'
+	String s = g.substring(2, g.length()-2);
+	//remove JavaDoc '*' (leftover from '/**')
+	if (s.charAt(0) == '*')
+		s = s.substring(1);
+	//replace all '*' at the beginning on lines.
+	s = s.replaceAll("[\n\r]\\s*\\*", "");
+	//remove whitespace at the ends of lines and replace with just a space
+	s = s.replaceAll("\\s+$", " ");
+	//remove leading and trailing whitespace
+	s = s.trim();
+	setText(s);
+}
     :   ({!inString}? => '/*' (options {greedy=false;} : . )* '*/')
     ;
-
+	
 OTHER
     : c=. 
     {

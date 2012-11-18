@@ -43,7 +43,7 @@ public class MultiFile {
 			System.out.println("Parsing "+dir.getName());
 			temp = processFile(temp, dir.getPath());
 			System.out.println("\nFinished parsing " + dir.getName());
-			//System.out.println(temp.toStringTree());
+			System.out.println(temp.toStringTree());
 			return;
 		}
 
