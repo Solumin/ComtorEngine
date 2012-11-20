@@ -5,7 +5,7 @@ import java.util.List;
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
 
-public class ComtorRootDoc {
+public class ComtorRootTree {
 	private static int errorCount = 0;
 	private static int fileCount = 0;
 	private static int COMMENT_STATEMENT=33; //token type for comments
@@ -22,39 +22,38 @@ public class ComtorRootDoc {
 		}
 	};
 
-	public ComtorRootDoc(String fileName) throws Exception {
+	public static CommonTree genRootTree(String fileName) throws Exception {
 		File dir;
-
+		CommonTree root = new CommonTree(new CommonToken(-1, "RootDoc"));
 		try {
 			dir = new File(fileName);
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("The COMTOR parser must be called with a file or a directory as the first argument.");
-			System.out.println("(No argument was given.)");
-			return;
+			//System.out.println("The COMTOR parser must be called with a file or a directory as the first argument.");
+			//System.out.println("(No argument was given.)");
+			return null;
 		}
 
 		if (!dir.exists()) {
-			System.out.println("The file or directory " + fileName + " does not exist.");
-			return;
+			//System.out.println("The file or directory " + fileName + " does not exist.");
+			return null;
 		}
 
 		if (dir.isFile()) {
 			//CommonTree temp = new CommonTree();
-			System.out.println("Parsing "+dir.getName());
-			CommonTree temp = processFile(dir.getPath());
-			System.out.println("\nFinished parsing " + dir.getName());
-			System.out.println(temp.toStringTree());
-			return;
+			//System.out.println("Parsing "+dir.getName());
+			root.addChild(processFile(dir.getPath()));
+			//System.out.println("\nFinished parsing " + dir.getName());
+			//System.out.println(temp.toStringTree());
+			return root;
 		}
 
-		CommonTree root = new CommonTree(new CommonToken(-1, "RootDoc"));
 		root = processDirectory(root, dir);
-
-		System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child(ren) (packages)");
-		System.out.println(fileCount + " files were processed.");
-		System.out.println(errorCount + " errors were encountered.");
-		System.out.println("\nThe tree:\n");
-		System.out.println(root.toStringTree());
+		return root;
+		//System.out.println("The root tree of " + dir.getName() + " has "+root.getChildCount()+" child(ren) (packages)");
+		//System.out.println(fileCount + " files were processed.");
+		//System.out.println(errorCount + " errors were encountered.");
+		//System.out.println("\nThe tree:\n");
+		//System.out.println(root.toStringTree());
 	}
 
 	public static CommonTree runParser(String file) throws Exception {
@@ -112,9 +111,9 @@ public class ComtorRootDoc {
 
 		CommonTree temp;
 		CommonTree comm;
-		// System.out.println("In add comments");
-		// System.out.println("\t" + root.getText() + " " + root.getChildCount() + " " + root.getLine());
-		// System.out.println("\t" + comments.getText() + " " + comments.getChildCount() + " " + comments.getLine());
+		//System.out.println("In add comments");
+		//System.out.println("\t" + root.getText() + " " + root.getChildCount() + " " + root.getLine());
+		//System.out.println("\t" + comments.getText() + " " + comments.getChildCount() + " " + comments.getLine());
 
 		if (comments.getChildCount() > 0) {
 			comm = (CommonTree)comments.getChild(0);
@@ -161,8 +160,8 @@ public class ComtorRootDoc {
 				try {
 					temp = processFile(dir.getPath()+"\\"+files[i]);//runParser(dir.getPath()+"\\"+files[i]);
 				} catch (RecognitionException e) {
-					System.out.println("Error parsing " + files[i]+". File skipped.");
-					System.out.println("\t"+e);
+					//System.out.println("Error parsing " + files[i]+". File skipped.");
+					//System.out.println("\t"+e);
 					errorCount++;
 					continue;
 				}
@@ -171,7 +170,7 @@ public class ComtorRootDoc {
 				try {
 					comments = runCommentParser(dir.getPath()+"\\"+files[i]);
 				} catch (Exception e) {
-					System.out.println("Error parsing comments in " + files[i] + ". Processing aborted.");
+					//System.out.println("Error parsing comments in " + files[i] + ". Processing aborted.");
 					errorCount++;
 					continue;
 				}
@@ -238,8 +237,8 @@ public class ComtorRootDoc {
 		try {
 			root = runParser(file);
 		} catch (Exception e) {
-			System.out.println("Error parsing " + file + ". File skipped.");
-			System.out.println(e.getMessage());
+			//System.out.println("Error parsing " + file + ". File skipped.");
+			//System.out.println(e.getMessage());
 			e.printStackTrace();
 			return null;
 		}
@@ -248,7 +247,7 @@ public class ComtorRootDoc {
 		try {
 			comments = runCommentParser(file);
 		} catch (Exception e) {
-			System.out.println("Error parsing comments in " + file + ". Processing aborted.");
+			//System.out.println("Error parsing comments in " + file + ". Processing aborted.");
 
 			return null;
 		}

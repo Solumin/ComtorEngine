@@ -47,9 +47,8 @@ options {
 	backtrack=true;
 	memoize=true;
 }
-
 //Imaginary tokens for tree building
-tokens { ANNOTATIONS; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
+tokens { ANNOTATION; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
 	ACCESS_MODIFIER; BODY; METHOD_DEC; PARAMS;
 	EMPTY; TYPE; VAR_DEF; ARRAY;
 	CONSTRUCTOR_CALL; ARGUMENTS; ANNOTATIONS;
@@ -61,33 +60,38 @@ tokens { ANNOTATIONS; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
 	COMMENT_STATEMENT; CONSTRUCTOR;
 	//Used for methods/fields that have no modifier.
 	PACKAGE_PRIVATE; INNER_CLASS; 
-	EMPTY_ARRAY; PACKAGE;}
+	EMPTY_ARRAY; PACKAGE;
+}
 
 /********************************************************************************************
                           Parser section
 *********************************************************************************************/
 
-start	:	compilationUnit	;	//{System.out.println("Parsing complete.");} ;
+start	:	compilationUnit;	//{System.out.println("Parsing complete.");} ;
 //{System.out.println($compilationUnit.tree.toStringTree());}
 
 compilationUnit 
     :   
     	annotations?
-        (importDeclaration)*
-        typeDeclaration*
-	 	-> ^({(CommonTree)adaptor.create(PACKAGE, "NONE")} ^(typeDeclaration ^(ANNOTATIONS annotations)? (IMPORTS importDeclaration+)?)*)
-	|
-		annotations? packageDeclaration
-        (importDeclaration)*
+        importDeclarations
         (typeDeclaration)*
-	 -> ^(packageDeclaration (typeDeclaration ^(ANNOTATIONS annotations)? ^(IMPORTS importDeclaration+)?)*)
+	 	-> ^({(CommonTree)adaptor.create(PACKAGE, "NONE")} (typeDeclaration importDeclarations?)* annotations?)
+	|
+		annotations?
+		packageDeclaration
+        importDeclarations
+       (typeDeclaration)*
+	 	-> ^(packageDeclaration (typeDeclaration importDeclarations?)* annotations?)
     ;
     
 packageDeclaration
     :   'package' qualifiedName ';'
-        //-> ^('package' qualifiedName)
         -> qualifiedName
     ;
+
+importDeclarations
+	:	importDeclaration* -> ^(IMPORTS importDeclaration*)
+	;
 
 importDeclaration  
     :   
@@ -96,7 +100,7 @@ importDeclaration
         )?
         (IDENTIFIER '.' '*')
         ';'    
-        -> ^('import' 'static'? IDENTIFIER '.' '*') 
+        -> ^(IMPORT 'static'? IDENTIFIER '.' '*')
     |  
     	'import' 
         ('static'
@@ -107,7 +111,7 @@ importDeclaration
         (s+='.' s+='*'
         )?
         ';'
-        -> ^('import' 'static'? $i+ $s*)
+        -> ^(IMPORT 'static'? $i+ $s*)
     ;
 
 qualifiedImportName 
@@ -116,13 +120,13 @@ qualifiedImportName
         )*
     ;
 
-typeDeclaration 
+typeDeclaration
     :   classOrInterfaceDeclaration
-    	-> classOrInterfaceDeclaration  
+    	-> classOrInterfaceDeclaration
     |   ';' ->
     ;
 
-classOrInterfaceDeclaration 
+classOrInterfaceDeclaration
     :   classDeclaration
     |   interfaceDeclaration
     ;
@@ -177,9 +181,7 @@ normalClassDeclaration
         ('implements' typeList
         )?            
         classBody
-        -> ^(NORMAL_CLASS IDENTIFIER 
-        	^(ACCESS_MODIFIER modifiers)? ^(TYPE_PARAMS typeParameters)? ^('extends' type)? ^('implements' typeList)? 
-        	classBody?)
+        -> ^(NORMAL_CLASS IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(TYPE_PARAMS typeParameters)? ^('extends' type)? ^('implements' typeList)? classBody?)
     ;
 
 
@@ -540,10 +542,10 @@ explicitConstructorInvocation
         -> ^(CONSTRUCTOR_CALL 'super' primary ^(ARGUMENTS arguments) nonWildcardTypeArguments?)
     ;
     
-annotations 
+annotations
     :   (annotation
         )+
-        -> ^(ANNOTATIONS annotation*)
+        -> ^(ANNOTATION annotation)*
     ;
 
 /**

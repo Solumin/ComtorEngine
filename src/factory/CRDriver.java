@@ -5,7 +5,7 @@ public class CRDriver {
 	public static void main(String[] args) throws Exception {
 		CommonTree cdr;
 		try {
-			cdr = ComtorRootDoc.genRootDoc("../../test/simple/comTest.java");
+			cdr = ComtorRootTree.genRootTree("../../test/simple/comTest.java");
 		} catch (Exception e) {
 			System.out.print("Couldn't run it! " + e);
 			cdr = new CommonTree();

@@ -1,2 +1,2 @@
 Main-Class: CRDriver
-Class-Path: ../../lib/antlr-3.3.jar
+Class-Path: ../../lib/antlr-3.3.jar ../../lib/cantlr.jar ../../lib/ComtorDocs.jar

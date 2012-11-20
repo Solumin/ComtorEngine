@@ -7,6 +7,7 @@ options {
 }
 
 tokens {COMMENTS;}
+
 @lexer::members {boolean inString=false;}
 
 start 	:	findComments* -> ^(COMMENTS findComments*);

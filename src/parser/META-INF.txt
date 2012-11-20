@@ -1,2 +1,2 @@
 Main-Class: MultiFile
-Class-Path: ../../lib/antlr-3.3.jar
+Class-Path: ../../lib/cantlr.jar ../../lib/antlr-3.3.jar 

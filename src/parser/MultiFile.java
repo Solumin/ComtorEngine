@@ -5,6 +5,8 @@ import java.util.List;
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
 
+import cantlr.*;
+
 public class MultiFile {
 	private static int errorCount = 0;
 	private static int fileCount = 0;
@@ -253,7 +255,7 @@ public class MultiFile {
 			return null;
 		}
 		// Mix in comments
-		root = addComments(root, comments);
+		//root = addComments(root, comments);
 
 		// Return tree.
 		return root;
