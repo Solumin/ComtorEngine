@@ -1,0 +1,2 @@
+Main-Class: CRDriver
+Class-Path: ../../lib/antlr-3.3.jar

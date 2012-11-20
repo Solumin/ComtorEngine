@@ -5,7 +5,7 @@ import java.util.List;
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
 
-public class MultiFile {
+public class ComtorRootDoc {
 	private static int errorCount = 0;
 	private static int fileCount = 0;
 	private static int COMMENT_STATEMENT=33; //token type for comments
@@ -22,11 +22,11 @@ public class MultiFile {
 		}
 	};
 
-	public static void main(String[] args) throws Exception {
+	public ComtorRootDoc(String fileName) throws Exception {
 		File dir;
 
 		try {
-			dir = new File(args[0]);
+			dir = new File(fileName);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("The COMTOR parser must be called with a file or a directory as the first argument.");
 			System.out.println("(No argument was given.)");
@@ -34,7 +34,7 @@ public class MultiFile {
 		}
 
 		if (!dir.exists()) {
-			System.out.println("The file or directory " + args[0] + " does not exist.");
+			System.out.println("The file or directory " + fileName + " does not exist.");
 			return;
 		}
 

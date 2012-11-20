@@ -1,0 +1,6 @@
+(RootDoc (foo (NORMAL_CLASS comTest (ACCESS_MODIFIER public) (VAR_DEF s (INITIAL_VALUE "/* Comment words") (TYPE String) (COMMENT_STATEMENT Test comment)) (VAR_DEF t (INITIAL_VALUE " Capture this */") (TYPE String) (COMMENT_STATEMENT Second test comment)) (COMMENT_STATEMENT This is a long JavaDoc-style comment. We need to get rid of leading whitespace and  leading * in the comment.))))
+There are 1 packages in RootDoc
+foo: 1 children
+	NORMAL_CLASS
+Compare: comTest =? comTest
+Found comTest
