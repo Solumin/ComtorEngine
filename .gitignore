@@ -6,9 +6,6 @@ difficult/
 modules/
 output/
 test/
-*Lexer.java
-*Parser.java
-*.tokens
 
 #################
 ## Sublime Text 2

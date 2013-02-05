@@ -67,8 +67,7 @@ tokens { ANNOTATION; IMPORTS; NORMAL_CLASS; TYPE_PARAMS;
                           Parser section
 *********************************************************************************************/
 
-start	:	compilationUnit;	//{System.out.println("Parsing complete.");} ;
-//{System.out.println($compilationUnit.tree.toStringTree());}
+start	:	compilationUnit;
 
 compilationUnit 
     :   
