@@ -321,7 +321,7 @@ methodDeclaration
         (blockStatement
         )*
         '}'
-        -> ^(CONSTRUCTOR IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(PARAMS formalParameters)? ^(TYPE_PARAMS typeParameters)?
+        -> ^(CONSTRUCTOR IDENTIFIER ^(ACCESS_MODIFIER modifiers)? ^(TYPE_PARAMS typeParameters)? ^(PARAMS formalParameters)?
         	^(THROWS qualifiedNameList)? ^(BODY explicitConstructorInvocation? blockStatement*))
     | //no modifiers
     	(typeParameters)?
@@ -368,7 +368,7 @@ fieldDeclaration
         (',' variableDeclarator
         )*
         ';'
-        -> ^(VAR_DEF variableDeclarator+ ^(ACCESS_MODIFIER modifiers)? ^(TYPE type))
+        -> ^(VAR_DEF variableDeclarator ^(ACCESS_MODIFIER modifiers)? ^(TYPE type))+
     ;
 
 variableDeclarator 
@@ -492,15 +492,14 @@ formalParameters
 
 formalParameterDecls 
     :   ellipsisParameterDecl
-    |   n+=normalParameterDecl
-        (',' n+=normalParameterDecl
-        )*
-        -> $n
-    |   (n+=normalParameterDecl
+    |   normalParameterDecl
+        (',' normalParameterDecl)*
+        -> normalParameterDecl*
+    |   (normalParameterDecl
         ','
         )+ 
         ellipsisParameterDecl
-        -> $n ellipsisParameterDecl
+        -> normalParameterDecl* ellipsisParameterDecl
     ;
 
 normalParameterDecl 
