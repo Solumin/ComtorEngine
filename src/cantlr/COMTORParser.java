@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 .\\COMTOR.g 2013-02-08 20:14:29
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 COMTOR.g 2013-02-18 01:03:57
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -190,7 +190,7 @@ public class COMTORParser extends Parser {
     }
 
     public String[] getTokenNames() { return COMTORParser.tokenNames; }
-    public String getGrammarFileName() { return ".\\COMTOR.g"; }
+    public String getGrammarFileName() { return "COMTOR.g"; }
 
 
     public static class start_return extends ParserRuleReturnScope {
@@ -199,7 +199,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "start"
-    // .\\COMTOR.g:66:1: start : compilationUnit ;
+    // COMTOR.g:66:1: start : compilationUnit ;
     public final COMTORParser.start_return start() throws RecognitionException {
         COMTORParser.start_return retval = new COMTORParser.start_return();
         retval.start = input.LT(1);
@@ -212,8 +212,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return retval; }
-            // .\\COMTOR.g:70:7: ( compilationUnit )
-            // .\\COMTOR.g:70:9: compilationUnit
+            // COMTOR.g:70:7: ( compilationUnit )
+            // COMTOR.g:70:9: compilationUnit
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -253,7 +253,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "compilationUnit"
-    // .\\COMTOR.g:72:1: compilationUnit : ( ( annotations )? importDeclarations ( typeDeclaration )* -> ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) | ( annotations )? packageDeclaration importDeclarations ( typeDeclaration )* -> ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) );
+    // COMTOR.g:72:1: compilationUnit : ( ( annotations )? importDeclarations ( typeDeclaration )* -> ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) | ( annotations )? packageDeclaration importDeclarations ( typeDeclaration )* -> ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) );
     public final COMTORParser.compilationUnit_return compilationUnit() throws RecognitionException {
         COMTORParser.compilationUnit_return retval = new COMTORParser.compilationUnit_return();
         retval.start = input.LT(1);
@@ -281,14 +281,14 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule typeDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return retval; }
-            // .\\COMTOR.g:73:5: ( ( annotations )? importDeclarations ( typeDeclaration )* -> ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) | ( annotations )? packageDeclaration importDeclarations ( typeDeclaration )* -> ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) )
+            // COMTOR.g:73:5: ( ( annotations )? importDeclarations ( typeDeclaration )* -> ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) | ( annotations )? packageDeclaration importDeclarations ( typeDeclaration )* -> ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? ) )
             int alt5=2;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // .\\COMTOR.g:74:6: ( annotations )? importDeclarations ( typeDeclaration )*
+                    // COMTOR.g:74:6: ( annotations )? importDeclarations ( typeDeclaration )*
                     {
-                    // .\\COMTOR.g:74:6: ( annotations )?
+                    // COMTOR.g:74:6: ( annotations )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -305,7 +305,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt1) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: annotations
+                            // COMTOR.g:0:0: annotations
                             {
                             pushFollow(FOLLOW_annotations_in_compilationUnit195);
                             annotations2=annotations();
@@ -325,7 +325,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_importDeclarations.add(importDeclarations3.getTree());
-                    // .\\COMTOR.g:76:9: ( typeDeclaration )*
+                    // COMTOR.g:76:9: ( typeDeclaration )*
                     loop2:
                     do {
                         int alt2=2;
@@ -338,7 +338,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // .\\COMTOR.g:76:10: typeDeclaration
+                    	    // COMTOR.g:76:10: typeDeclaration
                     	    {
                     	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit217);
                     	    typeDeclaration4=typeDeclaration();
@@ -358,7 +358,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: typeDeclaration, importDeclarations, annotations
+                    // elements: importDeclarations, annotations, typeDeclaration
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -371,15 +371,15 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 77:4: -> ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? )
                     {
-                        // .\\COMTOR.g:77:7: ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? )
+                        // COMTOR.g:77:7: ^( ( typeDeclaration ( importDeclarations )? )* ( annotations )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PACKAGE, "NONE"), root_1);
 
-                        // .\\COMTOR.g:77:55: ( typeDeclaration ( importDeclarations )? )*
+                        // COMTOR.g:77:55: ( typeDeclaration ( importDeclarations )? )*
                         while ( stream_typeDeclaration.hasNext() ) {
                             adaptor.addChild(root_1, stream_typeDeclaration.nextTree());
-                            // .\\COMTOR.g:77:72: ( importDeclarations )?
+                            // COMTOR.g:77:72: ( importDeclarations )?
                             if ( stream_importDeclarations.hasNext() ) {
                                 adaptor.addChild(root_1, stream_importDeclarations.nextTree());
 
@@ -388,7 +388,7 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_typeDeclaration.reset();
-                        // .\\COMTOR.g:77:94: ( annotations )?
+                        // COMTOR.g:77:94: ( annotations )?
                         if ( stream_annotations.hasNext() ) {
                             adaptor.addChild(root_1, stream_annotations.nextTree());
 
@@ -404,9 +404,9 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:79:3: ( annotations )? packageDeclaration importDeclarations ( typeDeclaration )*
+                    // COMTOR.g:79:3: ( annotations )? packageDeclaration importDeclarations ( typeDeclaration )*
                     {
-                    // .\\COMTOR.g:79:3: ( annotations )?
+                    // COMTOR.g:79:3: ( annotations )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -415,7 +415,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt3) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: annotations
+                            // COMTOR.g:0:0: annotations
                             {
                             pushFollow(FOLLOW_annotations_in_compilationUnit246);
                             annotations5=annotations();
@@ -441,7 +441,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_importDeclarations.add(importDeclarations7.getTree());
-                    // .\\COMTOR.g:82:8: ( typeDeclaration )*
+                    // COMTOR.g:82:8: ( typeDeclaration )*
                     loop4:
                     do {
                         int alt4=2;
@@ -454,7 +454,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // .\\COMTOR.g:82:9: typeDeclaration
+                    	    // COMTOR.g:82:9: typeDeclaration
                     	    {
                     	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit271);
                     	    typeDeclaration8=typeDeclaration();
@@ -474,7 +474,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: typeDeclaration, packageDeclaration, annotations, importDeclarations
+                    // elements: importDeclarations, typeDeclaration, annotations, packageDeclaration
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -487,15 +487,15 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 83:4: -> ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? )
                     {
-                        // .\\COMTOR.g:83:7: ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? )
+                        // COMTOR.g:83:7: ^( packageDeclaration ( typeDeclaration ( importDeclarations )? )* ( annotations )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_packageDeclaration.nextNode(), root_1);
 
-                        // .\\COMTOR.g:83:28: ( typeDeclaration ( importDeclarations )? )*
+                        // COMTOR.g:83:28: ( typeDeclaration ( importDeclarations )? )*
                         while ( stream_typeDeclaration.hasNext() ) {
                             adaptor.addChild(root_1, stream_typeDeclaration.nextTree());
-                            // .\\COMTOR.g:83:45: ( importDeclarations )?
+                            // COMTOR.g:83:45: ( importDeclarations )?
                             if ( stream_importDeclarations.hasNext() ) {
                                 adaptor.addChild(root_1, stream_importDeclarations.nextTree());
 
@@ -504,7 +504,7 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_typeDeclaration.reset();
-                        // .\\COMTOR.g:83:67: ( annotations )?
+                        // COMTOR.g:83:67: ( annotations )?
                         if ( stream_annotations.hasNext() ) {
                             adaptor.addChild(root_1, stream_annotations.nextTree());
 
@@ -548,7 +548,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "packageDeclaration"
-    // .\\COMTOR.g:86:1: packageDeclaration : 'package' qualifiedName ';' -> qualifiedName ;
+    // COMTOR.g:86:1: packageDeclaration : 'package' qualifiedName ';' -> qualifiedName ;
     public final COMTORParser.packageDeclaration_return packageDeclaration() throws RecognitionException {
         COMTORParser.packageDeclaration_return retval = new COMTORParser.packageDeclaration_return();
         retval.start = input.LT(1);
@@ -567,8 +567,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_qualifiedName=new RewriteRuleSubtreeStream(adaptor,"rule qualifiedName");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return retval; }
-            // .\\COMTOR.g:87:5: ( 'package' qualifiedName ';' -> qualifiedName )
-            // .\\COMTOR.g:87:9: 'package' qualifiedName ';'
+            // COMTOR.g:87:5: ( 'package' qualifiedName ';' -> qualifiedName )
+            // COMTOR.g:87:9: 'package' qualifiedName ';'
             {
             string_literal9=(Token)match(input,PACKAGE,FOLLOW_PACKAGE_in_packageDeclaration316); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_PACKAGE.add(string_literal9);
@@ -632,7 +632,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "importDeclarations"
-    // .\\COMTOR.g:91:1: importDeclarations : ( importDeclaration )* -> ^( IMPORTS ( importDeclaration )* ) ;
+    // COMTOR.g:91:1: importDeclarations : ( importDeclaration )* -> ^( IMPORTS ( importDeclaration )* ) ;
     public final COMTORParser.importDeclarations_return importDeclarations() throws RecognitionException {
         COMTORParser.importDeclarations_return retval = new COMTORParser.importDeclarations_return();
         retval.start = input.LT(1);
@@ -645,10 +645,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_importDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule importDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
-            // .\\COMTOR.g:92:2: ( ( importDeclaration )* -> ^( IMPORTS ( importDeclaration )* ) )
-            // .\\COMTOR.g:92:4: ( importDeclaration )*
+            // COMTOR.g:92:2: ( ( importDeclaration )* -> ^( IMPORTS ( importDeclaration )* ) )
+            // COMTOR.g:92:4: ( importDeclaration )*
             {
-            // .\\COMTOR.g:92:4: ( importDeclaration )*
+            // COMTOR.g:92:4: ( importDeclaration )*
             loop6:
             do {
                 int alt6=2;
@@ -661,7 +661,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // .\\COMTOR.g:0:0: importDeclaration
+            	    // COMTOR.g:0:0: importDeclaration
             	    {
             	    pushFollow(FOLLOW_importDeclaration_in_importDeclarations346);
             	    importDeclaration12=importDeclaration();
@@ -694,12 +694,12 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 92:23: -> ^( IMPORTS ( importDeclaration )* )
             {
-                // .\\COMTOR.g:92:26: ^( IMPORTS ( importDeclaration )* )
+                // COMTOR.g:92:26: ^( IMPORTS ( importDeclaration )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IMPORTS, "IMPORTS"), root_1);
 
-                // .\\COMTOR.g:92:36: ( importDeclaration )*
+                // COMTOR.g:92:36: ( importDeclaration )*
                 while ( stream_importDeclaration.hasNext() ) {
                     adaptor.addChild(root_1, stream_importDeclaration.nextTree());
 
@@ -741,7 +741,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "importDeclaration"
-    // .\\COMTOR.g:95:1: importDeclaration : ( 'import' ( 'static' )? ( IDENTIFIER '.' '*' ) ';' -> ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' ) | 'import' ( 'static' )? i+= IDENTIFIER (i+= '.' i+= IDENTIFIER )+ (s+= '.' s+= '*' )? ';' -> ^( IMPORT ( 'static' )? ( $i)+ ( $s)* ) );
+    // COMTOR.g:95:1: importDeclaration : ( 'import' ( 'static' )? ( IDENTIFIER '.' '*' ) ';' -> ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' ) | 'import' ( 'static' )? i+= IDENTIFIER (i+= '.' i+= IDENTIFIER )+ (s+= '.' s+= '*' )? ';' -> ^( IMPORT ( 'static' )? ( $i)+ ( $s)* ) );
     public final COMTORParser.importDeclaration_return importDeclaration() throws RecognitionException {
         COMTORParser.importDeclaration_return retval = new COMTORParser.importDeclaration_return();
         retval.start = input.LT(1);
@@ -782,7 +782,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
-            // .\\COMTOR.g:96:5: ( 'import' ( 'static' )? ( IDENTIFIER '.' '*' ) ';' -> ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' ) | 'import' ( 'static' )? i+= IDENTIFIER (i+= '.' i+= IDENTIFIER )+ (s+= '.' s+= '*' )? ';' -> ^( IMPORT ( 'static' )? ( $i)+ ( $s)* ) )
+            // COMTOR.g:96:5: ( 'import' ( 'static' )? ( IDENTIFIER '.' '*' ) ';' -> ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' ) | 'import' ( 'static' )? i+= IDENTIFIER (i+= '.' i+= IDENTIFIER )+ (s+= '.' s+= '*' )? ';' -> ^( IMPORT ( 'static' )? ( $i)+ ( $s)* ) )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -873,12 +873,12 @@ public class COMTORParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // .\\COMTOR.g:97:6: 'import' ( 'static' )? ( IDENTIFIER '.' '*' ) ';'
+                    // COMTOR.g:97:6: 'import' ( 'static' )? ( IDENTIFIER '.' '*' ) ';'
                     {
                     string_literal13=(Token)match(input,IMPORT,FOLLOW_IMPORT_in_importDeclaration380); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IMPORT.add(string_literal13);
 
-                    // .\\COMTOR.g:98:9: ( 'static' )?
+                    // COMTOR.g:98:9: ( 'static' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -887,7 +887,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt7) {
                         case 1 :
-                            // .\\COMTOR.g:98:10: 'static'
+                            // COMTOR.g:98:10: 'static'
                             {
                             string_literal14=(Token)match(input,STATIC,FOLLOW_STATIC_in_importDeclaration392); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_STATIC.add(string_literal14);
@@ -898,8 +898,8 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:100:9: ( IDENTIFIER '.' '*' )
-                    // .\\COMTOR.g:100:10: IDENTIFIER '.' '*'
+                    // COMTOR.g:100:9: ( IDENTIFIER '.' '*' )
+                    // COMTOR.g:100:10: IDENTIFIER '.' '*'
                     {
                     IDENTIFIER15=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_importDeclaration414); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER15);
@@ -919,7 +919,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: STAR, DOT, STATIC, IDENTIFIER
+                    // elements: DOT, IDENTIFIER, STATIC, STAR
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -932,12 +932,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 102:9: -> ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' )
                     {
-                        // .\\COMTOR.g:102:12: ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' )
+                        // COMTOR.g:102:12: ^( IMPORT ( 'static' )? IDENTIFIER '.' '*' )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IMPORT, "IMPORT"), root_1);
 
-                        // .\\COMTOR.g:102:21: ( 'static' )?
+                        // COMTOR.g:102:21: ( 'static' )?
                         if ( stream_STATIC.hasNext() ) {
                             adaptor.addChild(root_1, stream_STATIC.nextNode());
 
@@ -956,12 +956,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:104:6: 'import' ( 'static' )? i+= IDENTIFIER (i+= '.' i+= IDENTIFIER )+ (s+= '.' s+= '*' )? ';'
+                    // COMTOR.g:104:6: 'import' ( 'static' )? i+= IDENTIFIER (i+= '.' i+= IDENTIFIER )+ (s+= '.' s+= '*' )? ';'
                     {
                     string_literal19=(Token)match(input,IMPORT,FOLLOW_IMPORT_in_importDeclaration471); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IMPORT.add(string_literal19);
 
-                    // .\\COMTOR.g:105:9: ( 'static' )?
+                    // COMTOR.g:105:9: ( 'static' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -970,7 +970,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt8) {
                         case 1 :
-                            // .\\COMTOR.g:105:10: 'static'
+                            // COMTOR.g:105:10: 'static'
                             {
                             string_literal20=(Token)match(input,STATIC,FOLLOW_STATIC_in_importDeclaration483); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_STATIC.add(string_literal20);
@@ -987,7 +987,7 @@ public class COMTORParser extends Parser {
                     if (list_i==null) list_i=new ArrayList();
                     list_i.add(i);
 
-                    // .\\COMTOR.g:108:9: (i+= '.' i+= IDENTIFIER )+
+                    // COMTOR.g:108:9: (i+= '.' i+= IDENTIFIER )+
                     int cnt9=0;
                     loop9:
                     do {
@@ -1007,7 +1007,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // .\\COMTOR.g:108:10: i+= '.' i+= IDENTIFIER
+                    	    // COMTOR.g:108:10: i+= '.' i+= IDENTIFIER
                     	    {
                     	    i=(Token)match(input,DOT,FOLLOW_DOT_in_importDeclaration519); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_DOT.add(i);
@@ -1035,7 +1035,7 @@ public class COMTORParser extends Parser {
                         cnt9++;
                     } while (true);
 
-                    // .\\COMTOR.g:110:9: (s+= '.' s+= '*' )?
+                    // COMTOR.g:110:9: (s+= '.' s+= '*' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1044,7 +1044,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt10) {
                         case 1 :
-                            // .\\COMTOR.g:110:10: s+= '.' s+= '*'
+                            // COMTOR.g:110:10: s+= '.' s+= '*'
                             {
                             s=(Token)match(input,DOT,FOLLOW_DOT_in_importDeclaration547); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_DOT.add(s);
@@ -1070,7 +1070,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: s, STATIC, i
+                    // elements: STATIC, s, i
                     // token labels: 
                     // rule labels: retval
                     // token list labels: s, i
@@ -1085,12 +1085,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 113:9: -> ^( IMPORT ( 'static' )? ( $i)+ ( $s)* )
                     {
-                        // .\\COMTOR.g:113:12: ^( IMPORT ( 'static' )? ( $i)+ ( $s)* )
+                        // COMTOR.g:113:12: ^( IMPORT ( 'static' )? ( $i)+ ( $s)* )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IMPORT, "IMPORT"), root_1);
 
-                        // .\\COMTOR.g:113:21: ( 'static' )?
+                        // COMTOR.g:113:21: ( 'static' )?
                         if ( stream_STATIC.hasNext() ) {
                             adaptor.addChild(root_1, stream_STATIC.nextNode());
 
@@ -1104,7 +1104,7 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_i.reset();
-                        // .\\COMTOR.g:113:35: ( $s)*
+                        // COMTOR.g:113:35: ( $s)*
                         while ( stream_s.hasNext() ) {
                             adaptor.addChild(root_1, stream_s.nextNode());
 
@@ -1148,7 +1148,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "qualifiedImportName"
-    // .\\COMTOR.g:116:1: qualifiedImportName : IDENTIFIER ( '.' IDENTIFIER )* ;
+    // COMTOR.g:116:1: qualifiedImportName : IDENTIFIER ( '.' IDENTIFIER )* ;
     public final COMTORParser.qualifiedImportName_return qualifiedImportName() throws RecognitionException {
         COMTORParser.qualifiedImportName_return retval = new COMTORParser.qualifiedImportName_return();
         retval.start = input.LT(1);
@@ -1165,8 +1165,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
-            // .\\COMTOR.g:117:5: ( IDENTIFIER ( '.' IDENTIFIER )* )
-            // .\\COMTOR.g:117:9: IDENTIFIER ( '.' IDENTIFIER )*
+            // COMTOR.g:117:5: ( IDENTIFIER ( '.' IDENTIFIER )* )
+            // COMTOR.g:117:9: IDENTIFIER ( '.' IDENTIFIER )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1175,7 +1175,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER22_tree = (CommonTree)adaptor.create(IDENTIFIER22);
             adaptor.addChild(root_0, IDENTIFIER22_tree);
             }
-            // .\\COMTOR.g:118:9: ( '.' IDENTIFIER )*
+            // COMTOR.g:118:9: ( '.' IDENTIFIER )*
             loop12:
             do {
                 int alt12=2;
@@ -1188,7 +1188,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt12) {
             	case 1 :
-            	    // .\\COMTOR.g:118:10: '.' IDENTIFIER
+            	    // COMTOR.g:118:10: '.' IDENTIFIER
             	    {
             	    char_literal23=(Token)match(input,DOT,FOLLOW_DOT_in_qualifiedImportName628); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1239,7 +1239,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeDeclaration"
-    // .\\COMTOR.g:122:1: typeDeclaration : ( classOrInterfaceDeclaration -> classOrInterfaceDeclaration | ';' ->);
+    // COMTOR.g:122:1: typeDeclaration : ( classOrInterfaceDeclaration -> classOrInterfaceDeclaration | ';' ->);
     public final COMTORParser.typeDeclaration_return typeDeclaration() throws RecognitionException {
         COMTORParser.typeDeclaration_return retval = new COMTORParser.typeDeclaration_return();
         retval.start = input.LT(1);
@@ -1255,7 +1255,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_classOrInterfaceDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule classOrInterfaceDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return retval; }
-            // .\\COMTOR.g:123:5: ( classOrInterfaceDeclaration -> classOrInterfaceDeclaration | ';' ->)
+            // COMTOR.g:123:5: ( classOrInterfaceDeclaration -> classOrInterfaceDeclaration | ';' ->)
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1274,7 +1274,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // .\\COMTOR.g:123:9: classOrInterfaceDeclaration
+                    // COMTOR.g:123:9: classOrInterfaceDeclaration
                     {
                     pushFollow(FOLLOW_classOrInterfaceDeclaration_in_typeDeclaration660);
                     classOrInterfaceDeclaration25=classOrInterfaceDeclaration();
@@ -1306,7 +1306,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:125:9: ';'
+                    // COMTOR.g:125:9: ';'
                     {
                     char_literal26=(Token)match(input,SEMI,FOLLOW_SEMI_in_typeDeclaration679); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(char_literal26);
@@ -1362,7 +1362,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classOrInterfaceDeclaration"
-    // .\\COMTOR.g:128:1: classOrInterfaceDeclaration : ( classDeclaration | interfaceDeclaration );
+    // COMTOR.g:128:1: classOrInterfaceDeclaration : ( classDeclaration | interfaceDeclaration );
     public final COMTORParser.classOrInterfaceDeclaration_return classOrInterfaceDeclaration() throws RecognitionException {
         COMTORParser.classOrInterfaceDeclaration_return retval = new COMTORParser.classOrInterfaceDeclaration_return();
         retval.start = input.LT(1);
@@ -1377,12 +1377,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return retval; }
-            // .\\COMTOR.g:129:5: ( classDeclaration | interfaceDeclaration )
+            // COMTOR.g:129:5: ( classDeclaration | interfaceDeclaration )
             int alt14=2;
             alt14 = dfa14.predict(input);
             switch (alt14) {
                 case 1 :
-                    // .\\COMTOR.g:129:9: classDeclaration
+                    // COMTOR.g:129:9: classDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1396,7 +1396,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:130:9: interfaceDeclaration
+                    // COMTOR.g:130:9: interfaceDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1438,7 +1438,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "modifiers"
-    // .\\COMTOR.g:134:1: modifiers : ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+ ;
+    // COMTOR.g:134:1: modifiers : ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+ ;
     public final COMTORParser.modifiers_return modifiers() throws RecognitionException {
         COMTORParser.modifiers_return retval = new COMTORParser.modifiers_return();
         retval.start = input.LT(1);
@@ -1473,12 +1473,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return retval; }
-            // .\\COMTOR.g:135:5: ( ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+ )
-            // .\\COMTOR.g:136:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+
+            // COMTOR.g:135:5: ( ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+ )
+            // COMTOR.g:136:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // .\\COMTOR.g:136:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+
+            // COMTOR.g:136:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' | annotation )+
             int cnt15=0;
             loop15:
             do {
@@ -1486,7 +1486,7 @@ public class COMTORParser extends Parser {
                 alt15 = dfa15.predict(input);
                 switch (alt15) {
             	case 1 :
-            	    // .\\COMTOR.g:136:9: 'public'
+            	    // COMTOR.g:136:9: 'public'
             	    {
             	    string_literal29=(Token)match(input,PUBLIC,FOLLOW_PUBLIC_in_modifiers744); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1497,7 +1497,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // .\\COMTOR.g:137:9: 'protected'
+            	    // COMTOR.g:137:9: 'protected'
             	    {
             	    string_literal30=(Token)match(input,PROTECTED,FOLLOW_PROTECTED_in_modifiers754); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1508,7 +1508,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // .\\COMTOR.g:138:9: 'private'
+            	    // COMTOR.g:138:9: 'private'
             	    {
             	    string_literal31=(Token)match(input,PRIVATE,FOLLOW_PRIVATE_in_modifiers764); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1519,7 +1519,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // .\\COMTOR.g:139:9: 'static'
+            	    // COMTOR.g:139:9: 'static'
             	    {
             	    string_literal32=(Token)match(input,STATIC,FOLLOW_STATIC_in_modifiers774); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1530,7 +1530,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // .\\COMTOR.g:140:9: 'abstract'
+            	    // COMTOR.g:140:9: 'abstract'
             	    {
             	    string_literal33=(Token)match(input,ABSTRACT,FOLLOW_ABSTRACT_in_modifiers784); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1541,7 +1541,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 6 :
-            	    // .\\COMTOR.g:141:9: 'final'
+            	    // COMTOR.g:141:9: 'final'
             	    {
             	    string_literal34=(Token)match(input,FINAL,FOLLOW_FINAL_in_modifiers794); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1552,7 +1552,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 7 :
-            	    // .\\COMTOR.g:142:9: 'native'
+            	    // COMTOR.g:142:9: 'native'
             	    {
             	    string_literal35=(Token)match(input,NATIVE,FOLLOW_NATIVE_in_modifiers804); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1563,7 +1563,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 8 :
-            	    // .\\COMTOR.g:143:9: 'synchronized'
+            	    // COMTOR.g:143:9: 'synchronized'
             	    {
             	    string_literal36=(Token)match(input,SYNCHRONIZED,FOLLOW_SYNCHRONIZED_in_modifiers814); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1574,7 +1574,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 9 :
-            	    // .\\COMTOR.g:144:9: 'transient'
+            	    // COMTOR.g:144:9: 'transient'
             	    {
             	    string_literal37=(Token)match(input,TRANSIENT,FOLLOW_TRANSIENT_in_modifiers824); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1585,7 +1585,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 10 :
-            	    // .\\COMTOR.g:145:9: 'volatile'
+            	    // COMTOR.g:145:9: 'volatile'
             	    {
             	    string_literal38=(Token)match(input,VOLATILE,FOLLOW_VOLATILE_in_modifiers834); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1596,7 +1596,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 11 :
-            	    // .\\COMTOR.g:146:9: 'strictfp'
+            	    // COMTOR.g:146:9: 'strictfp'
             	    {
             	    string_literal39=(Token)match(input,STRICTFP,FOLLOW_STRICTFP_in_modifiers844); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1607,7 +1607,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 12 :
-            	    // .\\COMTOR.g:147:7: annotation
+            	    // COMTOR.g:147:7: annotation
             	    {
             	    pushFollow(FOLLOW_annotation_in_modifiers852);
             	    annotation40=annotation();
@@ -1659,7 +1659,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "variableModifiers"
-    // .\\COMTOR.g:152:1: variableModifiers : ( 'final' | vm+= annotation )* -> ( 'final' )* ( $vm)? ;
+    // COMTOR.g:152:1: variableModifiers : ( 'final' | vm+= annotation )* -> ( 'final' )* ( $vm)? ;
     public final COMTORParser.variableModifiers_return variableModifiers() throws RecognitionException {
         COMTORParser.variableModifiers_return retval = new COMTORParser.variableModifiers_return();
         retval.start = input.LT(1);
@@ -1674,10 +1674,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_annotation=new RewriteRuleSubtreeStream(adaptor,"rule annotation");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return retval; }
-            // .\\COMTOR.g:153:5: ( ( 'final' | vm+= annotation )* -> ( 'final' )* ( $vm)? )
-            // .\\COMTOR.g:153:9: ( 'final' | vm+= annotation )*
+            // COMTOR.g:153:5: ( ( 'final' | vm+= annotation )* -> ( 'final' )* ( $vm)? )
+            // COMTOR.g:153:9: ( 'final' | vm+= annotation )*
             {
-            // .\\COMTOR.g:153:9: ( 'final' | vm+= annotation )*
+            // COMTOR.g:153:9: ( 'final' | vm+= annotation )*
             loop16:
             do {
                 int alt16=3;
@@ -1693,7 +1693,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // .\\COMTOR.g:153:13: 'final'
+            	    // COMTOR.g:153:13: 'final'
             	    {
             	    string_literal41=(Token)match(input,FINAL,FOLLOW_FINAL_in_variableModifiers884); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_FINAL.add(string_literal41);
@@ -1702,7 +1702,7 @@ public class COMTORParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // .\\COMTOR.g:154:13: vm+= annotation
+            	    // COMTOR.g:154:13: vm+= annotation
             	    {
             	    pushFollow(FOLLOW_annotation_in_variableModifiers900);
             	    vm=annotation();
@@ -1738,13 +1738,13 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 156:9: -> ( 'final' )* ( $vm)?
             {
-                // .\\COMTOR.g:156:12: ( 'final' )*
+                // COMTOR.g:156:12: ( 'final' )*
                 while ( stream_FINAL.hasNext() ) {
                     adaptor.addChild(root_0, stream_FINAL.nextNode());
 
                 }
                 stream_FINAL.reset();
-                // .\\COMTOR.g:156:21: ( $vm)?
+                // COMTOR.g:156:21: ( $vm)?
                 if ( stream_vm.hasNext() ) {
                     adaptor.addChild(root_0, stream_vm.nextTree());
 
@@ -1783,7 +1783,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeParameters"
-    // .\\COMTOR.g:160:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' -> ( typeParameter )+ ;
+    // COMTOR.g:160:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' -> ( typeParameter )+ ;
     public final COMTORParser.typeParameters_return typeParameters() throws RecognitionException {
         COMTORParser.typeParameters_return retval = new COMTORParser.typeParameters_return();
         retval.start = input.LT(1);
@@ -1807,8 +1807,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeParameter=new RewriteRuleSubtreeStream(adaptor,"rule typeParameter");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return retval; }
-            // .\\COMTOR.g:161:5: ( '<' typeParameter ( ',' typeParameter )* '>' -> ( typeParameter )+ )
-            // .\\COMTOR.g:161:9: '<' typeParameter ( ',' typeParameter )* '>'
+            // COMTOR.g:161:5: ( '<' typeParameter ( ',' typeParameter )* '>' -> ( typeParameter )+ )
+            // COMTOR.g:161:9: '<' typeParameter ( ',' typeParameter )* '>'
             {
             char_literal42=(Token)match(input,LT,FOLLOW_LT_in_typeParameters949); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LT.add(char_literal42);
@@ -1819,7 +1819,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_typeParameter.add(typeParameter43.getTree());
-            // .\\COMTOR.g:163:13: ( ',' typeParameter )*
+            // COMTOR.g:163:13: ( ',' typeParameter )*
             loop17:
             do {
                 int alt17=2;
@@ -1832,7 +1832,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt17) {
             	case 1 :
-            	    // .\\COMTOR.g:163:14: ',' typeParameter
+            	    // COMTOR.g:163:14: ',' typeParameter
             	    {
             	    char_literal44=(Token)match(input,COMMA,FOLLOW_COMMA_in_typeParameters978); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal44);
@@ -1912,7 +1912,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classDeclaration"
-    // .\\COMTOR.g:168:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
+    // COMTOR.g:168:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
     public final COMTORParser.classDeclaration_return classDeclaration() throws RecognitionException {
         COMTORParser.classDeclaration_return retval = new COMTORParser.classDeclaration_return();
         retval.start = input.LT(1);
@@ -1927,12 +1927,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return retval; }
-            // .\\COMTOR.g:169:5: ( normalClassDeclaration | enumDeclaration )
+            // COMTOR.g:169:5: ( normalClassDeclaration | enumDeclaration )
             int alt18=2;
             alt18 = dfa18.predict(input);
             switch (alt18) {
                 case 1 :
-                    // .\\COMTOR.g:169:9: normalClassDeclaration
+                    // COMTOR.g:169:9: normalClassDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1946,7 +1946,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:170:9: enumDeclaration
+                    // COMTOR.g:170:9: enumDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1988,7 +1988,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "normalClassDeclaration"
-    // .\\COMTOR.g:174:1: normalClassDeclaration : ( modifiers )? 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody -> ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? ) ;
+    // COMTOR.g:174:1: normalClassDeclaration : ( modifiers )? 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody -> ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? ) ;
     public final COMTORParser.normalClassDeclaration_return normalClassDeclaration() throws RecognitionException {
         COMTORParser.normalClassDeclaration_return retval = new COMTORParser.normalClassDeclaration_return();
         retval.start = input.LT(1);
@@ -2025,10 +2025,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeList=new RewriteRuleSubtreeStream(adaptor,"rule typeList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
-            // .\\COMTOR.g:175:5: ( ( modifiers )? 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody -> ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? ) )
-            // .\\COMTOR.g:175:9: ( modifiers )? 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
+            // COMTOR.g:175:5: ( ( modifiers )? 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody -> ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? ) )
+            // COMTOR.g:175:9: ( modifiers )? 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
             {
-            // .\\COMTOR.g:175:9: ( modifiers )?
+            // COMTOR.g:175:9: ( modifiers )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2037,7 +2037,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_normalClassDeclaration1068);
                     modifiers49=modifiers();
@@ -2057,7 +2057,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER51=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_normalClassDeclaration1074); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER51);
 
-            // .\\COMTOR.g:176:9: ( typeParameters )?
+            // COMTOR.g:176:9: ( typeParameters )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -2066,7 +2066,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt20) {
                 case 1 :
-                    // .\\COMTOR.g:176:10: typeParameters
+                    // COMTOR.g:176:10: typeParameters
                     {
                     pushFollow(FOLLOW_typeParameters_in_normalClassDeclaration1085);
                     typeParameters52=typeParameters();
@@ -2080,7 +2080,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:178:9: ( 'extends' type )?
+            // COMTOR.g:178:9: ( 'extends' type )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2089,7 +2089,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // .\\COMTOR.g:178:10: 'extends' type
+                    // COMTOR.g:178:10: 'extends' type
                     {
                     string_literal53=(Token)match(input,EXTENDS,FOLLOW_EXTENDS_in_normalClassDeclaration1107); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_EXTENDS.add(string_literal53);
@@ -2106,7 +2106,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:180:9: ( 'implements' typeList )?
+            // COMTOR.g:180:9: ( 'implements' typeList )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2115,7 +2115,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // .\\COMTOR.g:180:10: 'implements' typeList
+                    // COMTOR.g:180:10: 'implements' typeList
                     {
                     string_literal55=(Token)match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_normalClassDeclaration1131); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IMPLEMENTS.add(string_literal55);
@@ -2141,7 +2141,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, modifiers, EXTENDS, typeParameters, IDENTIFIER, typeList, classBody, IMPLEMENTS
+            // elements: EXTENDS, typeParameters, modifiers, IMPLEMENTS, type, IDENTIFIER, classBody, typeList
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2154,15 +2154,15 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 183:9: -> ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? )
             {
-                // .\\COMTOR.g:183:12: ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? )
+                // COMTOR.g:183:12: ^( NORMAL_CLASS IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' type ) )? ( ^( 'implements' typeList ) )? ( classBody )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(NORMAL_CLASS, "NORMAL_CLASS"), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:183:38: ( ^( ACCESS_MODIFIER modifiers ) )?
+                // COMTOR.g:183:38: ( ^( ACCESS_MODIFIER modifiers ) )?
                 if ( stream_modifiers.hasNext() ) {
-                    // .\\COMTOR.g:183:38: ^( ACCESS_MODIFIER modifiers )
+                    // COMTOR.g:183:38: ^( ACCESS_MODIFIER modifiers )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -2174,9 +2174,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_modifiers.reset();
-                // .\\COMTOR.g:183:68: ( ^( TYPE_PARAMS typeParameters ) )?
+                // COMTOR.g:183:68: ( ^( TYPE_PARAMS typeParameters ) )?
                 if ( stream_typeParameters.hasNext() ) {
-                    // .\\COMTOR.g:183:68: ^( TYPE_PARAMS typeParameters )
+                    // COMTOR.g:183:68: ^( TYPE_PARAMS typeParameters )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE_PARAMS, "TYPE_PARAMS"), root_2);
@@ -2188,9 +2188,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_typeParameters.reset();
-                // .\\COMTOR.g:183:99: ( ^( 'extends' type ) )?
-                if ( stream_type.hasNext()||stream_EXTENDS.hasNext() ) {
-                    // .\\COMTOR.g:183:99: ^( 'extends' type )
+                // COMTOR.g:183:99: ( ^( 'extends' type ) )?
+                if ( stream_EXTENDS.hasNext()||stream_type.hasNext() ) {
+                    // COMTOR.g:183:99: ^( 'extends' type )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot(stream_EXTENDS.nextNode(), root_2);
@@ -2201,11 +2201,11 @@ public class COMTORParser extends Parser {
                     }
 
                 }
-                stream_type.reset();
                 stream_EXTENDS.reset();
-                // .\\COMTOR.g:183:118: ( ^( 'implements' typeList ) )?
-                if ( stream_typeList.hasNext()||stream_IMPLEMENTS.hasNext() ) {
-                    // .\\COMTOR.g:183:118: ^( 'implements' typeList )
+                stream_type.reset();
+                // COMTOR.g:183:118: ( ^( 'implements' typeList ) )?
+                if ( stream_IMPLEMENTS.hasNext()||stream_typeList.hasNext() ) {
+                    // COMTOR.g:183:118: ^( 'implements' typeList )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot(stream_IMPLEMENTS.nextNode(), root_2);
@@ -2216,9 +2216,9 @@ public class COMTORParser extends Parser {
                     }
 
                 }
-                stream_typeList.reset();
                 stream_IMPLEMENTS.reset();
-                // .\\COMTOR.g:183:144: ( classBody )?
+                stream_typeList.reset();
+                // COMTOR.g:183:144: ( classBody )?
                 if ( stream_classBody.hasNext() ) {
                     adaptor.addChild(root_1, stream_classBody.nextTree());
 
@@ -2260,7 +2260,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeParameter"
-    // .\\COMTOR.g:188:1: typeParameter : IDENTIFIER ( 'extends' typeBound )? -> ^( IDENTIFIER ( ^( 'extends' typeBound ) )? ) ;
+    // COMTOR.g:188:1: typeParameter : IDENTIFIER ( 'extends' typeBound )? -> ^( IDENTIFIER ( ^( 'extends' typeBound ) )? ) ;
     public final COMTORParser.typeParameter_return typeParameter() throws RecognitionException {
         COMTORParser.typeParameter_return retval = new COMTORParser.typeParameter_return();
         retval.start = input.LT(1);
@@ -2279,13 +2279,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeBound=new RewriteRuleSubtreeStream(adaptor,"rule typeBound");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
-            // .\\COMTOR.g:189:5: ( IDENTIFIER ( 'extends' typeBound )? -> ^( IDENTIFIER ( ^( 'extends' typeBound ) )? ) )
-            // .\\COMTOR.g:189:9: IDENTIFIER ( 'extends' typeBound )?
+            // COMTOR.g:189:5: ( IDENTIFIER ( 'extends' typeBound )? -> ^( IDENTIFIER ( ^( 'extends' typeBound ) )? ) )
+            // COMTOR.g:189:9: IDENTIFIER ( 'extends' typeBound )?
             {
             IDENTIFIER58=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_typeParameter1235); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER58);
 
-            // .\\COMTOR.g:190:9: ( 'extends' typeBound )?
+            // COMTOR.g:190:9: ( 'extends' typeBound )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2294,7 +2294,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // .\\COMTOR.g:190:10: 'extends' typeBound
+                    // COMTOR.g:190:10: 'extends' typeBound
                     {
                     string_literal59=(Token)match(input,EXTENDS,FOLLOW_EXTENDS_in_typeParameter1246); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_EXTENDS.add(string_literal59);
@@ -2314,7 +2314,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: typeBound, IDENTIFIER, EXTENDS
+            // elements: typeBound, EXTENDS, IDENTIFIER
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2327,14 +2327,14 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 192:9: -> ^( IDENTIFIER ( ^( 'extends' typeBound ) )? )
             {
-                // .\\COMTOR.g:192:12: ^( IDENTIFIER ( ^( 'extends' typeBound ) )? )
+                // COMTOR.g:192:12: ^( IDENTIFIER ( ^( 'extends' typeBound ) )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_IDENTIFIER.nextNode(), root_1);
 
-                // .\\COMTOR.g:192:25: ( ^( 'extends' typeBound ) )?
+                // COMTOR.g:192:25: ( ^( 'extends' typeBound ) )?
                 if ( stream_typeBound.hasNext()||stream_EXTENDS.hasNext() ) {
-                    // .\\COMTOR.g:192:25: ^( 'extends' typeBound )
+                    // COMTOR.g:192:25: ^( 'extends' typeBound )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot(stream_EXTENDS.nextNode(), root_2);
@@ -2383,7 +2383,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeBound"
-    // .\\COMTOR.g:196:1: typeBound : type ( '&' type )* ;
+    // COMTOR.g:196:1: typeBound : type ( '&' type )* ;
     public final COMTORParser.typeBound_return typeBound() throws RecognitionException {
         COMTORParser.typeBound_return retval = new COMTORParser.typeBound_return();
         retval.start = input.LT(1);
@@ -2400,8 +2400,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return retval; }
-            // .\\COMTOR.g:197:5: ( type ( '&' type )* )
-            // .\\COMTOR.g:197:9: type ( '&' type )*
+            // COMTOR.g:197:5: ( type ( '&' type )* )
+            // COMTOR.g:197:9: type ( '&' type )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2411,7 +2411,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, type61.getTree());
-            // .\\COMTOR.g:198:9: ( '&' type )*
+            // COMTOR.g:198:9: ( '&' type )*
             loop24:
             do {
                 int alt24=2;
@@ -2424,7 +2424,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt24) {
             	case 1 :
-            	    // .\\COMTOR.g:198:10: '&' type
+            	    // COMTOR.g:198:10: '&' type
             	    {
             	    char_literal62=(Token)match(input,AMP,FOLLOW_AMP_in_typeBound1312); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2476,7 +2476,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "enumDeclaration"
-    // .\\COMTOR.g:203:1: enumDeclaration : ( modifiers )? ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody -> ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) ) ;
+    // COMTOR.g:203:1: enumDeclaration : ( modifiers )? ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody -> ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) ) ;
     public final COMTORParser.enumDeclaration_return enumDeclaration() throws RecognitionException {
         COMTORParser.enumDeclaration_return retval = new COMTORParser.enumDeclaration_return();
         retval.start = input.LT(1);
@@ -2504,10 +2504,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeList=new RewriteRuleSubtreeStream(adaptor,"rule typeList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
-            // .\\COMTOR.g:204:5: ( ( modifiers )? ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody -> ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) ) )
-            // .\\COMTOR.g:204:9: ( modifiers )? ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody
+            // COMTOR.g:204:5: ( ( modifiers )? ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody -> ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) ) )
+            // COMTOR.g:204:9: ( modifiers )? ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody
             {
-            // .\\COMTOR.g:204:9: ( modifiers )?
+            // COMTOR.g:204:9: ( modifiers )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -2516,7 +2516,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt25) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_enumDeclaration1346);
                     modifiers64=modifiers();
@@ -2530,8 +2530,8 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:205:9: ( 'enum' )
-            // .\\COMTOR.g:205:10: 'enum'
+            // COMTOR.g:205:9: ( 'enum' )
+            // COMTOR.g:205:10: 'enum'
             {
             string_literal65=(Token)match(input,ENUM,FOLLOW_ENUM_in_enumDeclaration1359); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_ENUM.add(string_literal65);
@@ -2542,7 +2542,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER66=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_enumDeclaration1380); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER66);
 
-            // .\\COMTOR.g:208:9: ( 'implements' typeList )?
+            // COMTOR.g:208:9: ( 'implements' typeList )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -2551,7 +2551,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt26) {
                 case 1 :
-                    // .\\COMTOR.g:208:10: 'implements' typeList
+                    // COMTOR.g:208:10: 'implements' typeList
                     {
                     string_literal67=(Token)match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_enumDeclaration1391); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IMPLEMENTS.add(string_literal67);
@@ -2577,7 +2577,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: IMPLEMENTS, typeList, IDENTIFIER, ENUM, enumBody, modifiers
+            // elements: IMPLEMENTS, typeList, ENUM, IDENTIFIER, enumBody, modifiers
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2590,15 +2590,15 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 211:9: -> ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) )
             {
-                // .\\COMTOR.g:211:12: ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) )
+                // COMTOR.g:211:12: ^( 'enum' IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( 'implements' typeList ) )? ^( BODY enumBody ) )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_ENUM.nextNode(), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:211:32: ( ^( ACCESS_MODIFIER modifiers ) )?
+                // COMTOR.g:211:32: ( ^( ACCESS_MODIFIER modifiers ) )?
                 if ( stream_modifiers.hasNext() ) {
-                    // .\\COMTOR.g:211:32: ^( ACCESS_MODIFIER modifiers )
+                    // COMTOR.g:211:32: ^( ACCESS_MODIFIER modifiers )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -2610,9 +2610,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_modifiers.reset();
-                // .\\COMTOR.g:211:62: ( ^( 'implements' typeList ) )?
+                // COMTOR.g:211:62: ( ^( 'implements' typeList ) )?
                 if ( stream_IMPLEMENTS.hasNext()||stream_typeList.hasNext() ) {
-                    // .\\COMTOR.g:211:62: ^( 'implements' typeList )
+                    // COMTOR.g:211:62: ^( 'implements' typeList )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot(stream_IMPLEMENTS.nextNode(), root_2);
@@ -2625,7 +2625,7 @@ public class COMTORParser extends Parser {
                 }
                 stream_IMPLEMENTS.reset();
                 stream_typeList.reset();
-                // .\\COMTOR.g:211:88: ^( BODY enumBody )
+                // COMTOR.g:211:88: ^( BODY enumBody )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -2670,7 +2670,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "enumBody"
-    // .\\COMTOR.g:215:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' -> ( enumConstants )? ( enumBodyDeclarations )? ;
+    // COMTOR.g:215:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' -> ( enumConstants )? ( enumBodyDeclarations )? ;
     public final COMTORParser.enumBody_return enumBody() throws RecognitionException {
         COMTORParser.enumBody_return retval = new COMTORParser.enumBody_return();
         retval.start = input.LT(1);
@@ -2695,13 +2695,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_enumConstants=new RewriteRuleSubtreeStream(adaptor,"rule enumConstants");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return retval; }
-            // .\\COMTOR.g:216:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' -> ( enumConstants )? ( enumBodyDeclarations )? )
-            // .\\COMTOR.g:216:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
+            // COMTOR.g:216:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' -> ( enumConstants )? ( enumBodyDeclarations )? )
+            // COMTOR.g:216:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
             {
             char_literal70=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_enumBody1475); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACE.add(char_literal70);
 
-            // .\\COMTOR.g:217:9: ( enumConstants )?
+            // COMTOR.g:217:9: ( enumConstants )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -2710,7 +2710,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt27) {
                 case 1 :
-                    // .\\COMTOR.g:217:10: enumConstants
+                    // COMTOR.g:217:10: enumConstants
                     {
                     pushFollow(FOLLOW_enumConstants_in_enumBody1486);
                     enumConstants71=enumConstants();
@@ -2724,7 +2724,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:219:9: ( ',' )?
+            // COMTOR.g:219:9: ( ',' )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -2733,7 +2733,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: ','
+                    // COMTOR.g:0:0: ','
                     {
                     char_literal72=(Token)match(input,COMMA,FOLLOW_COMMA_in_enumBody1508); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_COMMA.add(char_literal72);
@@ -2744,7 +2744,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:220:9: ( enumBodyDeclarations )?
+            // COMTOR.g:220:9: ( enumBodyDeclarations )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -2753,7 +2753,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt29) {
                 case 1 :
-                    // .\\COMTOR.g:220:10: enumBodyDeclarations
+                    // COMTOR.g:220:10: enumBodyDeclarations
                     {
                     pushFollow(FOLLOW_enumBodyDeclarations_in_enumBody1521);
                     enumBodyDeclarations73=enumBodyDeclarations();
@@ -2786,13 +2786,13 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 223:9: -> ( enumConstants )? ( enumBodyDeclarations )?
             {
-                // .\\COMTOR.g:223:12: ( enumConstants )?
+                // COMTOR.g:223:12: ( enumConstants )?
                 if ( stream_enumConstants.hasNext() ) {
                     adaptor.addChild(root_0, stream_enumConstants.nextTree());
 
                 }
                 stream_enumConstants.reset();
-                // .\\COMTOR.g:223:27: ( enumBodyDeclarations )?
+                // COMTOR.g:223:27: ( enumBodyDeclarations )?
                 if ( stream_enumBodyDeclarations.hasNext() ) {
                     adaptor.addChild(root_0, stream_enumBodyDeclarations.nextTree());
 
@@ -2831,7 +2831,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "enumConstants"
-    // .\\COMTOR.g:226:1: enumConstants : enumConstant ( ',' enumConstant )* ;
+    // COMTOR.g:226:1: enumConstants : enumConstant ( ',' enumConstant )* ;
     public final COMTORParser.enumConstants_return enumConstants() throws RecognitionException {
         COMTORParser.enumConstants_return retval = new COMTORParser.enumConstants_return();
         retval.start = input.LT(1);
@@ -2848,8 +2848,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return retval; }
-            // .\\COMTOR.g:227:5: ( enumConstant ( ',' enumConstant )* )
-            // .\\COMTOR.g:227:9: enumConstant ( ',' enumConstant )*
+            // COMTOR.g:227:5: ( enumConstant ( ',' enumConstant )* )
+            // COMTOR.g:227:9: enumConstant ( ',' enumConstant )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2859,7 +2859,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, enumConstant75.getTree());
-            // .\\COMTOR.g:228:9: ( ',' enumConstant )*
+            // COMTOR.g:228:9: ( ',' enumConstant )*
             loop30:
             do {
                 int alt30=2;
@@ -2878,7 +2878,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt30) {
             	case 1 :
-            	    // .\\COMTOR.g:228:10: ',' enumConstant
+            	    // COMTOR.g:228:10: ',' enumConstant
             	    {
             	    char_literal76=(Token)match(input,COMMA,FOLLOW_COMMA_in_enumConstants1590); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2930,7 +2930,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "enumConstant"
-    // .\\COMTOR.g:232:1: enumConstant : ( annotations )? IDENTIFIER ( arguments )? ( classBody )? -> IDENTIFIER ( annotations )? ( arguments )? ( ^( BODY classBody ) )? ;
+    // COMTOR.g:232:1: enumConstant : ( annotations )? IDENTIFIER ( arguments )? ( classBody )? -> IDENTIFIER ( annotations )? ( arguments )? ( ^( BODY classBody ) )? ;
     public final COMTORParser.enumConstant_return enumConstant() throws RecognitionException {
         COMTORParser.enumConstant_return retval = new COMTORParser.enumConstant_return();
         retval.start = input.LT(1);
@@ -2952,10 +2952,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_classBody=new RewriteRuleSubtreeStream(adaptor,"rule classBody");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return retval; }
-            // .\\COMTOR.g:237:5: ( ( annotations )? IDENTIFIER ( arguments )? ( classBody )? -> IDENTIFIER ( annotations )? ( arguments )? ( ^( BODY classBody ) )? )
-            // .\\COMTOR.g:237:9: ( annotations )? IDENTIFIER ( arguments )? ( classBody )?
+            // COMTOR.g:237:5: ( ( annotations )? IDENTIFIER ( arguments )? ( classBody )? -> IDENTIFIER ( annotations )? ( arguments )? ( ^( BODY classBody ) )? )
+            // COMTOR.g:237:9: ( annotations )? IDENTIFIER ( arguments )? ( classBody )?
             {
-            // .\\COMTOR.g:237:9: ( annotations )?
+            // COMTOR.g:237:9: ( annotations )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -2964,7 +2964,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt31) {
                 case 1 :
-                    // .\\COMTOR.g:237:10: annotations
+                    // COMTOR.g:237:10: annotations
                     {
                     pushFollow(FOLLOW_annotations_in_enumConstant1626);
                     annotations78=annotations();
@@ -2981,7 +2981,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER79=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_enumConstant1630); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER79);
 
-            // .\\COMTOR.g:237:35: ( arguments )?
+            // COMTOR.g:237:35: ( arguments )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -2990,7 +2990,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt32) {
                 case 1 :
-                    // .\\COMTOR.g:237:36: arguments
+                    // COMTOR.g:237:36: arguments
                     {
                     pushFollow(FOLLOW_arguments_in_enumConstant1633);
                     arguments80=arguments();
@@ -3004,7 +3004,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:237:48: ( classBody )?
+            // COMTOR.g:237:48: ( classBody )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -3013,7 +3013,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt33) {
                 case 1 :
-                    // .\\COMTOR.g:237:49: classBody
+                    // COMTOR.g:237:49: classBody
                     {
                     pushFollow(FOLLOW_classBody_in_enumConstant1638);
                     classBody81=classBody();
@@ -3030,7 +3030,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: classBody, arguments, annotations, IDENTIFIER
+            // elements: arguments, classBody, annotations, IDENTIFIER
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3044,21 +3044,21 @@ public class COMTORParser extends Parser {
             // 238:9: -> IDENTIFIER ( annotations )? ( arguments )? ( ^( BODY classBody ) )?
             {
                 adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:238:23: ( annotations )?
+                // COMTOR.g:238:23: ( annotations )?
                 if ( stream_annotations.hasNext() ) {
                     adaptor.addChild(root_0, stream_annotations.nextTree());
 
                 }
                 stream_annotations.reset();
-                // .\\COMTOR.g:238:36: ( arguments )?
+                // COMTOR.g:238:36: ( arguments )?
                 if ( stream_arguments.hasNext() ) {
                     adaptor.addChild(root_0, stream_arguments.nextTree());
 
                 }
                 stream_arguments.reset();
-                // .\\COMTOR.g:238:47: ( ^( BODY classBody ) )?
+                // COMTOR.g:238:47: ( ^( BODY classBody ) )?
                 if ( stream_classBody.hasNext() ) {
-                    // .\\COMTOR.g:238:47: ^( BODY classBody )
+                    // COMTOR.g:238:47: ^( BODY classBody )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_1);
@@ -3103,7 +3103,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "enumBodyDeclarations"
-    // .\\COMTOR.g:243:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* -> ( ^( BODY classBodyDeclaration ) )? ;
+    // COMTOR.g:243:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* -> ( ^( BODY classBodyDeclaration ) )? ;
     public final COMTORParser.enumBodyDeclarations_return enumBodyDeclarations() throws RecognitionException {
         COMTORParser.enumBodyDeclarations_return retval = new COMTORParser.enumBodyDeclarations_return();
         retval.start = input.LT(1);
@@ -3119,13 +3119,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_classBodyDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule classBodyDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return retval; }
-            // .\\COMTOR.g:244:5: ( ';' ( classBodyDeclaration )* -> ( ^( BODY classBodyDeclaration ) )? )
-            // .\\COMTOR.g:244:9: ';' ( classBodyDeclaration )*
+            // COMTOR.g:244:5: ( ';' ( classBodyDeclaration )* -> ( ^( BODY classBodyDeclaration ) )? )
+            // COMTOR.g:244:9: ';' ( classBodyDeclaration )*
             {
             char_literal82=(Token)match(input,SEMI,FOLLOW_SEMI_in_enumBodyDeclarations1695); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(char_literal82);
 
-            // .\\COMTOR.g:245:9: ( classBodyDeclaration )*
+            // COMTOR.g:245:9: ( classBodyDeclaration )*
             loop34:
             do {
                 int alt34=2;
@@ -3138,7 +3138,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt34) {
             	case 1 :
-            	    // .\\COMTOR.g:245:10: classBodyDeclaration
+            	    // COMTOR.g:245:10: classBodyDeclaration
             	    {
             	    pushFollow(FOLLOW_classBodyDeclaration_in_enumBodyDeclarations1707);
             	    classBodyDeclaration83=classBodyDeclaration();
@@ -3171,9 +3171,9 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 246:9: -> ( ^( BODY classBodyDeclaration ) )?
             {
-                // .\\COMTOR.g:246:12: ( ^( BODY classBodyDeclaration ) )?
+                // COMTOR.g:246:12: ( ^( BODY classBodyDeclaration ) )?
                 if ( stream_classBodyDeclaration.hasNext() ) {
-                    // .\\COMTOR.g:246:12: ^( BODY classBodyDeclaration )
+                    // COMTOR.g:246:12: ^( BODY classBodyDeclaration )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_1);
@@ -3218,7 +3218,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "interfaceDeclaration"
-    // .\\COMTOR.g:249:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
+    // COMTOR.g:249:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
     public final COMTORParser.interfaceDeclaration_return interfaceDeclaration() throws RecognitionException {
         COMTORParser.interfaceDeclaration_return retval = new COMTORParser.interfaceDeclaration_return();
         retval.start = input.LT(1);
@@ -3233,12 +3233,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return retval; }
-            // .\\COMTOR.g:250:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
+            // COMTOR.g:250:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
             int alt35=2;
             alt35 = dfa35.predict(input);
             switch (alt35) {
                 case 1 :
-                    // .\\COMTOR.g:250:9: normalInterfaceDeclaration
+                    // COMTOR.g:250:9: normalInterfaceDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3252,7 +3252,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:251:9: annotationTypeDeclaration
+                    // COMTOR.g:251:9: annotationTypeDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -3294,7 +3294,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "normalInterfaceDeclaration"
-    // .\\COMTOR.g:254:1: normalInterfaceDeclaration : ( modifiers )? 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody -> ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) ) ;
+    // COMTOR.g:254:1: normalInterfaceDeclaration : ( modifiers )? 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody -> ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) ) ;
     public final COMTORParser.normalInterfaceDeclaration_return normalInterfaceDeclaration() throws RecognitionException {
         COMTORParser.normalInterfaceDeclaration_return retval = new COMTORParser.normalInterfaceDeclaration_return();
         retval.start = input.LT(1);
@@ -3325,10 +3325,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeList=new RewriteRuleSubtreeStream(adaptor,"rule typeList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return retval; }
-            // .\\COMTOR.g:255:5: ( ( modifiers )? 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody -> ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) ) )
-            // .\\COMTOR.g:255:9: ( modifiers )? 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody
+            // COMTOR.g:255:5: ( ( modifiers )? 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody -> ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) ) )
+            // COMTOR.g:255:9: ( modifiers )? 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody
             {
-            // .\\COMTOR.g:255:9: ( modifiers )?
+            // COMTOR.g:255:9: ( modifiers )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -3337,7 +3337,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt36) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_normalInterfaceDeclaration1780);
                     modifiers86=modifiers();
@@ -3357,7 +3357,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER88=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_normalInterfaceDeclaration1785); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER88);
 
-            // .\\COMTOR.g:256:9: ( typeParameters )?
+            // COMTOR.g:256:9: ( typeParameters )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -3366,7 +3366,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt37) {
                 case 1 :
-                    // .\\COMTOR.g:256:10: typeParameters
+                    // COMTOR.g:256:10: typeParameters
                     {
                     pushFollow(FOLLOW_typeParameters_in_normalInterfaceDeclaration1796);
                     typeParameters89=typeParameters();
@@ -3380,7 +3380,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:258:9: ( 'extends' typeList )?
+            // COMTOR.g:258:9: ( 'extends' typeList )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -3389,7 +3389,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt38) {
                 case 1 :
-                    // .\\COMTOR.g:258:10: 'extends' typeList
+                    // COMTOR.g:258:10: 'extends' typeList
                     {
                     string_literal90=(Token)match(input,EXTENDS,FOLLOW_EXTENDS_in_normalInterfaceDeclaration1818); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_EXTENDS.add(string_literal90);
@@ -3415,7 +3415,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: typeList, EXTENDS, interfaceBody, modifiers, IDENTIFIER, typeParameters
+            // elements: typeParameters, interfaceBody, IDENTIFIER, EXTENDS, modifiers, typeList
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3428,15 +3428,15 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 261:9: -> ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) )
             {
-                // .\\COMTOR.g:261:12: ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) )
+                // COMTOR.g:261:12: ^( INTERFACE IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( 'extends' typeList ) )? ^( BODY interfaceBody ) )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(INTERFACE, "INTERFACE"), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:261:35: ( ^( ACCESS_MODIFIER modifiers ) )?
+                // COMTOR.g:261:35: ( ^( ACCESS_MODIFIER modifiers ) )?
                 if ( stream_modifiers.hasNext() ) {
-                    // .\\COMTOR.g:261:35: ^( ACCESS_MODIFIER modifiers )
+                    // COMTOR.g:261:35: ^( ACCESS_MODIFIER modifiers )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -3448,9 +3448,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_modifiers.reset();
-                // .\\COMTOR.g:261:65: ( ^( TYPE_PARAMS typeParameters ) )?
+                // COMTOR.g:261:65: ( ^( TYPE_PARAMS typeParameters ) )?
                 if ( stream_typeParameters.hasNext() ) {
-                    // .\\COMTOR.g:261:65: ^( TYPE_PARAMS typeParameters )
+                    // COMTOR.g:261:65: ^( TYPE_PARAMS typeParameters )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE_PARAMS, "TYPE_PARAMS"), root_2);
@@ -3462,9 +3462,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_typeParameters.reset();
-                // .\\COMTOR.g:261:96: ( ^( 'extends' typeList ) )?
-                if ( stream_typeList.hasNext()||stream_EXTENDS.hasNext() ) {
-                    // .\\COMTOR.g:261:96: ^( 'extends' typeList )
+                // COMTOR.g:261:96: ( ^( 'extends' typeList ) )?
+                if ( stream_EXTENDS.hasNext()||stream_typeList.hasNext() ) {
+                    // COMTOR.g:261:96: ^( 'extends' typeList )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot(stream_EXTENDS.nextNode(), root_2);
@@ -3475,9 +3475,9 @@ public class COMTORParser extends Parser {
                     }
 
                 }
-                stream_typeList.reset();
                 stream_EXTENDS.reset();
-                // .\\COMTOR.g:261:119: ^( BODY interfaceBody )
+                stream_typeList.reset();
+                // COMTOR.g:261:119: ^( BODY interfaceBody )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -3522,7 +3522,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeList"
-    // .\\COMTOR.g:264:1: typeList : type ( ',' type )* ;
+    // COMTOR.g:264:1: typeList : type ( ',' type )* ;
     public final COMTORParser.typeList_return typeList() throws RecognitionException {
         COMTORParser.typeList_return retval = new COMTORParser.typeList_return();
         retval.start = input.LT(1);
@@ -3539,8 +3539,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return retval; }
-            // .\\COMTOR.g:265:5: ( type ( ',' type )* )
-            // .\\COMTOR.g:265:9: type ( ',' type )*
+            // COMTOR.g:265:5: ( type ( ',' type )* )
+            // COMTOR.g:265:9: type ( ',' type )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -3550,7 +3550,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, type93.getTree());
-            // .\\COMTOR.g:266:9: ( ',' type )*
+            // COMTOR.g:266:9: ( ',' type )*
             loop39:
             do {
                 int alt39=2;
@@ -3563,7 +3563,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt39) {
             	case 1 :
-            	    // .\\COMTOR.g:266:10: ',' type
+            	    // COMTOR.g:266:10: ',' type
             	    {
             	    char_literal94=(Token)match(input,COMMA,FOLLOW_COMMA_in_typeList1915); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -3615,7 +3615,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classBody"
-    // .\\COMTOR.g:270:1: classBody : '{' ( classBodyDeclaration )* '}' -> ( classBodyDeclaration )* ;
+    // COMTOR.g:270:1: classBody : '{' ( classBodyDeclaration )* '}' -> ( classBodyDeclaration )* ;
     public final COMTORParser.classBody_return classBody() throws RecognitionException {
         COMTORParser.classBody_return retval = new COMTORParser.classBody_return();
         retval.start = input.LT(1);
@@ -3634,13 +3634,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_classBodyDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule classBodyDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return retval; }
-            // .\\COMTOR.g:271:5: ( '{' ( classBodyDeclaration )* '}' -> ( classBodyDeclaration )* )
-            // .\\COMTOR.g:271:9: '{' ( classBodyDeclaration )* '}'
+            // COMTOR.g:271:5: ( '{' ( classBodyDeclaration )* '}' -> ( classBodyDeclaration )* )
+            // COMTOR.g:271:9: '{' ( classBodyDeclaration )* '}'
             {
             char_literal96=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_classBody1948); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACE.add(char_literal96);
 
-            // .\\COMTOR.g:272:9: ( classBodyDeclaration )*
+            // COMTOR.g:272:9: ( classBodyDeclaration )*
             loop40:
             do {
                 int alt40=2;
@@ -3653,7 +3653,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt40) {
             	case 1 :
-            	    // .\\COMTOR.g:272:10: classBodyDeclaration
+            	    // COMTOR.g:272:10: classBodyDeclaration
             	    {
             	    pushFollow(FOLLOW_classBodyDeclaration_in_classBody1960);
             	    classBodyDeclaration97=classBodyDeclaration();
@@ -3689,7 +3689,7 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 275:9: -> ( classBodyDeclaration )*
             {
-                // .\\COMTOR.g:275:12: ( classBodyDeclaration )*
+                // COMTOR.g:275:12: ( classBodyDeclaration )*
                 while ( stream_classBodyDeclaration.hasNext() ) {
                     adaptor.addChild(root_0, stream_classBodyDeclaration.nextTree());
 
@@ -3728,7 +3728,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "interfaceBody"
-    // .\\COMTOR.g:278:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
+    // COMTOR.g:278:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
     public final COMTORParser.interfaceBody_return interfaceBody() throws RecognitionException {
         COMTORParser.interfaceBody_return retval = new COMTORParser.interfaceBody_return();
         retval.start = input.LT(1);
@@ -3745,8 +3745,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return retval; }
-            // .\\COMTOR.g:279:5: ( '{' ( interfaceBodyDeclaration )* '}' )
-            // .\\COMTOR.g:279:9: '{' ( interfaceBodyDeclaration )* '}'
+            // COMTOR.g:279:5: ( '{' ( interfaceBodyDeclaration )* '}' )
+            // COMTOR.g:279:9: '{' ( interfaceBodyDeclaration )* '}'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -3755,7 +3755,7 @@ public class COMTORParser extends Parser {
             char_literal99_tree = (CommonTree)adaptor.create(char_literal99);
             adaptor.addChild(root_0, char_literal99_tree);
             }
-            // .\\COMTOR.g:280:9: ( interfaceBodyDeclaration )*
+            // COMTOR.g:280:9: ( interfaceBodyDeclaration )*
             loop41:
             do {
                 int alt41=2;
@@ -3768,7 +3768,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt41) {
             	case 1 :
-            	    // .\\COMTOR.g:280:10: interfaceBodyDeclaration
+            	    // COMTOR.g:280:10: interfaceBodyDeclaration
             	    {
             	    pushFollow(FOLLOW_interfaceBodyDeclaration_in_interfaceBody2027);
             	    interfaceBodyDeclaration100=interfaceBodyDeclaration();
@@ -3820,7 +3820,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classBodyDeclaration"
-    // .\\COMTOR.g:286:1: classBodyDeclaration : ( ';' -> BODY | ( 'static' )? block -> ( 'static' )? block | memberDecl );
+    // COMTOR.g:286:1: classBodyDeclaration : ( ';' -> BODY | ( 'static' )? block -> ( 'static' )? block | memberDecl );
     public final COMTORParser.classBodyDeclaration_return classBodyDeclaration() throws RecognitionException {
         COMTORParser.classBodyDeclaration_return retval = new COMTORParser.classBodyDeclaration_return();
         retval.start = input.LT(1);
@@ -3841,7 +3841,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return retval; }
-            // .\\COMTOR.g:287:5: ( ';' -> BODY | ( 'static' )? block -> ( 'static' )? block | memberDecl )
+            // COMTOR.g:287:5: ( ';' -> BODY | ( 'static' )? block -> ( 'static' )? block | memberDecl )
             int alt43=3;
             switch ( input.LA(1) ) {
             case SEMI:
@@ -3912,7 +3912,7 @@ public class COMTORParser extends Parser {
 
             switch (alt43) {
                 case 1 :
-                    // .\\COMTOR.g:287:9: ';'
+                    // COMTOR.g:287:9: ';'
                     {
                     char_literal102=(Token)match(input,SEMI,FOLLOW_SEMI_in_classBodyDeclaration2078); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(char_literal102);
@@ -3941,9 +3941,9 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:288:9: ( 'static' )? block
+                    // COMTOR.g:288:9: ( 'static' )? block
                     {
-                    // .\\COMTOR.g:288:9: ( 'static' )?
+                    // COMTOR.g:288:9: ( 'static' )?
                     int alt42=2;
                     int LA42_0 = input.LA(1);
 
@@ -3952,7 +3952,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt42) {
                         case 1 :
-                            // .\\COMTOR.g:288:10: 'static'
+                            // COMTOR.g:288:10: 'static'
                             {
                             string_literal103=(Token)match(input,STATIC,FOLLOW_STATIC_in_classBodyDeclaration2093); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_STATIC.add(string_literal103);
@@ -3985,7 +3985,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 291:9: -> ( 'static' )? block
                     {
-                        // .\\COMTOR.g:291:12: ( 'static' )?
+                        // COMTOR.g:291:12: ( 'static' )?
                         if ( stream_STATIC.hasNext() ) {
                             adaptor.addChild(root_0, stream_STATIC.nextNode());
 
@@ -3999,7 +3999,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:292:9: memberDecl
+                    // COMTOR.g:292:9: memberDecl
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4041,7 +4041,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "memberDecl"
-    // .\\COMTOR.g:295:1: memberDecl : ( fieldDeclaration | methodDeclaration | classDeclaration | interfaceDeclaration );
+    // COMTOR.g:295:1: memberDecl : ( fieldDeclaration | methodDeclaration | classDeclaration | interfaceDeclaration );
     public final COMTORParser.memberDecl_return memberDecl() throws RecognitionException {
         COMTORParser.memberDecl_return retval = new COMTORParser.memberDecl_return();
         retval.start = input.LT(1);
@@ -4060,12 +4060,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return retval; }
-            // .\\COMTOR.g:296:5: ( fieldDeclaration | methodDeclaration | classDeclaration | interfaceDeclaration )
+            // COMTOR.g:296:5: ( fieldDeclaration | methodDeclaration | classDeclaration | interfaceDeclaration )
             int alt44=4;
             alt44 = dfa44.predict(input);
             switch (alt44) {
                 case 1 :
-                    // .\\COMTOR.g:296:10: fieldDeclaration
+                    // COMTOR.g:296:10: fieldDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4079,7 +4079,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:297:10: methodDeclaration
+                    // COMTOR.g:297:10: methodDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4093,7 +4093,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:298:10: classDeclaration
+                    // COMTOR.g:298:10: classDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4107,7 +4107,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:299:10: interfaceDeclaration
+                    // COMTOR.g:299:10: interfaceDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4149,7 +4149,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "methodDeclaration"
-    // .\\COMTOR.g:308:1: methodDeclaration : ( ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' -> ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) ) | ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) | modifiers ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) );
+    // COMTOR.g:308:1: methodDeclaration : ( ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' -> ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) ) | ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) | modifiers ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) );
     public final COMTORParser.methodDeclaration_return methodDeclaration() throws RecognitionException {
         COMTORParser.methodDeclaration_return retval = new COMTORParser.methodDeclaration_return();
         retval.start = input.LT(1);
@@ -4237,14 +4237,14 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_qualifiedNameList=new RewriteRuleSubtreeStream(adaptor,"rule qualifiedNameList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return retval; }
-            // .\\COMTOR.g:309:5: ( ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' -> ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) ) | ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) | modifiers ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) )
+            // COMTOR.g:309:5: ( ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' -> ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) ) | ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) | modifiers ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) ) )
             int alt60=3;
             alt60 = dfa60.predict(input);
             switch (alt60) {
                 case 1 :
-                    // .\\COMTOR.g:311:10: ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
+                    // COMTOR.g:311:10: ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
                     {
-                    // .\\COMTOR.g:311:10: ( modifiers )?
+                    // COMTOR.g:311:10: ( modifiers )?
                     int alt45=2;
                     int LA45_0 = input.LA(1);
 
@@ -4253,7 +4253,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt45) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: modifiers
+                            // COMTOR.g:0:0: modifiers
                             {
                             pushFollow(FOLLOW_modifiers_in_methodDeclaration2241);
                             modifiers110=modifiers();
@@ -4267,7 +4267,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:312:9: ( typeParameters )?
+                    // COMTOR.g:312:9: ( typeParameters )?
                     int alt46=2;
                     int LA46_0 = input.LA(1);
 
@@ -4276,7 +4276,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt46) {
                         case 1 :
-                            // .\\COMTOR.g:312:10: typeParameters
+                            // COMTOR.g:312:10: typeParameters
                             {
                             pushFollow(FOLLOW_typeParameters_in_methodDeclaration2253);
                             typeParameters111=typeParameters();
@@ -4299,7 +4299,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_formalParameters.add(formalParameters113.getTree());
-                    // .\\COMTOR.g:316:9: ( 'throws' qualifiedNameList )?
+                    // COMTOR.g:316:9: ( 'throws' qualifiedNameList )?
                     int alt47=2;
                     int LA47_0 = input.LA(1);
 
@@ -4308,7 +4308,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt47) {
                         case 1 :
-                            // .\\COMTOR.g:316:10: 'throws' qualifiedNameList
+                            // COMTOR.g:316:10: 'throws' qualifiedNameList
                             {
                             string_literal114=(Token)match(input,THROWS,FOLLOW_THROWS_in_methodDeclaration2295); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_THROWS.add(string_literal114);
@@ -4328,12 +4328,12 @@ public class COMTORParser extends Parser {
                     char_literal116=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_methodDeclaration2318); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LBRACE.add(char_literal116);
 
-                    // .\\COMTOR.g:319:9: ( explicitConstructorInvocation )?
+                    // COMTOR.g:319:9: ( explicitConstructorInvocation )?
                     int alt48=2;
                     alt48 = dfa48.predict(input);
                     switch (alt48) {
                         case 1 :
-                            // .\\COMTOR.g:319:10: explicitConstructorInvocation
+                            // COMTOR.g:319:10: explicitConstructorInvocation
                             {
                             pushFollow(FOLLOW_explicitConstructorInvocation_in_methodDeclaration2330);
                             explicitConstructorInvocation117=explicitConstructorInvocation();
@@ -4347,7 +4347,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:321:9: ( blockStatement )*
+                    // COMTOR.g:321:9: ( blockStatement )*
                     loop49:
                     do {
                         int alt49=2;
@@ -4360,7 +4360,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt49) {
                     	case 1 :
-                    	    // .\\COMTOR.g:321:10: blockStatement
+                    	    // COMTOR.g:321:10: blockStatement
                     	    {
                     	    pushFollow(FOLLOW_blockStatement_in_methodDeclaration2352);
                     	    blockStatement118=blockStatement();
@@ -4383,7 +4383,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: typeParameters, explicitConstructorInvocation, IDENTIFIER, modifiers, formalParameters, qualifiedNameList, blockStatement
+                    // elements: blockStatement, typeParameters, qualifiedNameList, modifiers, explicitConstructorInvocation, IDENTIFIER, formalParameters
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4396,15 +4396,15 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 324:9: -> ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) )
                     {
-                        // .\\COMTOR.g:324:12: ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) )
+                        // COMTOR.g:324:12: ^( CONSTRUCTOR IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* ) )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONSTRUCTOR, "CONSTRUCTOR"), root_1);
 
                         adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                        // .\\COMTOR.g:324:37: ( ^( ACCESS_MODIFIER modifiers ) )?
+                        // COMTOR.g:324:37: ( ^( ACCESS_MODIFIER modifiers ) )?
                         if ( stream_modifiers.hasNext() ) {
-                            // .\\COMTOR.g:324:37: ^( ACCESS_MODIFIER modifiers )
+                            // COMTOR.g:324:37: ^( ACCESS_MODIFIER modifiers )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -4416,9 +4416,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_modifiers.reset();
-                        // .\\COMTOR.g:324:67: ( ^( TYPE_PARAMS typeParameters ) )?
+                        // COMTOR.g:324:67: ( ^( TYPE_PARAMS typeParameters ) )?
                         if ( stream_typeParameters.hasNext() ) {
-                            // .\\COMTOR.g:324:67: ^( TYPE_PARAMS typeParameters )
+                            // COMTOR.g:324:67: ^( TYPE_PARAMS typeParameters )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE_PARAMS, "TYPE_PARAMS"), root_2);
@@ -4430,9 +4430,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_typeParameters.reset();
-                        // .\\COMTOR.g:324:98: ( ^( PARAMS formalParameters ) )?
+                        // COMTOR.g:324:98: ( ^( PARAMS formalParameters ) )?
                         if ( stream_formalParameters.hasNext() ) {
-                            // .\\COMTOR.g:324:98: ^( PARAMS formalParameters )
+                            // COMTOR.g:324:98: ^( PARAMS formalParameters )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMS, "PARAMS"), root_2);
@@ -4444,9 +4444,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_formalParameters.reset();
-                        // .\\COMTOR.g:325:10: ( ^( THROWS qualifiedNameList ) )?
+                        // COMTOR.g:325:10: ( ^( THROWS qualifiedNameList ) )?
                         if ( stream_qualifiedNameList.hasNext() ) {
-                            // .\\COMTOR.g:325:10: ^( THROWS qualifiedNameList )
+                            // COMTOR.g:325:10: ^( THROWS qualifiedNameList )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(THROWS, "THROWS"), root_2);
@@ -4458,18 +4458,18 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_qualifiedNameList.reset();
-                        // .\\COMTOR.g:325:39: ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* )
+                        // COMTOR.g:325:39: ^( BODY ( explicitConstructorInvocation )? ( blockStatement )* )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
 
-                        // .\\COMTOR.g:325:46: ( explicitConstructorInvocation )?
+                        // COMTOR.g:325:46: ( explicitConstructorInvocation )?
                         if ( stream_explicitConstructorInvocation.hasNext() ) {
                             adaptor.addChild(root_2, stream_explicitConstructorInvocation.nextTree());
 
                         }
                         stream_explicitConstructorInvocation.reset();
-                        // .\\COMTOR.g:325:77: ( blockStatement )*
+                        // COMTOR.g:325:77: ( blockStatement )*
                         while ( stream_blockStatement.hasNext() ) {
                             adaptor.addChild(root_2, stream_blockStatement.nextTree());
 
@@ -4488,9 +4488,9 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:327:6: ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
+                    // COMTOR.g:327:6: ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
                     {
-                    // .\\COMTOR.g:327:6: ( typeParameters )?
+                    // COMTOR.g:327:6: ( typeParameters )?
                     int alt50=2;
                     int LA50_0 = input.LA(1);
 
@@ -4499,7 +4499,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt50) {
                         case 1 :
-                            // .\\COMTOR.g:327:7: typeParameters
+                            // COMTOR.g:327:7: typeParameters
                             {
                             pushFollow(FOLLOW_typeParameters_in_methodDeclaration2451);
                             typeParameters120=typeParameters();
@@ -4513,7 +4513,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:328:6: (t= type | v= 'void' )
+                    // COMTOR.g:328:6: (t= type | v= 'void' )
                     int alt51=2;
                     int LA51_0 = input.LA(1);
 
@@ -4532,7 +4532,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt51) {
                         case 1 :
-                            // .\\COMTOR.g:328:7: t= type
+                            // COMTOR.g:328:7: t= type
                             {
                             pushFollow(FOLLOW_type_in_methodDeclaration2463);
                             t=type();
@@ -4544,7 +4544,7 @@ public class COMTORParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:329:10: v= 'void'
+                            // COMTOR.g:329:10: v= 'void'
                             {
                             v=(Token)match(input,VOID,FOLLOW_VOID_in_methodDeclaration2476); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_VOID.add(v);
@@ -4564,7 +4564,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_formalParameters.add(formalParameters122.getTree());
-                    // .\\COMTOR.g:333:9: ( '[' ']' )*
+                    // COMTOR.g:333:9: ( '[' ']' )*
                     loop52:
                     do {
                         int alt52=2;
@@ -4577,7 +4577,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt52) {
                     	case 1 :
-                    	    // .\\COMTOR.g:333:10: '[' ']'
+                    	    // COMTOR.g:333:10: '[' ']'
                     	    {
                     	    char_literal123=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_methodDeclaration2517); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACKET.add(char_literal123);
@@ -4594,7 +4594,7 @@ public class COMTORParser extends Parser {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:335:9: ( 'throws' qualifiedNameList )?
+                    // COMTOR.g:335:9: ( 'throws' qualifiedNameList )?
                     int alt53=2;
                     int LA53_0 = input.LA(1);
 
@@ -4603,7 +4603,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt53) {
                         case 1 :
-                            // .\\COMTOR.g:335:10: 'throws' qualifiedNameList
+                            // COMTOR.g:335:10: 'throws' qualifiedNameList
                             {
                             string_literal125=(Token)match(input,THROWS,FOLLOW_THROWS_in_methodDeclaration2541); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_THROWS.add(string_literal125);
@@ -4620,7 +4620,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:337:9: ( block | ';' )
+                    // COMTOR.g:337:9: ( block | ';' )
                     int alt54=2;
                     int LA54_0 = input.LA(1);
 
@@ -4639,7 +4639,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt54) {
                         case 1 :
-                            // .\\COMTOR.g:338:13: block
+                            // COMTOR.g:338:13: block
                             {
                             pushFollow(FOLLOW_block_in_methodDeclaration2598);
                             block127=block();
@@ -4651,7 +4651,7 @@ public class COMTORParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:339:13: ';'
+                            // COMTOR.g:339:13: ';'
                             {
                             char_literal128=(Token)match(input,SEMI,FOLLOW_SEMI_in_methodDeclaration2612); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_SEMI.add(char_literal128);
@@ -4665,7 +4665,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: block, SEMI, typeParameters, qualifiedNameList, v, t, formalParameters, IDENTIFIER
+                    // elements: IDENTIFIER, formalParameters, t, typeParameters, block, SEMI, v, qualifiedNameList
                     // token labels: v
                     // rule labels: retval, t
                     // token list labels: 
@@ -4680,13 +4680,13 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 341:9: -> ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) )
                     {
-                        // .\\COMTOR.g:341:12: ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) )
+                        // COMTOR.g:341:12: ^( METHOD_DEC IDENTIFIER ^( ACCESS_MODIFIER PACKAGE_PRIVATE ) ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(METHOD_DEC, "METHOD_DEC"), root_1);
 
                         adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                        // .\\COMTOR.g:341:36: ^( ACCESS_MODIFIER PACKAGE_PRIVATE )
+                        // COMTOR.g:341:36: ^( ACCESS_MODIFIER PACKAGE_PRIVATE )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -4695,18 +4695,18 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:341:71: ^( TYPE ( $t)? ( $v)? )
+                        // COMTOR.g:341:71: ^( TYPE ( $t)? ( $v)? )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_2);
 
-                        // .\\COMTOR.g:341:78: ( $t)?
+                        // COMTOR.g:341:78: ( $t)?
                         if ( stream_t.hasNext() ) {
                             adaptor.addChild(root_2, stream_t.nextTree());
 
                         }
                         stream_t.reset();
-                        // .\\COMTOR.g:341:82: ( $v)?
+                        // COMTOR.g:341:82: ( $v)?
                         if ( stream_v.hasNext() ) {
                             adaptor.addChild(root_2, stream_v.nextNode());
 
@@ -4715,9 +4715,9 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:341:87: ( ^( PARAMS formalParameters ) )?
+                        // COMTOR.g:341:87: ( ^( PARAMS formalParameters ) )?
                         if ( stream_formalParameters.hasNext() ) {
-                            // .\\COMTOR.g:341:87: ^( PARAMS formalParameters )
+                            // COMTOR.g:341:87: ^( PARAMS formalParameters )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMS, "PARAMS"), root_2);
@@ -4729,9 +4729,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_formalParameters.reset();
-                        // .\\COMTOR.g:341:115: ( ^( TYPE_PARAMS typeParameters ) )?
+                        // COMTOR.g:341:115: ( ^( TYPE_PARAMS typeParameters ) )?
                         if ( stream_typeParameters.hasNext() ) {
-                            // .\\COMTOR.g:341:115: ^( TYPE_PARAMS typeParameters )
+                            // COMTOR.g:341:115: ^( TYPE_PARAMS typeParameters )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE_PARAMS, "TYPE_PARAMS"), root_2);
@@ -4743,9 +4743,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_typeParameters.reset();
-                        // .\\COMTOR.g:342:10: ( ^( THROWS qualifiedNameList ) )?
+                        // COMTOR.g:342:10: ( ^( THROWS qualifiedNameList ) )?
                         if ( stream_qualifiedNameList.hasNext() ) {
-                            // .\\COMTOR.g:342:10: ^( THROWS qualifiedNameList )
+                            // COMTOR.g:342:10: ^( THROWS qualifiedNameList )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(THROWS, "THROWS"), root_2);
@@ -4757,18 +4757,18 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_qualifiedNameList.reset();
-                        // .\\COMTOR.g:342:39: ^( BODY ( block )? ( ';' )? )
+                        // COMTOR.g:342:39: ^( BODY ( block )? ( ';' )? )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
 
-                        // .\\COMTOR.g:342:46: ( block )?
+                        // COMTOR.g:342:46: ( block )?
                         if ( stream_block.hasNext() ) {
                             adaptor.addChild(root_2, stream_block.nextTree());
 
                         }
                         stream_block.reset();
-                        // .\\COMTOR.g:342:53: ( ';' )?
+                        // COMTOR.g:342:53: ( ';' )?
                         if ( stream_SEMI.hasNext() ) {
                             adaptor.addChild(root_2, stream_SEMI.nextNode());
 
@@ -4787,7 +4787,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:343:9: modifiers ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
+                    // COMTOR.g:343:9: modifiers ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
                     {
                     pushFollow(FOLLOW_modifiers_in_methodDeclaration2710);
                     modifiers129=modifiers();
@@ -4795,7 +4795,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_modifiers.add(modifiers129.getTree());
-                    // .\\COMTOR.g:344:9: ( typeParameters )?
+                    // COMTOR.g:344:9: ( typeParameters )?
                     int alt55=2;
                     int LA55_0 = input.LA(1);
 
@@ -4804,7 +4804,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt55) {
                         case 1 :
-                            // .\\COMTOR.g:344:10: typeParameters
+                            // COMTOR.g:344:10: typeParameters
                             {
                             pushFollow(FOLLOW_typeParameters_in_methodDeclaration2721);
                             typeParameters130=typeParameters();
@@ -4818,7 +4818,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:346:9: (t= type | v= 'void' )
+                    // COMTOR.g:346:9: (t= type | v= 'void' )
                     int alt56=2;
                     int LA56_0 = input.LA(1);
 
@@ -4837,7 +4837,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt56) {
                         case 1 :
-                            // .\\COMTOR.g:346:10: t= type
+                            // COMTOR.g:346:10: t= type
                             {
                             pushFollow(FOLLOW_type_in_methodDeclaration2745);
                             t=type();
@@ -4849,7 +4849,7 @@ public class COMTORParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:347:13: v= 'void'
+                            // COMTOR.g:347:13: v= 'void'
                             {
                             v=(Token)match(input,VOID,FOLLOW_VOID_in_methodDeclaration2761); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_VOID.add(v);
@@ -4869,7 +4869,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_formalParameters.add(formalParameters132.getTree());
-                    // .\\COMTOR.g:351:9: ( '[' ']' )*
+                    // COMTOR.g:351:9: ( '[' ']' )*
                     loop57:
                     do {
                         int alt57=2;
@@ -4882,7 +4882,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt57) {
                     	case 1 :
-                    	    // .\\COMTOR.g:351:10: '[' ']'
+                    	    // COMTOR.g:351:10: '[' ']'
                     	    {
                     	    char_literal133=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_methodDeclaration2802); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACKET.add(char_literal133);
@@ -4899,7 +4899,7 @@ public class COMTORParser extends Parser {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:353:9: ( 'throws' qualifiedNameList )?
+                    // COMTOR.g:353:9: ( 'throws' qualifiedNameList )?
                     int alt58=2;
                     int LA58_0 = input.LA(1);
 
@@ -4908,7 +4908,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt58) {
                         case 1 :
-                            // .\\COMTOR.g:353:10: 'throws' qualifiedNameList
+                            // COMTOR.g:353:10: 'throws' qualifiedNameList
                             {
                             string_literal135=(Token)match(input,THROWS,FOLLOW_THROWS_in_methodDeclaration2826); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_THROWS.add(string_literal135);
@@ -4925,7 +4925,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:355:9: ( block | ';' )
+                    // COMTOR.g:355:9: ( block | ';' )
                     int alt59=2;
                     int LA59_0 = input.LA(1);
 
@@ -4944,7 +4944,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt59) {
                         case 1 :
-                            // .\\COMTOR.g:356:13: block
+                            // COMTOR.g:356:13: block
                             {
                             pushFollow(FOLLOW_block_in_methodDeclaration2883);
                             block137=block();
@@ -4956,7 +4956,7 @@ public class COMTORParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:357:13: ';'
+                            // COMTOR.g:357:13: ';'
                             {
                             char_literal138=(Token)match(input,SEMI,FOLLOW_SEMI_in_methodDeclaration2897); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_SEMI.add(char_literal138);
@@ -4970,7 +4970,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: qualifiedNameList, formalParameters, t, block, modifiers, v, SEMI, IDENTIFIER, typeParameters
+                    // elements: v, t, block, SEMI, qualifiedNameList, typeParameters, formalParameters, modifiers, IDENTIFIER
                     // token labels: v
                     // rule labels: retval, t
                     // token list labels: 
@@ -4985,15 +4985,15 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 359:9: -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) )
                     {
-                        // .\\COMTOR.g:359:12: ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) )
+                        // COMTOR.g:359:12: ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( TYPE_PARAMS typeParameters ) )? ( ^( THROWS qualifiedNameList ) )? ^( BODY ( block )? ( ';' )? ) )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(METHOD_DEC, "METHOD_DEC"), root_1);
 
                         adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                        // .\\COMTOR.g:359:36: ( ^( ACCESS_MODIFIER modifiers ) )?
+                        // COMTOR.g:359:36: ( ^( ACCESS_MODIFIER modifiers ) )?
                         if ( stream_modifiers.hasNext() ) {
-                            // .\\COMTOR.g:359:36: ^( ACCESS_MODIFIER modifiers )
+                            // COMTOR.g:359:36: ^( ACCESS_MODIFIER modifiers )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -5005,18 +5005,18 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_modifiers.reset();
-                        // .\\COMTOR.g:359:66: ^( TYPE ( $t)? ( $v)? )
+                        // COMTOR.g:359:66: ^( TYPE ( $t)? ( $v)? )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_2);
 
-                        // .\\COMTOR.g:359:73: ( $t)?
+                        // COMTOR.g:359:73: ( $t)?
                         if ( stream_t.hasNext() ) {
                             adaptor.addChild(root_2, stream_t.nextTree());
 
                         }
                         stream_t.reset();
-                        // .\\COMTOR.g:359:77: ( $v)?
+                        // COMTOR.g:359:77: ( $v)?
                         if ( stream_v.hasNext() ) {
                             adaptor.addChild(root_2, stream_v.nextNode());
 
@@ -5025,9 +5025,9 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:359:82: ( ^( PARAMS formalParameters ) )?
+                        // COMTOR.g:359:82: ( ^( PARAMS formalParameters ) )?
                         if ( stream_formalParameters.hasNext() ) {
-                            // .\\COMTOR.g:359:82: ^( PARAMS formalParameters )
+                            // COMTOR.g:359:82: ^( PARAMS formalParameters )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMS, "PARAMS"), root_2);
@@ -5039,9 +5039,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_formalParameters.reset();
-                        // .\\COMTOR.g:359:110: ( ^( TYPE_PARAMS typeParameters ) )?
+                        // COMTOR.g:359:110: ( ^( TYPE_PARAMS typeParameters ) )?
                         if ( stream_typeParameters.hasNext() ) {
-                            // .\\COMTOR.g:359:110: ^( TYPE_PARAMS typeParameters )
+                            // COMTOR.g:359:110: ^( TYPE_PARAMS typeParameters )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE_PARAMS, "TYPE_PARAMS"), root_2);
@@ -5053,9 +5053,9 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_typeParameters.reset();
-                        // .\\COMTOR.g:360:10: ( ^( THROWS qualifiedNameList ) )?
+                        // COMTOR.g:360:10: ( ^( THROWS qualifiedNameList ) )?
                         if ( stream_qualifiedNameList.hasNext() ) {
-                            // .\\COMTOR.g:360:10: ^( THROWS qualifiedNameList )
+                            // COMTOR.g:360:10: ^( THROWS qualifiedNameList )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(THROWS, "THROWS"), root_2);
@@ -5067,18 +5067,18 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_qualifiedNameList.reset();
-                        // .\\COMTOR.g:360:39: ^( BODY ( block )? ( ';' )? )
+                        // COMTOR.g:360:39: ^( BODY ( block )? ( ';' )? )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
 
-                        // .\\COMTOR.g:360:46: ( block )?
+                        // COMTOR.g:360:46: ( block )?
                         if ( stream_block.hasNext() ) {
                             adaptor.addChild(root_2, stream_block.nextTree());
 
                         }
                         stream_block.reset();
-                        // .\\COMTOR.g:360:53: ( ';' )?
+                        // COMTOR.g:360:53: ( ';' )?
                         if ( stream_SEMI.hasNext() ) {
                             adaptor.addChild(root_2, stream_SEMI.nextNode());
 
@@ -5125,7 +5125,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "fieldDeclaration"
-    // .\\COMTOR.g:364:1: fieldDeclaration : ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ) )+ ;
+    // COMTOR.g:364:1: fieldDeclaration : ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ) )+ ;
     public final COMTORParser.fieldDeclaration_return fieldDeclaration() throws RecognitionException {
         COMTORParser.fieldDeclaration_return retval = new COMTORParser.fieldDeclaration_return();
         retval.start = input.LT(1);
@@ -5152,10 +5152,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
-            // .\\COMTOR.g:365:5: ( ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ) )+ )
-            // .\\COMTOR.g:365:9: ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';'
+            // COMTOR.g:365:5: ( ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ) )+ )
+            // COMTOR.g:365:9: ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';'
             {
-            // .\\COMTOR.g:365:9: ( modifiers )?
+            // COMTOR.g:365:9: ( modifiers )?
             int alt61=2;
             int LA61_0 = input.LA(1);
 
@@ -5164,7 +5164,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt61) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_fieldDeclaration3007);
                     modifiers139=modifiers();
@@ -5190,7 +5190,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_variableDeclarator.add(variableDeclarator141.getTree());
-            // .\\COMTOR.g:368:9: ( ',' variableDeclarator )*
+            // COMTOR.g:368:9: ( ',' variableDeclarator )*
             loop62:
             do {
                 int alt62=2;
@@ -5203,7 +5203,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt62) {
             	case 1 :
-            	    // .\\COMTOR.g:368:10: ',' variableDeclarator
+            	    // COMTOR.g:368:10: ',' variableDeclarator
             	    {
             	    char_literal142=(Token)match(input,COMMA,FOLLOW_COMMA_in_fieldDeclaration3039); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal142);
@@ -5246,15 +5246,15 @@ public class COMTORParser extends Parser {
                     throw new RewriteEarlyExitException();
                 }
                 while ( stream_variableDeclarator.hasNext()||stream_type.hasNext() ) {
-                    // .\\COMTOR.g:371:12: ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) )
+                    // COMTOR.g:371:12: ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(VAR_DEF, "VAR_DEF"), root_1);
 
                     adaptor.addChild(root_1, stream_variableDeclarator.nextTree());
-                    // .\\COMTOR.g:371:41: ( ^( ACCESS_MODIFIER modifiers ) )?
+                    // COMTOR.g:371:41: ( ^( ACCESS_MODIFIER modifiers ) )?
                     if ( stream_modifiers.hasNext() ) {
-                        // .\\COMTOR.g:371:41: ^( ACCESS_MODIFIER modifiers )
+                        // COMTOR.g:371:41: ^( ACCESS_MODIFIER modifiers )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -5266,7 +5266,7 @@ public class COMTORParser extends Parser {
 
                     }
                     stream_modifiers.reset();
-                    // .\\COMTOR.g:371:71: ^( TYPE type )
+                    // COMTOR.g:371:71: ^( TYPE type )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_2);
@@ -5315,7 +5315,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "variableDeclarator"
-    // .\\COMTOR.g:374:1: variableDeclarator : IDENTIFIER (b+= '[' b+= ']' )* ( '=' variableInitializer )? -> IDENTIFIER ( ^( INITIAL_VALUE variableInitializer ) )? ( ^( ARRAY ( $b)* ) )? ;
+    // COMTOR.g:374:1: variableDeclarator : IDENTIFIER (b+= '[' b+= ']' )* ( '=' variableInitializer )? -> IDENTIFIER ( ^( INITIAL_VALUE variableInitializer ) )? ( ^( ARRAY ( $b)* ) )? ;
     public final COMTORParser.variableDeclarator_return variableDeclarator() throws RecognitionException {
         COMTORParser.variableDeclarator_return retval = new COMTORParser.variableDeclarator_return();
         retval.start = input.LT(1);
@@ -5339,13 +5339,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_variableInitializer=new RewriteRuleSubtreeStream(adaptor,"rule variableInitializer");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
-            // .\\COMTOR.g:375:5: ( IDENTIFIER (b+= '[' b+= ']' )* ( '=' variableInitializer )? -> IDENTIFIER ( ^( INITIAL_VALUE variableInitializer ) )? ( ^( ARRAY ( $b)* ) )? )
-            // .\\COMTOR.g:375:9: IDENTIFIER (b+= '[' b+= ']' )* ( '=' variableInitializer )?
+            // COMTOR.g:375:5: ( IDENTIFIER (b+= '[' b+= ']' )* ( '=' variableInitializer )? -> IDENTIFIER ( ^( INITIAL_VALUE variableInitializer ) )? ( ^( ARRAY ( $b)* ) )? )
+            // COMTOR.g:375:9: IDENTIFIER (b+= '[' b+= ']' )* ( '=' variableInitializer )?
             {
             IDENTIFIER145=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_variableDeclarator3112); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER145);
 
-            // .\\COMTOR.g:376:9: (b+= '[' b+= ']' )*
+            // COMTOR.g:376:9: (b+= '[' b+= ']' )*
             loop63:
             do {
                 int alt63=2;
@@ -5358,7 +5358,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt63) {
             	case 1 :
-            	    // .\\COMTOR.g:376:10: b+= '[' b+= ']'
+            	    // COMTOR.g:376:10: b+= '[' b+= ']'
             	    {
             	    b=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_variableDeclarator3125); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LBRACKET.add(b);
@@ -5381,7 +5381,7 @@ public class COMTORParser extends Parser {
                 }
             } while (true);
 
-            // .\\COMTOR.g:378:9: ( '=' variableInitializer )?
+            // COMTOR.g:378:9: ( '=' variableInitializer )?
             int alt64=2;
             int LA64_0 = input.LA(1);
 
@@ -5390,7 +5390,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt64) {
                 case 1 :
-                    // .\\COMTOR.g:378:10: '=' variableInitializer
+                    // COMTOR.g:378:10: '=' variableInitializer
                     {
                     char_literal146=(Token)match(input,EQ,FOLLOW_EQ_in_variableDeclarator3151); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_EQ.add(char_literal146);
@@ -5425,9 +5425,9 @@ public class COMTORParser extends Parser {
             // 380:9: -> IDENTIFIER ( ^( INITIAL_VALUE variableInitializer ) )? ( ^( ARRAY ( $b)* ) )?
             {
                 adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:380:23: ( ^( INITIAL_VALUE variableInitializer ) )?
+                // COMTOR.g:380:23: ( ^( INITIAL_VALUE variableInitializer ) )?
                 if ( stream_variableInitializer.hasNext() ) {
-                    // .\\COMTOR.g:380:23: ^( INITIAL_VALUE variableInitializer )
+                    // COMTOR.g:380:23: ^( INITIAL_VALUE variableInitializer )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(INITIAL_VALUE, "INITIAL_VALUE"), root_1);
@@ -5439,14 +5439,14 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_variableInitializer.reset();
-                // .\\COMTOR.g:380:61: ( ^( ARRAY ( $b)* ) )?
+                // COMTOR.g:380:61: ( ^( ARRAY ( $b)* ) )?
                 if ( stream_b.hasNext() ) {
-                    // .\\COMTOR.g:380:61: ^( ARRAY ( $b)* )
+                    // COMTOR.g:380:61: ^( ARRAY ( $b)* )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARRAY, "ARRAY"), root_1);
 
-                    // .\\COMTOR.g:380:69: ( $b)*
+                    // COMTOR.g:380:69: ( $b)*
                     while ( stream_b.hasNext() ) {
                         adaptor.addChild(root_1, stream_b.nextNode());
 
@@ -5491,7 +5491,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "interfaceBodyDeclaration"
-    // .\\COMTOR.g:383:1: interfaceBodyDeclaration : ( interfaceFieldDeclaration | interfaceMethodDeclaration | interfaceDeclaration | classDeclaration | ';' );
+    // COMTOR.g:383:1: interfaceBodyDeclaration : ( interfaceFieldDeclaration | interfaceMethodDeclaration | interfaceDeclaration | classDeclaration | ';' );
     public final COMTORParser.interfaceBodyDeclaration_return interfaceBodyDeclaration() throws RecognitionException {
         COMTORParser.interfaceBodyDeclaration_return retval = new COMTORParser.interfaceBodyDeclaration_return();
         retval.start = input.LT(1);
@@ -5512,12 +5512,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
-            // .\\COMTOR.g:387:5: ( interfaceFieldDeclaration | interfaceMethodDeclaration | interfaceDeclaration | classDeclaration | ';' )
+            // COMTOR.g:387:5: ( interfaceFieldDeclaration | interfaceMethodDeclaration | interfaceDeclaration | classDeclaration | ';' )
             int alt65=5;
             alt65 = dfa65.predict(input);
             switch (alt65) {
                 case 1 :
-                    // .\\COMTOR.g:387:9: interfaceFieldDeclaration
+                    // COMTOR.g:387:9: interfaceFieldDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5531,7 +5531,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:388:9: interfaceMethodDeclaration
+                    // COMTOR.g:388:9: interfaceMethodDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5545,7 +5545,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:389:9: interfaceDeclaration
+                    // COMTOR.g:389:9: interfaceDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5559,7 +5559,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:390:9: classDeclaration
+                    // COMTOR.g:390:9: classDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5573,7 +5573,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:391:9: ';'
+                    // COMTOR.g:391:9: ';'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5614,7 +5614,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "interfaceMethodDeclaration"
-    // .\\COMTOR.g:394:1: interfaceMethodDeclaration : ( modifiers )? ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ) ;
+    // COMTOR.g:394:1: interfaceMethodDeclaration : ( modifiers )? ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ) ;
     public final COMTORParser.interfaceMethodDeclaration_return interfaceMethodDeclaration() throws RecognitionException {
         COMTORParser.interfaceMethodDeclaration_return retval = new COMTORParser.interfaceMethodDeclaration_return();
         retval.start = input.LT(1);
@@ -5657,10 +5657,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_qualifiedNameList=new RewriteRuleSubtreeStream(adaptor,"rule qualifiedNameList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
-            // .\\COMTOR.g:395:5: ( ( modifiers )? ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ) )
-            // .\\COMTOR.g:395:9: ( modifiers )? ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
+            // COMTOR.g:395:5: ( ( modifiers )? ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? ) )
+            // COMTOR.g:395:9: ( modifiers )? ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
             {
-            // .\\COMTOR.g:395:9: ( modifiers )?
+            // COMTOR.g:395:9: ( modifiers )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -5669,7 +5669,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt66) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_interfaceMethodDeclaration3275);
                     modifiers153=modifiers();
@@ -5683,7 +5683,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:396:9: ( typeParameters )?
+            // COMTOR.g:396:9: ( typeParameters )?
             int alt67=2;
             int LA67_0 = input.LA(1);
 
@@ -5692,7 +5692,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt67) {
                 case 1 :
-                    // .\\COMTOR.g:396:10: typeParameters
+                    // COMTOR.g:396:10: typeParameters
                     {
                     pushFollow(FOLLOW_typeParameters_in_interfaceMethodDeclaration3287);
                     typeParameters154=typeParameters();
@@ -5706,7 +5706,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:398:9: (t= type | v= 'void' )
+            // COMTOR.g:398:9: (t= type | v= 'void' )
             int alt68=2;
             int LA68_0 = input.LA(1);
 
@@ -5725,7 +5725,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt68) {
                 case 1 :
-                    // .\\COMTOR.g:398:10: t= type
+                    // COMTOR.g:398:10: t= type
                     {
                     pushFollow(FOLLOW_type_in_interfaceMethodDeclaration3311);
                     t=type();
@@ -5737,7 +5737,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:399:10: v= 'void'
+                    // COMTOR.g:399:10: v= 'void'
                     {
                     v=(Token)match(input,VOID,FOLLOW_VOID_in_interfaceMethodDeclaration3324); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_VOID.add(v);
@@ -5757,7 +5757,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_formalParameters.add(formalParameters156.getTree());
-            // .\\COMTOR.g:403:9: ( '[' ']' )*
+            // COMTOR.g:403:9: ( '[' ']' )*
             loop69:
             do {
                 int alt69=2;
@@ -5770,7 +5770,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt69) {
             	case 1 :
-            	    // .\\COMTOR.g:403:10: '[' ']'
+            	    // COMTOR.g:403:10: '[' ']'
             	    {
             	    char_literal157=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_interfaceMethodDeclaration3365); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LBRACKET.add(char_literal157);
@@ -5787,7 +5787,7 @@ public class COMTORParser extends Parser {
                 }
             } while (true);
 
-            // .\\COMTOR.g:405:9: ( 'throws' qualifiedNameList )?
+            // COMTOR.g:405:9: ( 'throws' qualifiedNameList )?
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -5796,7 +5796,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt70) {
                 case 1 :
-                    // .\\COMTOR.g:405:10: 'throws' qualifiedNameList
+                    // COMTOR.g:405:10: 'throws' qualifiedNameList
                     {
                     string_literal159=(Token)match(input,THROWS,FOLLOW_THROWS_in_interfaceMethodDeclaration3389); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_THROWS.add(string_literal159);
@@ -5819,7 +5819,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: formalParameters, typeParameters, qualifiedNameList, t, modifiers, IDENTIFIER, v
+            // elements: typeParameters, formalParameters, IDENTIFIER, v, qualifiedNameList, t, modifiers
             // token labels: v
             // rule labels: retval, t
             // token list labels: 
@@ -5834,15 +5834,15 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 407:9: -> ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? )
             {
-                // .\\COMTOR.g:407:12: ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? )
+                // COMTOR.g:407:12: ^( METHOD_DEC IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ( ^( TYPE_PARAMS typeParameters ) )? ^( TYPE ( $t)? ( $v)? ) ( ^( PARAMS formalParameters ) )? ( ^( THROWS qualifiedNameList ) )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(METHOD_DEC, "METHOD_DEC"), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:407:36: ( ^( ACCESS_MODIFIER modifiers ) )?
+                // COMTOR.g:407:36: ( ^( ACCESS_MODIFIER modifiers ) )?
                 if ( stream_modifiers.hasNext() ) {
-                    // .\\COMTOR.g:407:36: ^( ACCESS_MODIFIER modifiers )
+                    // COMTOR.g:407:36: ^( ACCESS_MODIFIER modifiers )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -5854,9 +5854,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_modifiers.reset();
-                // .\\COMTOR.g:407:66: ( ^( TYPE_PARAMS typeParameters ) )?
+                // COMTOR.g:407:66: ( ^( TYPE_PARAMS typeParameters ) )?
                 if ( stream_typeParameters.hasNext() ) {
-                    // .\\COMTOR.g:407:66: ^( TYPE_PARAMS typeParameters )
+                    // COMTOR.g:407:66: ^( TYPE_PARAMS typeParameters )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE_PARAMS, "TYPE_PARAMS"), root_2);
@@ -5868,18 +5868,18 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_typeParameters.reset();
-                // .\\COMTOR.g:407:97: ^( TYPE ( $t)? ( $v)? )
+                // COMTOR.g:407:97: ^( TYPE ( $t)? ( $v)? )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_2);
 
-                // .\\COMTOR.g:407:104: ( $t)?
+                // COMTOR.g:407:104: ( $t)?
                 if ( stream_t.hasNext() ) {
                     adaptor.addChild(root_2, stream_t.nextTree());
 
                 }
                 stream_t.reset();
-                // .\\COMTOR.g:407:108: ( $v)?
+                // COMTOR.g:407:108: ( $v)?
                 if ( stream_v.hasNext() ) {
                     adaptor.addChild(root_2, stream_v.nextNode());
 
@@ -5888,9 +5888,9 @@ public class COMTORParser extends Parser {
 
                 adaptor.addChild(root_1, root_2);
                 }
-                // .\\COMTOR.g:407:113: ( ^( PARAMS formalParameters ) )?
+                // COMTOR.g:407:113: ( ^( PARAMS formalParameters ) )?
                 if ( stream_formalParameters.hasNext() ) {
-                    // .\\COMTOR.g:407:113: ^( PARAMS formalParameters )
+                    // COMTOR.g:407:113: ^( PARAMS formalParameters )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMS, "PARAMS"), root_2);
@@ -5902,9 +5902,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_formalParameters.reset();
-                // .\\COMTOR.g:408:10: ( ^( THROWS qualifiedNameList ) )?
+                // COMTOR.g:408:10: ( ^( THROWS qualifiedNameList ) )?
                 if ( stream_qualifiedNameList.hasNext() ) {
-                    // .\\COMTOR.g:408:10: ^( THROWS qualifiedNameList )
+                    // COMTOR.g:408:10: ^( THROWS qualifiedNameList )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(THROWS, "THROWS"), root_2);
@@ -5952,7 +5952,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "interfaceFieldDeclaration"
-    // .\\COMTOR.g:411:1: interfaceFieldDeclaration : ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF ( modifiers )? type variableDeclarator ) )+ ;
+    // COMTOR.g:411:1: interfaceFieldDeclaration : ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF ( modifiers )? type variableDeclarator ) )+ ;
     public final COMTORParser.interfaceFieldDeclaration_return interfaceFieldDeclaration() throws RecognitionException {
         COMTORParser.interfaceFieldDeclaration_return retval = new COMTORParser.interfaceFieldDeclaration_return();
         retval.start = input.LT(1);
@@ -5979,10 +5979,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
-            // .\\COMTOR.g:417:5: ( ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF ( modifiers )? type variableDeclarator ) )+ )
-            // .\\COMTOR.g:417:9: ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';'
+            // COMTOR.g:417:5: ( ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';' -> ( ^( VAR_DEF ( modifiers )? type variableDeclarator ) )+ )
+            // COMTOR.g:417:9: ( modifiers )? type variableDeclarator ( ',' variableDeclarator )* ';'
             {
-            // .\\COMTOR.g:417:9: ( modifiers )?
+            // COMTOR.g:417:9: ( modifiers )?
             int alt71=2;
             int LA71_0 = input.LA(1);
 
@@ -5991,7 +5991,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt71) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_interfaceFieldDeclaration3491);
                     modifiers162=modifiers();
@@ -6017,7 +6017,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_variableDeclarator.add(variableDeclarator164.getTree());
-            // .\\COMTOR.g:418:9: ( ',' variableDeclarator )*
+            // COMTOR.g:418:9: ( ',' variableDeclarator )*
             loop72:
             do {
                 int alt72=2;
@@ -6030,7 +6030,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt72) {
             	case 1 :
-            	    // .\\COMTOR.g:418:10: ',' variableDeclarator
+            	    // COMTOR.g:418:10: ',' variableDeclarator
             	    {
             	    char_literal165=(Token)match(input,COMMA,FOLLOW_COMMA_in_interfaceFieldDeclaration3507); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal165);
@@ -6056,7 +6056,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: modifiers, variableDeclarator, type
+            // elements: variableDeclarator, modifiers, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6073,12 +6073,12 @@ public class COMTORParser extends Parser {
                     throw new RewriteEarlyExitException();
                 }
                 while ( stream_variableDeclarator.hasNext()||stream_type.hasNext() ) {
-                    // .\\COMTOR.g:421:12: ^( VAR_DEF ( modifiers )? type variableDeclarator )
+                    // COMTOR.g:421:12: ^( VAR_DEF ( modifiers )? type variableDeclarator )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(VAR_DEF, "VAR_DEF"), root_1);
 
-                    // .\\COMTOR.g:421:22: ( modifiers )?
+                    // COMTOR.g:421:22: ( modifiers )?
                     if ( stream_modifiers.hasNext() ) {
                         adaptor.addChild(root_1, stream_modifiers.nextTree());
 
@@ -6126,7 +6126,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // .\\COMTOR.g:425:1: type : ( classOrInterfaceType (b+= '[' b+= ']' )* -> classOrInterfaceType ( ^( ARRAY ( $b)* ) )? | primitiveType (b+= '[' b+= ']' )* -> primitiveType ( ^( ARRAY ( $b)* ) )? );
+    // COMTOR.g:425:1: type : ( classOrInterfaceType (b+= '[' b+= ']' )* -> classOrInterfaceType ( ^( ARRAY ( $b)* ) )? | primitiveType (b+= '[' b+= ']' )* -> primitiveType ( ^( ARRAY ( $b)* ) )? );
     public final COMTORParser.type_return type() throws RecognitionException {
         COMTORParser.type_return retval = new COMTORParser.type_return();
         retval.start = input.LT(1);
@@ -6147,7 +6147,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_classOrInterfaceType=new RewriteRuleSubtreeStream(adaptor,"rule classOrInterfaceType");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
-            // .\\COMTOR.g:426:5: ( classOrInterfaceType (b+= '[' b+= ']' )* -> classOrInterfaceType ( ^( ARRAY ( $b)* ) )? | primitiveType (b+= '[' b+= ']' )* -> primitiveType ( ^( ARRAY ( $b)* ) )? )
+            // COMTOR.g:426:5: ( classOrInterfaceType (b+= '[' b+= ']' )* -> classOrInterfaceType ( ^( ARRAY ( $b)* ) )? | primitiveType (b+= '[' b+= ']' )* -> primitiveType ( ^( ARRAY ( $b)* ) )? )
             int alt75=2;
             int LA75_0 = input.LA(1);
 
@@ -6166,7 +6166,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt75) {
                 case 1 :
-                    // .\\COMTOR.g:426:9: classOrInterfaceType (b+= '[' b+= ']' )*
+                    // COMTOR.g:426:9: classOrInterfaceType (b+= '[' b+= ']' )*
                     {
                     pushFollow(FOLLOW_classOrInterfaceType_in_type3573);
                     classOrInterfaceType168=classOrInterfaceType();
@@ -6174,7 +6174,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_classOrInterfaceType.add(classOrInterfaceType168.getTree());
-                    // .\\COMTOR.g:427:9: (b+= '[' b+= ']' )*
+                    // COMTOR.g:427:9: (b+= '[' b+= ']' )*
                     loop73:
                     do {
                         int alt73=2;
@@ -6187,7 +6187,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt73) {
                     	case 1 :
-                    	    // .\\COMTOR.g:427:10: b+= '[' b+= ']'
+                    	    // COMTOR.g:427:10: b+= '[' b+= ']'
                     	    {
                     	    b=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_type3586); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACKET.add(b);
@@ -6213,7 +6213,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: b, classOrInterfaceType
+                    // elements: classOrInterfaceType, b
                     // token labels: 
                     // rule labels: retval
                     // token list labels: b
@@ -6228,14 +6228,14 @@ public class COMTORParser extends Parser {
                     // 429:9: -> classOrInterfaceType ( ^( ARRAY ( $b)* ) )?
                     {
                         adaptor.addChild(root_0, stream_classOrInterfaceType.nextTree());
-                        // .\\COMTOR.g:429:33: ( ^( ARRAY ( $b)* ) )?
+                        // COMTOR.g:429:33: ( ^( ARRAY ( $b)* ) )?
                         if ( stream_b.hasNext() ) {
-                            // .\\COMTOR.g:429:33: ^( ARRAY ( $b)* )
+                            // COMTOR.g:429:33: ^( ARRAY ( $b)* )
                             {
                             CommonTree root_1 = (CommonTree)adaptor.nil();
                             root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARRAY, "ARRAY"), root_1);
 
-                            // .\\COMTOR.g:429:41: ( $b)*
+                            // COMTOR.g:429:41: ( $b)*
                             while ( stream_b.hasNext() ) {
                                 adaptor.addChild(root_1, stream_b.nextNode());
 
@@ -6254,7 +6254,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:430:9: primitiveType (b+= '[' b+= ']' )*
+                    // COMTOR.g:430:9: primitiveType (b+= '[' b+= ']' )*
                     {
                     pushFollow(FOLLOW_primitiveType_in_type3632);
                     primitiveType169=primitiveType();
@@ -6262,7 +6262,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_primitiveType.add(primitiveType169.getTree());
-                    // .\\COMTOR.g:431:9: (b+= '[' b+= ']' )*
+                    // COMTOR.g:431:9: (b+= '[' b+= ']' )*
                     loop74:
                     do {
                         int alt74=2;
@@ -6275,7 +6275,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt74) {
                     	case 1 :
-                    	    // .\\COMTOR.g:431:10: b+= '[' b+= ']'
+                    	    // COMTOR.g:431:10: b+= '[' b+= ']'
                     	    {
                     	    b=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_type3645); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACKET.add(b);
@@ -6316,14 +6316,14 @@ public class COMTORParser extends Parser {
                     // 433:9: -> primitiveType ( ^( ARRAY ( $b)* ) )?
                     {
                         adaptor.addChild(root_0, stream_primitiveType.nextTree());
-                        // .\\COMTOR.g:433:26: ( ^( ARRAY ( $b)* ) )?
+                        // COMTOR.g:433:26: ( ^( ARRAY ( $b)* ) )?
                         if ( stream_b.hasNext() ) {
-                            // .\\COMTOR.g:433:26: ^( ARRAY ( $b)* )
+                            // COMTOR.g:433:26: ^( ARRAY ( $b)* )
                             {
                             CommonTree root_1 = (CommonTree)adaptor.nil();
                             root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARRAY, "ARRAY"), root_1);
 
-                            // .\\COMTOR.g:433:34: ( $b)*
+                            // COMTOR.g:433:34: ( $b)*
                             while ( stream_b.hasNext() ) {
                                 adaptor.addChild(root_1, stream_b.nextNode());
 
@@ -6370,7 +6370,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classOrInterfaceType"
-    // .\\COMTOR.g:437:1: classOrInterfaceType : IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )* ;
+    // COMTOR.g:437:1: classOrInterfaceType : IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )* ;
     public final COMTORParser.classOrInterfaceType_return classOrInterfaceType() throws RecognitionException {
         COMTORParser.classOrInterfaceType_return retval = new COMTORParser.classOrInterfaceType_return();
         retval.start = input.LT(1);
@@ -6391,8 +6391,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
-            // .\\COMTOR.g:438:5: ( IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )* )
-            // .\\COMTOR.g:438:9: IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )*
+            // COMTOR.g:438:5: ( IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )* )
+            // COMTOR.g:438:9: IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6401,7 +6401,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER170_tree = (CommonTree)adaptor.create(IDENTIFIER170);
             adaptor.addChild(root_0, IDENTIFIER170_tree);
             }
-            // .\\COMTOR.g:439:9: ( typeArguments )?
+            // COMTOR.g:439:9: ( typeArguments )?
             int alt76=2;
             int LA76_0 = input.LA(1);
 
@@ -6414,7 +6414,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt76) {
                 case 1 :
-                    // .\\COMTOR.g:439:10: typeArguments
+                    // COMTOR.g:439:10: typeArguments
                     {
                     pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType3713);
                     typeArguments171=typeArguments();
@@ -6428,7 +6428,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:441:9: ( '.' IDENTIFIER ( typeArguments )? )*
+            // COMTOR.g:441:9: ( '.' IDENTIFIER ( typeArguments )? )*
             loop78:
             do {
                 int alt78=2;
@@ -6441,7 +6441,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt78) {
             	case 1 :
-            	    // .\\COMTOR.g:441:10: '.' IDENTIFIER ( typeArguments )?
+            	    // COMTOR.g:441:10: '.' IDENTIFIER ( typeArguments )?
             	    {
             	    char_literal172=(Token)match(input,DOT,FOLLOW_DOT_in_classOrInterfaceType3735); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -6453,7 +6453,7 @@ public class COMTORParser extends Parser {
             	    IDENTIFIER173_tree = (CommonTree)adaptor.create(IDENTIFIER173);
             	    adaptor.addChild(root_0, IDENTIFIER173_tree);
             	    }
-            	    // .\\COMTOR.g:442:13: ( typeArguments )?
+            	    // COMTOR.g:442:13: ( typeArguments )?
             	    int alt77=2;
             	    int LA77_0 = input.LA(1);
 
@@ -6466,7 +6466,7 @@ public class COMTORParser extends Parser {
             	    }
             	    switch (alt77) {
             	        case 1 :
-            	            // .\\COMTOR.g:442:14: typeArguments
+            	            // COMTOR.g:442:14: typeArguments
             	            {
             	            pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType3752);
             	            typeArguments174=typeArguments();
@@ -6519,7 +6519,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "primitiveType"
-    // .\\COMTOR.g:447:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
+    // COMTOR.g:447:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
     public final COMTORParser.primitiveType_return primitiveType() throws RecognitionException {
         COMTORParser.primitiveType_return retval = new COMTORParser.primitiveType_return();
         retval.start = input.LT(1);
@@ -6532,8 +6532,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
-            // .\\COMTOR.g:448:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
-            // .\\COMTOR.g:
+            // COMTOR.g:448:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
+            // COMTOR.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -6579,7 +6579,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeArguments"
-    // .\\COMTOR.g:458:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' -> ( typeArgument )* ;
+    // COMTOR.g:458:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' -> ( typeArgument )* ;
     public final COMTORParser.typeArguments_return typeArguments() throws RecognitionException {
         COMTORParser.typeArguments_return retval = new COMTORParser.typeArguments_return();
         retval.start = input.LT(1);
@@ -6603,8 +6603,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeArgument=new RewriteRuleSubtreeStream(adaptor,"rule typeArgument");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
-            // .\\COMTOR.g:459:5: ( '<' typeArgument ( ',' typeArgument )* '>' -> ( typeArgument )* )
-            // .\\COMTOR.g:459:9: '<' typeArgument ( ',' typeArgument )* '>'
+            // COMTOR.g:459:5: ( '<' typeArgument ( ',' typeArgument )* '>' -> ( typeArgument )* )
+            // COMTOR.g:459:9: '<' typeArgument ( ',' typeArgument )* '>'
             {
             char_literal176=(Token)match(input,LT,FOLLOW_LT_in_typeArguments3889); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LT.add(char_literal176);
@@ -6615,7 +6615,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_typeArgument.add(typeArgument177.getTree());
-            // .\\COMTOR.g:460:9: ( ',' typeArgument )*
+            // COMTOR.g:460:9: ( ',' typeArgument )*
             loop79:
             do {
                 int alt79=2;
@@ -6628,7 +6628,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt79) {
             	case 1 :
-            	    // .\\COMTOR.g:460:10: ',' typeArgument
+            	    // COMTOR.g:460:10: ',' typeArgument
             	    {
             	    char_literal178=(Token)match(input,COMMA,FOLLOW_COMMA_in_typeArguments3902); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal178);
@@ -6667,7 +6667,7 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 463:9: -> ( typeArgument )*
             {
-                // .\\COMTOR.g:463:12: ( typeArgument )*
+                // COMTOR.g:463:12: ( typeArgument )*
                 while ( stream_typeArgument.hasNext() ) {
                     adaptor.addChild(root_0, stream_typeArgument.nextTree());
 
@@ -6706,7 +6706,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeArgument"
-    // .\\COMTOR.g:466:1: typeArgument : ( type | '?' ( (e= 'extends' | s= 'super' ) type )? -> ( $e)? ( $s)? ( '?' )? ( type )? );
+    // COMTOR.g:466:1: typeArgument : ( type | '?' ( (e= 'extends' | s= 'super' ) type )? -> ( $e)? ( $s)? ( '?' )? ( type )? );
     public final COMTORParser.typeArgument_return typeArgument() throws RecognitionException {
         COMTORParser.typeArgument_return retval = new COMTORParser.typeArgument_return();
         retval.start = input.LT(1);
@@ -6730,7 +6730,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return retval; }
-            // .\\COMTOR.g:467:5: ( type | '?' ( (e= 'extends' | s= 'super' ) type )? -> ( $e)? ( $s)? ( '?' )? ( type )? )
+            // COMTOR.g:467:5: ( type | '?' ( (e= 'extends' | s= 'super' ) type )? -> ( $e)? ( $s)? ( '?' )? ( type )? )
             int alt82=2;
             int LA82_0 = input.LA(1);
 
@@ -6749,7 +6749,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt82) {
                 case 1 :
-                    // .\\COMTOR.g:467:9: type
+                    // COMTOR.g:467:9: type
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -6763,12 +6763,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:468:9: '?' ( (e= 'extends' | s= 'super' ) type )?
+                    // COMTOR.g:468:9: '?' ( (e= 'extends' | s= 'super' ) type )?
                     {
                     char_literal182=(Token)match(input,QUES,FOLLOW_QUES_in_typeArgument3969); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_QUES.add(char_literal182);
 
-                    // .\\COMTOR.g:469:9: ( (e= 'extends' | s= 'super' ) type )?
+                    // COMTOR.g:469:9: ( (e= 'extends' | s= 'super' ) type )?
                     int alt81=2;
                     int LA81_0 = input.LA(1);
 
@@ -6777,9 +6777,9 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt81) {
                         case 1 :
-                            // .\\COMTOR.g:470:13: (e= 'extends' | s= 'super' ) type
+                            // COMTOR.g:470:13: (e= 'extends' | s= 'super' ) type
                             {
-                            // .\\COMTOR.g:470:13: (e= 'extends' | s= 'super' )
+                            // COMTOR.g:470:13: (e= 'extends' | s= 'super' )
                             int alt80=2;
                             int LA80_0 = input.LA(1);
 
@@ -6798,7 +6798,7 @@ public class COMTORParser extends Parser {
                             }
                             switch (alt80) {
                                 case 1 :
-                                    // .\\COMTOR.g:470:14: e= 'extends'
+                                    // COMTOR.g:470:14: e= 'extends'
                                     {
                                     e=(Token)match(input,EXTENDS,FOLLOW_EXTENDS_in_typeArgument3996); if (state.failed) return retval; 
                                     if ( state.backtracking==0 ) stream_EXTENDS.add(e);
@@ -6807,7 +6807,7 @@ public class COMTORParser extends Parser {
                                     }
                                     break;
                                 case 2 :
-                                    // .\\COMTOR.g:471:14: s= 'super'
+                                    // COMTOR.g:471:14: s= 'super'
                                     {
                                     s=(Token)match(input,SUPER,FOLLOW_SUPER_in_typeArgument4013); if (state.failed) return retval; 
                                     if ( state.backtracking==0 ) stream_SUPER.add(s);
@@ -6833,7 +6833,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: s, e, QUES, type
+                    // elements: e, QUES, type, s
                     // token labels: e, s
                     // rule labels: retval
                     // token list labels: 
@@ -6848,25 +6848,25 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 475:9: -> ( $e)? ( $s)? ( '?' )? ( type )?
                     {
-                        // .\\COMTOR.g:475:12: ( $e)?
+                        // COMTOR.g:475:12: ( $e)?
                         if ( stream_e.hasNext() ) {
                             adaptor.addChild(root_0, stream_e.nextNode());
 
                         }
                         stream_e.reset();
-                        // .\\COMTOR.g:475:16: ( $s)?
+                        // COMTOR.g:475:16: ( $s)?
                         if ( stream_s.hasNext() ) {
                             adaptor.addChild(root_0, stream_s.nextNode());
 
                         }
                         stream_s.reset();
-                        // .\\COMTOR.g:475:20: ( '?' )?
+                        // COMTOR.g:475:20: ( '?' )?
                         if ( stream_QUES.hasNext() ) {
                             adaptor.addChild(root_0, stream_QUES.nextNode());
 
                         }
                         stream_QUES.reset();
-                        // .\\COMTOR.g:475:25: ( type )?
+                        // COMTOR.g:475:25: ( type )?
                         if ( stream_type.hasNext() ) {
                             adaptor.addChild(root_0, stream_type.nextTree());
 
@@ -6907,7 +6907,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "qualifiedNameList"
-    // .\\COMTOR.g:478:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* -> ( qualifiedName )+ ;
+    // COMTOR.g:478:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* -> ( qualifiedName )+ ;
     public final COMTORParser.qualifiedNameList_return qualifiedNameList() throws RecognitionException {
         COMTORParser.qualifiedNameList_return retval = new COMTORParser.qualifiedNameList_return();
         retval.start = input.LT(1);
@@ -6925,8 +6925,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_qualifiedName=new RewriteRuleSubtreeStream(adaptor,"rule qualifiedName");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return retval; }
-            // .\\COMTOR.g:479:5: ( qualifiedName ( ',' qualifiedName )* -> ( qualifiedName )+ )
-            // .\\COMTOR.g:479:9: qualifiedName ( ',' qualifiedName )*
+            // COMTOR.g:479:5: ( qualifiedName ( ',' qualifiedName )* -> ( qualifiedName )+ )
+            // COMTOR.g:479:9: qualifiedName ( ',' qualifiedName )*
             {
             pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList4096);
             qualifiedName184=qualifiedName();
@@ -6934,7 +6934,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_qualifiedName.add(qualifiedName184.getTree());
-            // .\\COMTOR.g:480:9: ( ',' qualifiedName )*
+            // COMTOR.g:480:9: ( ',' qualifiedName )*
             loop83:
             do {
                 int alt83=2;
@@ -6947,7 +6947,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt83) {
             	case 1 :
-            	    // .\\COMTOR.g:480:10: ',' qualifiedName
+            	    // COMTOR.g:480:10: ',' qualifiedName
             	    {
             	    char_literal185=(Token)match(input,COMMA,FOLLOW_COMMA_in_qualifiedNameList4107); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal185);
@@ -7024,7 +7024,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "formalParameters"
-    // .\\COMTOR.g:485:1: formalParameters : '(' ( formalParameterDecls )? ')' -> ( formalParameterDecls )? ;
+    // COMTOR.g:485:1: formalParameters : '(' ( formalParameterDecls )? ')' -> ( formalParameterDecls )? ;
     public final COMTORParser.formalParameters_return formalParameters() throws RecognitionException {
         COMTORParser.formalParameters_return retval = new COMTORParser.formalParameters_return();
         retval.start = input.LT(1);
@@ -7043,13 +7043,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_formalParameterDecls=new RewriteRuleSubtreeStream(adaptor,"rule formalParameterDecls");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return retval; }
-            // .\\COMTOR.g:486:5: ( '(' ( formalParameterDecls )? ')' -> ( formalParameterDecls )? )
-            // .\\COMTOR.g:486:9: '(' ( formalParameterDecls )? ')'
+            // COMTOR.g:486:5: ( '(' ( formalParameterDecls )? ')' -> ( formalParameterDecls )? )
+            // COMTOR.g:486:9: '(' ( formalParameterDecls )? ')'
             {
             char_literal187=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_formalParameters4153); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(char_literal187);
 
-            // .\\COMTOR.g:487:9: ( formalParameterDecls )?
+            // COMTOR.g:487:9: ( formalParameterDecls )?
             int alt84=2;
             int LA84_0 = input.LA(1);
 
@@ -7058,7 +7058,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt84) {
                 case 1 :
-                    // .\\COMTOR.g:487:10: formalParameterDecls
+                    // COMTOR.g:487:10: formalParameterDecls
                     {
                     pushFollow(FOLLOW_formalParameterDecls_in_formalParameters4164);
                     formalParameterDecls188=formalParameterDecls();
@@ -7091,7 +7091,7 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 490:9: -> ( formalParameterDecls )?
             {
-                // .\\COMTOR.g:490:12: ( formalParameterDecls )?
+                // COMTOR.g:490:12: ( formalParameterDecls )?
                 if ( stream_formalParameterDecls.hasNext() ) {
                     adaptor.addChild(root_0, stream_formalParameterDecls.nextTree());
 
@@ -7130,7 +7130,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "formalParameterDecls"
-    // .\\COMTOR.g:493:1: formalParameterDecls : ( ellipsisParameterDecl | normalParameterDecl ( ',' normalParameterDecl )* -> ( normalParameterDecl )* | ( normalParameterDecl ',' )+ ellipsisParameterDecl -> ( normalParameterDecl )* ellipsisParameterDecl );
+    // COMTOR.g:493:1: formalParameterDecls : ( ellipsisParameterDecl | normalParameterDecl ( ',' normalParameterDecl )* -> ( normalParameterDecl )* | ( normalParameterDecl ',' )+ ellipsisParameterDecl -> ( normalParameterDecl )* ellipsisParameterDecl );
     public final COMTORParser.formalParameterDecls_return formalParameterDecls() throws RecognitionException {
         COMTORParser.formalParameterDecls_return retval = new COMTORParser.formalParameterDecls_return();
         retval.start = input.LT(1);
@@ -7157,7 +7157,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_normalParameterDecl=new RewriteRuleSubtreeStream(adaptor,"rule normalParameterDecl");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return retval; }
-            // .\\COMTOR.g:494:5: ( ellipsisParameterDecl | normalParameterDecl ( ',' normalParameterDecl )* -> ( normalParameterDecl )* | ( normalParameterDecl ',' )+ ellipsisParameterDecl -> ( normalParameterDecl )* ellipsisParameterDecl )
+            // COMTOR.g:494:5: ( ellipsisParameterDecl | normalParameterDecl ( ',' normalParameterDecl )* -> ( normalParameterDecl )* | ( normalParameterDecl ',' )+ ellipsisParameterDecl -> ( normalParameterDecl )* ellipsisParameterDecl )
             int alt87=3;
             switch ( input.LA(1) ) {
             case FINAL:
@@ -7265,7 +7265,7 @@ public class COMTORParser extends Parser {
 
             switch (alt87) {
                 case 1 :
-                    // .\\COMTOR.g:494:9: ellipsisParameterDecl
+                    // COMTOR.g:494:9: ellipsisParameterDecl
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -7279,7 +7279,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:495:9: normalParameterDecl ( ',' normalParameterDecl )*
+                    // COMTOR.g:495:9: normalParameterDecl ( ',' normalParameterDecl )*
                     {
                     pushFollow(FOLLOW_normalParameterDecl_in_formalParameterDecls4229);
                     normalParameterDecl191=normalParameterDecl();
@@ -7287,7 +7287,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_normalParameterDecl.add(normalParameterDecl191.getTree());
-                    // .\\COMTOR.g:496:9: ( ',' normalParameterDecl )*
+                    // COMTOR.g:496:9: ( ',' normalParameterDecl )*
                     loop85:
                     do {
                         int alt85=2;
@@ -7300,7 +7300,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt85) {
                     	case 1 :
-                    	    // .\\COMTOR.g:496:10: ',' normalParameterDecl
+                    	    // COMTOR.g:496:10: ',' normalParameterDecl
                     	    {
                     	    char_literal192=(Token)match(input,COMMA,FOLLOW_COMMA_in_formalParameterDecls4240); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal192);
@@ -7336,7 +7336,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 497:9: -> ( normalParameterDecl )*
                     {
-                        // .\\COMTOR.g:497:12: ( normalParameterDecl )*
+                        // COMTOR.g:497:12: ( normalParameterDecl )*
                         while ( stream_normalParameterDecl.hasNext() ) {
                             adaptor.addChild(root_0, stream_normalParameterDecl.nextTree());
 
@@ -7349,9 +7349,9 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:498:9: ( normalParameterDecl ',' )+ ellipsisParameterDecl
+                    // COMTOR.g:498:9: ( normalParameterDecl ',' )+ ellipsisParameterDecl
                     {
-                    // .\\COMTOR.g:498:9: ( normalParameterDecl ',' )+
+                    // COMTOR.g:498:9: ( normalParameterDecl ',' )+
                     int cnt86=0;
                     loop86:
                     do {
@@ -7413,7 +7413,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt86) {
                     	case 1 :
-                    	    // .\\COMTOR.g:498:10: normalParameterDecl ','
+                    	    // COMTOR.g:498:10: normalParameterDecl ','
                     	    {
                     	    pushFollow(FOLLOW_normalParameterDecl_in_formalParameterDecls4268);
                     	    normalParameterDecl194=normalParameterDecl();
@@ -7460,7 +7460,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 502:9: -> ( normalParameterDecl )* ellipsisParameterDecl
                     {
-                        // .\\COMTOR.g:502:12: ( normalParameterDecl )*
+                        // COMTOR.g:502:12: ( normalParameterDecl )*
                         while ( stream_normalParameterDecl.hasNext() ) {
                             adaptor.addChild(root_0, stream_normalParameterDecl.nextTree());
 
@@ -7502,7 +7502,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "normalParameterDecl"
-    // .\\COMTOR.g:505:1: normalParameterDecl : variableModifiers type IDENTIFIER (b+= '[' b+= ']' )* -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ( ^( ARRAY ( $b)* ) )? ) ;
+    // COMTOR.g:505:1: normalParameterDecl : variableModifiers type IDENTIFIER (b+= '[' b+= ']' )* -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ( ^( ARRAY ( $b)* ) )? ) ;
     public final COMTORParser.normalParameterDecl_return normalParameterDecl() throws RecognitionException {
         COMTORParser.normalParameterDecl_return retval = new COMTORParser.normalParameterDecl_return();
         retval.start = input.LT(1);
@@ -7526,8 +7526,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
-            // .\\COMTOR.g:506:5: ( variableModifiers type IDENTIFIER (b+= '[' b+= ']' )* -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ( ^( ARRAY ( $b)* ) )? ) )
-            // .\\COMTOR.g:506:9: variableModifiers type IDENTIFIER (b+= '[' b+= ']' )*
+            // COMTOR.g:506:5: ( variableModifiers type IDENTIFIER (b+= '[' b+= ']' )* -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ( ^( ARRAY ( $b)* ) )? ) )
+            // COMTOR.g:506:9: variableModifiers type IDENTIFIER (b+= '[' b+= ']' )*
             {
             pushFollow(FOLLOW_variableModifiers_in_normalParameterDecl4335);
             variableModifiers197=variableModifiers();
@@ -7544,7 +7544,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER199=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_normalParameterDecl4339); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER199);
 
-            // .\\COMTOR.g:507:9: (b+= '[' b+= ']' )*
+            // COMTOR.g:507:9: (b+= '[' b+= ']' )*
             loop88:
             do {
                 int alt88=2;
@@ -7557,7 +7557,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt88) {
             	case 1 :
-            	    // .\\COMTOR.g:507:10: b+= '[' b+= ']'
+            	    // COMTOR.g:507:10: b+= '[' b+= ']'
             	    {
             	    b=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_normalParameterDecl4352); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LBRACKET.add(b);
@@ -7583,7 +7583,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: b, variableModifiers, type, IDENTIFIER
+            // elements: b, variableModifiers, IDENTIFIER, type
             // token labels: 
             // rule labels: retval
             // token list labels: b
@@ -7598,9 +7598,9 @@ public class COMTORParser extends Parser {
             // 509:9: -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ( ^( ARRAY ( $b)* ) )? )
             {
                 adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:509:23: ( ^( ACCESS_MODIFIER variableModifiers ) )?
+                // COMTOR.g:509:23: ( ^( ACCESS_MODIFIER variableModifiers ) )?
                 if ( stream_variableModifiers.hasNext() ) {
-                    // .\\COMTOR.g:509:23: ^( ACCESS_MODIFIER variableModifiers )
+                    // COMTOR.g:509:23: ^( ACCESS_MODIFIER variableModifiers )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_1);
@@ -7612,20 +7612,20 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_variableModifiers.reset();
-                // .\\COMTOR.g:509:61: ^( TYPE type ( ^( ARRAY ( $b)* ) )? )
+                // COMTOR.g:509:61: ^( TYPE type ( ^( ARRAY ( $b)* ) )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_1);
 
                 adaptor.addChild(root_1, stream_type.nextTree());
-                // .\\COMTOR.g:509:73: ( ^( ARRAY ( $b)* ) )?
+                // COMTOR.g:509:73: ( ^( ARRAY ( $b)* ) )?
                 if ( stream_b.hasNext() ) {
-                    // .\\COMTOR.g:509:73: ^( ARRAY ( $b)* )
+                    // COMTOR.g:509:73: ^( ARRAY ( $b)* )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARRAY, "ARRAY"), root_2);
 
-                    // .\\COMTOR.g:509:81: ( $b)*
+                    // COMTOR.g:509:81: ( $b)*
                     while ( stream_b.hasNext() ) {
                         adaptor.addChild(root_2, stream_b.nextNode());
 
@@ -7673,7 +7673,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "ellipsisParameterDecl"
-    // .\\COMTOR.g:512:1: ellipsisParameterDecl : variableModifiers type '...' IDENTIFIER -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) ;
+    // COMTOR.g:512:1: ellipsisParameterDecl : variableModifiers type '...' IDENTIFIER -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) ;
     public final COMTORParser.ellipsisParameterDecl_return ellipsisParameterDecl() throws RecognitionException {
         COMTORParser.ellipsisParameterDecl_return retval = new COMTORParser.ellipsisParameterDecl_return();
         retval.start = input.LT(1);
@@ -7695,8 +7695,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return retval; }
-            // .\\COMTOR.g:513:5: ( variableModifiers type '...' IDENTIFIER -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) )
-            // .\\COMTOR.g:513:9: variableModifiers type '...' IDENTIFIER
+            // COMTOR.g:513:5: ( variableModifiers type '...' IDENTIFIER -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) )
+            // COMTOR.g:513:9: variableModifiers type '...' IDENTIFIER
             {
             pushFollow(FOLLOW_variableModifiers_in_ellipsisParameterDecl4421);
             variableModifiers200=variableModifiers();
@@ -7719,7 +7719,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, IDENTIFIER, variableModifiers
+            // elements: IDENTIFIER, type, variableModifiers
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -7733,9 +7733,9 @@ public class COMTORParser extends Parser {
             // 516:9: -> IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type )
             {
                 adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:516:23: ( ^( ACCESS_MODIFIER variableModifiers ) )?
+                // COMTOR.g:516:23: ( ^( ACCESS_MODIFIER variableModifiers ) )?
                 if ( stream_variableModifiers.hasNext() ) {
-                    // .\\COMTOR.g:516:23: ^( ACCESS_MODIFIER variableModifiers )
+                    // COMTOR.g:516:23: ^( ACCESS_MODIFIER variableModifiers )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_1);
@@ -7747,7 +7747,7 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_variableModifiers.reset();
-                // .\\COMTOR.g:516:61: ^( TYPE type )
+                // COMTOR.g:516:61: ^( TYPE type )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_1);
@@ -7789,7 +7789,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "qualifiedName"
-    // .\\COMTOR.g:520:1: qualifiedName : IDENTIFIER ( '.' IDENTIFIER )* -> IDENTIFIER ( '.' IDENTIFIER )* ;
+    // COMTOR.g:520:1: qualifiedName : IDENTIFIER ( '.' IDENTIFIER )* -> IDENTIFIER ( '.' IDENTIFIER )* ;
     public final COMTORParser.qualifiedName_return qualifiedName() throws RecognitionException {
         COMTORParser.qualifiedName_return retval = new COMTORParser.qualifiedName_return();
         retval.start = input.LT(1);
@@ -7808,13 +7808,13 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return retval; }
-            // .\\COMTOR.g:521:5: ( IDENTIFIER ( '.' IDENTIFIER )* -> IDENTIFIER ( '.' IDENTIFIER )* )
-            // .\\COMTOR.g:521:9: IDENTIFIER ( '.' IDENTIFIER )*
+            // COMTOR.g:521:5: ( IDENTIFIER ( '.' IDENTIFIER )* -> IDENTIFIER ( '.' IDENTIFIER )* )
+            // COMTOR.g:521:9: IDENTIFIER ( '.' IDENTIFIER )*
             {
             IDENTIFIER204=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_qualifiedName4490); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER204);
 
-            // .\\COMTOR.g:522:9: ( '.' IDENTIFIER )*
+            // COMTOR.g:522:9: ( '.' IDENTIFIER )*
             loop89:
             do {
                 int alt89=2;
@@ -7827,7 +7827,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt89) {
             	case 1 :
-            	    // .\\COMTOR.g:522:10: '.' IDENTIFIER
+            	    // COMTOR.g:522:10: '.' IDENTIFIER
             	    {
             	    char_literal205=(Token)match(input,DOT,FOLLOW_DOT_in_qualifiedName4501); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_DOT.add(char_literal205);
@@ -7861,7 +7861,7 @@ public class COMTORParser extends Parser {
             // 524:9: -> IDENTIFIER ( '.' IDENTIFIER )*
             {
                 adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:524:23: ( '.' IDENTIFIER )*
+                // COMTOR.g:524:23: ( '.' IDENTIFIER )*
                 while ( stream_DOT.hasNext()||stream_IDENTIFIER.hasNext() ) {
                     adaptor.addChild(root_0, stream_DOT.nextNode());
                     adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
@@ -7902,7 +7902,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "explicitConstructorInvocation"
-    // .\\COMTOR.g:526:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';' -> ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' -> ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) );
+    // COMTOR.g:526:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';' -> ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' -> ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) );
     public final COMTORParser.explicitConstructorInvocation_return explicitConstructorInvocation() throws RecognitionException {
         COMTORParser.explicitConstructorInvocation_return retval = new COMTORParser.explicitConstructorInvocation_return();
         retval.start = input.LT(1);
@@ -7941,14 +7941,14 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_nonWildcardTypeArguments=new RewriteRuleSubtreeStream(adaptor,"rule nonWildcardTypeArguments");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return retval; }
-            // .\\COMTOR.g:527:5: ( ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';' -> ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' -> ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) )
+            // COMTOR.g:527:5: ( ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';' -> ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' -> ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? ) )
             int alt93=2;
             alt93 = dfa93.predict(input);
             switch (alt93) {
                 case 1 :
-                    // .\\COMTOR.g:527:9: ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';'
+                    // COMTOR.g:527:9: ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';'
                     {
-                    // .\\COMTOR.g:527:9: ( nonWildcardTypeArguments )?
+                    // COMTOR.g:527:9: ( nonWildcardTypeArguments )?
                     int alt90=2;
                     int LA90_0 = input.LA(1);
 
@@ -7957,7 +7957,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt90) {
                         case 1 :
-                            // .\\COMTOR.g:527:10: nonWildcardTypeArguments
+                            // COMTOR.g:527:10: nonWildcardTypeArguments
                             {
                             pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation4553);
                             nonWildcardTypeArguments207=nonWildcardTypeArguments();
@@ -7971,7 +7971,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:529:9: (t= 'this' | s= 'super' )
+                    // COMTOR.g:529:9: (t= 'this' | s= 'super' )
                     int alt91=2;
                     int LA91_0 = input.LA(1);
 
@@ -7990,7 +7990,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt91) {
                         case 1 :
-                            // .\\COMTOR.g:529:10: t= 'this'
+                            // COMTOR.g:529:10: t= 'this'
                             {
                             t=(Token)match(input,THIS,FOLLOW_THIS_in_explicitConstructorInvocation4582); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_THIS.add(t);
@@ -7999,7 +7999,7 @@ public class COMTORParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:530:10: s= 'super'
+                            // COMTOR.g:530:10: s= 'super'
                             {
                             s=(Token)match(input,SUPER,FOLLOW_SUPER_in_explicitConstructorInvocation4595); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_SUPER.add(s);
@@ -8022,7 +8022,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: s, arguments, t, nonWildcardTypeArguments
+                    // elements: nonWildcardTypeArguments, t, s, arguments
                     // token labels: t, s
                     // rule labels: retval
                     // token list labels: 
@@ -8037,24 +8037,24 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 533:9: -> ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? )
                     {
-                        // .\\COMTOR.g:533:12: ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? )
+                        // COMTOR.g:533:12: ^( CONSTRUCTOR_CALL ( $s)? ( $t)? ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONSTRUCTOR_CALL, "CONSTRUCTOR_CALL"), root_1);
 
-                        // .\\COMTOR.g:533:31: ( $s)?
+                        // COMTOR.g:533:31: ( $s)?
                         if ( stream_s.hasNext() ) {
                             adaptor.addChild(root_1, stream_s.nextNode());
 
                         }
                         stream_s.reset();
-                        // .\\COMTOR.g:533:35: ( $t)?
+                        // COMTOR.g:533:35: ( $t)?
                         if ( stream_t.hasNext() ) {
                             adaptor.addChild(root_1, stream_t.nextNode());
 
                         }
                         stream_t.reset();
-                        // .\\COMTOR.g:533:39: ^( ARGUMENTS arguments )
+                        // COMTOR.g:533:39: ^( ARGUMENTS arguments )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARGUMENTS, "ARGUMENTS"), root_2);
@@ -8063,7 +8063,7 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:533:62: ( nonWildcardTypeArguments )?
+                        // COMTOR.g:533:62: ( nonWildcardTypeArguments )?
                         if ( stream_nonWildcardTypeArguments.hasNext() ) {
                             adaptor.addChild(root_1, stream_nonWildcardTypeArguments.nextTree());
 
@@ -8079,7 +8079,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:534:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
+                    // COMTOR.g:534:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
                     {
                     pushFollow(FOLLOW_primary_in_explicitConstructorInvocation4658);
                     primary210=primary();
@@ -8090,7 +8090,7 @@ public class COMTORParser extends Parser {
                     char_literal211=(Token)match(input,DOT,FOLLOW_DOT_in_explicitConstructorInvocation4668); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_DOT.add(char_literal211);
 
-                    // .\\COMTOR.g:536:9: ( nonWildcardTypeArguments )?
+                    // COMTOR.g:536:9: ( nonWildcardTypeArguments )?
                     int alt92=2;
                     int LA92_0 = input.LA(1);
 
@@ -8099,7 +8099,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt92) {
                         case 1 :
-                            // .\\COMTOR.g:536:10: nonWildcardTypeArguments
+                            // COMTOR.g:536:10: nonWildcardTypeArguments
                             {
                             pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation4679);
                             nonWildcardTypeArguments212=nonWildcardTypeArguments();
@@ -8128,7 +8128,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: nonWildcardTypeArguments, arguments, primary, SUPER
+                    // elements: SUPER, arguments, primary, nonWildcardTypeArguments
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -8141,14 +8141,14 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 540:9: -> ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? )
                     {
-                        // .\\COMTOR.g:540:12: ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? )
+                        // COMTOR.g:540:12: ^( CONSTRUCTOR_CALL 'super' primary ^( ARGUMENTS arguments ) ( nonWildcardTypeArguments )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONSTRUCTOR_CALL, "CONSTRUCTOR_CALL"), root_1);
 
                         adaptor.addChild(root_1, stream_SUPER.nextNode());
                         adaptor.addChild(root_1, stream_primary.nextTree());
-                        // .\\COMTOR.g:540:47: ^( ARGUMENTS arguments )
+                        // COMTOR.g:540:47: ^( ARGUMENTS arguments )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARGUMENTS, "ARGUMENTS"), root_2);
@@ -8157,7 +8157,7 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:540:70: ( nonWildcardTypeArguments )?
+                        // COMTOR.g:540:70: ( nonWildcardTypeArguments )?
                         if ( stream_nonWildcardTypeArguments.hasNext() ) {
                             adaptor.addChild(root_1, stream_nonWildcardTypeArguments.nextTree());
 
@@ -8201,7 +8201,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotations"
-    // .\\COMTOR.g:543:1: annotations : ( annotation )+ -> ( ^( ANNOTATION annotation ) )* ;
+    // COMTOR.g:543:1: annotations : ( annotation )+ -> ( ^( ANNOTATION annotation ) )* ;
     public final COMTORParser.annotations_return annotations() throws RecognitionException {
         COMTORParser.annotations_return retval = new COMTORParser.annotations_return();
         retval.start = input.LT(1);
@@ -8214,10 +8214,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_annotation=new RewriteRuleSubtreeStream(adaptor,"rule annotation");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return retval; }
-            // .\\COMTOR.g:544:5: ( ( annotation )+ -> ( ^( ANNOTATION annotation ) )* )
-            // .\\COMTOR.g:544:9: ( annotation )+
+            // COMTOR.g:544:5: ( ( annotation )+ -> ( ^( ANNOTATION annotation ) )* )
+            // COMTOR.g:544:9: ( annotation )+
             {
-            // .\\COMTOR.g:544:9: ( annotation )+
+            // COMTOR.g:544:9: ( annotation )+
             int cnt94=0;
             loop94:
             do {
@@ -8243,7 +8243,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt94) {
             	case 1 :
-            	    // .\\COMTOR.g:544:10: annotation
+            	    // COMTOR.g:544:10: annotation
             	    {
             	    pushFollow(FOLLOW_annotation_in_annotations4763);
             	    annotation216=annotation();
@@ -8281,9 +8281,9 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 546:9: -> ( ^( ANNOTATION annotation ) )*
             {
-                // .\\COMTOR.g:546:12: ( ^( ANNOTATION annotation ) )*
+                // COMTOR.g:546:12: ( ^( ANNOTATION annotation ) )*
                 while ( stream_annotation.hasNext() ) {
-                    // .\\COMTOR.g:546:12: ^( ANNOTATION annotation )
+                    // COMTOR.g:546:12: ^( ANNOTATION annotation )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ANNOTATION, "ANNOTATION"), root_1);
@@ -8328,7 +8328,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotation"
-    // .\\COMTOR.g:549:1: annotation : '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )? -> ^( qualifiedName ( elementValuePairs )? ( elementValue )? ) ;
+    // COMTOR.g:549:1: annotation : '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )? -> ^( qualifiedName ( elementValuePairs )? ( elementValue )? ) ;
     public final COMTORParser.annotation_return annotation() throws RecognitionException {
         COMTORParser.annotation_return retval = new COMTORParser.annotation_return();
         retval.start = input.LT(1);
@@ -8356,8 +8356,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_elementValuePairs=new RewriteRuleSubtreeStream(adaptor,"rule elementValuePairs");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 47) ) { return retval; }
-            // .\\COMTOR.g:554:5: ( '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )? -> ^( qualifiedName ( elementValuePairs )? ( elementValue )? ) )
-            // .\\COMTOR.g:554:9: '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )?
+            // COMTOR.g:554:5: ( '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )? -> ^( qualifiedName ( elementValuePairs )? ( elementValue )? ) )
+            // COMTOR.g:554:9: '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )?
             {
             char_literal217=(Token)match(input,MONKEYS_AT,FOLLOW_MONKEYS_AT_in_annotation4813); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_MONKEYS_AT.add(char_literal217);
@@ -8368,7 +8368,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_qualifiedName.add(qualifiedName218.getTree());
-            // .\\COMTOR.g:555:9: ( '(' ( elementValuePairs | elementValue )? ')' )?
+            // COMTOR.g:555:9: ( '(' ( elementValuePairs | elementValue )? ')' )?
             int alt96=2;
             int LA96_0 = input.LA(1);
 
@@ -8377,12 +8377,12 @@ public class COMTORParser extends Parser {
             }
             switch (alt96) {
                 case 1 :
-                    // .\\COMTOR.g:555:13: '(' ( elementValuePairs | elementValue )? ')'
+                    // COMTOR.g:555:13: '(' ( elementValuePairs | elementValue )? ')'
                     {
                     char_literal219=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_annotation4829); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(char_literal219);
 
-                    // .\\COMTOR.g:556:19: ( elementValuePairs | elementValue )?
+                    // COMTOR.g:556:19: ( elementValuePairs | elementValue )?
                     int alt95=3;
                     int LA95_0 = input.LA(1);
 
@@ -8401,7 +8401,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt95) {
                         case 1 :
-                            // .\\COMTOR.g:556:23: elementValuePairs
+                            // COMTOR.g:556:23: elementValuePairs
                             {
                             pushFollow(FOLLOW_elementValuePairs_in_annotation4856);
                             elementValuePairs220=elementValuePairs();
@@ -8413,7 +8413,7 @@ public class COMTORParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:557:23: elementValue
+                            // COMTOR.g:557:23: elementValue
                             {
                             pushFollow(FOLLOW_elementValue_in_annotation4880);
                             elementValue221=elementValue();
@@ -8452,18 +8452,18 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 561:9: -> ^( qualifiedName ( elementValuePairs )? ( elementValue )? )
             {
-                // .\\COMTOR.g:561:12: ^( qualifiedName ( elementValuePairs )? ( elementValue )? )
+                // COMTOR.g:561:12: ^( qualifiedName ( elementValuePairs )? ( elementValue )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_qualifiedName.nextNode(), root_1);
 
-                // .\\COMTOR.g:561:28: ( elementValuePairs )?
+                // COMTOR.g:561:28: ( elementValuePairs )?
                 if ( stream_elementValuePairs.hasNext() ) {
                     adaptor.addChild(root_1, stream_elementValuePairs.nextTree());
 
                 }
                 stream_elementValuePairs.reset();
-                // .\\COMTOR.g:561:47: ( elementValue )?
+                // COMTOR.g:561:47: ( elementValue )?
                 if ( stream_elementValue.hasNext() ) {
                     adaptor.addChild(root_1, stream_elementValue.nextTree());
 
@@ -8505,7 +8505,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "elementValuePairs"
-    // .\\COMTOR.g:564:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* -> ( ^( elementValuePair ) )+ ;
+    // COMTOR.g:564:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* -> ( ^( elementValuePair ) )+ ;
     public final COMTORParser.elementValuePairs_return elementValuePairs() throws RecognitionException {
         COMTORParser.elementValuePairs_return retval = new COMTORParser.elementValuePairs_return();
         retval.start = input.LT(1);
@@ -8523,8 +8523,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_elementValuePair=new RewriteRuleSubtreeStream(adaptor,"rule elementValuePair");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 48) ) { return retval; }
-            // .\\COMTOR.g:565:5: ( elementValuePair ( ',' elementValuePair )* -> ( ^( elementValuePair ) )+ )
-            // .\\COMTOR.g:565:9: elementValuePair ( ',' elementValuePair )*
+            // COMTOR.g:565:5: ( elementValuePair ( ',' elementValuePair )* -> ( ^( elementValuePair ) )+ )
+            // COMTOR.g:565:9: elementValuePair ( ',' elementValuePair )*
             {
             pushFollow(FOLLOW_elementValuePair_in_elementValuePairs4968);
             elementValuePair223=elementValuePair();
@@ -8532,7 +8532,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_elementValuePair.add(elementValuePair223.getTree());
-            // .\\COMTOR.g:566:9: ( ',' elementValuePair )*
+            // COMTOR.g:566:9: ( ',' elementValuePair )*
             loop97:
             do {
                 int alt97=2;
@@ -8545,7 +8545,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt97) {
             	case 1 :
-            	    // .\\COMTOR.g:566:10: ',' elementValuePair
+            	    // COMTOR.g:566:10: ',' elementValuePair
             	    {
             	    char_literal224=(Token)match(input,COMMA,FOLLOW_COMMA_in_elementValuePairs4979); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal224);
@@ -8585,7 +8585,7 @@ public class COMTORParser extends Parser {
                     throw new RewriteEarlyExitException();
                 }
                 while ( stream_elementValuePair.hasNext() ) {
-                    // .\\COMTOR.g:568:12: ^( elementValuePair )
+                    // COMTOR.g:568:12: ^( elementValuePair )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot(stream_elementValuePair.nextNode(), root_1);
@@ -8628,7 +8628,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "elementValuePair"
-    // .\\COMTOR.g:571:1: elementValuePair : IDENTIFIER '=' elementValue -> IDENTIFIER elementValue ;
+    // COMTOR.g:571:1: elementValuePair : IDENTIFIER '=' elementValue -> IDENTIFIER elementValue ;
     public final COMTORParser.elementValuePair_return elementValuePair() throws RecognitionException {
         COMTORParser.elementValuePair_return retval = new COMTORParser.elementValuePair_return();
         retval.start = input.LT(1);
@@ -8647,8 +8647,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_elementValue=new RewriteRuleSubtreeStream(adaptor,"rule elementValue");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 49) ) { return retval; }
-            // .\\COMTOR.g:572:5: ( IDENTIFIER '=' elementValue -> IDENTIFIER elementValue )
-            // .\\COMTOR.g:572:9: IDENTIFIER '=' elementValue
+            // COMTOR.g:572:5: ( IDENTIFIER '=' elementValue -> IDENTIFIER elementValue )
+            // COMTOR.g:572:9: IDENTIFIER '=' elementValue
             {
             IDENTIFIER226=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_elementValuePair5027); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER226);
@@ -8713,7 +8713,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "elementValue"
-    // .\\COMTOR.g:576:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
+    // COMTOR.g:576:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
     public final COMTORParser.elementValue_return elementValue() throws RecognitionException {
         COMTORParser.elementValue_return retval = new COMTORParser.elementValue_return();
         retval.start = input.LT(1);
@@ -8730,7 +8730,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 50) ) { return retval; }
-            // .\\COMTOR.g:577:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
+            // COMTOR.g:577:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
             int alt98=3;
             switch ( input.LA(1) ) {
             case IDENTIFIER:
@@ -8787,7 +8787,7 @@ public class COMTORParser extends Parser {
 
             switch (alt98) {
                 case 1 :
-                    // .\\COMTOR.g:577:9: conditionalExpression
+                    // COMTOR.g:577:9: conditionalExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8801,7 +8801,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:578:9: annotation
+                    // COMTOR.g:578:9: annotation
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8815,7 +8815,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:579:9: elementValueArrayInitializer
+                    // COMTOR.g:579:9: elementValueArrayInitializer
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -8857,7 +8857,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "elementValueArrayInitializer"
-    // .\\COMTOR.g:582:1: elementValueArrayInitializer : ( '{' '}' -> EMPTY_ARRAY | '{' ( elementValue ( ',' elementValue )* ) ( ',' )? '}' -> ( elementValue )+ );
+    // COMTOR.g:582:1: elementValueArrayInitializer : ( '{' '}' -> EMPTY_ARRAY | '{' ( elementValue ( ',' elementValue )* ) ( ',' )? '}' -> ( elementValue )+ );
     public final COMTORParser.elementValueArrayInitializer_return elementValueArrayInitializer() throws RecognitionException {
         COMTORParser.elementValueArrayInitializer_return retval = new COMTORParser.elementValueArrayInitializer_return();
         retval.start = input.LT(1);
@@ -8887,7 +8887,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_elementValue=new RewriteRuleSubtreeStream(adaptor,"rule elementValue");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 51) ) { return retval; }
-            // .\\COMTOR.g:583:5: ( '{' '}' -> EMPTY_ARRAY | '{' ( elementValue ( ',' elementValue )* ) ( ',' )? '}' -> ( elementValue )+ )
+            // COMTOR.g:583:5: ( '{' '}' -> EMPTY_ARRAY | '{' ( elementValue ( ',' elementValue )* ) ( ',' )? '}' -> ( elementValue )+ )
             int alt101=2;
             int LA101_0 = input.LA(1);
 
@@ -8917,7 +8917,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt101) {
                 case 1 :
-                    // .\\COMTOR.g:583:9: '{' '}'
+                    // COMTOR.g:583:9: '{' '}'
                     {
                     char_literal232=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_elementValueArrayInitializer5101); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LBRACE.add(char_literal232);
@@ -8949,13 +8949,13 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:584:9: '{' ( elementValue ( ',' elementValue )* ) ( ',' )? '}'
+                    // COMTOR.g:584:9: '{' ( elementValue ( ',' elementValue )* ) ( ',' )? '}'
                     {
                     char_literal234=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_elementValueArrayInitializer5117); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LBRACE.add(char_literal234);
 
-                    // .\\COMTOR.g:585:9: ( elementValue ( ',' elementValue )* )
-                    // .\\COMTOR.g:585:10: elementValue ( ',' elementValue )*
+                    // COMTOR.g:585:9: ( elementValue ( ',' elementValue )* )
+                    // COMTOR.g:585:10: elementValue ( ',' elementValue )*
                     {
                     pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer5128);
                     elementValue235=elementValue();
@@ -8963,7 +8963,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_elementValue.add(elementValue235.getTree());
-                    // .\\COMTOR.g:586:13: ( ',' elementValue )*
+                    // COMTOR.g:586:13: ( ',' elementValue )*
                     loop99:
                     do {
                         int alt99=2;
@@ -8982,7 +8982,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt99) {
                     	case 1 :
-                    	    // .\\COMTOR.g:586:14: ',' elementValue
+                    	    // COMTOR.g:586:14: ',' elementValue
                     	    {
                     	    char_literal236=(Token)match(input,COMMA,FOLLOW_COMMA_in_elementValueArrayInitializer5143); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal236);
@@ -9005,7 +9005,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:588:11: ( ',' )?
+                    // COMTOR.g:588:11: ( ',' )?
                     int alt100=2;
                     int LA100_0 = input.LA(1);
 
@@ -9014,7 +9014,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt100) {
                         case 1 :
-                            // .\\COMTOR.g:588:12: ','
+                            // COMTOR.g:588:12: ','
                             {
                             char_literal238=(Token)match(input,COMMA,FOLLOW_COMMA_in_elementValueArrayInitializer5173); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_COMMA.add(char_literal238);
@@ -9087,7 +9087,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotationTypeDeclaration"
-    // .\\COMTOR.g:593:1: annotationTypeDeclaration : modifiers '@' 'interface' IDENTIFIER annotationTypeBody ;
+    // COMTOR.g:593:1: annotationTypeDeclaration : modifiers '@' 'interface' IDENTIFIER annotationTypeBody ;
     public final COMTORParser.annotationTypeDeclaration_return annotationTypeDeclaration() throws RecognitionException {
         COMTORParser.annotationTypeDeclaration_return retval = new COMTORParser.annotationTypeDeclaration_return();
         retval.start = input.LT(1);
@@ -9108,8 +9108,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 52) ) { return retval; }
-            // .\\COMTOR.g:597:5: ( modifiers '@' 'interface' IDENTIFIER annotationTypeBody )
-            // .\\COMTOR.g:597:9: modifiers '@' 'interface' IDENTIFIER annotationTypeBody
+            // COMTOR.g:597:5: ( modifiers '@' 'interface' IDENTIFIER annotationTypeBody )
+            // COMTOR.g:597:9: modifiers '@' 'interface' IDENTIFIER annotationTypeBody
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -9170,7 +9170,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotationTypeBody"
-    // .\\COMTOR.g:604:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' -> ( annotationTypeElementDeclaration )* ;
+    // COMTOR.g:604:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' -> ( annotationTypeElementDeclaration )* ;
     public final COMTORParser.annotationTypeBody_return annotationTypeBody() throws RecognitionException {
         COMTORParser.annotationTypeBody_return retval = new COMTORParser.annotationTypeBody_return();
         retval.start = input.LT(1);
@@ -9189,13 +9189,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_annotationTypeElementDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule annotationTypeElementDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 53) ) { return retval; }
-            // .\\COMTOR.g:605:5: ( '{' ( annotationTypeElementDeclaration )* '}' -> ( annotationTypeElementDeclaration )* )
-            // .\\COMTOR.g:605:9: '{' ( annotationTypeElementDeclaration )* '}'
+            // COMTOR.g:605:5: ( '{' ( annotationTypeElementDeclaration )* '}' -> ( annotationTypeElementDeclaration )* )
+            // COMTOR.g:605:9: '{' ( annotationTypeElementDeclaration )* '}'
             {
             char_literal245=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_annotationTypeBody5267); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACE.add(char_literal245);
 
-            // .\\COMTOR.g:606:9: ( annotationTypeElementDeclaration )*
+            // COMTOR.g:606:9: ( annotationTypeElementDeclaration )*
             loop102:
             do {
                 int alt102=2;
@@ -9208,7 +9208,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt102) {
             	case 1 :
-            	    // .\\COMTOR.g:606:10: annotationTypeElementDeclaration
+            	    // COMTOR.g:606:10: annotationTypeElementDeclaration
             	    {
             	    pushFollow(FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody5279);
             	    annotationTypeElementDeclaration246=annotationTypeElementDeclaration();
@@ -9244,7 +9244,7 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 609:9: -> ( annotationTypeElementDeclaration )*
             {
-                // .\\COMTOR.g:609:12: ( annotationTypeElementDeclaration )*
+                // COMTOR.g:609:12: ( annotationTypeElementDeclaration )*
                 while ( stream_annotationTypeElementDeclaration.hasNext() ) {
                     adaptor.addChild(root_0, stream_annotationTypeElementDeclaration.nextTree());
 
@@ -9283,7 +9283,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotationTypeElementDeclaration"
-    // .\\COMTOR.g:612:1: annotationTypeElementDeclaration : ( annotationMethodDeclaration | interfaceFieldDeclaration | normalClassDeclaration | normalInterfaceDeclaration | enumDeclaration | annotationTypeDeclaration | ';' ->);
+    // COMTOR.g:612:1: annotationTypeElementDeclaration : ( annotationMethodDeclaration | interfaceFieldDeclaration | normalClassDeclaration | normalInterfaceDeclaration | enumDeclaration | annotationTypeDeclaration | ';' ->);
     public final COMTORParser.annotationTypeElementDeclaration_return annotationTypeElementDeclaration() throws RecognitionException {
         COMTORParser.annotationTypeElementDeclaration_return retval = new COMTORParser.annotationTypeElementDeclaration_return();
         retval.start = input.LT(1);
@@ -9309,12 +9309,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 54) ) { return retval; }
-            // .\\COMTOR.g:616:5: ( annotationMethodDeclaration | interfaceFieldDeclaration | normalClassDeclaration | normalInterfaceDeclaration | enumDeclaration | annotationTypeDeclaration | ';' ->)
+            // COMTOR.g:616:5: ( annotationMethodDeclaration | interfaceFieldDeclaration | normalClassDeclaration | normalInterfaceDeclaration | enumDeclaration | annotationTypeDeclaration | ';' ->)
             int alt103=7;
             alt103 = dfa103.predict(input);
             switch (alt103) {
                 case 1 :
-                    // .\\COMTOR.g:616:9: annotationMethodDeclaration
+                    // COMTOR.g:616:9: annotationMethodDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9328,7 +9328,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:617:9: interfaceFieldDeclaration
+                    // COMTOR.g:617:9: interfaceFieldDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9342,7 +9342,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:618:9: normalClassDeclaration
+                    // COMTOR.g:618:9: normalClassDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9356,7 +9356,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:619:9: normalInterfaceDeclaration
+                    // COMTOR.g:619:9: normalInterfaceDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9370,7 +9370,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:620:9: enumDeclaration
+                    // COMTOR.g:620:9: enumDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9384,7 +9384,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:621:9: annotationTypeDeclaration
+                    // COMTOR.g:621:9: annotationTypeDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9398,7 +9398,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:622:9: ';'
+                    // COMTOR.g:622:9: ';'
                     {
                     char_literal254=(Token)match(input,SEMI,FOLLOW_SEMI_in_annotationTypeElementDeclaration5396); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(char_literal254);
@@ -9454,7 +9454,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotationMethodDeclaration"
-    // .\\COMTOR.g:625:1: annotationMethodDeclaration : ( modifiers )? type IDENTIFIER '(' ')' ( 'default' elementValue )? ';' -> IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ( ^( 'default' elementValue ) )? ;
+    // COMTOR.g:625:1: annotationMethodDeclaration : ( modifiers )? type IDENTIFIER '(' ')' ( 'default' elementValue )? ';' -> IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ( ^( 'default' elementValue ) )? ;
     public final COMTORParser.annotationMethodDeclaration_return annotationMethodDeclaration() throws RecognitionException {
         COMTORParser.annotationMethodDeclaration_return retval = new COMTORParser.annotationMethodDeclaration_return();
         retval.start = input.LT(1);
@@ -9488,10 +9488,10 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 55) ) { return retval; }
-            // .\\COMTOR.g:626:5: ( ( modifiers )? type IDENTIFIER '(' ')' ( 'default' elementValue )? ';' -> IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ( ^( 'default' elementValue ) )? )
-            // .\\COMTOR.g:626:9: ( modifiers )? type IDENTIFIER '(' ')' ( 'default' elementValue )? ';'
+            // COMTOR.g:626:5: ( ( modifiers )? type IDENTIFIER '(' ')' ( 'default' elementValue )? ';' -> IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ( ^( 'default' elementValue ) )? )
+            // COMTOR.g:626:9: ( modifiers )? type IDENTIFIER '(' ')' ( 'default' elementValue )? ';'
             {
-            // .\\COMTOR.g:626:9: ( modifiers )?
+            // COMTOR.g:626:9: ( modifiers )?
             int alt104=2;
             int LA104_0 = input.LA(1);
 
@@ -9500,7 +9500,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt104) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: modifiers
+                    // COMTOR.g:0:0: modifiers
                     {
                     pushFollow(FOLLOW_modifiers_in_annotationMethodDeclaration5418);
                     modifiers255=modifiers();
@@ -9529,7 +9529,7 @@ public class COMTORParser extends Parser {
             char_literal259=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_annotationMethodDeclaration5435); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(char_literal259);
 
-            // .\\COMTOR.g:627:17: ( 'default' elementValue )?
+            // COMTOR.g:627:17: ( 'default' elementValue )?
             int alt105=2;
             int LA105_0 = input.LA(1);
 
@@ -9538,7 +9538,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt105) {
                 case 1 :
-                    // .\\COMTOR.g:627:18: 'default' elementValue
+                    // COMTOR.g:627:18: 'default' elementValue
                     {
                     string_literal260=(Token)match(input,DEFAULT,FOLLOW_DEFAULT_in_annotationMethodDeclaration5438); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_DEFAULT.add(string_literal260);
@@ -9561,7 +9561,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, elementValue, DEFAULT, modifiers, IDENTIFIER
+            // elements: modifiers, DEFAULT, IDENTIFIER, elementValue, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -9575,9 +9575,9 @@ public class COMTORParser extends Parser {
             // 630:9: -> IDENTIFIER ( ^( ACCESS_MODIFIER modifiers ) )? ^( TYPE type ) ( ^( 'default' elementValue ) )?
             {
                 adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:630:23: ( ^( ACCESS_MODIFIER modifiers ) )?
+                // COMTOR.g:630:23: ( ^( ACCESS_MODIFIER modifiers ) )?
                 if ( stream_modifiers.hasNext() ) {
-                    // .\\COMTOR.g:630:23: ^( ACCESS_MODIFIER modifiers )
+                    // COMTOR.g:630:23: ^( ACCESS_MODIFIER modifiers )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_1);
@@ -9589,7 +9589,7 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_modifiers.reset();
-                // .\\COMTOR.g:630:53: ^( TYPE type )
+                // COMTOR.g:630:53: ^( TYPE type )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_1);
@@ -9598,9 +9598,9 @@ public class COMTORParser extends Parser {
 
                 adaptor.addChild(root_0, root_1);
                 }
-                // .\\COMTOR.g:630:66: ( ^( 'default' elementValue ) )?
-                if ( stream_elementValue.hasNext()||stream_DEFAULT.hasNext() ) {
-                    // .\\COMTOR.g:630:66: ^( 'default' elementValue )
+                // COMTOR.g:630:66: ( ^( 'default' elementValue ) )?
+                if ( stream_DEFAULT.hasNext()||stream_elementValue.hasNext() ) {
+                    // COMTOR.g:630:66: ^( 'default' elementValue )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot(stream_DEFAULT.nextNode(), root_1);
@@ -9611,8 +9611,8 @@ public class COMTORParser extends Parser {
                     }
 
                 }
-                stream_elementValue.reset();
                 stream_DEFAULT.reset();
+                stream_elementValue.reset();
 
             }
 
@@ -9646,7 +9646,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "block"
-    // .\\COMTOR.g:633:1: block : '{' ( blockStatement )* '}' -> ( blockStatement )* ;
+    // COMTOR.g:633:1: block : '{' ( blockStatement )* '}' -> ( blockStatement )* ;
     public final COMTORParser.block_return block() throws RecognitionException {
         COMTORParser.block_return retval = new COMTORParser.block_return();
         retval.start = input.LT(1);
@@ -9665,13 +9665,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_blockStatement=new RewriteRuleSubtreeStream(adaptor,"rule blockStatement");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 56) ) { return retval; }
-            // .\\COMTOR.g:634:5: ( '{' ( blockStatement )* '}' -> ( blockStatement )* )
-            // .\\COMTOR.g:634:9: '{' ( blockStatement )* '}'
+            // COMTOR.g:634:5: ( '{' ( blockStatement )* '}' -> ( blockStatement )* )
+            // COMTOR.g:634:9: '{' ( blockStatement )* '}'
             {
             char_literal263=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_block5525); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACE.add(char_literal263);
 
-            // .\\COMTOR.g:635:9: ( blockStatement )*
+            // COMTOR.g:635:9: ( blockStatement )*
             loop106:
             do {
                 int alt106=2;
@@ -9684,7 +9684,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt106) {
             	case 1 :
-            	    // .\\COMTOR.g:635:10: blockStatement
+            	    // COMTOR.g:635:10: blockStatement
             	    {
             	    pushFollow(FOLLOW_blockStatement_in_block5536);
             	    blockStatement264=blockStatement();
@@ -9720,7 +9720,7 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 638:9: -> ( blockStatement )*
             {
-                // .\\COMTOR.g:638:12: ( blockStatement )*
+                // COMTOR.g:638:12: ( blockStatement )*
                 while ( stream_blockStatement.hasNext() ) {
                     adaptor.addChild(root_0, stream_blockStatement.nextTree());
 
@@ -9759,7 +9759,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "blockStatement"
-    // .\\COMTOR.g:666:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
+    // COMTOR.g:666:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
     public final COMTORParser.blockStatement_return blockStatement() throws RecognitionException {
         COMTORParser.blockStatement_return retval = new COMTORParser.blockStatement_return();
         retval.start = input.LT(1);
@@ -9776,12 +9776,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 57) ) { return retval; }
-            // .\\COMTOR.g:667:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
+            // COMTOR.g:667:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
             int alt107=3;
             alt107 = dfa107.predict(input);
             switch (alt107) {
                 case 1 :
-                    // .\\COMTOR.g:667:9: localVariableDeclarationStatement
+                    // COMTOR.g:667:9: localVariableDeclarationStatement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9795,7 +9795,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:668:9: classOrInterfaceDeclaration
+                    // COMTOR.g:668:9: classOrInterfaceDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9809,7 +9809,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:669:9: statement
+                    // COMTOR.g:669:9: statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -9851,7 +9851,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "localVariableDeclarationStatement"
-    // .\\COMTOR.g:673:1: localVariableDeclarationStatement : localVariableDeclaration ';' -> localVariableDeclaration ;
+    // COMTOR.g:673:1: localVariableDeclarationStatement : localVariableDeclaration ';' -> localVariableDeclaration ;
     public final COMTORParser.localVariableDeclarationStatement_return localVariableDeclarationStatement() throws RecognitionException {
         COMTORParser.localVariableDeclarationStatement_return retval = new COMTORParser.localVariableDeclarationStatement_return();
         retval.start = input.LT(1);
@@ -9867,8 +9867,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_localVariableDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule localVariableDeclaration");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 58) ) { return retval; }
-            // .\\COMTOR.g:674:5: ( localVariableDeclaration ';' -> localVariableDeclaration )
-            // .\\COMTOR.g:674:9: localVariableDeclaration ';'
+            // COMTOR.g:674:5: ( localVariableDeclaration ';' -> localVariableDeclaration )
+            // COMTOR.g:674:9: localVariableDeclaration ';'
             {
             pushFollow(FOLLOW_localVariableDeclaration_in_localVariableDeclarationStatement5634);
             localVariableDeclaration269=localVariableDeclaration();
@@ -9929,7 +9929,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "localVariableDeclaration"
-    // .\\COMTOR.g:679:1: localVariableDeclaration : variableModifiers type variableDeclarator ( ',' variableDeclarator )* -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) ) )+ ;
+    // COMTOR.g:679:1: localVariableDeclaration : variableModifiers type variableDeclarator ( ',' variableDeclarator )* -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) ) )+ ;
     public final COMTORParser.localVariableDeclaration_return localVariableDeclaration() throws RecognitionException {
         COMTORParser.localVariableDeclaration_return retval = new COMTORParser.localVariableDeclaration_return();
         retval.start = input.LT(1);
@@ -9953,8 +9953,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 59) ) { return retval; }
-            // .\\COMTOR.g:680:5: ( variableModifiers type variableDeclarator ( ',' variableDeclarator )* -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) ) )+ )
-            // .\\COMTOR.g:680:9: variableModifiers type variableDeclarator ( ',' variableDeclarator )*
+            // COMTOR.g:680:5: ( variableModifiers type variableDeclarator ( ',' variableDeclarator )* -> ( ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) ) )+ )
+            // COMTOR.g:680:9: variableModifiers type variableDeclarator ( ',' variableDeclarator )*
             {
             pushFollow(FOLLOW_variableModifiers_in_localVariableDeclaration5676);
             variableModifiers271=variableModifiers();
@@ -9974,7 +9974,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_variableDeclarator.add(variableDeclarator273.getTree());
-            // .\\COMTOR.g:682:9: ( ',' variableDeclarator )*
+            // COMTOR.g:682:9: ( ',' variableDeclarator )*
             loop108:
             do {
                 int alt108=2;
@@ -9987,7 +9987,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt108) {
             	case 1 :
-            	    // .\\COMTOR.g:682:10: ',' variableDeclarator
+            	    // COMTOR.g:682:10: ',' variableDeclarator
             	    {
             	    char_literal274=(Token)match(input,COMMA,FOLLOW_COMMA_in_localVariableDeclaration5699); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal274);
@@ -10010,7 +10010,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, variableDeclarator, variableModifiers
+            // elements: variableModifiers, type, variableDeclarator
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -10027,15 +10027,15 @@ public class COMTORParser extends Parser {
                     throw new RewriteEarlyExitException();
                 }
                 while ( stream_type.hasNext()||stream_variableDeclarator.hasNext() ) {
-                    // .\\COMTOR.g:684:12: ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) )
+                    // COMTOR.g:684:12: ^( VAR_DEF variableDeclarator ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(VAR_DEF, "VAR_DEF"), root_1);
 
                     adaptor.addChild(root_1, stream_variableDeclarator.nextTree());
-                    // .\\COMTOR.g:684:41: ( ^( ACCESS_MODIFIER variableModifiers ) )?
+                    // COMTOR.g:684:41: ( ^( ACCESS_MODIFIER variableModifiers ) )?
                     if ( stream_variableModifiers.hasNext() ) {
-                        // .\\COMTOR.g:684:41: ^( ACCESS_MODIFIER variableModifiers )
+                        // COMTOR.g:684:41: ^( ACCESS_MODIFIER variableModifiers )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -10047,7 +10047,7 @@ public class COMTORParser extends Parser {
 
                     }
                     stream_variableModifiers.reset();
-                    // .\\COMTOR.g:684:79: ^( TYPE type )
+                    // COMTOR.g:684:79: ^( TYPE type )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_2);
@@ -10096,7 +10096,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // .\\COMTOR.g:687:1: statement : ( block | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'if' parExpression ( statement )? ( 'else' el= statement )? -> ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? ) | forstatement | 'while' parExpression statement -> ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | 'do' statement 'while' parExpression ';' -> ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' -> ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? ) | 'synchronized' parExpression block -> ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? ) | 'return' ( expression )? ';' -> ^( RETURN_STATEMENT ( expression )? ) | 'throw' expression ';' -> ^( THROWS expression ) | 'break' ( IDENTIFIER )? ';' -> ^( 'break' ( IDENTIFIER )? ) | 'continue' ( IDENTIFIER )? ';' -> ^( 'continue' ( IDENTIFIER )? ) | expression ';' -> expression | IDENTIFIER ':' statement -> ^( statement ^( LABEL IDENTIFIER ) ) | ';' ->);
+    // COMTOR.g:687:1: statement : ( block | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'if' parExpression ( statement )? ( 'else' el= statement )? -> ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? ) | forstatement | 'while' parExpression statement -> ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | 'do' statement 'while' parExpression ';' -> ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' -> ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? ) | 'synchronized' parExpression block -> ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? ) | 'return' ( expression )? ';' -> ^( RETURN_STATEMENT ( expression )? ) | 'throw' expression ';' -> ^( THROWS expression ) | 'break' ( IDENTIFIER )? ';' -> ^( 'break' ( IDENTIFIER )? ) | 'continue' ( IDENTIFIER )? ';' -> ^( 'continue' ( IDENTIFIER )? ) | expression ';' -> expression | IDENTIFIER ':' statement -> ^( statement ^( LABEL IDENTIFIER ) ) | ';' ->);
     public final COMTORParser.statement_return statement() throws RecognitionException {
         COMTORParser.statement_return retval = new COMTORParser.statement_return();
         retval.start = input.LT(1);
@@ -10231,12 +10231,12 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 60) ) { return retval; }
-            // .\\COMTOR.g:688:5: ( block | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'if' parExpression ( statement )? ( 'else' el= statement )? -> ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? ) | forstatement | 'while' parExpression statement -> ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | 'do' statement 'while' parExpression ';' -> ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' -> ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? ) | 'synchronized' parExpression block -> ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? ) | 'return' ( expression )? ';' -> ^( RETURN_STATEMENT ( expression )? ) | 'throw' expression ';' -> ^( THROWS expression ) | 'break' ( IDENTIFIER )? ';' -> ^( 'break' ( IDENTIFIER )? ) | 'continue' ( IDENTIFIER )? ';' -> ^( 'continue' ( IDENTIFIER )? ) | expression ';' -> expression | IDENTIFIER ':' statement -> ^( statement ^( LABEL IDENTIFIER ) ) | ';' ->)
+            // COMTOR.g:688:5: ( block | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'assert' expression ( ':' expression )? ';' -> ^( ASSERT ( expression )+ ) | 'if' parExpression ( statement )? ( 'else' el= statement )? -> ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? ) | forstatement | 'while' parExpression statement -> ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | 'do' statement 'while' parExpression ';' -> ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? ) | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' -> ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? ) | 'synchronized' parExpression block -> ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? ) | 'return' ( expression )? ';' -> ^( RETURN_STATEMENT ( expression )? ) | 'throw' expression ';' -> ^( THROWS expression ) | 'break' ( IDENTIFIER )? ';' -> ^( 'break' ( IDENTIFIER )? ) | 'continue' ( IDENTIFIER )? ';' -> ^( 'continue' ( IDENTIFIER )? ) | expression ';' -> expression | IDENTIFIER ':' statement -> ^( statement ^( LABEL IDENTIFIER ) ) | ';' ->)
             int alt116=17;
             alt116 = dfa116.predict(input);
             switch (alt116) {
                 case 1 :
-                    // .\\COMTOR.g:688:9: block
+                    // COMTOR.g:688:9: block
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -10250,7 +10250,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:690:9: 'assert' expression ( ':' expression )? ';'
+                    // COMTOR.g:690:9: 'assert' expression ( ':' expression )? ';'
                     {
                     string_literal277=(Token)match(input,ASSERT,FOLLOW_ASSERT_in_statement5785); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ASSERT.add(string_literal277);
@@ -10261,7 +10261,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(expression278.getTree());
-                    // .\\COMTOR.g:690:29: ( ':' expression )?
+                    // COMTOR.g:690:29: ( ':' expression )?
                     int alt109=2;
                     int LA109_0 = input.LA(1);
 
@@ -10270,7 +10270,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt109) {
                         case 1 :
-                            // .\\COMTOR.g:690:30: ':' expression
+                            // COMTOR.g:690:30: ':' expression
                             {
                             char_literal279=(Token)match(input,COLON,FOLLOW_COLON_in_statement5790); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_COLON.add(char_literal279);
@@ -10306,7 +10306,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 691:9: -> ^( ASSERT ( expression )+ )
                     {
-                        // .\\COMTOR.g:691:12: ^( ASSERT ( expression )+ )
+                        // COMTOR.g:691:12: ^( ASSERT ( expression )+ )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ASSERT, "ASSERT"), root_1);
@@ -10329,7 +10329,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:692:9: 'assert' expression ( ':' expression )? ';'
+                    // COMTOR.g:692:9: 'assert' expression ( ':' expression )? ';'
                     {
                     string_literal282=(Token)match(input,ASSERT,FOLLOW_ASSERT_in_statement5823); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ASSERT.add(string_literal282);
@@ -10340,7 +10340,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(expression283.getTree());
-                    // .\\COMTOR.g:692:30: ( ':' expression )?
+                    // COMTOR.g:692:30: ( ':' expression )?
                     int alt110=2;
                     int LA110_0 = input.LA(1);
 
@@ -10349,7 +10349,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt110) {
                         case 1 :
-                            // .\\COMTOR.g:692:31: ':' expression
+                            // COMTOR.g:692:31: ':' expression
                             {
                             char_literal284=(Token)match(input,COLON,FOLLOW_COLON_in_statement5829); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_COLON.add(char_literal284);
@@ -10385,7 +10385,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 693:6: -> ^( ASSERT ( expression )+ )
                     {
-                        // .\\COMTOR.g:693:9: ^( ASSERT ( expression )+ )
+                        // COMTOR.g:693:9: ^( ASSERT ( expression )+ )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ASSERT, "ASSERT"), root_1);
@@ -10408,7 +10408,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:694:9: 'if' parExpression ( statement )? ( 'else' el= statement )?
+                    // COMTOR.g:694:9: 'if' parExpression ( statement )? ( 'else' el= statement )?
                     {
                     string_literal287=(Token)match(input,IF,FOLLOW_IF_in_statement5863); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IF.add(string_literal287);
@@ -10419,12 +10419,12 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_parExpression.add(parExpression288.getTree());
-                    // .\\COMTOR.g:694:28: ( statement )?
+                    // COMTOR.g:694:28: ( statement )?
                     int alt111=2;
                     alt111 = dfa111.predict(input);
                     switch (alt111) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: statement
+                            // COMTOR.g:0:0: statement
                             {
                             pushFollow(FOLLOW_statement_in_statement5867);
                             statement289=statement();
@@ -10438,7 +10438,7 @@ public class COMTORParser extends Parser {
 
                     }
 
-                    // .\\COMTOR.g:694:39: ( 'else' el= statement )?
+                    // COMTOR.g:694:39: ( 'else' el= statement )?
                     int alt112=2;
                     int LA112_0 = input.LA(1);
 
@@ -10451,7 +10451,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt112) {
                         case 1 :
-                            // .\\COMTOR.g:694:40: 'else' el= statement
+                            // COMTOR.g:694:40: 'else' el= statement
                             {
                             string_literal290=(Token)match(input,ELSE,FOLLOW_ELSE_in_statement5871); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_ELSE.add(string_literal290);
@@ -10471,7 +10471,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: el, parExpression, statement
+                    // elements: el, statement, parExpression
                     // token labels: 
                     // rule labels: retval, el
                     // token list labels: 
@@ -10485,12 +10485,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 695:6: -> ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? )
                     {
-                        // .\\COMTOR.g:695:9: ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? )
+                        // COMTOR.g:695:9: ^( IF_STATEMENT ^( CONDITION parExpression ) ( ^( BODY statement ) )? ( ^( ELSE_STATEMENT ^( BODY $el) ) )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IF_STATEMENT, "IF_STATEMENT"), root_1);
 
-                        // .\\COMTOR.g:695:24: ^( CONDITION parExpression )
+                        // COMTOR.g:695:24: ^( CONDITION parExpression )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONDITION, "CONDITION"), root_2);
@@ -10499,9 +10499,9 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:695:51: ( ^( BODY statement ) )?
+                        // COMTOR.g:695:51: ( ^( BODY statement ) )?
                         if ( stream_statement.hasNext() ) {
-                            // .\\COMTOR.g:695:51: ^( BODY statement )
+                            // COMTOR.g:695:51: ^( BODY statement )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -10513,14 +10513,14 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_statement.reset();
-                        // .\\COMTOR.g:695:70: ( ^( ELSE_STATEMENT ^( BODY $el) ) )?
+                        // COMTOR.g:695:70: ( ^( ELSE_STATEMENT ^( BODY $el) ) )?
                         if ( stream_el.hasNext() ) {
-                            // .\\COMTOR.g:695:70: ^( ELSE_STATEMENT ^( BODY $el) )
+                            // COMTOR.g:695:70: ^( ELSE_STATEMENT ^( BODY $el) )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ELSE_STATEMENT, "ELSE_STATEMENT"), root_2);
 
-                            // .\\COMTOR.g:695:87: ^( BODY $el)
+                            // COMTOR.g:695:87: ^( BODY $el)
                             {
                             CommonTree root_3 = (CommonTree)adaptor.nil();
                             root_3 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_3);
@@ -10545,7 +10545,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:696:9: forstatement
+                    // COMTOR.g:696:9: forstatement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -10559,7 +10559,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:697:9: 'while' parExpression statement
+                    // COMTOR.g:697:9: 'while' parExpression statement
                     {
                     string_literal292=(Token)match(input,WHILE,FOLLOW_WHILE_in_statement5941); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_WHILE.add(string_literal292);
@@ -10592,12 +10592,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 698:6: -> ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? )
                     {
-                        // .\\COMTOR.g:698:9: ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? )
+                        // COMTOR.g:698:9: ^( WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(WHILE_BLOCK, "WHILE_BLOCK"), root_1);
 
-                        // .\\COMTOR.g:698:23: ^( CONDITION parExpression )
+                        // COMTOR.g:698:23: ^( CONDITION parExpression )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONDITION, "CONDITION"), root_2);
@@ -10606,9 +10606,9 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:698:50: ( ^( BODY statement ) )?
+                        // COMTOR.g:698:50: ( ^( BODY statement ) )?
                         if ( stream_statement.hasNext() ) {
-                            // .\\COMTOR.g:698:50: ^( BODY statement )
+                            // COMTOR.g:698:50: ^( BODY statement )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -10630,7 +10630,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:699:9: 'do' statement 'while' parExpression ';'
+                    // COMTOR.g:699:9: 'do' statement 'while' parExpression ';'
                     {
                     string_literal295=(Token)match(input,DO,FOLLOW_DO_in_statement5979); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_DO.add(string_literal295);
@@ -10656,7 +10656,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: parExpression, statement
+                    // elements: statement, parExpression
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -10669,12 +10669,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 700:6: -> ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? )
                     {
-                        // .\\COMTOR.g:700:9: ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? )
+                        // COMTOR.g:700:9: ^( DO_WHILE_BLOCK ^( CONDITION parExpression ) ( ^( BODY statement ) )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(DO_WHILE_BLOCK, "DO_WHILE_BLOCK"), root_1);
 
-                        // .\\COMTOR.g:700:26: ^( CONDITION parExpression )
+                        // COMTOR.g:700:26: ^( CONDITION parExpression )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONDITION, "CONDITION"), root_2);
@@ -10683,9 +10683,9 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:700:53: ( ^( BODY statement ) )?
+                        // COMTOR.g:700:53: ( ^( BODY statement ) )?
                         if ( stream_statement.hasNext() ) {
-                            // .\\COMTOR.g:700:53: ^( BODY statement )
+                            // COMTOR.g:700:53: ^( BODY statement )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -10707,7 +10707,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:701:9: trystatement
+                    // COMTOR.g:701:9: trystatement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -10721,7 +10721,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // .\\COMTOR.g:702:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
+                    // COMTOR.g:702:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
                     {
                     string_literal301=(Token)match(input,SWITCH,FOLLOW_SWITCH_in_statement6031); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SWITCH.add(string_literal301);
@@ -10747,7 +10747,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: switchBlockStatementGroups, parExpression
+                    // elements: parExpression, switchBlockStatementGroups
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -10760,12 +10760,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 703:6: -> ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? )
                     {
-                        // .\\COMTOR.g:703:9: ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? )
+                        // COMTOR.g:703:9: ^( SWITCH_STATEMENT ^( CONDITION parExpression ) ( ^( BODY switchBlockStatementGroups ) )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(SWITCH_STATEMENT, "SWITCH_STATEMENT"), root_1);
 
-                        // .\\COMTOR.g:703:28: ^( CONDITION parExpression )
+                        // COMTOR.g:703:28: ^( CONDITION parExpression )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CONDITION, "CONDITION"), root_2);
@@ -10774,9 +10774,9 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:703:55: ( ^( BODY switchBlockStatementGroups ) )?
+                        // COMTOR.g:703:55: ( ^( BODY switchBlockStatementGroups ) )?
                         if ( stream_switchBlockStatementGroups.hasNext() ) {
-                            // .\\COMTOR.g:703:55: ^( BODY switchBlockStatementGroups )
+                            // COMTOR.g:703:55: ^( BODY switchBlockStatementGroups )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -10798,7 +10798,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // .\\COMTOR.g:704:9: 'synchronized' parExpression block
+                    // COMTOR.g:704:9: 'synchronized' parExpression block
                     {
                     string_literal306=(Token)match(input,SYNCHRONIZED,FOLLOW_SYNCHRONIZED_in_statement6073); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SYNCHRONIZED.add(string_literal306);
@@ -10831,15 +10831,15 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 705:6: -> ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? )
                     {
-                        // .\\COMTOR.g:705:9: ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? )
+                        // COMTOR.g:705:9: ^( SYNCHRONIZED_BLOCK parExpression ( ^( BODY block ) )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(SYNCHRONIZED_BLOCK, "SYNCHRONIZED_BLOCK"), root_1);
 
                         adaptor.addChild(root_1, stream_parExpression.nextTree());
-                        // .\\COMTOR.g:705:44: ( ^( BODY block ) )?
+                        // COMTOR.g:705:44: ( ^( BODY block ) )?
                         if ( stream_block.hasNext() ) {
-                            // .\\COMTOR.g:705:44: ^( BODY block )
+                            // COMTOR.g:705:44: ^( BODY block )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -10861,12 +10861,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // .\\COMTOR.g:706:9: 'return' ( expression )? ';'
+                    // COMTOR.g:706:9: 'return' ( expression )? ';'
                     {
                     string_literal309=(Token)match(input,RETURN,FOLLOW_RETURN_in_statement6108); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RETURN.add(string_literal309);
 
-                    // .\\COMTOR.g:706:18: ( expression )?
+                    // COMTOR.g:706:18: ( expression )?
                     int alt113=2;
                     int LA113_0 = input.LA(1);
 
@@ -10875,7 +10875,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt113) {
                         case 1 :
-                            // .\\COMTOR.g:706:19: expression
+                            // COMTOR.g:706:19: expression
                             {
                             pushFollow(FOLLOW_expression_in_statement6111);
                             expression310=expression();
@@ -10908,12 +10908,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 707:6: -> ^( RETURN_STATEMENT ( expression )? )
                     {
-                        // .\\COMTOR.g:707:9: ^( RETURN_STATEMENT ( expression )? )
+                        // COMTOR.g:707:9: ^( RETURN_STATEMENT ( expression )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(RETURN_STATEMENT, "RETURN_STATEMENT"), root_1);
 
-                        // .\\COMTOR.g:707:28: ( expression )?
+                        // COMTOR.g:707:28: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -10929,7 +10929,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // .\\COMTOR.g:708:9: 'throw' expression ';'
+                    // COMTOR.g:708:9: 'throw' expression ';'
                     {
                     string_literal312=(Token)match(input,THROW,FOLLOW_THROW_in_statement6140); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_THROW.add(string_literal312);
@@ -10959,7 +10959,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 709:6: -> ^( THROWS expression )
                     {
-                        // .\\COMTOR.g:709:9: ^( THROWS expression )
+                        // COMTOR.g:709:9: ^( THROWS expression )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(THROWS, "THROWS"), root_1);
@@ -10975,12 +10975,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // .\\COMTOR.g:710:9: 'break' ( IDENTIFIER )? ';'
+                    // COMTOR.g:710:9: 'break' ( IDENTIFIER )? ';'
                     {
                     string_literal315=(Token)match(input,BREAK,FOLLOW_BREAK_in_statement6167); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_BREAK.add(string_literal315);
 
-                    // .\\COMTOR.g:711:13: ( IDENTIFIER )?
+                    // COMTOR.g:711:13: ( IDENTIFIER )?
                     int alt114=2;
                     int LA114_0 = input.LA(1);
 
@@ -10989,7 +10989,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt114) {
                         case 1 :
-                            // .\\COMTOR.g:711:14: IDENTIFIER
+                            // COMTOR.g:711:14: IDENTIFIER
                             {
                             IDENTIFIER316=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_statement6182); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER316);
@@ -11019,12 +11019,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 713:9: -> ^( 'break' ( IDENTIFIER )? )
                     {
-                        // .\\COMTOR.g:713:12: ^( 'break' ( IDENTIFIER )? )
+                        // COMTOR.g:713:12: ^( 'break' ( IDENTIFIER )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_BREAK.nextNode(), root_1);
 
-                        // .\\COMTOR.g:713:22: ( IDENTIFIER )?
+                        // COMTOR.g:713:22: ( IDENTIFIER )?
                         if ( stream_IDENTIFIER.hasNext() ) {
                             adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
 
@@ -11040,12 +11040,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // .\\COMTOR.g:714:9: 'continue' ( IDENTIFIER )? ';'
+                    // COMTOR.g:714:9: 'continue' ( IDENTIFIER )? ';'
                     {
                     string_literal318=(Token)match(input,CONTINUE,FOLLOW_CONTINUE_in_statement6226); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONTINUE.add(string_literal318);
 
-                    // .\\COMTOR.g:715:13: ( IDENTIFIER )?
+                    // COMTOR.g:715:13: ( IDENTIFIER )?
                     int alt115=2;
                     int LA115_0 = input.LA(1);
 
@@ -11054,7 +11054,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt115) {
                         case 1 :
-                            // .\\COMTOR.g:715:14: IDENTIFIER
+                            // COMTOR.g:715:14: IDENTIFIER
                             {
                             IDENTIFIER319=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_statement6241); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER319);
@@ -11084,12 +11084,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 717:9: -> ^( 'continue' ( IDENTIFIER )? )
                     {
-                        // .\\COMTOR.g:717:12: ^( 'continue' ( IDENTIFIER )? )
+                        // COMTOR.g:717:12: ^( 'continue' ( IDENTIFIER )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_CONTINUE.nextNode(), root_1);
 
-                        // .\\COMTOR.g:717:25: ( IDENTIFIER )?
+                        // COMTOR.g:717:25: ( IDENTIFIER )?
                         if ( stream_IDENTIFIER.hasNext() ) {
                             adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
 
@@ -11105,7 +11105,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // .\\COMTOR.g:718:9: expression ';'
+                    // COMTOR.g:718:9: expression ';'
                     {
                     pushFollow(FOLLOW_expression_in_statement6285);
                     expression321=expression();
@@ -11140,7 +11140,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // .\\COMTOR.g:719:9: IDENTIFIER ':' statement
+                    // COMTOR.g:719:9: IDENTIFIER ':' statement
                     {
                     IDENTIFIER323=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_statement6306); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER323);
@@ -11170,12 +11170,12 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 720:6: -> ^( statement ^( LABEL IDENTIFIER ) )
                     {
-                        // .\\COMTOR.g:720:9: ^( statement ^( LABEL IDENTIFIER ) )
+                        // COMTOR.g:720:9: ^( statement ^( LABEL IDENTIFIER ) )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_statement.nextNode(), root_1);
 
-                        // .\\COMTOR.g:720:21: ^( LABEL IDENTIFIER )
+                        // COMTOR.g:720:21: ^( LABEL IDENTIFIER )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(LABEL, "LABEL"), root_2);
@@ -11194,7 +11194,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // .\\COMTOR.g:721:9: ';'
+                    // COMTOR.g:721:9: ';'
                     {
                     char_literal326=(Token)match(input,SEMI,FOLLOW_SEMI_in_statement6337); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(char_literal326);
@@ -11250,7 +11250,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "switchBlockStatementGroups"
-    // .\\COMTOR.g:725:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
+    // COMTOR.g:725:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
     public final COMTORParser.switchBlockStatementGroups_return switchBlockStatementGroups() throws RecognitionException {
         COMTORParser.switchBlockStatementGroups_return retval = new COMTORParser.switchBlockStatementGroups_return();
         retval.start = input.LT(1);
@@ -11263,12 +11263,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 61) ) { return retval; }
-            // .\\COMTOR.g:726:5: ( ( switchBlockStatementGroup )* )
-            // .\\COMTOR.g:726:9: ( switchBlockStatementGroup )*
+            // COMTOR.g:726:5: ( ( switchBlockStatementGroup )* )
+            // COMTOR.g:726:9: ( switchBlockStatementGroup )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // .\\COMTOR.g:726:9: ( switchBlockStatementGroup )*
+            // COMTOR.g:726:9: ( switchBlockStatementGroup )*
             loop117:
             do {
                 int alt117=2;
@@ -11281,7 +11281,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt117) {
             	case 1 :
-            	    // .\\COMTOR.g:726:10: switchBlockStatementGroup
+            	    // COMTOR.g:726:10: switchBlockStatementGroup
             	    {
             	    pushFollow(FOLLOW_switchBlockStatementGroup_in_switchBlockStatementGroups6361);
             	    switchBlockStatementGroup327=switchBlockStatementGroup();
@@ -11328,7 +11328,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "switchBlockStatementGroup"
-    // .\\COMTOR.g:729:1: switchBlockStatementGroup : switchLabel ( blockStatement )* ;
+    // COMTOR.g:729:1: switchBlockStatementGroup : switchLabel ( blockStatement )* ;
     public final COMTORParser.switchBlockStatementGroup_return switchBlockStatementGroup() throws RecognitionException {
         COMTORParser.switchBlockStatementGroup_return retval = new COMTORParser.switchBlockStatementGroup_return();
         retval.start = input.LT(1);
@@ -11343,8 +11343,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 62) ) { return retval; }
-            // .\\COMTOR.g:730:5: ( switchLabel ( blockStatement )* )
-            // .\\COMTOR.g:731:9: switchLabel ( blockStatement )*
+            // COMTOR.g:730:5: ( switchLabel ( blockStatement )* )
+            // COMTOR.g:731:9: switchLabel ( blockStatement )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11354,7 +11354,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, switchLabel328.getTree());
-            // .\\COMTOR.g:732:9: ( blockStatement )*
+            // COMTOR.g:732:9: ( blockStatement )*
             loop118:
             do {
                 int alt118=2;
@@ -11367,7 +11367,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt118) {
             	case 1 :
-            	    // .\\COMTOR.g:732:10: blockStatement
+            	    // COMTOR.g:732:10: blockStatement
             	    {
             	    pushFollow(FOLLOW_blockStatement_in_switchBlockStatementGroup6401);
             	    blockStatement329=blockStatement();
@@ -11414,7 +11414,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "switchLabel"
-    // .\\COMTOR.g:736:1: switchLabel : ( 'case' expression ':' -> ^( CASE expression ) | 'default' ':' -> ^( CASE 'default' ) );
+    // COMTOR.g:736:1: switchLabel : ( 'case' expression ':' -> ^( CASE expression ) | 'default' ':' -> ^( CASE 'default' ) );
     public final COMTORParser.switchLabel_return switchLabel() throws RecognitionException {
         COMTORParser.switchLabel_return retval = new COMTORParser.switchLabel_return();
         retval.start = input.LT(1);
@@ -11438,7 +11438,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 63) ) { return retval; }
-            // .\\COMTOR.g:737:5: ( 'case' expression ':' -> ^( CASE expression ) | 'default' ':' -> ^( CASE 'default' ) )
+            // COMTOR.g:737:5: ( 'case' expression ':' -> ^( CASE expression ) | 'default' ':' -> ^( CASE 'default' ) )
             int alt119=2;
             int LA119_0 = input.LA(1);
 
@@ -11457,7 +11457,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt119) {
                 case 1 :
-                    // .\\COMTOR.g:737:9: 'case' expression ':'
+                    // COMTOR.g:737:9: 'case' expression ':'
                     {
                     string_literal330=(Token)match(input,CASE,FOLLOW_CASE_in_switchLabel6432); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CASE.add(string_literal330);
@@ -11487,7 +11487,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 737:31: -> ^( CASE expression )
                     {
-                        // .\\COMTOR.g:737:34: ^( CASE expression )
+                        // COMTOR.g:737:34: ^( CASE expression )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CASE, "CASE"), root_1);
@@ -11503,7 +11503,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:738:9: 'default' ':'
+                    // COMTOR.g:738:9: 'default' ':'
                     {
                     string_literal333=(Token)match(input,DEFAULT,FOLLOW_DEFAULT_in_switchLabel6454); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_DEFAULT.add(string_literal333);
@@ -11527,7 +11527,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 738:23: -> ^( CASE 'default' )
                     {
-                        // .\\COMTOR.g:738:26: ^( CASE 'default' )
+                        // COMTOR.g:738:26: ^( CASE 'default' )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CASE, "CASE"), root_1);
@@ -11571,7 +11571,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "trystatement"
-    // .\\COMTOR.g:742:1: trystatement : 'try' block (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block ) -> ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) ) ;
+    // COMTOR.g:742:1: trystatement : 'try' block (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block ) -> ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) ) ;
     public final COMTORParser.trystatement_return trystatement() throws RecognitionException {
         COMTORParser.trystatement_return retval = new COMTORParser.trystatement_return();
         retval.start = input.LT(1);
@@ -11595,8 +11595,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 64) ) { return retval; }
-            // .\\COMTOR.g:743:5: ( 'try' block (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block ) -> ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) ) )
-            // .\\COMTOR.g:743:9: 'try' block (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block )
+            // COMTOR.g:743:5: ( 'try' block (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block ) -> ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) ) )
+            // COMTOR.g:743:9: 'try' block (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block )
             {
             string_literal335=(Token)match(input,TRY,FOLLOW_TRY_in_trystatement6485); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_TRY.add(string_literal335);
@@ -11607,7 +11607,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_block.add(block336.getTree());
-            // .\\COMTOR.g:744:9: (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block )
+            // COMTOR.g:744:9: (c= catches f= 'finally' b= block | c= catches | f= 'finally' b= block )
             int alt120=3;
             int LA120_0 = input.LA(1);
 
@@ -11640,7 +11640,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt120) {
                 case 1 :
-                    // .\\COMTOR.g:744:13: c= catches f= 'finally' b= block
+                    // COMTOR.g:744:13: c= catches f= 'finally' b= block
                     {
                     pushFollow(FOLLOW_catches_in_trystatement6503);
                     c=catches();
@@ -11661,7 +11661,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:745:13: c= catches
+                    // COMTOR.g:745:13: c= catches
                     {
                     pushFollow(FOLLOW_catches_in_trystatement6527);
                     c=catches();
@@ -11673,7 +11673,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:746:13: f= 'finally' b= block
+                    // COMTOR.g:746:13: f= 'finally' b= block
                     {
                     f=(Token)match(input,FINALLY,FOLLOW_FINALLY_in_trystatement6543); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_FINALLY.add(f);
@@ -11693,7 +11693,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: block, b, f, c
+            // elements: f, c, b, block
             // token labels: f
             // rule labels: retval, b, c
             // token list labels: 
@@ -11709,14 +11709,14 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 748:9: -> ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) )
             {
-                // .\\COMTOR.g:748:12: ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) )
+                // COMTOR.g:748:12: ^( TRY_STATEMENT ( ^( BODY block ) )? ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? ) )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TRY_STATEMENT, "TRY_STATEMENT"), root_1);
 
-                // .\\COMTOR.g:748:28: ( ^( BODY block ) )?
+                // COMTOR.g:748:28: ( ^( BODY block ) )?
                 if ( stream_block.hasNext() ) {
-                    // .\\COMTOR.g:748:28: ^( BODY block )
+                    // COMTOR.g:748:28: ^( BODY block )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -11728,26 +11728,26 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_block.reset();
-                // .\\COMTOR.g:748:43: ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? )
+                // COMTOR.g:748:43: ^( CATCH ( $c)? ( $f)? ( ^( BODY $b) )? )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CATCH, "CATCH"), root_2);
 
-                // .\\COMTOR.g:748:51: ( $c)?
+                // COMTOR.g:748:51: ( $c)?
                 if ( stream_c.hasNext() ) {
                     adaptor.addChild(root_2, stream_c.nextTree());
 
                 }
                 stream_c.reset();
-                // .\\COMTOR.g:748:55: ( $f)?
+                // COMTOR.g:748:55: ( $f)?
                 if ( stream_f.hasNext() ) {
                     adaptor.addChild(root_2, stream_f.nextNode());
 
                 }
                 stream_f.reset();
-                // .\\COMTOR.g:748:59: ( ^( BODY $b) )?
+                // COMTOR.g:748:59: ( ^( BODY $b) )?
                 if ( stream_b.hasNext() ) {
-                    // .\\COMTOR.g:748:59: ^( BODY $b)
+                    // COMTOR.g:748:59: ^( BODY $b)
                     {
                     CommonTree root_3 = (CommonTree)adaptor.nil();
                     root_3 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_3);
@@ -11798,7 +11798,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "catches"
-    // .\\COMTOR.g:751:1: catches : catchClause ( catchClause )* ;
+    // COMTOR.g:751:1: catches : catchClause ( catchClause )* ;
     public final COMTORParser.catches_return catches() throws RecognitionException {
         COMTORParser.catches_return retval = new COMTORParser.catches_return();
         retval.start = input.LT(1);
@@ -11813,8 +11813,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 65) ) { return retval; }
-            // .\\COMTOR.g:752:5: ( catchClause ( catchClause )* )
-            // .\\COMTOR.g:752:9: catchClause ( catchClause )*
+            // COMTOR.g:752:5: ( catchClause ( catchClause )* )
+            // COMTOR.g:752:9: catchClause ( catchClause )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -11824,7 +11824,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, catchClause337.getTree());
-            // .\\COMTOR.g:753:9: ( catchClause )*
+            // COMTOR.g:753:9: ( catchClause )*
             loop121:
             do {
                 int alt121=2;
@@ -11837,7 +11837,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt121) {
             	case 1 :
-            	    // .\\COMTOR.g:753:10: catchClause
+            	    // COMTOR.g:753:10: catchClause
             	    {
             	    pushFollow(FOLLOW_catchClause_in_catches6630);
             	    catchClause338=catchClause();
@@ -11884,7 +11884,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "catchClause"
-    // .\\COMTOR.g:757:1: catchClause : 'catch' '(' formalParameter ')' ( block )? -> 'catch' ^( PARAMS formalParameter ) ( ^( BODY block ) )? ;
+    // COMTOR.g:757:1: catchClause : 'catch' '(' formalParameter ')' ( block )? -> 'catch' ^( PARAMS formalParameter ) ( ^( BODY block ) )? ;
     public final COMTORParser.catchClause_return catchClause() throws RecognitionException {
         COMTORParser.catchClause_return retval = new COMTORParser.catchClause_return();
         retval.start = input.LT(1);
@@ -11909,8 +11909,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 66) ) { return retval; }
-            // .\\COMTOR.g:758:5: ( 'catch' '(' formalParameter ')' ( block )? -> 'catch' ^( PARAMS formalParameter ) ( ^( BODY block ) )? )
-            // .\\COMTOR.g:758:9: 'catch' '(' formalParameter ')' ( block )?
+            // COMTOR.g:758:5: ( 'catch' '(' formalParameter ')' ( block )? -> 'catch' ^( PARAMS formalParameter ) ( ^( BODY block ) )? )
+            // COMTOR.g:758:9: 'catch' '(' formalParameter ')' ( block )?
             {
             string_literal339=(Token)match(input,CATCH,FOLLOW_CATCH_in_catchClause6661); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_CATCH.add(string_literal339);
@@ -11927,12 +11927,12 @@ public class COMTORParser extends Parser {
             char_literal342=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_catchClause6675); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(char_literal342);
 
-            // .\\COMTOR.g:759:13: ( block )?
+            // COMTOR.g:759:13: ( block )?
             int alt122=2;
             alt122 = dfa122.predict(input);
             switch (alt122) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: block
+                    // COMTOR.g:0:0: block
                     {
                     pushFollow(FOLLOW_block_in_catchClause6677);
                     block343=block();
@@ -11949,7 +11949,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: block, formalParameter, CATCH
+            // elements: block, CATCH, formalParameter
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -11963,7 +11963,7 @@ public class COMTORParser extends Parser {
             // 760:9: -> 'catch' ^( PARAMS formalParameter ) ( ^( BODY block ) )?
             {
                 adaptor.addChild(root_0, stream_CATCH.nextNode());
-                // .\\COMTOR.g:760:20: ^( PARAMS formalParameter )
+                // COMTOR.g:760:20: ^( PARAMS formalParameter )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMS, "PARAMS"), root_1);
@@ -11972,9 +11972,9 @@ public class COMTORParser extends Parser {
 
                 adaptor.addChild(root_0, root_1);
                 }
-                // .\\COMTOR.g:760:46: ( ^( BODY block ) )?
+                // COMTOR.g:760:46: ( ^( BODY block ) )?
                 if ( stream_block.hasNext() ) {
-                    // .\\COMTOR.g:760:46: ^( BODY block )
+                    // COMTOR.g:760:46: ^( BODY block )
                     {
                     CommonTree root_1 = (CommonTree)adaptor.nil();
                     root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_1);
@@ -12019,7 +12019,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "formalParameter"
-    // .\\COMTOR.g:763:1: formalParameter : variableModifiers type ( '|' type )* IDENTIFIER ( '[' ']' )* -> ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* ) ;
+    // COMTOR.g:763:1: formalParameter : variableModifiers type ( '|' type )* IDENTIFIER ( '[' ']' )* -> ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* ) ;
     public final COMTORParser.formalParameter_return formalParameter() throws RecognitionException {
         COMTORParser.formalParameter_return retval = new COMTORParser.formalParameter_return();
         retval.start = input.LT(1);
@@ -12049,8 +12049,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 67) ) { return retval; }
-            // .\\COMTOR.g:764:5: ( variableModifiers type ( '|' type )* IDENTIFIER ( '[' ']' )* -> ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* ) )
-            // .\\COMTOR.g:764:9: variableModifiers type ( '|' type )* IDENTIFIER ( '[' ']' )*
+            // COMTOR.g:764:5: ( variableModifiers type ( '|' type )* IDENTIFIER ( '[' ']' )* -> ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* ) )
+            // COMTOR.g:764:9: variableModifiers type ( '|' type )* IDENTIFIER ( '[' ']' )*
             {
             pushFollow(FOLLOW_variableModifiers_in_formalParameter6723);
             variableModifiers344=variableModifiers();
@@ -12064,7 +12064,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_type.add(type345.getTree());
-            // .\\COMTOR.g:764:32: ( '|' type )*
+            // COMTOR.g:764:32: ( '|' type )*
             loop123:
             do {
                 int alt123=2;
@@ -12077,7 +12077,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt123) {
             	case 1 :
-            	    // .\\COMTOR.g:764:33: '|' type
+            	    // COMTOR.g:764:33: '|' type
             	    {
             	    char_literal346=(Token)match(input,BAR,FOLLOW_BAR_in_formalParameter6728); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_BAR.add(char_literal346);
@@ -12100,7 +12100,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER348=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_formalParameter6734); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER348);
 
-            // .\\COMTOR.g:765:9: ( '[' ']' )*
+            // COMTOR.g:765:9: ( '[' ']' )*
             loop124:
             do {
                 int alt124=2;
@@ -12113,7 +12113,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt124) {
             	case 1 :
-            	    // .\\COMTOR.g:765:10: '[' ']'
+            	    // COMTOR.g:765:10: '[' ']'
             	    {
             	    char_literal349=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_formalParameter6745); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LBRACKET.add(char_literal349);
@@ -12133,7 +12133,7 @@ public class COMTORParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, IDENTIFIER, variableModifiers
+            // elements: IDENTIFIER, type, variableModifiers
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -12146,15 +12146,15 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 766:9: -> ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* )
             {
-                // .\\COMTOR.g:766:12: ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* )
+                // COMTOR.g:766:12: ^( VAR_DEF IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ( ^( TYPE type ) )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(VAR_DEF, "VAR_DEF"), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // .\\COMTOR.g:766:33: ( ^( ACCESS_MODIFIER variableModifiers ) )?
+                // COMTOR.g:766:33: ( ^( ACCESS_MODIFIER variableModifiers ) )?
                 if ( stream_variableModifiers.hasNext() ) {
-                    // .\\COMTOR.g:766:33: ^( ACCESS_MODIFIER variableModifiers )
+                    // COMTOR.g:766:33: ^( ACCESS_MODIFIER variableModifiers )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_2);
@@ -12166,9 +12166,9 @@ public class COMTORParser extends Parser {
 
                 }
                 stream_variableModifiers.reset();
-                // .\\COMTOR.g:766:71: ( ^( TYPE type ) )*
+                // COMTOR.g:766:71: ( ^( TYPE type ) )*
                 while ( stream_type.hasNext() ) {
-                    // .\\COMTOR.g:766:71: ^( TYPE type )
+                    // COMTOR.g:766:71: ^( TYPE type )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_2);
@@ -12216,7 +12216,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "forstatement"
-    // .\\COMTOR.g:769:1: forstatement : ( 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement -> ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) ) | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' ( statement )? -> ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? ) );
+    // COMTOR.g:769:1: forstatement : ( 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement -> ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) ) | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' ( statement )? -> ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? ) );
     public final COMTORParser.forstatement_return forstatement() throws RecognitionException {
         COMTORParser.forstatement_return retval = new COMTORParser.forstatement_return();
         retval.start = input.LT(1);
@@ -12274,7 +12274,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 68) ) { return retval; }
-            // .\\COMTOR.g:770:5: ( 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement -> ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) ) | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' ( statement )? -> ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? ) )
+            // COMTOR.g:770:5: ( 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement -> ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) ) | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' ( statement )? -> ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? ) )
             int alt130=2;
             int LA130_0 = input.LA(1);
 
@@ -12304,7 +12304,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt130) {
                 case 1 :
-                    // .\\COMTOR.g:772:9: 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement
+                    // COMTOR.g:772:9: 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement
                     {
                     string_literal351=(Token)match(input,FOR,FOLLOW_FOR_in_forstatement6818); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_FOR.add(string_literal351);
@@ -12312,7 +12312,7 @@ public class COMTORParser extends Parser {
                     char_literal352=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_forstatement6820); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(char_literal352);
 
-                    // .\\COMTOR.g:772:19: ( variableModifiers )?
+                    // COMTOR.g:772:19: ( variableModifiers )?
                     int alt125=2;
                     switch ( input.LA(1) ) {
                         case FINAL:
@@ -12350,7 +12350,7 @@ public class COMTORParser extends Parser {
 
                     switch (alt125) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: variableModifiers
+                            // COMTOR.g:0:0: variableModifiers
                             {
                             pushFollow(FOLLOW_variableModifiers_in_forstatement6822);
                             variableModifiers353=variableModifiers();
@@ -12397,7 +12397,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression, type, statement, variableModifiers
+                    // elements: expression, variableModifiers, type, statement
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -12410,20 +12410,20 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 774:9: -> ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) )
                     {
-                        // .\\COMTOR.g:774:12: ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) )
+                        // COMTOR.g:774:12: ^( FOR_BLOCK ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression ) ^( BODY statement ) )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FOR_BLOCK, "FOR_BLOCK"), root_1);
 
-                        // .\\COMTOR.g:774:24: ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression )
+                        // COMTOR.g:774:24: ^( INIT IDENTIFIER ( ^( ACCESS_MODIFIER variableModifiers ) )? ^( TYPE type ) expression )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(INIT, "INIT"), root_2);
 
                         adaptor.addChild(root_2, (CommonTree)adaptor.create(IDENTIFIER, "IDENTIFIER"));
-                        // .\\COMTOR.g:774:42: ( ^( ACCESS_MODIFIER variableModifiers ) )?
+                        // COMTOR.g:774:42: ( ^( ACCESS_MODIFIER variableModifiers ) )?
                         if ( stream_variableModifiers.hasNext() ) {
-                            // .\\COMTOR.g:774:42: ^( ACCESS_MODIFIER variableModifiers )
+                            // COMTOR.g:774:42: ^( ACCESS_MODIFIER variableModifiers )
                             {
                             CommonTree root_3 = (CommonTree)adaptor.nil();
                             root_3 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ACCESS_MODIFIER, "ACCESS_MODIFIER"), root_3);
@@ -12435,7 +12435,7 @@ public class COMTORParser extends Parser {
 
                         }
                         stream_variableModifiers.reset();
-                        // .\\COMTOR.g:774:80: ^( TYPE type )
+                        // COMTOR.g:774:80: ^( TYPE type )
                         {
                         CommonTree root_3 = (CommonTree)adaptor.nil();
                         root_3 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_3);
@@ -12448,7 +12448,7 @@ public class COMTORParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // .\\COMTOR.g:774:105: ^( BODY statement )
+                        // COMTOR.g:774:105: ^( BODY statement )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -12467,7 +12467,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:776:9: 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' ( statement )?
+                    // COMTOR.g:776:9: 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' ( statement )?
                     {
                     string_literal360=(Token)match(input,FOR,FOLLOW_FOR_in_forstatement6904); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_FOR.add(string_literal360);
@@ -12475,7 +12475,7 @@ public class COMTORParser extends Parser {
                     char_literal361=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_forstatement6906); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(char_literal361);
 
-                    // .\\COMTOR.g:777:17: ( forInit )?
+                    // COMTOR.g:777:17: ( forInit )?
                     int alt126=2;
                     int LA126_0 = input.LA(1);
 
@@ -12484,7 +12484,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt126) {
                         case 1 :
-                            // .\\COMTOR.g:777:18: forInit
+                            // COMTOR.g:777:18: forInit
                             {
                             pushFollow(FOLLOW_forInit_in_forstatement6926);
                             forInit362=forInit();
@@ -12501,7 +12501,7 @@ public class COMTORParser extends Parser {
                     char_literal363=(Token)match(input,SEMI,FOLLOW_SEMI_in_forstatement6947); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(char_literal363);
 
-                    // .\\COMTOR.g:779:17: ( expression )?
+                    // COMTOR.g:779:17: ( expression )?
                     int alt127=2;
                     int LA127_0 = input.LA(1);
 
@@ -12510,7 +12510,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt127) {
                         case 1 :
-                            // .\\COMTOR.g:779:18: expression
+                            // COMTOR.g:779:18: expression
                             {
                             pushFollow(FOLLOW_expression_in_forstatement6967);
                             expression364=expression();
@@ -12527,7 +12527,7 @@ public class COMTORParser extends Parser {
                     char_literal365=(Token)match(input,SEMI,FOLLOW_SEMI_in_forstatement6988); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(char_literal365);
 
-                    // .\\COMTOR.g:781:17: ( expressionList )?
+                    // COMTOR.g:781:17: ( expressionList )?
                     int alt128=2;
                     int LA128_0 = input.LA(1);
 
@@ -12536,7 +12536,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt128) {
                         case 1 :
-                            // .\\COMTOR.g:781:18: expressionList
+                            // COMTOR.g:781:18: expressionList
                             {
                             pushFollow(FOLLOW_expressionList_in_forstatement7008);
                             expressionList366=expressionList();
@@ -12553,12 +12553,12 @@ public class COMTORParser extends Parser {
                     char_literal367=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_forstatement7029); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RPAREN.add(char_literal367);
 
-                    // .\\COMTOR.g:782:24: ( statement )?
+                    // COMTOR.g:782:24: ( statement )?
                     int alt129=2;
                     alt129 = dfa129.predict(input);
                     switch (alt129) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: statement
+                            // COMTOR.g:0:0: statement
                             {
                             pushFollow(FOLLOW_statement_in_forstatement7031);
                             statement368=statement();
@@ -12575,7 +12575,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: forInit, statement, expressionList, expression
+                    // elements: expressionList, forInit, statement, expression
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -12588,32 +12588,32 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 783:9: -> ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? )
                     {
-                        // .\\COMTOR.g:783:12: ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? )
+                        // COMTOR.g:783:12: ^( FOR_BLOCK ( forInit )? ( expression )? ( expressionList )? ( ^( BODY statement ) )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FOR_BLOCK, "FOR_BLOCK"), root_1);
 
-                        // .\\COMTOR.g:783:24: ( forInit )?
+                        // COMTOR.g:783:24: ( forInit )?
                         if ( stream_forInit.hasNext() ) {
                             adaptor.addChild(root_1, stream_forInit.nextTree());
 
                         }
                         stream_forInit.reset();
-                        // .\\COMTOR.g:783:33: ( expression )?
+                        // COMTOR.g:783:33: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
                         }
                         stream_expression.reset();
-                        // .\\COMTOR.g:783:45: ( expressionList )?
+                        // COMTOR.g:783:45: ( expressionList )?
                         if ( stream_expressionList.hasNext() ) {
                             adaptor.addChild(root_1, stream_expressionList.nextTree());
 
                         }
                         stream_expressionList.reset();
-                        // .\\COMTOR.g:783:61: ( ^( BODY statement ) )?
+                        // COMTOR.g:783:61: ( ^( BODY statement ) )?
                         if ( stream_statement.hasNext() ) {
-                            // .\\COMTOR.g:783:61: ^( BODY statement )
+                            // COMTOR.g:783:61: ^( BODY statement )
                             {
                             CommonTree root_2 = (CommonTree)adaptor.nil();
                             root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(BODY, "BODY"), root_2);
@@ -12663,7 +12663,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "forInit"
-    // .\\COMTOR.g:786:1: forInit : ( localVariableDeclaration | expressionList );
+    // COMTOR.g:786:1: forInit : ( localVariableDeclaration | expressionList );
     public final COMTORParser.forInit_return forInit() throws RecognitionException {
         COMTORParser.forInit_return retval = new COMTORParser.forInit_return();
         retval.start = input.LT(1);
@@ -12678,12 +12678,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 69) ) { return retval; }
-            // .\\COMTOR.g:787:5: ( localVariableDeclaration | expressionList )
+            // COMTOR.g:787:5: ( localVariableDeclaration | expressionList )
             int alt131=2;
             alt131 = dfa131.predict(input);
             switch (alt131) {
                 case 1 :
-                    // .\\COMTOR.g:787:9: localVariableDeclaration
+                    // COMTOR.g:787:9: localVariableDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -12697,7 +12697,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:788:9: expressionList
+                    // COMTOR.g:788:9: expressionList
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -12739,7 +12739,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "parExpression"
-    // .\\COMTOR.g:791:1: parExpression : '(' expression ')' -> expression ;
+    // COMTOR.g:791:1: parExpression : '(' expression ')' -> expression ;
     public final COMTORParser.parExpression_return parExpression() throws RecognitionException {
         COMTORParser.parExpression_return retval = new COMTORParser.parExpression_return();
         retval.start = input.LT(1);
@@ -12758,8 +12758,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 70) ) { return retval; }
-            // .\\COMTOR.g:792:5: ( '(' expression ')' -> expression )
-            // .\\COMTOR.g:792:9: '(' expression ')'
+            // COMTOR.g:792:5: ( '(' expression ')' -> expression )
+            // COMTOR.g:792:9: '(' expression ')'
             {
             char_literal371=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_parExpression7112); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(char_literal371);
@@ -12823,7 +12823,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "expressionList"
-    // .\\COMTOR.g:796:1: expressionList : expression ( ',' expression )* -> ( expression )+ ;
+    // COMTOR.g:796:1: expressionList : expression ( ',' expression )* -> ( expression )+ ;
     public final COMTORParser.expressionList_return expressionList() throws RecognitionException {
         COMTORParser.expressionList_return retval = new COMTORParser.expressionList_return();
         retval.start = input.LT(1);
@@ -12841,8 +12841,8 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 71) ) { return retval; }
-            // .\\COMTOR.g:797:5: ( expression ( ',' expression )* -> ( expression )+ )
-            // .\\COMTOR.g:797:9: expression ( ',' expression )*
+            // COMTOR.g:797:5: ( expression ( ',' expression )* -> ( expression )+ )
+            // COMTOR.g:797:9: expression ( ',' expression )*
             {
             pushFollow(FOLLOW_expression_in_expressionList7145);
             expression374=expression();
@@ -12850,7 +12850,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression374.getTree());
-            // .\\COMTOR.g:798:9: ( ',' expression )*
+            // COMTOR.g:798:9: ( ',' expression )*
             loop132:
             do {
                 int alt132=2;
@@ -12863,7 +12863,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt132) {
             	case 1 :
-            	    // .\\COMTOR.g:798:10: ',' expression
+            	    // COMTOR.g:798:10: ',' expression
             	    {
             	    char_literal375=(Token)match(input,COMMA,FOLLOW_COMMA_in_expressionList7156); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal375);
@@ -12940,7 +12940,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // .\\COMTOR.g:804:1: expression : conditionalExpression ( assignmentOperator expression )? ;
+    // COMTOR.g:804:1: expression : conditionalExpression ( assignmentOperator expression )? ;
     public final COMTORParser.expression_return expression() throws RecognitionException {
         COMTORParser.expression_return retval = new COMTORParser.expression_return();
         retval.start = input.LT(1);
@@ -12957,8 +12957,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 72) ) { return retval; }
-            // .\\COMTOR.g:805:5: ( conditionalExpression ( assignmentOperator expression )? )
-            // .\\COMTOR.g:805:9: conditionalExpression ( assignmentOperator expression )?
+            // COMTOR.g:805:5: ( conditionalExpression ( assignmentOperator expression )? )
+            // COMTOR.g:805:9: conditionalExpression ( assignmentOperator expression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -12968,7 +12968,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, conditionalExpression377.getTree());
-            // .\\COMTOR.g:806:9: ( assignmentOperator expression )?
+            // COMTOR.g:806:9: ( assignmentOperator expression )?
             int alt133=2;
             int LA133_0 = input.LA(1);
 
@@ -12977,7 +12977,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt133) {
                 case 1 :
-                    // .\\COMTOR.g:806:10: assignmentOperator expression
+                    // COMTOR.g:806:10: assignmentOperator expression
                     {
                     pushFollow(FOLLOW_assignmentOperator_in_expression7214);
                     assignmentOperator378=assignmentOperator();
@@ -13027,7 +13027,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "assignmentOperator"
-    // .\\COMTOR.g:811:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' );
+    // COMTOR.g:811:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' );
     public final COMTORParser.assignmentOperator_return assignmentOperator() throws RecognitionException {
         COMTORParser.assignmentOperator_return retval = new COMTORParser.assignmentOperator_return();
         retval.start = input.LT(1);
@@ -13076,12 +13076,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 73) ) { return retval; }
-            // .\\COMTOR.g:812:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' )
+            // COMTOR.g:812:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' )
             int alt134=12;
             alt134 = dfa134.predict(input);
             switch (alt134) {
                 case 1 :
-                    // .\\COMTOR.g:812:9: '='
+                    // COMTOR.g:812:9: '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13094,7 +13094,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:813:9: '+='
+                    // COMTOR.g:813:9: '+='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13107,7 +13107,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:814:9: '-='
+                    // COMTOR.g:814:9: '-='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13120,7 +13120,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:815:9: '*='
+                    // COMTOR.g:815:9: '*='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13133,7 +13133,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:816:9: '/='
+                    // COMTOR.g:816:9: '/='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13146,7 +13146,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:817:9: '&='
+                    // COMTOR.g:817:9: '&='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13159,7 +13159,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:818:9: '|='
+                    // COMTOR.g:818:9: '|='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13172,7 +13172,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:819:9: '^='
+                    // COMTOR.g:819:9: '^='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13185,7 +13185,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // .\\COMTOR.g:820:9: '%='
+                    // COMTOR.g:820:9: '%='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13198,7 +13198,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // .\\COMTOR.g:821:10: '<' '<' '='
+                    // COMTOR.g:821:10: '<' '<' '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13221,7 +13221,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // .\\COMTOR.g:822:10: '>' '>' '>' '='
+                    // COMTOR.g:822:10: '>' '>' '>' '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13249,7 +13249,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // .\\COMTOR.g:823:10: '>' '>' '='
+                    // COMTOR.g:823:10: '>' '>' '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -13300,7 +13300,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "conditionalExpression"
-    // .\\COMTOR.g:827:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' conditionalExpression )? ;
+    // COMTOR.g:827:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' conditionalExpression )? ;
     public final COMTORParser.conditionalExpression_return conditionalExpression() throws RecognitionException {
         COMTORParser.conditionalExpression_return retval = new COMTORParser.conditionalExpression_return();
         retval.start = input.LT(1);
@@ -13321,8 +13321,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 74) ) { return retval; }
-            // .\\COMTOR.g:828:5: ( conditionalOrExpression ( '?' expression ':' conditionalExpression )? )
-            // .\\COMTOR.g:828:9: conditionalOrExpression ( '?' expression ':' conditionalExpression )?
+            // COMTOR.g:828:5: ( conditionalOrExpression ( '?' expression ':' conditionalExpression )? )
+            // COMTOR.g:828:9: conditionalOrExpression ( '?' expression ':' conditionalExpression )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13332,7 +13332,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, conditionalOrExpression399.getTree());
-            // .\\COMTOR.g:829:9: ( '?' expression ':' conditionalExpression )?
+            // COMTOR.g:829:9: ( '?' expression ':' conditionalExpression )?
             int alt135=2;
             int LA135_0 = input.LA(1);
 
@@ -13341,7 +13341,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt135) {
                 case 1 :
-                    // .\\COMTOR.g:829:10: '?' expression ':' conditionalExpression
+                    // COMTOR.g:829:10: '?' expression ':' conditionalExpression
                     {
                     char_literal400=(Token)match(input,QUES,FOLLOW_QUES_in_conditionalExpression7407); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -13401,7 +13401,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "conditionalOrExpression"
-    // .\\COMTOR.g:833:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
+    // COMTOR.g:833:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
     public final COMTORParser.conditionalOrExpression_return conditionalOrExpression() throws RecognitionException {
         COMTORParser.conditionalOrExpression_return retval = new COMTORParser.conditionalOrExpression_return();
         retval.start = input.LT(1);
@@ -13418,8 +13418,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 75) ) { return retval; }
-            // .\\COMTOR.g:834:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
-            // .\\COMTOR.g:834:9: conditionalAndExpression ( '||' conditionalAndExpression )*
+            // COMTOR.g:834:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
+            // COMTOR.g:834:9: conditionalAndExpression ( '||' conditionalAndExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13429,7 +13429,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, conditionalAndExpression404.getTree());
-            // .\\COMTOR.g:835:9: ( '||' conditionalAndExpression )*
+            // COMTOR.g:835:9: ( '||' conditionalAndExpression )*
             loop136:
             do {
                 int alt136=2;
@@ -13442,7 +13442,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt136) {
             	case 1 :
-            	    // .\\COMTOR.g:835:10: '||' conditionalAndExpression
+            	    // COMTOR.g:835:10: '||' conditionalAndExpression
             	    {
             	    string_literal405=(Token)match(input,BARBAR,FOLLOW_BARBAR_in_conditionalOrExpression7455); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13494,7 +13494,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "conditionalAndExpression"
-    // .\\COMTOR.g:839:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
+    // COMTOR.g:839:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
     public final COMTORParser.conditionalAndExpression_return conditionalAndExpression() throws RecognitionException {
         COMTORParser.conditionalAndExpression_return retval = new COMTORParser.conditionalAndExpression_return();
         retval.start = input.LT(1);
@@ -13511,8 +13511,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 76) ) { return retval; }
-            // .\\COMTOR.g:840:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
-            // .\\COMTOR.g:840:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
+            // COMTOR.g:840:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
+            // COMTOR.g:840:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13522,7 +13522,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, inclusiveOrExpression407.getTree());
-            // .\\COMTOR.g:841:9: ( '&&' inclusiveOrExpression )*
+            // COMTOR.g:841:9: ( '&&' inclusiveOrExpression )*
             loop137:
             do {
                 int alt137=2;
@@ -13535,7 +13535,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt137) {
             	case 1 :
-            	    // .\\COMTOR.g:841:10: '&&' inclusiveOrExpression
+            	    // COMTOR.g:841:10: '&&' inclusiveOrExpression
             	    {
             	    string_literal408=(Token)match(input,AMPAMP,FOLLOW_AMPAMP_in_conditionalAndExpression7499); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13587,7 +13587,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "inclusiveOrExpression"
-    // .\\COMTOR.g:845:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
+    // COMTOR.g:845:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
     public final COMTORParser.inclusiveOrExpression_return inclusiveOrExpression() throws RecognitionException {
         COMTORParser.inclusiveOrExpression_return retval = new COMTORParser.inclusiveOrExpression_return();
         retval.start = input.LT(1);
@@ -13604,8 +13604,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 77) ) { return retval; }
-            // .\\COMTOR.g:846:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
-            // .\\COMTOR.g:846:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
+            // COMTOR.g:846:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
+            // COMTOR.g:846:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13615,7 +13615,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusiveOrExpression410.getTree());
-            // .\\COMTOR.g:847:9: ( '|' exclusiveOrExpression )*
+            // COMTOR.g:847:9: ( '|' exclusiveOrExpression )*
             loop138:
             do {
                 int alt138=2;
@@ -13628,7 +13628,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt138) {
             	case 1 :
-            	    // .\\COMTOR.g:847:10: '|' exclusiveOrExpression
+            	    // COMTOR.g:847:10: '|' exclusiveOrExpression
             	    {
             	    char_literal411=(Token)match(input,BAR,FOLLOW_BAR_in_inclusiveOrExpression7543); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13680,7 +13680,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "exclusiveOrExpression"
-    // .\\COMTOR.g:851:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
+    // COMTOR.g:851:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
     public final COMTORParser.exclusiveOrExpression_return exclusiveOrExpression() throws RecognitionException {
         COMTORParser.exclusiveOrExpression_return retval = new COMTORParser.exclusiveOrExpression_return();
         retval.start = input.LT(1);
@@ -13697,8 +13697,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 78) ) { return retval; }
-            // .\\COMTOR.g:852:5: ( andExpression ( '^' andExpression )* )
-            // .\\COMTOR.g:852:9: andExpression ( '^' andExpression )*
+            // COMTOR.g:852:5: ( andExpression ( '^' andExpression )* )
+            // COMTOR.g:852:9: andExpression ( '^' andExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13708,7 +13708,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, andExpression413.getTree());
-            // .\\COMTOR.g:853:9: ( '^' andExpression )*
+            // COMTOR.g:853:9: ( '^' andExpression )*
             loop139:
             do {
                 int alt139=2;
@@ -13721,7 +13721,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt139) {
             	case 1 :
-            	    // .\\COMTOR.g:853:10: '^' andExpression
+            	    // COMTOR.g:853:10: '^' andExpression
             	    {
             	    char_literal414=(Token)match(input,CARET,FOLLOW_CARET_in_exclusiveOrExpression7587); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13773,7 +13773,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "andExpression"
-    // .\\COMTOR.g:857:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
+    // COMTOR.g:857:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
     public final COMTORParser.andExpression_return andExpression() throws RecognitionException {
         COMTORParser.andExpression_return retval = new COMTORParser.andExpression_return();
         retval.start = input.LT(1);
@@ -13790,8 +13790,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 79) ) { return retval; }
-            // .\\COMTOR.g:858:5: ( equalityExpression ( '&' equalityExpression )* )
-            // .\\COMTOR.g:858:9: equalityExpression ( '&' equalityExpression )*
+            // COMTOR.g:858:5: ( equalityExpression ( '&' equalityExpression )* )
+            // COMTOR.g:858:9: equalityExpression ( '&' equalityExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13801,7 +13801,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, equalityExpression416.getTree());
-            // .\\COMTOR.g:859:9: ( '&' equalityExpression )*
+            // COMTOR.g:859:9: ( '&' equalityExpression )*
             loop140:
             do {
                 int alt140=2;
@@ -13814,7 +13814,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt140) {
             	case 1 :
-            	    // .\\COMTOR.g:859:10: '&' equalityExpression
+            	    // COMTOR.g:859:10: '&' equalityExpression
             	    {
             	    char_literal417=(Token)match(input,AMP,FOLLOW_AMP_in_andExpression7631); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -13866,7 +13866,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "equalityExpression"
-    // .\\COMTOR.g:863:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
+    // COMTOR.g:863:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
     public final COMTORParser.equalityExpression_return equalityExpression() throws RecognitionException {
         COMTORParser.equalityExpression_return retval = new COMTORParser.equalityExpression_return();
         retval.start = input.LT(1);
@@ -13883,8 +13883,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 80) ) { return retval; }
-            // .\\COMTOR.g:864:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
-            // .\\COMTOR.g:864:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
+            // COMTOR.g:864:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
+            // COMTOR.g:864:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13894,7 +13894,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, instanceOfExpression419.getTree());
-            // .\\COMTOR.g:865:9: ( ( '==' | '!=' ) instanceOfExpression )*
+            // COMTOR.g:865:9: ( ( '==' | '!=' ) instanceOfExpression )*
             loop141:
             do {
                 int alt141=2;
@@ -13907,7 +13907,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt141) {
             	case 1 :
-            	    // .\\COMTOR.g:866:13: ( '==' | '!=' ) instanceOfExpression
+            	    // COMTOR.g:866:13: ( '==' | '!=' ) instanceOfExpression
             	    {
             	    set420=(Token)input.LT(1);
             	    if ( input.LA(1)==EQEQ||input.LA(1)==BANGEQ ) {
@@ -13966,7 +13966,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "instanceOfExpression"
-    // .\\COMTOR.g:873:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
+    // COMTOR.g:873:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
     public final COMTORParser.instanceOfExpression_return instanceOfExpression() throws RecognitionException {
         COMTORParser.instanceOfExpression_return retval = new COMTORParser.instanceOfExpression_return();
         retval.start = input.LT(1);
@@ -13983,8 +13983,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 81) ) { return retval; }
-            // .\\COMTOR.g:874:5: ( relationalExpression ( 'instanceof' type )? )
-            // .\\COMTOR.g:874:9: relationalExpression ( 'instanceof' type )?
+            // COMTOR.g:874:5: ( relationalExpression ( 'instanceof' type )? )
+            // COMTOR.g:874:9: relationalExpression ( 'instanceof' type )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -13994,7 +13994,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, relationalExpression422.getTree());
-            // .\\COMTOR.g:875:9: ( 'instanceof' type )?
+            // COMTOR.g:875:9: ( 'instanceof' type )?
             int alt142=2;
             int LA142_0 = input.LA(1);
 
@@ -14003,7 +14003,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt142) {
                 case 1 :
-                    // .\\COMTOR.g:875:10: 'instanceof' type
+                    // COMTOR.g:875:10: 'instanceof' type
                     {
                     string_literal423=(Token)match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_instanceOfExpression7783); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -14052,7 +14052,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "relationalExpression"
-    // .\\COMTOR.g:879:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
+    // COMTOR.g:879:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
     public final COMTORParser.relationalExpression_return relationalExpression() throws RecognitionException {
         COMTORParser.relationalExpression_return retval = new COMTORParser.relationalExpression_return();
         retval.start = input.LT(1);
@@ -14069,8 +14069,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 82) ) { return retval; }
-            // .\\COMTOR.g:880:5: ( shiftExpression ( relationalOp shiftExpression )* )
-            // .\\COMTOR.g:880:9: shiftExpression ( relationalOp shiftExpression )*
+            // COMTOR.g:880:5: ( shiftExpression ( relationalOp shiftExpression )* )
+            // COMTOR.g:880:9: shiftExpression ( relationalOp shiftExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14080,7 +14080,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, shiftExpression425.getTree());
-            // .\\COMTOR.g:881:9: ( relationalOp shiftExpression )*
+            // COMTOR.g:881:9: ( relationalOp shiftExpression )*
             loop143:
             do {
                 int alt143=2;
@@ -14108,7 +14108,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt143) {
             	case 1 :
-            	    // .\\COMTOR.g:881:10: relationalOp shiftExpression
+            	    // COMTOR.g:881:10: relationalOp shiftExpression
             	    {
             	    pushFollow(FOLLOW_relationalOp_in_relationalExpression7827);
             	    relationalOp426=relationalOp();
@@ -14161,7 +14161,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "relationalOp"
-    // .\\COMTOR.g:885:1: relationalOp : ( '<' '=' | '>' '=' | '<' | '>' );
+    // COMTOR.g:885:1: relationalOp : ( '<' '=' | '>' '=' | '<' | '>' );
     public final COMTORParser.relationalOp_return relationalOp() throws RecognitionException {
         COMTORParser.relationalOp_return retval = new COMTORParser.relationalOp_return();
         retval.start = input.LT(1);
@@ -14184,7 +14184,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 83) ) { return retval; }
-            // .\\COMTOR.g:886:5: ( '<' '=' | '>' '=' | '<' | '>' )
+            // COMTOR.g:886:5: ( '<' '=' | '>' '=' | '<' | '>' )
             int alt144=4;
             int LA144_0 = input.LA(1);
 
@@ -14231,7 +14231,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt144) {
                 case 1 :
-                    // .\\COMTOR.g:886:10: '<' '='
+                    // COMTOR.g:886:10: '<' '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14249,7 +14249,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:887:10: '>' '='
+                    // COMTOR.g:887:10: '>' '='
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14267,7 +14267,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:888:9: '<'
+                    // COMTOR.g:888:9: '<'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14280,7 +14280,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:889:9: '>'
+                    // COMTOR.g:889:9: '>'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14321,7 +14321,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "shiftExpression"
-    // .\\COMTOR.g:892:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
+    // COMTOR.g:892:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
     public final COMTORParser.shiftExpression_return shiftExpression() throws RecognitionException {
         COMTORParser.shiftExpression_return retval = new COMTORParser.shiftExpression_return();
         retval.start = input.LT(1);
@@ -14338,8 +14338,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 84) ) { return retval; }
-            // .\\COMTOR.g:893:5: ( additiveExpression ( shiftOp additiveExpression )* )
-            // .\\COMTOR.g:893:9: additiveExpression ( shiftOp additiveExpression )*
+            // COMTOR.g:893:5: ( additiveExpression ( shiftOp additiveExpression )* )
+            // COMTOR.g:893:9: additiveExpression ( shiftOp additiveExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14349,7 +14349,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, additiveExpression434.getTree());
-            // .\\COMTOR.g:894:9: ( shiftOp additiveExpression )*
+            // COMTOR.g:894:9: ( shiftOp additiveExpression )*
             loop145:
             do {
                 int alt145=2;
@@ -14398,7 +14398,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt145) {
             	case 1 :
-            	    // .\\COMTOR.g:894:10: shiftOp additiveExpression
+            	    // COMTOR.g:894:10: shiftOp additiveExpression
             	    {
             	    pushFollow(FOLLOW_shiftOp_in_shiftExpression7927);
             	    shiftOp435=shiftOp();
@@ -14451,7 +14451,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "shiftOp"
-    // .\\COMTOR.g:899:1: shiftOp : ( '<' '<' | '>' '>' '>' | '>' '>' );
+    // COMTOR.g:899:1: shiftOp : ( '<' '<' | '>' '>' '>' | '>' '>' );
     public final COMTORParser.shiftOp_return shiftOp() throws RecognitionException {
         COMTORParser.shiftOp_return retval = new COMTORParser.shiftOp_return();
         retval.start = input.LT(1);
@@ -14476,7 +14476,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 85) ) { return retval; }
-            // .\\COMTOR.g:900:5: ( '<' '<' | '>' '>' '>' | '>' '>' )
+            // COMTOR.g:900:5: ( '<' '<' | '>' '>' '>' | '>' '>' )
             int alt146=3;
             int LA146_0 = input.LA(1);
 
@@ -14520,7 +14520,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt146) {
                 case 1 :
-                    // .\\COMTOR.g:900:10: '<' '<'
+                    // COMTOR.g:900:10: '<' '<'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14538,7 +14538,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:901:10: '>' '>' '>'
+                    // COMTOR.g:901:10: '>' '>' '>'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14561,7 +14561,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:902:10: '>' '>'
+                    // COMTOR.g:902:10: '>' '>'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14607,7 +14607,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "additiveExpression"
-    // .\\COMTOR.g:906:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+    // COMTOR.g:906:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
     public final COMTORParser.additiveExpression_return additiveExpression() throws RecognitionException {
         COMTORParser.additiveExpression_return retval = new COMTORParser.additiveExpression_return();
         retval.start = input.LT(1);
@@ -14624,8 +14624,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 86) ) { return retval; }
-            // .\\COMTOR.g:907:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
-            // .\\COMTOR.g:907:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
+            // COMTOR.g:907:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
+            // COMTOR.g:907:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14635,7 +14635,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicativeExpression444.getTree());
-            // .\\COMTOR.g:908:9: ( ( '+' | '-' ) multiplicativeExpression )*
+            // COMTOR.g:908:9: ( ( '+' | '-' ) multiplicativeExpression )*
             loop147:
             do {
                 int alt147=2;
@@ -14648,7 +14648,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt147) {
             	case 1 :
-            	    // .\\COMTOR.g:909:13: ( '+' | '-' ) multiplicativeExpression
+            	    // COMTOR.g:909:13: ( '+' | '-' ) multiplicativeExpression
             	    {
             	    set445=(Token)input.LT(1);
             	    if ( (input.LA(1)>=PLUS && input.LA(1)<=SUB) ) {
@@ -14707,7 +14707,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "multiplicativeExpression"
-    // .\\COMTOR.g:916:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
+    // COMTOR.g:916:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
     public final COMTORParser.multiplicativeExpression_return multiplicativeExpression() throws RecognitionException {
         COMTORParser.multiplicativeExpression_return retval = new COMTORParser.multiplicativeExpression_return();
         retval.start = input.LT(1);
@@ -14724,8 +14724,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 87) ) { return retval; }
-            // .\\COMTOR.g:917:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
-            // .\\COMTOR.g:918:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
+            // COMTOR.g:917:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
+            // COMTOR.g:918:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -14735,7 +14735,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, unaryExpression447.getTree());
-            // .\\COMTOR.g:919:9: ( ( '*' | '/' | '%' ) unaryExpression )*
+            // COMTOR.g:919:9: ( ( '*' | '/' | '%' ) unaryExpression )*
             loop148:
             do {
                 int alt148=2;
@@ -14748,7 +14748,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt148) {
             	case 1 :
-            	    // .\\COMTOR.g:920:13: ( '*' | '/' | '%' ) unaryExpression
+            	    // COMTOR.g:920:13: ( '*' | '/' | '%' ) unaryExpression
             	    {
             	    set448=(Token)input.LT(1);
             	    if ( (input.LA(1)>=STAR && input.LA(1)<=SLASH)||input.LA(1)==PERCENT ) {
@@ -14807,7 +14807,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "unaryExpression"
-    // .\\COMTOR.g:928:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
+    // COMTOR.g:928:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
     public final COMTORParser.unaryExpression_return unaryExpression() throws RecognitionException {
         COMTORParser.unaryExpression_return retval = new COMTORParser.unaryExpression_return();
         retval.start = input.LT(1);
@@ -14836,7 +14836,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 88) ) { return retval; }
-            // .\\COMTOR.g:933:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
+            // COMTOR.g:933:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
             int alt149=5;
             switch ( input.LA(1) ) {
             case PLUS:
@@ -14899,7 +14899,7 @@ public class COMTORParser extends Parser {
 
             switch (alt149) {
                 case 1 :
-                    // .\\COMTOR.g:933:9: '+' unaryExpression
+                    // COMTOR.g:933:9: '+' unaryExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14918,7 +14918,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:934:9: '-' unaryExpression
+                    // COMTOR.g:934:9: '-' unaryExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14937,7 +14937,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:935:9: '++' unaryExpression
+                    // COMTOR.g:935:9: '++' unaryExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14956,7 +14956,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:936:9: '--' unaryExpression
+                    // COMTOR.g:936:9: '--' unaryExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -14975,7 +14975,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:937:9: unaryExpressionNotPlusMinus
+                    // COMTOR.g:937:9: unaryExpressionNotPlusMinus
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15017,7 +15017,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "unaryExpressionNotPlusMinus"
-    // .\\COMTOR.g:940:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
+    // COMTOR.g:940:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
     public final COMTORParser.unaryExpressionNotPlusMinus_return unaryExpressionNotPlusMinus() throws RecognitionException {
         COMTORParser.unaryExpressionNotPlusMinus_return retval = new COMTORParser.unaryExpressionNotPlusMinus_return();
         retval.start = input.LT(1);
@@ -15044,12 +15044,12 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 89) ) { return retval; }
-            // .\\COMTOR.g:941:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
+            // COMTOR.g:941:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
             int alt152=4;
             alt152 = dfa152.predict(input);
             switch (alt152) {
                 case 1 :
-                    // .\\COMTOR.g:941:9: '~' unaryExpression
+                    // COMTOR.g:941:9: '~' unaryExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15068,7 +15068,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:942:9: '!' unaryExpression
+                    // COMTOR.g:942:9: '!' unaryExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15087,7 +15087,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:943:9: castExpression
+                    // COMTOR.g:943:9: castExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15101,7 +15101,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:944:9: primary ( selector )* ( '++' | '--' )?
+                    // COMTOR.g:944:9: primary ( selector )* ( '++' | '--' )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15111,7 +15111,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, primary464.getTree());
-                    // .\\COMTOR.g:945:9: ( selector )*
+                    // COMTOR.g:945:9: ( selector )*
                     loop150:
                     do {
                         int alt150=2;
@@ -15124,7 +15124,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt150) {
                     	case 1 :
-                    	    // .\\COMTOR.g:945:10: selector
+                    	    // COMTOR.g:945:10: selector
                     	    {
                     	    pushFollow(FOLLOW_selector_in_unaryExpressionNotPlusMinus8370);
                     	    selector465=selector();
@@ -15141,7 +15141,7 @@ public class COMTORParser extends Parser {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:947:9: ( '++' | '--' )?
+                    // COMTOR.g:947:9: ( '++' | '--' )?
                     int alt151=2;
                     int LA151_0 = input.LA(1);
 
@@ -15150,7 +15150,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt151) {
                         case 1 :
-                            // .\\COMTOR.g:
+                            // COMTOR.g:
                             {
                             set466=(Token)input.LT(1);
                             if ( (input.LA(1)>=PLUSPLUS && input.LA(1)<=SUBSUB) ) {
@@ -15202,7 +15202,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "castExpression"
-    // .\\COMTOR.g:952:1: castExpression : ( '(' primitiveType ')' unaryExpression -> unaryExpression ^( CAST primitiveType ) | '(' type ')' unaryExpressionNotPlusMinus -> unaryExpressionNotPlusMinus ^( CAST type ) );
+    // COMTOR.g:952:1: castExpression : ( '(' primitiveType ')' unaryExpression -> unaryExpression ^( CAST primitiveType ) | '(' type ')' unaryExpressionNotPlusMinus -> unaryExpressionNotPlusMinus ^( CAST type ) );
     public final COMTORParser.castExpression_return castExpression() throws RecognitionException {
         COMTORParser.castExpression_return retval = new COMTORParser.castExpression_return();
         retval.start = input.LT(1);
@@ -15234,7 +15234,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 90) ) { return retval; }
-            // .\\COMTOR.g:953:5: ( '(' primitiveType ')' unaryExpression -> unaryExpression ^( CAST primitiveType ) | '(' type ')' unaryExpressionNotPlusMinus -> unaryExpressionNotPlusMinus ^( CAST type ) )
+            // COMTOR.g:953:5: ( '(' primitiveType ')' unaryExpression -> unaryExpression ^( CAST primitiveType ) | '(' type ')' unaryExpressionNotPlusMinus -> unaryExpressionNotPlusMinus ^( CAST type ) )
             int alt153=2;
             int LA153_0 = input.LA(1);
 
@@ -15264,7 +15264,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt153) {
                 case 1 :
-                    // .\\COMTOR.g:953:9: '(' primitiveType ')' unaryExpression
+                    // COMTOR.g:953:9: '(' primitiveType ')' unaryExpression
                     {
                     char_literal467=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_castExpression8440); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(char_literal467);
@@ -15301,7 +15301,7 @@ public class COMTORParser extends Parser {
                     // 954:6: -> unaryExpression ^( CAST primitiveType )
                     {
                         adaptor.addChild(root_0, stream_unaryExpression.nextTree());
-                        // .\\COMTOR.g:954:25: ^( CAST primitiveType )
+                        // COMTOR.g:954:25: ^( CAST primitiveType )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CAST, "CAST"), root_1);
@@ -15317,7 +15317,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:955:9: '(' type ')' unaryExpressionNotPlusMinus
+                    // COMTOR.g:955:9: '(' type ')' unaryExpressionNotPlusMinus
                     {
                     char_literal471=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_castExpression8471); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(char_literal471);
@@ -15354,7 +15354,7 @@ public class COMTORParser extends Parser {
                     // 956:6: -> unaryExpressionNotPlusMinus ^( CAST type )
                     {
                         adaptor.addChild(root_0, stream_unaryExpressionNotPlusMinus.nextTree());
-                        // .\\COMTOR.g:956:37: ^( CAST type )
+                        // COMTOR.g:956:37: ^( CAST type )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(CAST, "CAST"), root_1);
@@ -15398,7 +15398,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "primary"
-    // .\\COMTOR.g:959:1: primary : ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType (b+= '[' b+= ']' )* '.' 'class' -> primitiveType '.' 'class' ( ^( ARRAY ( $b)* ) )? | 'void' '.' 'class' );
+    // COMTOR.g:959:1: primary : ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType (b+= '[' b+= ']' )* '.' 'class' -> primitiveType '.' 'class' ( ^( ARRAY ( $b)* ) )? | 'void' '.' 'class' );
     public final COMTORParser.primary_return primary() throws RecognitionException {
         COMTORParser.primary_return retval = new COMTORParser.primary_return();
         retval.start = input.LT(1);
@@ -15454,7 +15454,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_primitiveType=new RewriteRuleSubtreeStream(adaptor,"rule primitiveType");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 91) ) { return retval; }
-            // .\\COMTOR.g:963:5: ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType (b+= '[' b+= ']' )* '.' 'class' -> primitiveType '.' 'class' ( ^( ARRAY ( $b)* ) )? | 'void' '.' 'class' )
+            // COMTOR.g:963:5: ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType (b+= '[' b+= ']' )* '.' 'class' -> primitiveType '.' 'class' ( ^( ARRAY ( $b)* ) )? | 'void' '.' 'class' )
             int alt159=8;
             switch ( input.LA(1) ) {
             case LPAREN:
@@ -15523,7 +15523,7 @@ public class COMTORParser extends Parser {
 
             switch (alt159) {
                 case 1 :
-                    // .\\COMTOR.g:963:9: parExpression
+                    // COMTOR.g:963:9: parExpression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15537,7 +15537,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:964:9: 'this' ( '.' IDENTIFIER )* ( identifierSuffix )?
+                    // COMTOR.g:964:9: 'this' ( '.' IDENTIFIER )* ( identifierSuffix )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15546,7 +15546,7 @@ public class COMTORParser extends Parser {
                     string_literal476_tree = (CommonTree)adaptor.create(string_literal476);
                     adaptor.addChild(root_0, string_literal476_tree);
                     }
-                    // .\\COMTOR.g:965:9: ( '.' IDENTIFIER )*
+                    // COMTOR.g:965:9: ( '.' IDENTIFIER )*
                     loop154:
                     do {
                         int alt154=2;
@@ -15571,7 +15571,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt154) {
                     	case 1 :
-                    	    // .\\COMTOR.g:965:10: '.' IDENTIFIER
+                    	    // COMTOR.g:965:10: '.' IDENTIFIER
                     	    {
                     	    char_literal477=(Token)match(input,DOT,FOLLOW_DOT_in_primary8547); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -15592,12 +15592,12 @@ public class COMTORParser extends Parser {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:967:9: ( identifierSuffix )?
+                    // COMTOR.g:967:9: ( identifierSuffix )?
                     int alt155=2;
                     alt155 = dfa155.predict(input);
                     switch (alt155) {
                         case 1 :
-                            // .\\COMTOR.g:967:10: identifierSuffix
+                            // COMTOR.g:967:10: identifierSuffix
                             {
                             pushFollow(FOLLOW_identifierSuffix_in_primary8571);
                             identifierSuffix479=identifierSuffix();
@@ -15615,7 +15615,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:969:9: IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )?
+                    // COMTOR.g:969:9: IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15624,7 +15624,7 @@ public class COMTORParser extends Parser {
                     IDENTIFIER480_tree = (CommonTree)adaptor.create(IDENTIFIER480);
                     adaptor.addChild(root_0, IDENTIFIER480_tree);
                     }
-                    // .\\COMTOR.g:970:9: ( '.' IDENTIFIER )*
+                    // COMTOR.g:970:9: ( '.' IDENTIFIER )*
                     loop156:
                     do {
                         int alt156=2;
@@ -15649,7 +15649,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt156) {
                     	case 1 :
-                    	    // .\\COMTOR.g:970:10: '.' IDENTIFIER
+                    	    // COMTOR.g:970:10: '.' IDENTIFIER
                     	    {
                     	    char_literal481=(Token)match(input,DOT,FOLLOW_DOT_in_primary8603); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -15670,12 +15670,12 @@ public class COMTORParser extends Parser {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:972:9: ( identifierSuffix )?
+                    // COMTOR.g:972:9: ( identifierSuffix )?
                     int alt157=2;
                     alt157 = dfa157.predict(input);
                     switch (alt157) {
                         case 1 :
-                            // .\\COMTOR.g:972:10: identifierSuffix
+                            // COMTOR.g:972:10: identifierSuffix
                             {
                             pushFollow(FOLLOW_identifierSuffix_in_primary8627);
                             identifierSuffix483=identifierSuffix();
@@ -15693,7 +15693,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:974:9: 'super' superSuffix
+                    // COMTOR.g:974:9: 'super' superSuffix
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15712,7 +15712,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:976:9: literal
+                    // COMTOR.g:976:9: literal
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15726,7 +15726,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:977:9: creator
+                    // COMTOR.g:977:9: creator
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15740,7 +15740,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:978:9: primitiveType (b+= '[' b+= ']' )* '.' 'class'
+                    // COMTOR.g:978:9: primitiveType (b+= '[' b+= ']' )* '.' 'class'
                     {
                     pushFollow(FOLLOW_primitiveType_in_primary8688);
                     primitiveType488=primitiveType();
@@ -15748,7 +15748,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_primitiveType.add(primitiveType488.getTree());
-                    // .\\COMTOR.g:979:9: (b+= '[' b+= ']' )*
+                    // COMTOR.g:979:9: (b+= '[' b+= ']' )*
                     loop158:
                     do {
                         int alt158=2;
@@ -15761,7 +15761,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt158) {
                     	case 1 :
-                    	    // .\\COMTOR.g:979:10: b+= '[' b+= ']'
+                    	    // COMTOR.g:979:10: b+= '[' b+= ']'
                     	    {
                     	    b=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_primary8701); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACKET.add(b);
@@ -15793,7 +15793,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: CLASS, b, primitiveType, DOT
+                    // elements: DOT, primitiveType, CLASS, b
                     // token labels: 
                     // rule labels: retval
                     // token list labels: b
@@ -15810,14 +15810,14 @@ public class COMTORParser extends Parser {
                         adaptor.addChild(root_0, stream_primitiveType.nextTree());
                         adaptor.addChild(root_0, stream_DOT.nextNode());
                         adaptor.addChild(root_0, stream_CLASS.nextNode());
-                        // .\\COMTOR.g:982:38: ( ^( ARRAY ( $b)* ) )?
+                        // COMTOR.g:982:38: ( ^( ARRAY ( $b)* ) )?
                         if ( stream_b.hasNext() ) {
-                            // .\\COMTOR.g:982:38: ^( ARRAY ( $b)* )
+                            // COMTOR.g:982:38: ^( ARRAY ( $b)* )
                             {
                             CommonTree root_1 = (CommonTree)adaptor.nil();
                             root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARRAY, "ARRAY"), root_1);
 
-                            // .\\COMTOR.g:982:46: ( $b)*
+                            // COMTOR.g:982:46: ( $b)*
                             while ( stream_b.hasNext() ) {
                                 adaptor.addChild(root_1, stream_b.nextNode());
 
@@ -15836,7 +15836,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:983:9: 'void' '.' 'class'
+                    // COMTOR.g:983:9: 'void' '.' 'class'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15887,7 +15887,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "superSuffix"
-    // .\\COMTOR.g:987:1: superSuffix : ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? -> IDENTIFIER ( typeArguments )? ( arguments )? );
+    // COMTOR.g:987:1: superSuffix : ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? -> IDENTIFIER ( typeArguments )? ( arguments )? );
     public final COMTORParser.superSuffix_return superSuffix() throws RecognitionException {
         COMTORParser.superSuffix_return retval = new COMTORParser.superSuffix_return();
         retval.start = input.LT(1);
@@ -15911,7 +15911,7 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_typeArguments=new RewriteRuleSubtreeStream(adaptor,"rule typeArguments");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 92) ) { return retval; }
-            // .\\COMTOR.g:988:5: ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? -> IDENTIFIER ( typeArguments )? ( arguments )? )
+            // COMTOR.g:988:5: ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? -> IDENTIFIER ( typeArguments )? ( arguments )? )
             int alt162=2;
             int LA162_0 = input.LA(1);
 
@@ -15930,7 +15930,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt162) {
                 case 1 :
-                    // .\\COMTOR.g:988:9: arguments
+                    // COMTOR.g:988:9: arguments
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -15944,12 +15944,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:989:9: '.' ( typeArguments )? IDENTIFIER ( arguments )?
+                    // COMTOR.g:989:9: '.' ( typeArguments )? IDENTIFIER ( arguments )?
                     {
                     char_literal495=(Token)match(input,DOT,FOLLOW_DOT_in_superSuffix8803); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_DOT.add(char_literal495);
 
-                    // .\\COMTOR.g:989:13: ( typeArguments )?
+                    // COMTOR.g:989:13: ( typeArguments )?
                     int alt160=2;
                     int LA160_0 = input.LA(1);
 
@@ -15958,7 +15958,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt160) {
                         case 1 :
-                            // .\\COMTOR.g:989:14: typeArguments
+                            // COMTOR.g:989:14: typeArguments
                             {
                             pushFollow(FOLLOW_typeArguments_in_superSuffix8806);
                             typeArguments496=typeArguments();
@@ -15975,7 +15975,7 @@ public class COMTORParser extends Parser {
                     IDENTIFIER497=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_superSuffix8827); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER497);
 
-                    // .\\COMTOR.g:992:9: ( arguments )?
+                    // COMTOR.g:992:9: ( arguments )?
                     int alt161=2;
                     int LA161_0 = input.LA(1);
 
@@ -15984,7 +15984,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt161) {
                         case 1 :
-                            // .\\COMTOR.g:992:10: arguments
+                            // COMTOR.g:992:10: arguments
                             {
                             pushFollow(FOLLOW_arguments_in_superSuffix8838);
                             arguments498=arguments();
@@ -16001,7 +16001,7 @@ public class COMTORParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: arguments, IDENTIFIER, typeArguments
+                    // elements: IDENTIFIER, arguments, typeArguments
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -16015,13 +16015,13 @@ public class COMTORParser extends Parser {
                     // 994:9: -> IDENTIFIER ( typeArguments )? ( arguments )?
                     {
                         adaptor.addChild(root_0, stream_IDENTIFIER.nextNode());
-                        // .\\COMTOR.g:994:23: ( typeArguments )?
+                        // COMTOR.g:994:23: ( typeArguments )?
                         if ( stream_typeArguments.hasNext() ) {
                             adaptor.addChild(root_0, stream_typeArguments.nextTree());
 
                         }
                         stream_typeArguments.reset();
-                        // .\\COMTOR.g:994:38: ( arguments )?
+                        // COMTOR.g:994:38: ( arguments )?
                         if ( stream_arguments.hasNext() ) {
                             adaptor.addChild(root_0, stream_arguments.nextTree());
 
@@ -16062,7 +16062,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "identifierSuffix"
-    // .\\COMTOR.g:998:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator );
+    // COMTOR.g:998:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator );
     public final COMTORParser.identifierSuffix_return identifierSuffix() throws RecognitionException {
         COMTORParser.identifierSuffix_return retval = new COMTORParser.identifierSuffix_return();
         retval.start = input.LT(1);
@@ -16113,16 +16113,16 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 93) ) { return retval; }
-            // .\\COMTOR.g:999:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator )
+            // COMTOR.g:999:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator )
             int alt165=8;
             alt165 = dfa165.predict(input);
             switch (alt165) {
                 case 1 :
-                    // .\\COMTOR.g:999:9: ( '[' ']' )+ '.' 'class'
+                    // COMTOR.g:999:9: ( '[' ']' )+ '.' 'class'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // .\\COMTOR.g:999:9: ( '[' ']' )+
+                    // COMTOR.g:999:9: ( '[' ']' )+
                     int cnt163=0;
                     loop163:
                     do {
@@ -16136,7 +16136,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt163) {
                     	case 1 :
-                    	    // .\\COMTOR.g:999:10: '[' ']'
+                    	    // COMTOR.g:999:10: '[' ']'
                     	    {
                     	    char_literal499=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_identifierSuffix8889); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -16176,11 +16176,11 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1002:9: ( '[' expression ']' )+
+                    // COMTOR.g:1002:9: ( '[' expression ']' )+
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // .\\COMTOR.g:1002:9: ( '[' expression ']' )+
+                    // COMTOR.g:1002:9: ( '[' expression ']' )+
                     int cnt164=0;
                     loop164:
                     do {
@@ -16188,7 +16188,7 @@ public class COMTORParser extends Parser {
                         alt164 = dfa164.predict(input);
                         switch (alt164) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1002:10: '[' expression ']'
+                    	    // COMTOR.g:1002:10: '[' expression ']'
                     	    {
                     	    char_literal503=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_identifierSuffix8925); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -16224,7 +16224,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1004:9: arguments
+                    // COMTOR.g:1004:9: arguments
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16238,7 +16238,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:1005:9: '.' 'class'
+                    // COMTOR.g:1005:9: '.' 'class'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16256,7 +16256,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:1006:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
+                    // COMTOR.g:1006:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16286,7 +16286,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:1007:9: '.' 'this'
+                    // COMTOR.g:1007:9: '.' 'this'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16304,7 +16304,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:1008:9: '.' 'super' arguments
+                    // COMTOR.g:1008:9: '.' 'super' arguments
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16328,7 +16328,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:1009:9: innerCreator
+                    // COMTOR.g:1009:9: innerCreator
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16370,7 +16370,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "selector"
-    // .\\COMTOR.g:1013:1: selector : ( '.' IDENTIFIER ( arguments )? | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' );
+    // COMTOR.g:1013:1: selector : ( '.' IDENTIFIER ( arguments )? | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' );
     public final COMTORParser.selector_return selector() throws RecognitionException {
         COMTORParser.selector_return retval = new COMTORParser.selector_return();
         retval.start = input.LT(1);
@@ -16405,7 +16405,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 94) ) { return retval; }
-            // .\\COMTOR.g:1014:5: ( '.' IDENTIFIER ( arguments )? | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' )
+            // COMTOR.g:1014:5: ( '.' IDENTIFIER ( arguments )? | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' )
             int alt167=5;
             int LA167_0 = input.LA(1);
 
@@ -16452,7 +16452,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt167) {
                 case 1 :
-                    // .\\COMTOR.g:1014:9: '.' IDENTIFIER ( arguments )?
+                    // COMTOR.g:1014:9: '.' IDENTIFIER ( arguments )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16466,7 +16466,7 @@ public class COMTORParser extends Parser {
                     IDENTIFIER520_tree = (CommonTree)adaptor.create(IDENTIFIER520);
                     adaptor.addChild(root_0, IDENTIFIER520_tree);
                     }
-                    // .\\COMTOR.g:1015:9: ( arguments )?
+                    // COMTOR.g:1015:9: ( arguments )?
                     int alt166=2;
                     int LA166_0 = input.LA(1);
 
@@ -16475,7 +16475,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt166) {
                         case 1 :
-                            // .\\COMTOR.g:1015:10: arguments
+                            // COMTOR.g:1015:10: arguments
                             {
                             pushFollow(FOLLOW_arguments_in_selector9049);
                             arguments521=arguments();
@@ -16493,7 +16493,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1017:9: '.' 'this'
+                    // COMTOR.g:1017:9: '.' 'this'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16511,7 +16511,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1018:9: '.' 'super' superSuffix
+                    // COMTOR.g:1018:9: '.' 'super' superSuffix
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16535,7 +16535,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:1020:9: innerCreator
+                    // COMTOR.g:1020:9: innerCreator
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16549,7 +16549,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:1021:9: '[' expression ']'
+                    // COMTOR.g:1021:9: '[' expression ']'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16601,7 +16601,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "creator"
-    // .\\COMTOR.g:1024:1: creator : ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest | 'new' classOrInterfaceType classCreatorRest | arrayCreator );
+    // COMTOR.g:1024:1: creator : ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest | 'new' classOrInterfaceType classCreatorRest | arrayCreator );
     public final COMTORParser.creator_return creator() throws RecognitionException {
         COMTORParser.creator_return retval = new COMTORParser.creator_return();
         retval.start = input.LT(1);
@@ -16628,7 +16628,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 95) ) { return retval; }
-            // .\\COMTOR.g:1025:5: ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest | 'new' classOrInterfaceType classCreatorRest | arrayCreator )
+            // COMTOR.g:1025:5: ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest | 'new' classOrInterfaceType classCreatorRest | arrayCreator )
             int alt168=3;
             int LA168_0 = input.LA(1);
 
@@ -16661,7 +16661,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt168) {
                 case 1 :
-                    // .\\COMTOR.g:1025:9: 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
+                    // COMTOR.g:1025:9: 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16692,7 +16692,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1026:9: 'new' classOrInterfaceType classCreatorRest
+                    // COMTOR.g:1026:9: 'new' classOrInterfaceType classCreatorRest
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16717,7 +16717,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1027:9: arrayCreator
+                    // COMTOR.g:1027:9: arrayCreator
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16759,7 +16759,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "arrayCreator"
-    // .\\COMTOR.g:1030:1: arrayCreator : ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* );
+    // COMTOR.g:1030:1: arrayCreator : ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* );
     public final COMTORParser.arrayCreator_return arrayCreator() throws RecognitionException {
         COMTORParser.arrayCreator_return retval = new COMTORParser.arrayCreator_return();
         retval.start = input.LT(1);
@@ -16804,7 +16804,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 96) ) { return retval; }
-            // .\\COMTOR.g:1031:5: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+            // COMTOR.g:1031:5: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* )
             int alt172=2;
             int LA172_0 = input.LA(1);
 
@@ -16834,7 +16834,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt172) {
                 case 1 :
-                    // .\\COMTOR.g:1031:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
+                    // COMTOR.g:1031:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16859,7 +16859,7 @@ public class COMTORParser extends Parser {
                     char_literal542_tree = (CommonTree)adaptor.create(char_literal542);
                     adaptor.addChild(root_0, char_literal542_tree);
                     }
-                    // .\\COMTOR.g:1033:9: ( '[' ']' )*
+                    // COMTOR.g:1033:9: ( '[' ']' )*
                     loop169:
                     do {
                         int alt169=2;
@@ -16872,7 +16872,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt169) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1033:10: '[' ']'
+                    	    // COMTOR.g:1033:10: '[' ']'
                     	    {
                     	    char_literal543=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_arrayCreator9213); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -16903,7 +16903,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1037:9: 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )*
+                    // COMTOR.g:1037:9: 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )*
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -16934,14 +16934,14 @@ public class COMTORParser extends Parser {
                     char_literal550_tree = (CommonTree)adaptor.create(char_literal550);
                     adaptor.addChild(root_0, char_literal550_tree);
                     }
-                    // .\\COMTOR.g:1040:9: ( '[' expression ']' )*
+                    // COMTOR.g:1040:9: ( '[' expression ']' )*
                     loop170:
                     do {
                         int alt170=2;
                         alt170 = dfa170.predict(input);
                         switch (alt170) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1040:13: '[' expression ']'
+                    	    // COMTOR.g:1040:13: '[' expression ']'
                     	    {
                     	    char_literal551=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_arrayCreator9285); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -16968,7 +16968,7 @@ public class COMTORParser extends Parser {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:1043:9: ( '[' ']' )*
+                    // COMTOR.g:1043:9: ( '[' ']' )*
                     loop171:
                     do {
                         int alt171=2;
@@ -16987,7 +16987,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt171) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1043:10: '[' ']'
+                    	    // COMTOR.g:1043:10: '[' ']'
                     	    {
                     	    char_literal554=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_arrayCreator9323); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -17040,7 +17040,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "variableInitializer"
-    // .\\COMTOR.g:1047:1: variableInitializer : ( arrayInitializer | expression );
+    // COMTOR.g:1047:1: variableInitializer : ( arrayInitializer | expression );
     public final COMTORParser.variableInitializer_return variableInitializer() throws RecognitionException {
         COMTORParser.variableInitializer_return retval = new COMTORParser.variableInitializer_return();
         retval.start = input.LT(1);
@@ -17055,7 +17055,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 97) ) { return retval; }
-            // .\\COMTOR.g:1048:5: ( arrayInitializer | expression )
+            // COMTOR.g:1048:5: ( arrayInitializer | expression )
             int alt173=2;
             int LA173_0 = input.LA(1);
 
@@ -17074,7 +17074,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt173) {
                 case 1 :
-                    // .\\COMTOR.g:1048:9: arrayInitializer
+                    // COMTOR.g:1048:9: arrayInitializer
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17088,7 +17088,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1049:9: expression
+                    // COMTOR.g:1049:9: expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17130,7 +17130,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "arrayInitializer"
-    // .\\COMTOR.g:1052:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' -> ( variableInitializer )* ;
+    // COMTOR.g:1052:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' -> ( variableInitializer )* ;
     public final COMTORParser.arrayInitializer_return arrayInitializer() throws RecognitionException {
         COMTORParser.arrayInitializer_return retval = new COMTORParser.arrayInitializer_return();
         retval.start = input.LT(1);
@@ -17156,13 +17156,13 @@ public class COMTORParser extends Parser {
         RewriteRuleSubtreeStream stream_variableInitializer=new RewriteRuleSubtreeStream(adaptor,"rule variableInitializer");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 98) ) { return retval; }
-            // .\\COMTOR.g:1053:5: ( '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' -> ( variableInitializer )* )
-            // .\\COMTOR.g:1053:9: '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}'
+            // COMTOR.g:1053:5: ( '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' -> ( variableInitializer )* )
+            // COMTOR.g:1053:9: '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}'
             {
             char_literal558=(Token)match(input,LBRACE,FOLLOW_LBRACE_in_arrayInitializer9386); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACE.add(char_literal558);
 
-            // .\\COMTOR.g:1054:13: ( variableInitializer ( ',' variableInitializer )* )?
+            // COMTOR.g:1054:13: ( variableInitializer ( ',' variableInitializer )* )?
             int alt175=2;
             int LA175_0 = input.LA(1);
 
@@ -17171,7 +17171,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt175) {
                 case 1 :
-                    // .\\COMTOR.g:1054:14: variableInitializer ( ',' variableInitializer )*
+                    // COMTOR.g:1054:14: variableInitializer ( ',' variableInitializer )*
                     {
                     pushFollow(FOLLOW_variableInitializer_in_arrayInitializer9402);
                     variableInitializer559=variableInitializer();
@@ -17179,7 +17179,7 @@ public class COMTORParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_variableInitializer.add(variableInitializer559.getTree());
-                    // .\\COMTOR.g:1055:17: ( ',' variableInitializer )*
+                    // COMTOR.g:1055:17: ( ',' variableInitializer )*
                     loop174:
                     do {
                         int alt174=2;
@@ -17198,7 +17198,7 @@ public class COMTORParser extends Parser {
 
                         switch (alt174) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1055:18: ',' variableInitializer
+                    	    // COMTOR.g:1055:18: ',' variableInitializer
                     	    {
                     	    char_literal560=(Token)match(input,COMMA,FOLLOW_COMMA_in_arrayInitializer9421); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_COMMA.add(char_literal560);
@@ -17224,7 +17224,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:1058:13: ( ',' )?
+            // COMTOR.g:1058:13: ( ',' )?
             int alt176=2;
             int LA176_0 = input.LA(1);
 
@@ -17233,7 +17233,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt176) {
                 case 1 :
-                    // .\\COMTOR.g:1058:14: ','
+                    // COMTOR.g:1058:14: ','
                     {
                     char_literal562=(Token)match(input,COMMA,FOLLOW_COMMA_in_arrayInitializer9473); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_COMMA.add(char_literal562);
@@ -17263,7 +17263,7 @@ public class COMTORParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 1060:10: -> ( variableInitializer )*
             {
-                // .\\COMTOR.g:1060:13: ( variableInitializer )*
+                // COMTOR.g:1060:13: ( variableInitializer )*
                 while ( stream_variableInitializer.hasNext() ) {
                     adaptor.addChild(root_0, stream_variableInitializer.nextTree());
 
@@ -17302,7 +17302,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "createdName"
-    // .\\COMTOR.g:1064:1: createdName : ( classOrInterfaceType | primitiveType );
+    // COMTOR.g:1064:1: createdName : ( classOrInterfaceType | primitiveType );
     public final COMTORParser.createdName_return createdName() throws RecognitionException {
         COMTORParser.createdName_return retval = new COMTORParser.createdName_return();
         retval.start = input.LT(1);
@@ -17317,7 +17317,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 99) ) { return retval; }
-            // .\\COMTOR.g:1065:5: ( classOrInterfaceType | primitiveType )
+            // COMTOR.g:1065:5: ( classOrInterfaceType | primitiveType )
             int alt177=2;
             int LA177_0 = input.LA(1);
 
@@ -17336,7 +17336,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt177) {
                 case 1 :
-                    // .\\COMTOR.g:1065:9: classOrInterfaceType
+                    // COMTOR.g:1065:9: classOrInterfaceType
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17350,7 +17350,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1066:9: primitiveType
+                    // COMTOR.g:1066:9: primitiveType
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -17392,7 +17392,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "innerCreator"
-    // .\\COMTOR.g:1069:1: innerCreator : '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest ;
+    // COMTOR.g:1069:1: innerCreator : '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest ;
     public final COMTORParser.innerCreator_return innerCreator() throws RecognitionException {
         COMTORParser.innerCreator_return retval = new COMTORParser.innerCreator_return();
         retval.start = input.LT(1);
@@ -17415,8 +17415,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 100) ) { return retval; }
-            // .\\COMTOR.g:1070:5: ( '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest )
-            // .\\COMTOR.g:1070:9: '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest
+            // COMTOR.g:1070:5: ( '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest )
+            // COMTOR.g:1070:9: '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17430,7 +17430,7 @@ public class COMTORParser extends Parser {
             string_literal567_tree = (CommonTree)adaptor.create(string_literal567);
             adaptor.addChild(root_0, string_literal567_tree);
             }
-            // .\\COMTOR.g:1071:9: ( nonWildcardTypeArguments )?
+            // COMTOR.g:1071:9: ( nonWildcardTypeArguments )?
             int alt178=2;
             int LA178_0 = input.LA(1);
 
@@ -17439,7 +17439,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt178) {
                 case 1 :
-                    // .\\COMTOR.g:1071:10: nonWildcardTypeArguments
+                    // COMTOR.g:1071:10: nonWildcardTypeArguments
                     {
                     pushFollow(FOLLOW_nonWildcardTypeArguments_in_innerCreator9578);
                     nonWildcardTypeArguments568=nonWildcardTypeArguments();
@@ -17458,7 +17458,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER569_tree = (CommonTree)adaptor.create(IDENTIFIER569);
             adaptor.addChild(root_0, IDENTIFIER569_tree);
             }
-            // .\\COMTOR.g:1074:9: ( typeArguments )?
+            // COMTOR.g:1074:9: ( typeArguments )?
             int alt179=2;
             int LA179_0 = input.LA(1);
 
@@ -17467,7 +17467,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt179) {
                 case 1 :
-                    // .\\COMTOR.g:1074:10: typeArguments
+                    // COMTOR.g:1074:10: typeArguments
                     {
                     pushFollow(FOLLOW_typeArguments_in_innerCreator9610);
                     typeArguments570=typeArguments();
@@ -17517,7 +17517,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classCreatorRest"
-    // .\\COMTOR.g:1080:1: classCreatorRest : arguments ( classBody )? ;
+    // COMTOR.g:1080:1: classCreatorRest : arguments ( classBody )? ;
     public final COMTORParser.classCreatorRest_return classCreatorRest() throws RecognitionException {
         COMTORParser.classCreatorRest_return retval = new COMTORParser.classCreatorRest_return();
         retval.start = input.LT(1);
@@ -17532,8 +17532,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 101) ) { return retval; }
-            // .\\COMTOR.g:1081:5: ( arguments ( classBody )? )
-            // .\\COMTOR.g:1081:9: arguments ( classBody )?
+            // COMTOR.g:1081:5: ( arguments ( classBody )? )
+            // COMTOR.g:1081:9: arguments ( classBody )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17543,7 +17543,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, arguments572.getTree());
-            // .\\COMTOR.g:1082:9: ( classBody )?
+            // COMTOR.g:1082:9: ( classBody )?
             int alt180=2;
             int LA180_0 = input.LA(1);
 
@@ -17552,7 +17552,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt180) {
                 case 1 :
-                    // .\\COMTOR.g:1082:10: classBody
+                    // COMTOR.g:1082:10: classBody
                     {
                     pushFollow(FOLLOW_classBody_in_classCreatorRest9663);
                     classBody573=classBody();
@@ -17596,7 +17596,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "nonWildcardTypeArguments"
-    // .\\COMTOR.g:1087:1: nonWildcardTypeArguments : '<' typeList '>' ;
+    // COMTOR.g:1087:1: nonWildcardTypeArguments : '<' typeList '>' ;
     public final COMTORParser.nonWildcardTypeArguments_return nonWildcardTypeArguments() throws RecognitionException {
         COMTORParser.nonWildcardTypeArguments_return retval = new COMTORParser.nonWildcardTypeArguments_return();
         retval.start = input.LT(1);
@@ -17613,8 +17613,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 102) ) { return retval; }
-            // .\\COMTOR.g:1088:5: ( '<' typeList '>' )
-            // .\\COMTOR.g:1088:9: '<' typeList '>'
+            // COMTOR.g:1088:5: ( '<' typeList '>' )
+            // COMTOR.g:1088:9: '<' typeList '>'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17664,7 +17664,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "arguments"
-    // .\\COMTOR.g:1092:1: arguments : '(' ( expressionList )? ')' ;
+    // COMTOR.g:1092:1: arguments : '(' ( expressionList )? ')' ;
     public final COMTORParser.arguments_return arguments() throws RecognitionException {
         COMTORParser.arguments_return retval = new COMTORParser.arguments_return();
         retval.start = input.LT(1);
@@ -17681,8 +17681,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 103) ) { return retval; }
-            // .\\COMTOR.g:1093:5: ( '(' ( expressionList )? ')' )
-            // .\\COMTOR.g:1093:9: '(' ( expressionList )? ')'
+            // COMTOR.g:1093:5: ( '(' ( expressionList )? ')' )
+            // COMTOR.g:1093:9: '(' ( expressionList )? ')'
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17691,7 +17691,7 @@ public class COMTORParser extends Parser {
             char_literal577_tree = (CommonTree)adaptor.create(char_literal577);
             adaptor.addChild(root_0, char_literal577_tree);
             }
-            // .\\COMTOR.g:1093:13: ( expressionList )?
+            // COMTOR.g:1093:13: ( expressionList )?
             int alt181=2;
             int LA181_0 = input.LA(1);
 
@@ -17700,7 +17700,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt181) {
                 case 1 :
-                    // .\\COMTOR.g:1093:14: expressionList
+                    // COMTOR.g:1093:14: expressionList
                     {
                     pushFollow(FOLLOW_expressionList_in_arguments9730);
                     expressionList578=expressionList();
@@ -17749,7 +17749,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "literal"
-    // .\\COMTOR.g:1097:1: literal : ( INTLITERAL | LONGLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | UNICODECHARLITERAL | STRINGLITERAL | TRUE | FALSE | NULL );
+    // COMTOR.g:1097:1: literal : ( INTLITERAL | LONGLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | UNICODECHARLITERAL | STRINGLITERAL | TRUE | FALSE | NULL );
     public final COMTORParser.literal_return literal() throws RecognitionException {
         COMTORParser.literal_return retval = new COMTORParser.literal_return();
         retval.start = input.LT(1);
@@ -17762,8 +17762,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 104) ) { return retval; }
-            // .\\COMTOR.g:1098:5: ( INTLITERAL | LONGLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | UNICODECHARLITERAL | STRINGLITERAL | TRUE | FALSE | NULL )
-            // .\\COMTOR.g:
+            // COMTOR.g:1098:5: ( INTLITERAL | LONGLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | UNICODECHARLITERAL | STRINGLITERAL | TRUE | FALSE | NULL )
+            // COMTOR.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17809,7 +17809,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "classHeader"
-    // .\\COMTOR.g:1110:1: classHeader : modifiers 'class' IDENTIFIER ;
+    // COMTOR.g:1110:1: classHeader : modifiers 'class' IDENTIFIER ;
     public final COMTORParser.classHeader_return classHeader() throws RecognitionException {
         COMTORParser.classHeader_return retval = new COMTORParser.classHeader_return();
         retval.start = input.LT(1);
@@ -17826,8 +17826,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 105) ) { return retval; }
-            // .\\COMTOR.g:1115:5: ( modifiers 'class' IDENTIFIER )
-            // .\\COMTOR.g:1115:9: modifiers 'class' IDENTIFIER
+            // COMTOR.g:1115:5: ( modifiers 'class' IDENTIFIER )
+            // COMTOR.g:1115:9: modifiers 'class' IDENTIFIER
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17877,7 +17877,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "enumHeader"
-    // .\\COMTOR.g:1118:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
+    // COMTOR.g:1118:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
     public final COMTORParser.enumHeader_return enumHeader() throws RecognitionException {
         COMTORParser.enumHeader_return retval = new COMTORParser.enumHeader_return();
         retval.start = input.LT(1);
@@ -17894,8 +17894,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 106) ) { return retval; }
-            // .\\COMTOR.g:1119:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
-            // .\\COMTOR.g:1119:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
+            // COMTOR.g:1119:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
+            // COMTOR.g:1119:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -17952,7 +17952,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "interfaceHeader"
-    // .\\COMTOR.g:1122:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
+    // COMTOR.g:1122:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
     public final COMTORParser.interfaceHeader_return interfaceHeader() throws RecognitionException {
         COMTORParser.interfaceHeader_return retval = new COMTORParser.interfaceHeader_return();
         retval.start = input.LT(1);
@@ -17969,8 +17969,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 107) ) { return retval; }
-            // .\\COMTOR.g:1123:5: ( modifiers 'interface' IDENTIFIER )
-            // .\\COMTOR.g:1123:9: modifiers 'interface' IDENTIFIER
+            // COMTOR.g:1123:5: ( modifiers 'interface' IDENTIFIER )
+            // COMTOR.g:1123:9: modifiers 'interface' IDENTIFIER
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18020,7 +18020,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "annotationHeader"
-    // .\\COMTOR.g:1126:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
+    // COMTOR.g:1126:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
     public final COMTORParser.annotationHeader_return annotationHeader() throws RecognitionException {
         COMTORParser.annotationHeader_return retval = new COMTORParser.annotationHeader_return();
         retval.start = input.LT(1);
@@ -18039,8 +18039,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 108) ) { return retval; }
-            // .\\COMTOR.g:1127:5: ( modifiers '@' 'interface' IDENTIFIER )
-            // .\\COMTOR.g:1127:9: modifiers '@' 'interface' IDENTIFIER
+            // COMTOR.g:1127:5: ( modifiers '@' 'interface' IDENTIFIER )
+            // COMTOR.g:1127:9: modifiers '@' 'interface' IDENTIFIER
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18095,7 +18095,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "typeHeader"
-    // .\\COMTOR.g:1130:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
+    // COMTOR.g:1130:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
     public final COMTORParser.typeHeader_return typeHeader() throws RecognitionException {
         COMTORParser.typeHeader_return retval = new COMTORParser.typeHeader_return();
         retval.start = input.LT(1);
@@ -18118,8 +18118,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 109) ) { return retval; }
-            // .\\COMTOR.g:1131:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
-            // .\\COMTOR.g:1131:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
+            // COMTOR.g:1131:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
+            // COMTOR.g:1131:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18129,7 +18129,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, modifiers594.getTree());
-            // .\\COMTOR.g:1131:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
+            // COMTOR.g:1131:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
             int alt183=3;
             switch ( input.LA(1) ) {
             case CLASS:
@@ -18158,7 +18158,7 @@ public class COMTORParser extends Parser {
 
             switch (alt183) {
                 case 1 :
-                    // .\\COMTOR.g:1131:20: 'class'
+                    // COMTOR.g:1131:20: 'class'
                     {
                     string_literal595=(Token)match(input,CLASS,FOLLOW_CLASS_in_typeHeader9980); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -18169,7 +18169,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1131:28: 'enum'
+                    // COMTOR.g:1131:28: 'enum'
                     {
                     string_literal596=(Token)match(input,ENUM,FOLLOW_ENUM_in_typeHeader9982); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -18180,12 +18180,12 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1131:35: ( ( '@' )? 'interface' )
+                    // COMTOR.g:1131:35: ( ( '@' )? 'interface' )
                     {
-                    // .\\COMTOR.g:1131:35: ( ( '@' )? 'interface' )
-                    // .\\COMTOR.g:1131:36: ( '@' )? 'interface'
+                    // COMTOR.g:1131:35: ( ( '@' )? 'interface' )
+                    // COMTOR.g:1131:36: ( '@' )? 'interface'
                     {
-                    // .\\COMTOR.g:1131:36: ( '@' )?
+                    // COMTOR.g:1131:36: ( '@' )?
                     int alt182=2;
                     int LA182_0 = input.LA(1);
 
@@ -18194,7 +18194,7 @@ public class COMTORParser extends Parser {
                     }
                     switch (alt182) {
                         case 1 :
-                            // .\\COMTOR.g:0:0: '@'
+                            // COMTOR.g:0:0: '@'
                             {
                             char_literal597=(Token)match(input,MONKEYS_AT,FOLLOW_MONKEYS_AT_in_typeHeader9985); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -18256,7 +18256,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "methodHeader"
-    // .\\COMTOR.g:1134:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
+    // COMTOR.g:1134:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
     public final COMTORParser.methodHeader_return methodHeader() throws RecognitionException {
         COMTORParser.methodHeader_return retval = new COMTORParser.methodHeader_return();
         retval.start = input.LT(1);
@@ -18279,8 +18279,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 110) ) { return retval; }
-            // .\\COMTOR.g:1135:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
-            // .\\COMTOR.g:1135:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
+            // COMTOR.g:1135:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
+            // COMTOR.g:1135:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18290,7 +18290,7 @@ public class COMTORParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, modifiers600.getTree());
-            // .\\COMTOR.g:1135:19: ( typeParameters )?
+            // COMTOR.g:1135:19: ( typeParameters )?
             int alt184=2;
             int LA184_0 = input.LA(1);
 
@@ -18299,7 +18299,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt184) {
                 case 1 :
-                    // .\\COMTOR.g:0:0: typeParameters
+                    // COMTOR.g:0:0: typeParameters
                     {
                     pushFollow(FOLLOW_typeParameters_in_methodHeader10015);
                     typeParameters601=typeParameters();
@@ -18313,7 +18313,7 @@ public class COMTORParser extends Parser {
 
             }
 
-            // .\\COMTOR.g:1135:35: ( type | 'void' )?
+            // COMTOR.g:1135:35: ( type | 'void' )?
             int alt185=3;
             switch ( input.LA(1) ) {
                 case IDENTIFIER:
@@ -18346,7 +18346,7 @@ public class COMTORParser extends Parser {
 
             switch (alt185) {
                 case 1 :
-                    // .\\COMTOR.g:1135:36: type
+                    // COMTOR.g:1135:36: type
                     {
                     pushFollow(FOLLOW_type_in_methodHeader10019);
                     type602=type();
@@ -18358,7 +18358,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1135:41: 'void'
+                    // COMTOR.g:1135:41: 'void'
                     {
                     string_literal603=(Token)match(input,VOID,FOLLOW_VOID_in_methodHeader10021); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -18411,7 +18411,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "fieldHeader"
-    // .\\COMTOR.g:1138:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+    // COMTOR.g:1138:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
     public final COMTORParser.fieldHeader_return fieldHeader() throws RecognitionException {
         COMTORParser.fieldHeader_return retval = new COMTORParser.fieldHeader_return();
         retval.start = input.LT(1);
@@ -18434,8 +18434,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 111) ) { return retval; }
-            // .\\COMTOR.g:1139:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
-            // .\\COMTOR.g:1139:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+            // COMTOR.g:1139:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+            // COMTOR.g:1139:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18456,7 +18456,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER608_tree = (CommonTree)adaptor.create(IDENTIFIER608);
             adaptor.addChild(root_0, IDENTIFIER608_tree);
             }
-            // .\\COMTOR.g:1139:35: ( '[' ']' )*
+            // COMTOR.g:1139:35: ( '[' ']' )*
             loop186:
             do {
                 int alt186=2;
@@ -18469,7 +18469,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt186) {
             	case 1 :
-            	    // .\\COMTOR.g:1139:36: '[' ']'
+            	    // COMTOR.g:1139:36: '[' ']'
             	    {
             	    char_literal609=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_fieldHeader10054); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -18532,7 +18532,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "localVariableHeader"
-    // .\\COMTOR.g:1142:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+    // COMTOR.g:1142:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
     public final COMTORParser.localVariableHeader_return localVariableHeader() throws RecognitionException {
         COMTORParser.localVariableHeader_return retval = new COMTORParser.localVariableHeader_return();
         retval.start = input.LT(1);
@@ -18555,8 +18555,8 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 112) ) { return retval; }
-            // .\\COMTOR.g:1143:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
-            // .\\COMTOR.g:1143:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+            // COMTOR.g:1143:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+            // COMTOR.g:1143:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -18577,7 +18577,7 @@ public class COMTORParser extends Parser {
             IDENTIFIER614_tree = (CommonTree)adaptor.create(IDENTIFIER614);
             adaptor.addChild(root_0, IDENTIFIER614_tree);
             }
-            // .\\COMTOR.g:1143:43: ( '[' ']' )*
+            // COMTOR.g:1143:43: ( '[' ']' )*
             loop187:
             do {
                 int alt187=2;
@@ -18590,7 +18590,7 @@ public class COMTORParser extends Parser {
 
                 switch (alt187) {
             	case 1 :
-            	    // .\\COMTOR.g:1143:44: '[' ']'
+            	    // COMTOR.g:1143:44: '[' ']'
             	    {
             	    char_literal615=(Token)match(input,LBRACKET,FOLLOW_LBRACKET_in_localVariableHeader10092); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -18653,7 +18653,7 @@ public class COMTORParser extends Parser {
     };
 
     // $ANTLR start "comments"
-    // .\\COMTOR.g:1146:1: comments : ( COMMENT -> ^( COMMENT_STATEMENT COMMENT ) | LINE_COMMENT -> ^( COMMENT_STATEMENT LINE_COMMENT ) );
+    // COMTOR.g:1146:1: comments : ( COMMENT -> ^( COMMENT_STATEMENT COMMENT ) | LINE_COMMENT -> ^( COMMENT_STATEMENT LINE_COMMENT ) );
     public final COMTORParser.comments_return comments() throws RecognitionException {
         COMTORParser.comments_return retval = new COMTORParser.comments_return();
         retval.start = input.LT(1);
@@ -18670,7 +18670,7 @@ public class COMTORParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 113) ) { return retval; }
-            // .\\COMTOR.g:1147:5: ( COMMENT -> ^( COMMENT_STATEMENT COMMENT ) | LINE_COMMENT -> ^( COMMENT_STATEMENT LINE_COMMENT ) )
+            // COMTOR.g:1147:5: ( COMMENT -> ^( COMMENT_STATEMENT COMMENT ) | LINE_COMMENT -> ^( COMMENT_STATEMENT LINE_COMMENT ) )
             int alt188=2;
             int LA188_0 = input.LA(1);
 
@@ -18689,7 +18689,7 @@ public class COMTORParser extends Parser {
             }
             switch (alt188) {
                 case 1 :
-                    // .\\COMTOR.g:1147:9: COMMENT
+                    // COMTOR.g:1147:9: COMMENT
                     {
                     COMMENT618=(Token)match(input,COMMENT,FOLLOW_COMMENT_in_comments10122); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_COMMENT.add(COMMENT618);
@@ -18710,7 +18710,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 1147:17: -> ^( COMMENT_STATEMENT COMMENT )
                     {
-                        // .\\COMTOR.g:1147:20: ^( COMMENT_STATEMENT COMMENT )
+                        // COMTOR.g:1147:20: ^( COMMENT_STATEMENT COMMENT )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(COMMENT_STATEMENT, "COMMENT_STATEMENT"), root_1);
@@ -18726,7 +18726,7 @@ public class COMTORParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1148:9: LINE_COMMENT
+                    // COMTOR.g:1148:9: LINE_COMMENT
                     {
                     LINE_COMMENT619=(Token)match(input,LINE_COMMENT,FOLLOW_LINE_COMMENT_in_comments10140); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LINE_COMMENT.add(LINE_COMMENT619);
@@ -18747,7 +18747,7 @@ public class COMTORParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 1148:22: -> ^( COMMENT_STATEMENT LINE_COMMENT )
                     {
-                        // .\\COMTOR.g:1148:25: ^( COMMENT_STATEMENT LINE_COMMENT )
+                        // COMTOR.g:1148:25: ^( COMMENT_STATEMENT LINE_COMMENT )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(COMMENT_STATEMENT, "COMMENT_STATEMENT"), root_1);
@@ -18787,8 +18787,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred1_COMTOR
     public final void synpred1_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:74:6: ( annotations )
-        // .\\COMTOR.g:74:6: annotations
+        // COMTOR.g:74:6: ( annotations )
+        // COMTOR.g:74:6: annotations
         {
         pushFollow(FOLLOW_annotations_in_synpred1_COMTOR195);
         annotations();
@@ -18802,10 +18802,10 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred3_COMTOR
     public final void synpred3_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:74:6: ( ( annotations )? importDeclarations ( typeDeclaration )* )
-        // .\\COMTOR.g:74:6: ( annotations )? importDeclarations ( typeDeclaration )*
+        // COMTOR.g:74:6: ( ( annotations )? importDeclarations ( typeDeclaration )* )
+        // COMTOR.g:74:6: ( annotations )? importDeclarations ( typeDeclaration )*
         {
-        // .\\COMTOR.g:74:6: ( annotations )?
+        // COMTOR.g:74:6: ( annotations )?
         int alt189=2;
         int LA189_0 = input.LA(1);
 
@@ -18822,7 +18822,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt189) {
             case 1 :
-                // .\\COMTOR.g:0:0: annotations
+                // COMTOR.g:0:0: annotations
                 {
                 pushFollow(FOLLOW_annotations_in_synpred3_COMTOR195);
                 annotations();
@@ -18840,7 +18840,7 @@ public class COMTORParser extends Parser {
 
         state._fsp--;
         if (state.failed) return ;
-        // .\\COMTOR.g:76:9: ( typeDeclaration )*
+        // COMTOR.g:76:9: ( typeDeclaration )*
         loop190:
         do {
             int alt190=2;
@@ -18853,7 +18853,7 @@ public class COMTORParser extends Parser {
 
             switch (alt190) {
         	case 1 :
-        	    // .\\COMTOR.g:76:10: typeDeclaration
+        	    // COMTOR.g:76:10: typeDeclaration
         	    {
         	    pushFollow(FOLLOW_typeDeclaration_in_synpred3_COMTOR217);
         	    typeDeclaration();
@@ -18876,8 +18876,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred14_COMTOR
     public final void synpred14_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:129:9: ( classDeclaration )
-        // .\\COMTOR.g:129:9: classDeclaration
+        // COMTOR.g:129:9: ( classDeclaration )
+        // COMTOR.g:129:9: classDeclaration
         {
         pushFollow(FOLLOW_classDeclaration_in_synpred14_COMTOR700);
         classDeclaration();
@@ -18891,8 +18891,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred30_COMTOR
     public final void synpred30_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:169:9: ( normalClassDeclaration )
-        // .\\COMTOR.g:169:9: normalClassDeclaration
+        // COMTOR.g:169:9: ( normalClassDeclaration )
+        // COMTOR.g:169:9: normalClassDeclaration
         {
         pushFollow(FOLLOW_normalClassDeclaration_in_synpred30_COMTOR1037);
         normalClassDeclaration();
@@ -18906,8 +18906,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred47_COMTOR
     public final void synpred47_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:250:9: ( normalInterfaceDeclaration )
-        // .\\COMTOR.g:250:9: normalInterfaceDeclaration
+        // COMTOR.g:250:9: ( normalInterfaceDeclaration )
+        // COMTOR.g:250:9: normalInterfaceDeclaration
         {
         pushFollow(FOLLOW_normalInterfaceDeclaration_in_synpred47_COMTOR1746);
         normalInterfaceDeclaration();
@@ -18921,8 +18921,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred57_COMTOR
     public final void synpred57_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:296:10: ( fieldDeclaration )
-        // .\\COMTOR.g:296:10: fieldDeclaration
+        // COMTOR.g:296:10: ( fieldDeclaration )
+        // COMTOR.g:296:10: fieldDeclaration
         {
         pushFollow(FOLLOW_fieldDeclaration_in_synpred57_COMTOR2165);
         fieldDeclaration();
@@ -18936,8 +18936,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred58_COMTOR
     public final void synpred58_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:297:10: ( methodDeclaration )
-        // .\\COMTOR.g:297:10: methodDeclaration
+        // COMTOR.g:297:10: ( methodDeclaration )
+        // COMTOR.g:297:10: methodDeclaration
         {
         pushFollow(FOLLOW_methodDeclaration_in_synpred58_COMTOR2176);
         methodDeclaration();
@@ -18951,8 +18951,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred59_COMTOR
     public final void synpred59_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:298:10: ( classDeclaration )
-        // .\\COMTOR.g:298:10: classDeclaration
+        // COMTOR.g:298:10: ( classDeclaration )
+        // COMTOR.g:298:10: classDeclaration
         {
         pushFollow(FOLLOW_classDeclaration_in_synpred59_COMTOR2187);
         classDeclaration();
@@ -18966,8 +18966,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred63_COMTOR
     public final void synpred63_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:319:10: ( explicitConstructorInvocation )
-        // .\\COMTOR.g:319:10: explicitConstructorInvocation
+        // COMTOR.g:319:10: ( explicitConstructorInvocation )
+        // COMTOR.g:319:10: explicitConstructorInvocation
         {
         pushFollow(FOLLOW_explicitConstructorInvocation_in_synpred63_COMTOR2330);
         explicitConstructorInvocation();
@@ -18981,10 +18981,10 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred65_COMTOR
     public final void synpred65_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:311:10: ( ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
-        // .\\COMTOR.g:311:10: ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
+        // COMTOR.g:311:10: ( ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
+        // COMTOR.g:311:10: ( modifiers )? ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
         {
-        // .\\COMTOR.g:311:10: ( modifiers )?
+        // COMTOR.g:311:10: ( modifiers )?
         int alt193=2;
         int LA193_0 = input.LA(1);
 
@@ -18993,7 +18993,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt193) {
             case 1 :
-                // .\\COMTOR.g:0:0: modifiers
+                // COMTOR.g:0:0: modifiers
                 {
                 pushFollow(FOLLOW_modifiers_in_synpred65_COMTOR2241);
                 modifiers();
@@ -19006,7 +19006,7 @@ public class COMTORParser extends Parser {
 
         }
 
-        // .\\COMTOR.g:312:9: ( typeParameters )?
+        // COMTOR.g:312:9: ( typeParameters )?
         int alt194=2;
         int LA194_0 = input.LA(1);
 
@@ -19015,7 +19015,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt194) {
             case 1 :
-                // .\\COMTOR.g:312:10: typeParameters
+                // COMTOR.g:312:10: typeParameters
                 {
                 pushFollow(FOLLOW_typeParameters_in_synpred65_COMTOR2253);
                 typeParameters();
@@ -19034,7 +19034,7 @@ public class COMTORParser extends Parser {
 
         state._fsp--;
         if (state.failed) return ;
-        // .\\COMTOR.g:316:9: ( 'throws' qualifiedNameList )?
+        // COMTOR.g:316:9: ( 'throws' qualifiedNameList )?
         int alt195=2;
         int LA195_0 = input.LA(1);
 
@@ -19043,7 +19043,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt195) {
             case 1 :
-                // .\\COMTOR.g:316:10: 'throws' qualifiedNameList
+                // COMTOR.g:316:10: 'throws' qualifiedNameList
                 {
                 match(input,THROWS,FOLLOW_THROWS_in_synpred65_COMTOR2295); if (state.failed) return ;
                 pushFollow(FOLLOW_qualifiedNameList_in_synpred65_COMTOR2297);
@@ -19058,12 +19058,12 @@ public class COMTORParser extends Parser {
         }
 
         match(input,LBRACE,FOLLOW_LBRACE_in_synpred65_COMTOR2318); if (state.failed) return ;
-        // .\\COMTOR.g:319:9: ( explicitConstructorInvocation )?
+        // COMTOR.g:319:9: ( explicitConstructorInvocation )?
         int alt196=2;
         alt196 = dfa196.predict(input);
         switch (alt196) {
             case 1 :
-                // .\\COMTOR.g:319:10: explicitConstructorInvocation
+                // COMTOR.g:319:10: explicitConstructorInvocation
                 {
                 pushFollow(FOLLOW_explicitConstructorInvocation_in_synpred65_COMTOR2330);
                 explicitConstructorInvocation();
@@ -19076,7 +19076,7 @@ public class COMTORParser extends Parser {
 
         }
 
-        // .\\COMTOR.g:321:9: ( blockStatement )*
+        // COMTOR.g:321:9: ( blockStatement )*
         loop197:
         do {
             int alt197=2;
@@ -19089,7 +19089,7 @@ public class COMTORParser extends Parser {
 
             switch (alt197) {
         	case 1 :
-        	    // .\\COMTOR.g:321:10: blockStatement
+        	    // COMTOR.g:321:10: blockStatement
         	    {
         	    pushFollow(FOLLOW_blockStatement_in_synpred65_COMTOR2352);
         	    blockStatement();
@@ -19117,10 +19117,10 @@ public class COMTORParser extends Parser {
         COMTORParser.type_return t = null;
 
 
-        // .\\COMTOR.g:327:6: ( ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) )
-        // .\\COMTOR.g:327:6: ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
+        // COMTOR.g:327:6: ( ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) )
+        // COMTOR.g:327:6: ( typeParameters )? (t= type | v= 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
         {
-        // .\\COMTOR.g:327:6: ( typeParameters )?
+        // COMTOR.g:327:6: ( typeParameters )?
         int alt198=2;
         int LA198_0 = input.LA(1);
 
@@ -19129,7 +19129,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt198) {
             case 1 :
-                // .\\COMTOR.g:327:7: typeParameters
+                // COMTOR.g:327:7: typeParameters
                 {
                 pushFollow(FOLLOW_typeParameters_in_synpred71_COMTOR2451);
                 typeParameters();
@@ -19142,7 +19142,7 @@ public class COMTORParser extends Parser {
 
         }
 
-        // .\\COMTOR.g:328:6: (t= type | v= 'void' )
+        // COMTOR.g:328:6: (t= type | v= 'void' )
         int alt199=2;
         int LA199_0 = input.LA(1);
 
@@ -19161,7 +19161,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt199) {
             case 1 :
-                // .\\COMTOR.g:328:7: t= type
+                // COMTOR.g:328:7: t= type
                 {
                 pushFollow(FOLLOW_type_in_synpred71_COMTOR2463);
                 t=type();
@@ -19172,7 +19172,7 @@ public class COMTORParser extends Parser {
                 }
                 break;
             case 2 :
-                // .\\COMTOR.g:329:10: v= 'void'
+                // COMTOR.g:329:10: v= 'void'
                 {
                 v=(Token)match(input,VOID,FOLLOW_VOID_in_synpred71_COMTOR2476); if (state.failed) return ;
 
@@ -19187,7 +19187,7 @@ public class COMTORParser extends Parser {
 
         state._fsp--;
         if (state.failed) return ;
-        // .\\COMTOR.g:333:9: ( '[' ']' )*
+        // COMTOR.g:333:9: ( '[' ']' )*
         loop200:
         do {
             int alt200=2;
@@ -19200,7 +19200,7 @@ public class COMTORParser extends Parser {
 
             switch (alt200) {
         	case 1 :
-        	    // .\\COMTOR.g:333:10: '[' ']'
+        	    // COMTOR.g:333:10: '[' ']'
         	    {
         	    match(input,LBRACKET,FOLLOW_LBRACKET_in_synpred71_COMTOR2517); if (state.failed) return ;
         	    match(input,RBRACKET,FOLLOW_RBRACKET_in_synpred71_COMTOR2519); if (state.failed) return ;
@@ -19213,7 +19213,7 @@ public class COMTORParser extends Parser {
             }
         } while (true);
 
-        // .\\COMTOR.g:335:9: ( 'throws' qualifiedNameList )?
+        // COMTOR.g:335:9: ( 'throws' qualifiedNameList )?
         int alt201=2;
         int LA201_0 = input.LA(1);
 
@@ -19222,7 +19222,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt201) {
             case 1 :
-                // .\\COMTOR.g:335:10: 'throws' qualifiedNameList
+                // COMTOR.g:335:10: 'throws' qualifiedNameList
                 {
                 match(input,THROWS,FOLLOW_THROWS_in_synpred71_COMTOR2541); if (state.failed) return ;
                 pushFollow(FOLLOW_qualifiedNameList_in_synpred71_COMTOR2543);
@@ -19236,7 +19236,7 @@ public class COMTORParser extends Parser {
 
         }
 
-        // .\\COMTOR.g:337:9: ( block | ';' )
+        // COMTOR.g:337:9: ( block | ';' )
         int alt202=2;
         int LA202_0 = input.LA(1);
 
@@ -19255,7 +19255,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt202) {
             case 1 :
-                // .\\COMTOR.g:338:13: block
+                // COMTOR.g:338:13: block
                 {
                 pushFollow(FOLLOW_block_in_synpred71_COMTOR2598);
                 block();
@@ -19266,7 +19266,7 @@ public class COMTORParser extends Parser {
                 }
                 break;
             case 2 :
-                // .\\COMTOR.g:339:13: ';'
+                // COMTOR.g:339:13: ';'
                 {
                 match(input,SEMI,FOLLOW_SEMI_in_synpred71_COMTOR2612); if (state.failed) return ;
 
@@ -19282,8 +19282,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred81_COMTOR
     public final void synpred81_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:387:9: ( interfaceFieldDeclaration )
-        // .\\COMTOR.g:387:9: interfaceFieldDeclaration
+        // COMTOR.g:387:9: ( interfaceFieldDeclaration )
+        // COMTOR.g:387:9: interfaceFieldDeclaration
         {
         pushFollow(FOLLOW_interfaceFieldDeclaration_in_synpred81_COMTOR3215);
         interfaceFieldDeclaration();
@@ -19297,8 +19297,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred82_COMTOR
     public final void synpred82_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:388:9: ( interfaceMethodDeclaration )
-        // .\\COMTOR.g:388:9: interfaceMethodDeclaration
+        // COMTOR.g:388:9: ( interfaceMethodDeclaration )
+        // COMTOR.g:388:9: interfaceMethodDeclaration
         {
         pushFollow(FOLLOW_interfaceMethodDeclaration_in_synpred82_COMTOR3225);
         interfaceMethodDeclaration();
@@ -19312,8 +19312,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred83_COMTOR
     public final void synpred83_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:389:9: ( interfaceDeclaration )
-        // .\\COMTOR.g:389:9: interfaceDeclaration
+        // COMTOR.g:389:9: ( interfaceDeclaration )
+        // COMTOR.g:389:9: interfaceDeclaration
         {
         pushFollow(FOLLOW_interfaceDeclaration_in_synpred83_COMTOR3235);
         interfaceDeclaration();
@@ -19327,8 +19327,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred84_COMTOR
     public final void synpred84_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:390:9: ( classDeclaration )
-        // .\\COMTOR.g:390:9: classDeclaration
+        // COMTOR.g:390:9: ( classDeclaration )
+        // COMTOR.g:390:9: classDeclaration
         {
         pushFollow(FOLLOW_classDeclaration_in_synpred84_COMTOR3245);
         classDeclaration();
@@ -19342,8 +19342,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred111_COMTOR
     public final void synpred111_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:494:9: ( ellipsisParameterDecl )
-        // .\\COMTOR.g:494:9: ellipsisParameterDecl
+        // COMTOR.g:494:9: ( ellipsisParameterDecl )
+        // COMTOR.g:494:9: ellipsisParameterDecl
         {
         pushFollow(FOLLOW_ellipsisParameterDecl_in_synpred111_COMTOR4219);
         ellipsisParameterDecl();
@@ -19357,15 +19357,15 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred113_COMTOR
     public final void synpred113_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:495:9: ( normalParameterDecl ( ',' normalParameterDecl )* )
-        // .\\COMTOR.g:495:9: normalParameterDecl ( ',' normalParameterDecl )*
+        // COMTOR.g:495:9: ( normalParameterDecl ( ',' normalParameterDecl )* )
+        // COMTOR.g:495:9: normalParameterDecl ( ',' normalParameterDecl )*
         {
         pushFollow(FOLLOW_normalParameterDecl_in_synpred113_COMTOR4229);
         normalParameterDecl();
 
         state._fsp--;
         if (state.failed) return ;
-        // .\\COMTOR.g:496:9: ( ',' normalParameterDecl )*
+        // COMTOR.g:496:9: ( ',' normalParameterDecl )*
         loop206:
         do {
             int alt206=2;
@@ -19378,7 +19378,7 @@ public class COMTORParser extends Parser {
 
             switch (alt206) {
         	case 1 :
-        	    // .\\COMTOR.g:496:10: ',' normalParameterDecl
+        	    // COMTOR.g:496:10: ',' normalParameterDecl
         	    {
         	    match(input,COMMA,FOLLOW_COMMA_in_synpred113_COMTOR4240); if (state.failed) return ;
         	    pushFollow(FOLLOW_normalParameterDecl_in_synpred113_COMTOR4242);
@@ -19402,8 +19402,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred114_COMTOR
     public final void synpred114_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:498:10: ( normalParameterDecl ',' )
-        // .\\COMTOR.g:498:10: normalParameterDecl ','
+        // COMTOR.g:498:10: ( normalParameterDecl ',' )
+        // COMTOR.g:498:10: normalParameterDecl ','
         {
         pushFollow(FOLLOW_normalParameterDecl_in_synpred114_COMTOR4268);
         normalParameterDecl();
@@ -19421,10 +19421,10 @@ public class COMTORParser extends Parser {
         Token t=null;
         Token s=null;
 
-        // .\\COMTOR.g:527:9: ( ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';' )
-        // .\\COMTOR.g:527:9: ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';'
+        // COMTOR.g:527:9: ( ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';' )
+        // COMTOR.g:527:9: ( nonWildcardTypeArguments )? (t= 'this' | s= 'super' ) arguments ';'
         {
-        // .\\COMTOR.g:527:9: ( nonWildcardTypeArguments )?
+        // COMTOR.g:527:9: ( nonWildcardTypeArguments )?
         int alt207=2;
         int LA207_0 = input.LA(1);
 
@@ -19433,7 +19433,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt207) {
             case 1 :
-                // .\\COMTOR.g:527:10: nonWildcardTypeArguments
+                // COMTOR.g:527:10: nonWildcardTypeArguments
                 {
                 pushFollow(FOLLOW_nonWildcardTypeArguments_in_synpred119_COMTOR4553);
                 nonWildcardTypeArguments();
@@ -19446,7 +19446,7 @@ public class COMTORParser extends Parser {
 
         }
 
-        // .\\COMTOR.g:529:9: (t= 'this' | s= 'super' )
+        // COMTOR.g:529:9: (t= 'this' | s= 'super' )
         int alt208=2;
         int LA208_0 = input.LA(1);
 
@@ -19465,14 +19465,14 @@ public class COMTORParser extends Parser {
         }
         switch (alt208) {
             case 1 :
-                // .\\COMTOR.g:529:10: t= 'this'
+                // COMTOR.g:529:10: t= 'this'
                 {
                 t=(Token)match(input,THIS,FOLLOW_THIS_in_synpred119_COMTOR4582); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // .\\COMTOR.g:530:10: s= 'super'
+                // COMTOR.g:530:10: s= 'super'
                 {
                 s=(Token)match(input,SUPER,FOLLOW_SUPER_in_synpred119_COMTOR4595); if (state.failed) return ;
 
@@ -19494,8 +19494,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred121_COMTOR
     public final void synpred121_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:544:10: ( annotation )
-        // .\\COMTOR.g:544:10: annotation
+        // COMTOR.g:544:10: ( annotation )
+        // COMTOR.g:544:10: annotation
         {
         pushFollow(FOLLOW_annotation_in_synpred121_COMTOR4763);
         annotation();
@@ -19509,8 +19509,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred132_COMTOR
     public final void synpred132_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:616:9: ( annotationMethodDeclaration )
-        // .\\COMTOR.g:616:9: annotationMethodDeclaration
+        // COMTOR.g:616:9: ( annotationMethodDeclaration )
+        // COMTOR.g:616:9: annotationMethodDeclaration
         {
         pushFollow(FOLLOW_annotationMethodDeclaration_in_synpred132_COMTOR5336);
         annotationMethodDeclaration();
@@ -19524,8 +19524,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred133_COMTOR
     public final void synpred133_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:617:9: ( interfaceFieldDeclaration )
-        // .\\COMTOR.g:617:9: interfaceFieldDeclaration
+        // COMTOR.g:617:9: ( interfaceFieldDeclaration )
+        // COMTOR.g:617:9: interfaceFieldDeclaration
         {
         pushFollow(FOLLOW_interfaceFieldDeclaration_in_synpred133_COMTOR5346);
         interfaceFieldDeclaration();
@@ -19539,8 +19539,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred134_COMTOR
     public final void synpred134_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:618:9: ( normalClassDeclaration )
-        // .\\COMTOR.g:618:9: normalClassDeclaration
+        // COMTOR.g:618:9: ( normalClassDeclaration )
+        // COMTOR.g:618:9: normalClassDeclaration
         {
         pushFollow(FOLLOW_normalClassDeclaration_in_synpred134_COMTOR5356);
         normalClassDeclaration();
@@ -19554,8 +19554,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred135_COMTOR
     public final void synpred135_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:619:9: ( normalInterfaceDeclaration )
-        // .\\COMTOR.g:619:9: normalInterfaceDeclaration
+        // COMTOR.g:619:9: ( normalInterfaceDeclaration )
+        // COMTOR.g:619:9: normalInterfaceDeclaration
         {
         pushFollow(FOLLOW_normalInterfaceDeclaration_in_synpred135_COMTOR5366);
         normalInterfaceDeclaration();
@@ -19569,8 +19569,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred136_COMTOR
     public final void synpred136_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:620:9: ( enumDeclaration )
-        // .\\COMTOR.g:620:9: enumDeclaration
+        // COMTOR.g:620:9: ( enumDeclaration )
+        // COMTOR.g:620:9: enumDeclaration
         {
         pushFollow(FOLLOW_enumDeclaration_in_synpred136_COMTOR5376);
         enumDeclaration();
@@ -19584,8 +19584,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred137_COMTOR
     public final void synpred137_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:621:9: ( annotationTypeDeclaration )
-        // .\\COMTOR.g:621:9: annotationTypeDeclaration
+        // COMTOR.g:621:9: ( annotationTypeDeclaration )
+        // COMTOR.g:621:9: annotationTypeDeclaration
         {
         pushFollow(FOLLOW_annotationTypeDeclaration_in_synpred137_COMTOR5386);
         annotationTypeDeclaration();
@@ -19599,8 +19599,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred141_COMTOR
     public final void synpred141_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:667:9: ( localVariableDeclarationStatement )
-        // .\\COMTOR.g:667:9: localVariableDeclarationStatement
+        // COMTOR.g:667:9: ( localVariableDeclarationStatement )
+        // COMTOR.g:667:9: localVariableDeclarationStatement
         {
         pushFollow(FOLLOW_localVariableDeclarationStatement_in_synpred141_COMTOR5593);
         localVariableDeclarationStatement();
@@ -19614,8 +19614,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred142_COMTOR
     public final void synpred142_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:668:9: ( classOrInterfaceDeclaration )
-        // .\\COMTOR.g:668:9: classOrInterfaceDeclaration
+        // COMTOR.g:668:9: ( classOrInterfaceDeclaration )
+        // COMTOR.g:668:9: classOrInterfaceDeclaration
         {
         pushFollow(FOLLOW_classOrInterfaceDeclaration_in_synpred142_COMTOR5603);
         classOrInterfaceDeclaration();
@@ -19629,8 +19629,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred146_COMTOR
     public final void synpred146_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:690:9: ( 'assert' expression ( ':' expression )? ';' )
-        // .\\COMTOR.g:690:9: 'assert' expression ( ':' expression )? ';'
+        // COMTOR.g:690:9: ( 'assert' expression ( ':' expression )? ';' )
+        // COMTOR.g:690:9: 'assert' expression ( ':' expression )? ';'
         {
         match(input,ASSERT,FOLLOW_ASSERT_in_synpred146_COMTOR5785); if (state.failed) return ;
         pushFollow(FOLLOW_expression_in_synpred146_COMTOR5787);
@@ -19638,7 +19638,7 @@ public class COMTORParser extends Parser {
 
         state._fsp--;
         if (state.failed) return ;
-        // .\\COMTOR.g:690:29: ( ':' expression )?
+        // COMTOR.g:690:29: ( ':' expression )?
         int alt210=2;
         int LA210_0 = input.LA(1);
 
@@ -19647,7 +19647,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt210) {
             case 1 :
-                // .\\COMTOR.g:690:30: ':' expression
+                // COMTOR.g:690:30: ':' expression
                 {
                 match(input,COLON,FOLLOW_COLON_in_synpred146_COMTOR5790); if (state.failed) return ;
                 pushFollow(FOLLOW_expression_in_synpred146_COMTOR5792);
@@ -19669,8 +19669,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred148_COMTOR
     public final void synpred148_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:692:9: ( 'assert' expression ( ':' expression )? ';' )
-        // .\\COMTOR.g:692:9: 'assert' expression ( ':' expression )? ';'
+        // COMTOR.g:692:9: ( 'assert' expression ( ':' expression )? ';' )
+        // COMTOR.g:692:9: 'assert' expression ( ':' expression )? ';'
         {
         match(input,ASSERT,FOLLOW_ASSERT_in_synpred148_COMTOR5823); if (state.failed) return ;
         pushFollow(FOLLOW_expression_in_synpred148_COMTOR5826);
@@ -19678,7 +19678,7 @@ public class COMTORParser extends Parser {
 
         state._fsp--;
         if (state.failed) return ;
-        // .\\COMTOR.g:692:30: ( ':' expression )?
+        // COMTOR.g:692:30: ( ':' expression )?
         int alt211=2;
         int LA211_0 = input.LA(1);
 
@@ -19687,7 +19687,7 @@ public class COMTORParser extends Parser {
         }
         switch (alt211) {
             case 1 :
-                // .\\COMTOR.g:692:31: ':' expression
+                // COMTOR.g:692:31: ':' expression
                 {
                 match(input,COLON,FOLLOW_COLON_in_synpred148_COMTOR5829); if (state.failed) return ;
                 pushFollow(FOLLOW_expression_in_synpred148_COMTOR5831);
@@ -19709,8 +19709,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred149_COMTOR
     public final void synpred149_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:694:28: ( statement )
-        // .\\COMTOR.g:694:28: statement
+        // COMTOR.g:694:28: ( statement )
+        // COMTOR.g:694:28: statement
         {
         pushFollow(FOLLOW_statement_in_synpred149_COMTOR5867);
         statement();
@@ -19727,8 +19727,8 @@ public class COMTORParser extends Parser {
         COMTORParser.statement_return el = null;
 
 
-        // .\\COMTOR.g:694:40: ( 'else' el= statement )
-        // .\\COMTOR.g:694:40: 'else' el= statement
+        // COMTOR.g:694:40: ( 'else' el= statement )
+        // COMTOR.g:694:40: 'else' el= statement
         {
         match(input,ELSE,FOLLOW_ELSE_in_synpred150_COMTOR5871); if (state.failed) return ;
         pushFollow(FOLLOW_statement_in_synpred150_COMTOR5875);
@@ -19743,8 +19743,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred165_COMTOR
     public final void synpred165_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:718:9: ( expression ';' )
-        // .\\COMTOR.g:718:9: expression ';'
+        // COMTOR.g:718:9: ( expression ';' )
+        // COMTOR.g:718:9: expression ';'
         {
         pushFollow(FOLLOW_expression_in_synpred165_COMTOR6285);
         expression();
@@ -19759,8 +19759,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred166_COMTOR
     public final void synpred166_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:719:9: ( IDENTIFIER ':' statement )
-        // .\\COMTOR.g:719:9: IDENTIFIER ':' statement
+        // COMTOR.g:719:9: ( IDENTIFIER ':' statement )
+        // COMTOR.g:719:9: IDENTIFIER ':' statement
         {
         match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred166_COMTOR6306); if (state.failed) return ;
         match(input,COLON,FOLLOW_COLON_in_synpred166_COMTOR6308); if (state.failed) return ;
@@ -19782,8 +19782,8 @@ public class COMTORParser extends Parser {
         COMTORParser.block_return b = null;
 
 
-        // .\\COMTOR.g:744:13: (c= catches f= 'finally' b= block )
-        // .\\COMTOR.g:744:13: c= catches f= 'finally' b= block
+        // COMTOR.g:744:13: (c= catches f= 'finally' b= block )
+        // COMTOR.g:744:13: c= catches f= 'finally' b= block
         {
         pushFollow(FOLLOW_catches_in_synpred170_COMTOR6503);
         c=catches();
@@ -19806,8 +19806,8 @@ public class COMTORParser extends Parser {
         COMTORParser.catches_return c = null;
 
 
-        // .\\COMTOR.g:745:13: (c= catches )
-        // .\\COMTOR.g:745:13: c= catches
+        // COMTOR.g:745:13: (c= catches )
+        // COMTOR.g:745:13: c= catches
         {
         pushFollow(FOLLOW_catches_in_synpred171_COMTOR6527);
         c=catches();
@@ -19821,8 +19821,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred173_COMTOR
     public final void synpred173_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:759:13: ( block )
-        // .\\COMTOR.g:759:13: block
+        // COMTOR.g:759:13: ( block )
+        // COMTOR.g:759:13: block
         {
         pushFollow(FOLLOW_block_in_synpred173_COMTOR6677);
         block();
@@ -19836,8 +19836,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred176_COMTOR
     public final void synpred176_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:772:19: ( variableModifiers )
-        // .\\COMTOR.g:772:19: variableModifiers
+        // COMTOR.g:772:19: ( variableModifiers )
+        // COMTOR.g:772:19: variableModifiers
         {
         pushFollow(FOLLOW_variableModifiers_in_synpred176_COMTOR6822);
         variableModifiers();
@@ -19851,12 +19851,12 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred177_COMTOR
     public final void synpred177_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:772:9: ( 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement )
-        // .\\COMTOR.g:772:9: 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement
+        // COMTOR.g:772:9: ( 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement )
+        // COMTOR.g:772:9: 'for' '(' ( variableModifiers )? type variableDeclarator ':' expression ')' statement
         {
         match(input,FOR,FOLLOW_FOR_in_synpred177_COMTOR6818); if (state.failed) return ;
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred177_COMTOR6820); if (state.failed) return ;
-        // .\\COMTOR.g:772:19: ( variableModifiers )?
+        // COMTOR.g:772:19: ( variableModifiers )?
         int alt217=2;
         switch ( input.LA(1) ) {
             case FINAL:
@@ -19894,7 +19894,7 @@ public class COMTORParser extends Parser {
 
         switch (alt217) {
             case 1 :
-                // .\\COMTOR.g:0:0: variableModifiers
+                // COMTOR.g:0:0: variableModifiers
                 {
                 pushFollow(FOLLOW_variableModifiers_in_synpred177_COMTOR6822);
                 variableModifiers();
@@ -19936,8 +19936,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred181_COMTOR
     public final void synpred181_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:782:24: ( statement )
-        // .\\COMTOR.g:782:24: statement
+        // COMTOR.g:782:24: ( statement )
+        // COMTOR.g:782:24: statement
         {
         pushFollow(FOLLOW_statement_in_synpred181_COMTOR7031);
         statement();
@@ -19951,8 +19951,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred182_COMTOR
     public final void synpred182_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:787:9: ( localVariableDeclaration )
-        // .\\COMTOR.g:787:9: localVariableDeclaration
+        // COMTOR.g:787:9: ( localVariableDeclaration )
+        // COMTOR.g:787:9: localVariableDeclaration
         {
         pushFollow(FOLLOW_localVariableDeclaration_in_synpred182_COMTOR7082);
         localVariableDeclaration();
@@ -19966,8 +19966,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred223_COMTOR
     public final void synpred223_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:943:9: ( castExpression )
-        // .\\COMTOR.g:943:9: castExpression
+        // COMTOR.g:943:9: ( castExpression )
+        // COMTOR.g:943:9: castExpression
         {
         pushFollow(FOLLOW_castExpression_in_synpred223_COMTOR8349);
         castExpression();
@@ -19981,8 +19981,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred227_COMTOR
     public final void synpred227_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:953:9: ( '(' primitiveType ')' unaryExpression )
-        // .\\COMTOR.g:953:9: '(' primitiveType ')' unaryExpression
+        // COMTOR.g:953:9: ( '(' primitiveType ')' unaryExpression )
+        // COMTOR.g:953:9: '(' primitiveType ')' unaryExpression
         {
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred227_COMTOR8440); if (state.failed) return ;
         pushFollow(FOLLOW_primitiveType_in_synpred227_COMTOR8442);
@@ -20003,8 +20003,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred229_COMTOR
     public final void synpred229_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:965:10: ( '.' IDENTIFIER )
-        // .\\COMTOR.g:965:10: '.' IDENTIFIER
+        // COMTOR.g:965:10: ( '.' IDENTIFIER )
+        // COMTOR.g:965:10: '.' IDENTIFIER
         {
         match(input,DOT,FOLLOW_DOT_in_synpred229_COMTOR8547); if (state.failed) return ;
         match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred229_COMTOR8549); if (state.failed) return ;
@@ -20015,8 +20015,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred230_COMTOR
     public final void synpred230_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:967:10: ( identifierSuffix )
-        // .\\COMTOR.g:967:10: identifierSuffix
+        // COMTOR.g:967:10: ( identifierSuffix )
+        // COMTOR.g:967:10: identifierSuffix
         {
         pushFollow(FOLLOW_identifierSuffix_in_synpred230_COMTOR8571);
         identifierSuffix();
@@ -20030,8 +20030,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred232_COMTOR
     public final void synpred232_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:970:10: ( '.' IDENTIFIER )
-        // .\\COMTOR.g:970:10: '.' IDENTIFIER
+        // COMTOR.g:970:10: ( '.' IDENTIFIER )
+        // COMTOR.g:970:10: '.' IDENTIFIER
         {
         match(input,DOT,FOLLOW_DOT_in_synpred232_COMTOR8603); if (state.failed) return ;
         match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred232_COMTOR8605); if (state.failed) return ;
@@ -20042,8 +20042,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred233_COMTOR
     public final void synpred233_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:972:10: ( identifierSuffix )
-        // .\\COMTOR.g:972:10: identifierSuffix
+        // COMTOR.g:972:10: ( identifierSuffix )
+        // COMTOR.g:972:10: identifierSuffix
         {
         pushFollow(FOLLOW_identifierSuffix_in_synpred233_COMTOR8627);
         identifierSuffix();
@@ -20057,8 +20057,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred245_COMTOR
     public final void synpred245_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:1002:10: ( '[' expression ']' )
-        // .\\COMTOR.g:1002:10: '[' expression ']'
+        // COMTOR.g:1002:10: ( '[' expression ']' )
+        // COMTOR.g:1002:10: '[' expression ']'
         {
         match(input,LBRACKET,FOLLOW_LBRACKET_in_synpred245_COMTOR8925); if (state.failed) return ;
         pushFollow(FOLLOW_expression_in_synpred245_COMTOR8927);
@@ -20074,8 +20074,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred257_COMTOR
     public final void synpred257_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:1025:9: ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest )
-        // .\\COMTOR.g:1025:9: 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
+        // COMTOR.g:1025:9: ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest )
+        // COMTOR.g:1025:9: 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
         {
         match(input,NEW,FOLLOW_NEW_in_synpred257_COMTOR9138); if (state.failed) return ;
         pushFollow(FOLLOW_nonWildcardTypeArguments_in_synpred257_COMTOR9140);
@@ -20100,8 +20100,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred258_COMTOR
     public final void synpred258_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:1026:9: ( 'new' classOrInterfaceType classCreatorRest )
-        // .\\COMTOR.g:1026:9: 'new' classOrInterfaceType classCreatorRest
+        // COMTOR.g:1026:9: ( 'new' classOrInterfaceType classCreatorRest )
+        // COMTOR.g:1026:9: 'new' classOrInterfaceType classCreatorRest
         {
         match(input,NEW,FOLLOW_NEW_in_synpred258_COMTOR9154); if (state.failed) return ;
         pushFollow(FOLLOW_classOrInterfaceType_in_synpred258_COMTOR9156);
@@ -20121,8 +20121,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred260_COMTOR
     public final void synpred260_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:1031:9: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer )
-        // .\\COMTOR.g:1031:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
+        // COMTOR.g:1031:9: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer )
+        // COMTOR.g:1031:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
         {
         match(input,NEW,FOLLOW_NEW_in_synpred260_COMTOR9188); if (state.failed) return ;
         pushFollow(FOLLOW_createdName_in_synpred260_COMTOR9190);
@@ -20132,7 +20132,7 @@ public class COMTORParser extends Parser {
         if (state.failed) return ;
         match(input,LBRACKET,FOLLOW_LBRACKET_in_synpred260_COMTOR9200); if (state.failed) return ;
         match(input,RBRACKET,FOLLOW_RBRACKET_in_synpred260_COMTOR9202); if (state.failed) return ;
-        // .\\COMTOR.g:1033:9: ( '[' ']' )*
+        // COMTOR.g:1033:9: ( '[' ']' )*
         loop226:
         do {
             int alt226=2;
@@ -20145,7 +20145,7 @@ public class COMTORParser extends Parser {
 
             switch (alt226) {
         	case 1 :
-        	    // .\\COMTOR.g:1033:10: '[' ']'
+        	    // COMTOR.g:1033:10: '[' ']'
         	    {
         	    match(input,LBRACKET,FOLLOW_LBRACKET_in_synpred260_COMTOR9213); if (state.failed) return ;
         	    match(input,RBRACKET,FOLLOW_RBRACKET_in_synpred260_COMTOR9215); if (state.failed) return ;
@@ -20170,8 +20170,8 @@ public class COMTORParser extends Parser {
 
     // $ANTLR start synpred261_COMTOR
     public final void synpred261_COMTOR_fragment() throws RecognitionException {   
-        // .\\COMTOR.g:1040:13: ( '[' expression ']' )
-        // .\\COMTOR.g:1040:13: '[' expression ']'
+        // COMTOR.g:1040:13: ( '[' expression ']' )
+        // COMTOR.g:1040:13: '[' expression ']'
         {
         match(input,LBRACKET,FOLLOW_LBRACKET_in_synpred261_COMTOR9285); if (state.failed) return ;
         pushFollow(FOLLOW_expression_in_synpred261_COMTOR9287);

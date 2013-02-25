@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 .\\COMTOR.g 2013-02-08 20:14:34
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 COMTOR.g 2013-02-18 01:04:01
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -170,15 +170,15 @@ public class COMTORLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return ".\\COMTOR.g"; }
+    public String getGrammarFileName() { return "COMTOR.g"; }
 
     // $ANTLR start "LONGLITERAL"
     public final void mLONGLITERAL() throws RecognitionException {
         try {
             int _type = LONGLITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1157:5: ( IntegerNumber LongSuffix )
-            // .\\COMTOR.g:1157:9: IntegerNumber LongSuffix
+            // COMTOR.g:1157:5: ( IntegerNumber LongSuffix )
+            // COMTOR.g:1157:9: IntegerNumber LongSuffix
             {
             mIntegerNumber(); 
             mLongSuffix(); 
@@ -198,8 +198,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = INTLITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1162:5: ( IntegerNumber )
-            // .\\COMTOR.g:1162:9: IntegerNumber
+            // COMTOR.g:1162:5: ( IntegerNumber )
+            // COMTOR.g:1162:9: IntegerNumber
             {
             mIntegerNumber(); 
 
@@ -216,7 +216,7 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "IntegerNumber"
     public final void mIntegerNumber() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1167:5: ( '0' | '1' .. '9' ( '0' .. '9' )* | '0' ( '0' .. '7' )+ | HexPrefix ( HexDigit )+ )
+            // COMTOR.g:1167:5: ( '0' | '1' .. '9' ( '0' .. '9' )* | '0' ( '0' .. '7' )+ | HexPrefix ( HexDigit )+ )
             int alt4=4;
             int LA4_0 = input.LA(1);
 
@@ -255,17 +255,17 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // .\\COMTOR.g:1167:9: '0'
+                    // COMTOR.g:1167:9: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1168:9: '1' .. '9' ( '0' .. '9' )*
+                    // COMTOR.g:1168:9: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); 
-                    // .\\COMTOR.g:1168:18: ( '0' .. '9' )*
+                    // COMTOR.g:1168:18: ( '0' .. '9' )*
                     loop1:
                     do {
                         int alt1=2;
@@ -278,7 +278,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1168:19: '0' .. '9'
+                    	    // COMTOR.g:1168:19: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -294,10 +294,10 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1169:9: '0' ( '0' .. '7' )+
+                    // COMTOR.g:1169:9: '0' ( '0' .. '7' )+
                     {
                     match('0'); 
-                    // .\\COMTOR.g:1169:13: ( '0' .. '7' )+
+                    // COMTOR.g:1169:13: ( '0' .. '7' )+
                     int cnt2=0;
                     loop2:
                     do {
@@ -311,7 +311,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1169:14: '0' .. '7'
+                    	    // COMTOR.g:1169:14: '0' .. '7'
                     	    {
                     	    matchRange('0','7'); 
 
@@ -331,10 +331,10 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:1170:9: HexPrefix ( HexDigit )+
+                    // COMTOR.g:1170:9: HexPrefix ( HexDigit )+
                     {
                     mHexPrefix(); 
-                    // .\\COMTOR.g:1170:19: ( HexDigit )+
+                    // COMTOR.g:1170:19: ( HexDigit )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -348,7 +348,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1170:19: HexDigit
+                    	    // COMTOR.g:1170:19: HexDigit
                     	    {
                     	    mHexDigit(); 
 
@@ -378,7 +378,7 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "HexPrefix"
     public final void mHexPrefix() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1175:5: ( '0x' | '0X' )
+            // COMTOR.g:1175:5: ( '0x' | '0X' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -406,7 +406,7 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // .\\COMTOR.g:1175:9: '0x'
+                    // COMTOR.g:1175:9: '0x'
                     {
                     match("0x"); 
 
@@ -414,7 +414,7 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1175:16: '0X'
+                    // COMTOR.g:1175:16: '0X'
                     {
                     match("0X"); 
 
@@ -432,8 +432,8 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "HexDigit"
     public final void mHexDigit() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1180:5: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // .\\COMTOR.g:1180:9: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // COMTOR.g:1180:5: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // COMTOR.g:1180:9: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -456,8 +456,8 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "LongSuffix"
     public final void mLongSuffix() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1185:5: ( 'l' | 'L' )
-            // .\\COMTOR.g:
+            // COMTOR.g:1185:5: ( 'l' | 'L' )
+            // COMTOR.g:
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -480,14 +480,14 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "NonIntegerNumber"
     public final void mNonIntegerNumber() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1191:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? | '.' ( '0' .. '9' )+ ( Exponent )? | ( '0' .. '9' )+ Exponent | ( '0' .. '9' )+ | HexPrefix ( HexDigit )* ( () | ( '.' ( HexDigit )* ) ) ( 'p' | 'P' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // COMTOR.g:1191:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? | '.' ( '0' .. '9' )+ ( Exponent )? | ( '0' .. '9' )+ Exponent | ( '0' .. '9' )+ | HexPrefix ( HexDigit )* ( () | ( '.' ( HexDigit )* ) ) ( 'p' | 'P' ) ( '+' | '-' )? ( '0' .. '9' )+ )
             int alt18=5;
             alt18 = dfa18.predict(input);
             switch (alt18) {
                 case 1 :
-                    // .\\COMTOR.g:1191:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )?
+                    // COMTOR.g:1191:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )?
                     {
-                    // .\\COMTOR.g:1191:9: ( '0' .. '9' )+
+                    // COMTOR.g:1191:9: ( '0' .. '9' )+
                     int cnt6=0;
                     loop6:
                     do {
@@ -501,7 +501,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1191:10: '0' .. '9'
+                    	    // COMTOR.g:1191:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -518,7 +518,7 @@ public class COMTORLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // .\\COMTOR.g:1191:27: ( '0' .. '9' )*
+                    // COMTOR.g:1191:27: ( '0' .. '9' )*
                     loop7:
                     do {
                         int alt7=2;
@@ -531,7 +531,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1191:28: '0' .. '9'
+                    	    // COMTOR.g:1191:28: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -543,7 +543,7 @@ public class COMTORLexer extends Lexer {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:1191:41: ( Exponent )?
+                    // COMTOR.g:1191:41: ( Exponent )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -552,7 +552,7 @@ public class COMTORLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // .\\COMTOR.g:1191:41: Exponent
+                            // COMTOR.g:1191:41: Exponent
                             {
                             mExponent(); 
 
@@ -565,10 +565,10 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1192:9: '.' ( '0' .. '9' )+ ( Exponent )?
+                    // COMTOR.g:1192:9: '.' ( '0' .. '9' )+ ( Exponent )?
                     {
                     match('.'); 
-                    // .\\COMTOR.g:1192:13: ( '0' .. '9' )+
+                    // COMTOR.g:1192:13: ( '0' .. '9' )+
                     int cnt9=0;
                     loop9:
                     do {
@@ -582,7 +582,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1192:15: '0' .. '9'
+                    	    // COMTOR.g:1192:15: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -598,7 +598,7 @@ public class COMTORLexer extends Lexer {
                         cnt9++;
                     } while (true);
 
-                    // .\\COMTOR.g:1192:29: ( Exponent )?
+                    // COMTOR.g:1192:29: ( Exponent )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -607,7 +607,7 @@ public class COMTORLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // .\\COMTOR.g:1192:29: Exponent
+                            // COMTOR.g:1192:29: Exponent
                             {
                             mExponent(); 
 
@@ -620,9 +620,9 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1193:9: ( '0' .. '9' )+ Exponent
+                    // COMTOR.g:1193:9: ( '0' .. '9' )+ Exponent
                     {
-                    // .\\COMTOR.g:1193:9: ( '0' .. '9' )+
+                    // COMTOR.g:1193:9: ( '0' .. '9' )+
                     int cnt11=0;
                     loop11:
                     do {
@@ -636,7 +636,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1193:10: '0' .. '9'
+                    	    // COMTOR.g:1193:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -657,9 +657,9 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:1194:9: ( '0' .. '9' )+
+                    // COMTOR.g:1194:9: ( '0' .. '9' )+
                     {
-                    // .\\COMTOR.g:1194:9: ( '0' .. '9' )+
+                    // COMTOR.g:1194:9: ( '0' .. '9' )+
                     int cnt12=0;
                     loop12:
                     do {
@@ -673,7 +673,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1194:10: '0' .. '9'
+                    	    // COMTOR.g:1194:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -693,10 +693,10 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:1196:9: HexPrefix ( HexDigit )* ( () | ( '.' ( HexDigit )* ) ) ( 'p' | 'P' ) ( '+' | '-' )? ( '0' .. '9' )+
+                    // COMTOR.g:1196:9: HexPrefix ( HexDigit )* ( () | ( '.' ( HexDigit )* ) ) ( 'p' | 'P' ) ( '+' | '-' )? ( '0' .. '9' )+
                     {
                     mHexPrefix(); 
-                    // .\\COMTOR.g:1196:19: ( HexDigit )*
+                    // COMTOR.g:1196:19: ( HexDigit )*
                     loop13:
                     do {
                         int alt13=2;
@@ -709,7 +709,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1196:20: HexDigit
+                    	    // COMTOR.g:1196:20: HexDigit
                     	    {
                     	    mHexDigit(); 
 
@@ -721,7 +721,7 @@ public class COMTORLexer extends Lexer {
                         }
                     } while (true);
 
-                    // .\\COMTOR.g:1197:9: ( () | ( '.' ( HexDigit )* ) )
+                    // COMTOR.g:1197:9: ( () | ( '.' ( HexDigit )* ) )
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -739,10 +739,10 @@ public class COMTORLexer extends Lexer {
                     }
                     switch (alt15) {
                         case 1 :
-                            // .\\COMTOR.g:1197:14: ()
+                            // COMTOR.g:1197:14: ()
                             {
-                            // .\\COMTOR.g:1197:14: ()
-                            // .\\COMTOR.g:1197:15: 
+                            // COMTOR.g:1197:14: ()
+                            // COMTOR.g:1197:15: 
                             {
                             }
 
@@ -750,13 +750,13 @@ public class COMTORLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:1198:14: ( '.' ( HexDigit )* )
+                            // COMTOR.g:1198:14: ( '.' ( HexDigit )* )
                             {
-                            // .\\COMTOR.g:1198:14: ( '.' ( HexDigit )* )
-                            // .\\COMTOR.g:1198:15: '.' ( HexDigit )*
+                            // COMTOR.g:1198:14: ( '.' ( HexDigit )* )
+                            // COMTOR.g:1198:15: '.' ( HexDigit )*
                             {
                             match('.'); 
-                            // .\\COMTOR.g:1198:19: ( HexDigit )*
+                            // COMTOR.g:1198:19: ( HexDigit )*
                             loop14:
                             do {
                                 int alt14=2;
@@ -769,7 +769,7 @@ public class COMTORLexer extends Lexer {
 
                                 switch (alt14) {
                             	case 1 :
-                            	    // .\\COMTOR.g:1198:20: HexDigit
+                            	    // COMTOR.g:1198:20: HexDigit
                             	    {
                             	    mHexDigit(); 
 
@@ -799,7 +799,7 @@ public class COMTORLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // .\\COMTOR.g:1201:9: ( '+' | '-' )?
+                    // COMTOR.g:1201:9: ( '+' | '-' )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -808,7 +808,7 @@ public class COMTORLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // .\\COMTOR.g:
+                            // COMTOR.g:
                             {
                             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                                 input.consume();
@@ -825,7 +825,7 @@ public class COMTORLexer extends Lexer {
 
                     }
 
-                    // .\\COMTOR.g:1202:9: ( '0' .. '9' )+
+                    // COMTOR.g:1202:9: ( '0' .. '9' )+
                     int cnt17=0;
                     loop17:
                     do {
@@ -839,7 +839,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt17) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1202:11: '0' .. '9'
+                    	    // COMTOR.g:1202:11: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -869,8 +869,8 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "Exponent"
     public final void mExponent() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1207:5: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // .\\COMTOR.g:1207:9: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // COMTOR.g:1207:5: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // COMTOR.g:1207:9: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -881,7 +881,7 @@ public class COMTORLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // .\\COMTOR.g:1207:23: ( '+' | '-' )?
+            // COMTOR.g:1207:23: ( '+' | '-' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -890,7 +890,7 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // .\\COMTOR.g:
+                    // COMTOR.g:
                     {
                     if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                         input.consume();
@@ -907,7 +907,7 @@ public class COMTORLexer extends Lexer {
 
             }
 
-            // .\\COMTOR.g:1207:38: ( '0' .. '9' )+
+            // COMTOR.g:1207:38: ( '0' .. '9' )+
             int cnt20=0;
             loop20:
             do {
@@ -921,7 +921,7 @@ public class COMTORLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // .\\COMTOR.g:1207:40: '0' .. '9'
+            	    // COMTOR.g:1207:40: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -949,8 +949,8 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "FloatSuffix"
     public final void mFloatSuffix() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1212:5: ( 'f' | 'F' )
-            // .\\COMTOR.g:
+            // COMTOR.g:1212:5: ( 'f' | 'F' )
+            // COMTOR.g:
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -973,8 +973,8 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "DoubleSuffix"
     public final void mDoubleSuffix() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1217:5: ( 'd' | 'D' )
-            // .\\COMTOR.g:
+            // COMTOR.g:1217:5: ( 'd' | 'D' )
+            // COMTOR.g:
             {
             if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
                 input.consume();
@@ -999,8 +999,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = FLOATLITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1221:5: ( NonIntegerNumber FloatSuffix )
-            // .\\COMTOR.g:1221:9: NonIntegerNumber FloatSuffix
+            // COMTOR.g:1221:5: ( NonIntegerNumber FloatSuffix )
+            // COMTOR.g:1221:9: NonIntegerNumber FloatSuffix
             {
             mNonIntegerNumber(); 
             mFloatSuffix(); 
@@ -1020,11 +1020,11 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = DOUBLELITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1225:5: ( NonIntegerNumber ( DoubleSuffix )? )
-            // .\\COMTOR.g:1225:9: NonIntegerNumber ( DoubleSuffix )?
+            // COMTOR.g:1225:5: ( NonIntegerNumber ( DoubleSuffix )? )
+            // COMTOR.g:1225:9: NonIntegerNumber ( DoubleSuffix )?
             {
             mNonIntegerNumber(); 
-            // .\\COMTOR.g:1225:26: ( DoubleSuffix )?
+            // COMTOR.g:1225:26: ( DoubleSuffix )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1033,7 +1033,7 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt21) {
                 case 1 :
-                    // .\\COMTOR.g:1225:26: DoubleSuffix
+                    // COMTOR.g:1225:26: DoubleSuffix
                     {
                     mDoubleSuffix(); 
 
@@ -1058,11 +1058,11 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CHARLITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1229:5: ( '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' | '\\r' | '\\n' ) ) '\\'' )
-            // .\\COMTOR.g:1229:9: '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' | '\\r' | '\\n' ) ) '\\''
+            // COMTOR.g:1229:5: ( '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' | '\\r' | '\\n' ) ) '\\'' )
+            // COMTOR.g:1229:9: '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' | '\\r' | '\\n' ) ) '\\''
             {
             match('\''); 
-            // .\\COMTOR.g:1230:9: ( EscapeSequence | ~ ( '\\'' | '\\\\' | '\\r' | '\\n' ) )
+            // COMTOR.g:1230:9: ( EscapeSequence | ~ ( '\\'' | '\\\\' | '\\r' | '\\n' ) )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -1080,14 +1080,14 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // .\\COMTOR.g:1230:13: EscapeSequence
+                    // COMTOR.g:1230:13: EscapeSequence
                     {
                     mEscapeSequence(); 
 
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1231:13: ~ ( '\\'' | '\\\\' | '\\r' | '\\n' )
+                    // COMTOR.g:1231:13: ~ ( '\\'' | '\\\\' | '\\r' | '\\n' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -1121,8 +1121,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = UNICODECHARLITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1237:5: ( '\\'' UNICODECHAR '\\'' )
-            // .\\COMTOR.g:1237:7: '\\'' UNICODECHAR '\\''
+            // COMTOR.g:1237:5: ( '\\'' UNICODECHAR '\\'' )
+            // COMTOR.g:1237:7: '\\'' UNICODECHAR '\\''
             {
             match('\''); 
             mUNICODECHAR(); 
@@ -1143,8 +1143,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = UNICODECHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1241:2: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
-            // .\\COMTOR.g:1241:4: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
+            // COMTOR.g:1241:2: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
+            // COMTOR.g:1241:4: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
             {
             match('\\'); 
             match('u'); 
@@ -1168,11 +1168,11 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = STRINGLITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1245:5: ( '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' | '\\r' | '\\n' ) | UNICODECHAR )* '\"' )
-            // .\\COMTOR.g:1245:9: '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' | '\\r' | '\\n' ) | UNICODECHAR )* '\"'
+            // COMTOR.g:1245:5: ( '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' | '\\r' | '\\n' ) | UNICODECHAR )* '\"' )
+            // COMTOR.g:1245:9: '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' | '\\r' | '\\n' ) | UNICODECHAR )* '\"'
             {
             match('\"'); 
-            // .\\COMTOR.g:1246:9: ( EscapeSequence | ~ ( '\\\\' | '\"' | '\\r' | '\\n' ) | UNICODECHAR )*
+            // COMTOR.g:1246:9: ( EscapeSequence | ~ ( '\\\\' | '\"' | '\\r' | '\\n' ) | UNICODECHAR )*
             loop23:
             do {
                 int alt23=4;
@@ -1197,14 +1197,14 @@ public class COMTORLexer extends Lexer {
 
                 switch (alt23) {
             	case 1 :
-            	    // .\\COMTOR.g:1246:13: EscapeSequence
+            	    // COMTOR.g:1246:13: EscapeSequence
             	    {
             	    mEscapeSequence(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // .\\COMTOR.g:1247:13: ~ ( '\\\\' | '\"' | '\\r' | '\\n' )
+            	    // COMTOR.g:1247:13: ~ ( '\\\\' | '\"' | '\\r' | '\\n' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1219,7 +1219,7 @@ public class COMTORLexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // .\\COMTOR.g:1248:11: UNICODECHAR
+            	    // COMTOR.g:1248:11: UNICODECHAR
             	    {
             	    mUNICODECHAR(); 
 
@@ -1246,89 +1246,89 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "EscapeSequence"
     public final void mEscapeSequence() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1255:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' | ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ) )
-            // .\\COMTOR.g:1255:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' | ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) )
+            // COMTOR.g:1255:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' | ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ) )
+            // COMTOR.g:1255:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' | ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) )
             {
             match('\\'); 
-            // .\\COMTOR.g:1255:14: ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' | ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) )
+            // COMTOR.g:1255:14: ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' | ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) ( '0' .. '7' ) | ( '0' .. '7' ) )
             int alt24=11;
             alt24 = dfa24.predict(input);
             switch (alt24) {
                 case 1 :
-                    // .\\COMTOR.g:1256:18: 'b'
+                    // COMTOR.g:1256:18: 'b'
                     {
                     match('b'); 
 
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1257:18: 't'
+                    // COMTOR.g:1257:18: 't'
                     {
                     match('t'); 
 
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1258:18: 'n'
+                    // COMTOR.g:1258:18: 'n'
                     {
                     match('n'); 
 
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:1259:18: 'f'
+                    // COMTOR.g:1259:18: 'f'
                     {
                     match('f'); 
 
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:1260:18: 'r'
+                    // COMTOR.g:1260:18: 'r'
                     {
                     match('r'); 
 
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:1261:18: '\\\"'
+                    // COMTOR.g:1261:18: '\\\"'
                     {
                     match('\"'); 
 
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:1262:18: '\\''
+                    // COMTOR.g:1262:18: '\\''
                     {
                     match('\''); 
 
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:1263:18: '\\\\'
+                    // COMTOR.g:1263:18: '\\\\'
                     {
                     match('\\'); 
 
                     }
                     break;
                 case 9 :
-                    // .\\COMTOR.g:1265:18: ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // COMTOR.g:1265:18: ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
-                    // .\\COMTOR.g:1265:18: ( '0' .. '3' )
-                    // .\\COMTOR.g:1265:19: '0' .. '3'
+                    // COMTOR.g:1265:18: ( '0' .. '3' )
+                    // COMTOR.g:1265:19: '0' .. '3'
                     {
                     matchRange('0','3'); 
 
                     }
 
-                    // .\\COMTOR.g:1265:29: ( '0' .. '7' )
-                    // .\\COMTOR.g:1265:30: '0' .. '7'
+                    // COMTOR.g:1265:29: ( '0' .. '7' )
+                    // COMTOR.g:1265:30: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // .\\COMTOR.g:1265:40: ( '0' .. '7' )
-                    // .\\COMTOR.g:1265:41: '0' .. '7'
+                    // COMTOR.g:1265:40: ( '0' .. '7' )
+                    // COMTOR.g:1265:41: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -1338,17 +1338,17 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // .\\COMTOR.g:1267:18: ( '0' .. '7' ) ( '0' .. '7' )
+                    // COMTOR.g:1267:18: ( '0' .. '7' ) ( '0' .. '7' )
                     {
-                    // .\\COMTOR.g:1267:18: ( '0' .. '7' )
-                    // .\\COMTOR.g:1267:19: '0' .. '7'
+                    // COMTOR.g:1267:18: ( '0' .. '7' )
+                    // COMTOR.g:1267:19: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // .\\COMTOR.g:1267:29: ( '0' .. '7' )
-                    // .\\COMTOR.g:1267:30: '0' .. '7'
+                    // COMTOR.g:1267:29: ( '0' .. '7' )
+                    // COMTOR.g:1267:30: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -1358,10 +1358,10 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // .\\COMTOR.g:1269:18: ( '0' .. '7' )
+                    // COMTOR.g:1269:18: ( '0' .. '7' )
                     {
-                    // .\\COMTOR.g:1269:18: ( '0' .. '7' )
-                    // .\\COMTOR.g:1269:19: '0' .. '7'
+                    // COMTOR.g:1269:18: ( '0' .. '7' )
+                    // COMTOR.g:1269:19: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -1387,8 +1387,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1274:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-            // .\\COMTOR.g:1274:9: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+            // COMTOR.g:1274:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+            // COMTOR.g:1274:9: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -1420,19 +1420,19 @@ public class COMTORLexer extends Lexer {
             int _channel = DEFAULT_TOKEN_CHANNEL;
             int c;
 
-            // .\\COMTOR.g:1287:5: ( '//' c= ( (~ ( '\\n' | '\\r' ) )* ) ( '\\r\\n' | '\\r' | '\\n' ) | '//' (~ ( '\\n' | '\\r' ) )* )
+            // COMTOR.g:1287:5: ( '//' c= ( (~ ( '\\n' | '\\r' ) )* ) ( '\\r\\n' | '\\r' | '\\n' ) | '//' (~ ( '\\n' | '\\r' ) )* )
             int alt28=2;
             alt28 = dfa28.predict(input);
             switch (alt28) {
                 case 1 :
-                    // .\\COMTOR.g:1287:9: '//' c= ( (~ ( '\\n' | '\\r' ) )* ) ( '\\r\\n' | '\\r' | '\\n' )
+                    // COMTOR.g:1287:9: '//' c= ( (~ ( '\\n' | '\\r' ) )* ) ( '\\r\\n' | '\\r' | '\\n' )
                     {
                     match("//"); 
 
-                    // .\\COMTOR.g:1287:16: ( (~ ( '\\n' | '\\r' ) )* )
-                    // .\\COMTOR.g:1287:17: (~ ( '\\n' | '\\r' ) )*
+                    // COMTOR.g:1287:16: ( (~ ( '\\n' | '\\r' ) )* )
+                    // COMTOR.g:1287:17: (~ ( '\\n' | '\\r' ) )*
                     {
-                    // .\\COMTOR.g:1287:17: (~ ( '\\n' | '\\r' ) )*
+                    // COMTOR.g:1287:17: (~ ( '\\n' | '\\r' ) )*
                     loop25:
                     do {
                         int alt25=2;
@@ -1445,7 +1445,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt25) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1287:17: ~ ( '\\n' | '\\r' )
+                    	    // COMTOR.g:1287:17: ~ ( '\\n' | '\\r' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1468,7 +1468,7 @@ public class COMTORLexer extends Lexer {
 
                     }
 
-                    // .\\COMTOR.g:1287:33: ( '\\r\\n' | '\\r' | '\\n' )
+                    // COMTOR.g:1287:33: ( '\\r\\n' | '\\r' | '\\n' )
                     int alt26=3;
                     int LA26_0 = input.LA(1);
 
@@ -1492,7 +1492,7 @@ public class COMTORLexer extends Lexer {
                     }
                     switch (alt26) {
                         case 1 :
-                            // .\\COMTOR.g:1287:34: '\\r\\n'
+                            // COMTOR.g:1287:34: '\\r\\n'
                             {
                             match("\r\n"); 
 
@@ -1500,14 +1500,14 @@ public class COMTORLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // .\\COMTOR.g:1287:43: '\\r'
+                            // COMTOR.g:1287:43: '\\r'
                             {
                             match('\r'); 
 
                             }
                             break;
                         case 3 :
-                            // .\\COMTOR.g:1287:50: '\\n'
+                            // COMTOR.g:1287:50: '\\n'
                             {
                             match('\n'); 
 
@@ -1523,11 +1523,11 @@ public class COMTORLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1291:9: '//' (~ ( '\\n' | '\\r' ) )*
+                    // COMTOR.g:1291:9: '//' (~ ( '\\n' | '\\r' ) )*
                     {
                     match("//"); 
 
-                    // .\\COMTOR.g:1291:14: (~ ( '\\n' | '\\r' ) )*
+                    // COMTOR.g:1291:14: (~ ( '\\n' | '\\r' ) )*
                     loop27:
                     do {
                         int alt27=2;
@@ -1540,7 +1540,7 @@ public class COMTORLexer extends Lexer {
 
                         switch (alt27) {
                     	case 1 :
-                    	    // .\\COMTOR.g:1291:14: ~ ( '\\n' | '\\r' )
+                    	    // COMTOR.g:1291:14: ~ ( '\\n' | '\\r' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1581,12 +1581,12 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1301:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // .\\COMTOR.g:1301:9: '/*' ( options {greedy=false; } : . )* '*/'
+            // COMTOR.g:1301:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // COMTOR.g:1301:9: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // .\\COMTOR.g:1307:9: ( options {greedy=false; } : . )*
+            // COMTOR.g:1307:9: ( options {greedy=false; } : . )*
             loop29:
             do {
                 int alt29=2;
@@ -1611,7 +1611,7 @@ public class COMTORLexer extends Lexer {
 
                 switch (alt29) {
             	case 1 :
-            	    // .\\COMTOR.g:1307:36: .
+            	    // COMTOR.g:1307:36: .
             	    {
             	    matchAny(); 
 
@@ -1648,8 +1648,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = ABSTRACT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1321:5: ( 'abstract' )
-            // .\\COMTOR.g:1321:9: 'abstract'
+            // COMTOR.g:1321:5: ( 'abstract' )
+            // COMTOR.g:1321:9: 'abstract'
             {
             match("abstract"); 
 
@@ -1669,8 +1669,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = ASSERT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1325:5: ( 'assert' )
-            // .\\COMTOR.g:1325:9: 'assert'
+            // COMTOR.g:1325:5: ( 'assert' )
+            // COMTOR.g:1325:9: 'assert'
             {
             match("assert"); 
 
@@ -1690,8 +1690,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1329:5: ( 'boolean' )
-            // .\\COMTOR.g:1329:9: 'boolean'
+            // COMTOR.g:1329:5: ( 'boolean' )
+            // COMTOR.g:1329:9: 'boolean'
             {
             match("boolean"); 
 
@@ -1711,8 +1711,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BREAK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1333:5: ( 'break' )
-            // .\\COMTOR.g:1333:9: 'break'
+            // COMTOR.g:1333:5: ( 'break' )
+            // COMTOR.g:1333:9: 'break'
             {
             match("break"); 
 
@@ -1732,8 +1732,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BYTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1337:5: ( 'byte' )
-            // .\\COMTOR.g:1337:9: 'byte'
+            // COMTOR.g:1337:5: ( 'byte' )
+            // COMTOR.g:1337:9: 'byte'
             {
             match("byte"); 
 
@@ -1753,8 +1753,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CASE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1341:5: ( 'case' )
-            // .\\COMTOR.g:1341:9: 'case'
+            // COMTOR.g:1341:5: ( 'case' )
+            // COMTOR.g:1341:9: 'case'
             {
             match("case"); 
 
@@ -1774,8 +1774,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CATCH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1345:5: ( 'catch' )
-            // .\\COMTOR.g:1345:9: 'catch'
+            // COMTOR.g:1345:5: ( 'catch' )
+            // COMTOR.g:1345:9: 'catch'
             {
             match("catch"); 
 
@@ -1795,8 +1795,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1349:5: ( 'char' )
-            // .\\COMTOR.g:1349:9: 'char'
+            // COMTOR.g:1349:5: ( 'char' )
+            // COMTOR.g:1349:9: 'char'
             {
             match("char"); 
 
@@ -1816,8 +1816,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1353:5: ( 'class' )
-            // .\\COMTOR.g:1353:9: 'class'
+            // COMTOR.g:1353:5: ( 'class' )
+            // COMTOR.g:1353:9: 'class'
             {
             match("class"); 
 
@@ -1837,8 +1837,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1357:5: ( 'const' )
-            // .\\COMTOR.g:1357:9: 'const'
+            // COMTOR.g:1357:5: ( 'const' )
+            // COMTOR.g:1357:9: 'const'
             {
             match("const"); 
 
@@ -1858,8 +1858,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CONTINUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1361:5: ( 'continue' )
-            // .\\COMTOR.g:1361:9: 'continue'
+            // COMTOR.g:1361:5: ( 'continue' )
+            // COMTOR.g:1361:9: 'continue'
             {
             match("continue"); 
 
@@ -1879,8 +1879,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = DEFAULT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1365:5: ( 'default' )
-            // .\\COMTOR.g:1365:9: 'default'
+            // COMTOR.g:1365:5: ( 'default' )
+            // COMTOR.g:1365:9: 'default'
             {
             match("default"); 
 
@@ -1900,8 +1900,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1369:5: ( 'do' )
-            // .\\COMTOR.g:1369:9: 'do'
+            // COMTOR.g:1369:5: ( 'do' )
+            // COMTOR.g:1369:9: 'do'
             {
             match("do"); 
 
@@ -1921,8 +1921,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1373:5: ( 'double' )
-            // .\\COMTOR.g:1373:9: 'double'
+            // COMTOR.g:1373:5: ( 'double' )
+            // COMTOR.g:1373:9: 'double'
             {
             match("double"); 
 
@@ -1942,8 +1942,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1377:5: ( 'else' )
-            // .\\COMTOR.g:1377:9: 'else'
+            // COMTOR.g:1377:5: ( 'else' )
+            // COMTOR.g:1377:9: 'else'
             {
             match("else"); 
 
@@ -1963,8 +1963,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = ENUM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1381:5: ( 'enum' )
-            // .\\COMTOR.g:1381:9: 'enum'
+            // COMTOR.g:1381:5: ( 'enum' )
+            // COMTOR.g:1381:9: 'enum'
             {
             match("enum"); 
 
@@ -1984,8 +1984,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = EXTENDS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1385:5: ( 'extends' )
-            // .\\COMTOR.g:1385:9: 'extends'
+            // COMTOR.g:1385:5: ( 'extends' )
+            // COMTOR.g:1385:9: 'extends'
             {
             match("extends"); 
 
@@ -2005,8 +2005,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = FINAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1389:5: ( 'final' )
-            // .\\COMTOR.g:1389:9: 'final'
+            // COMTOR.g:1389:5: ( 'final' )
+            // COMTOR.g:1389:9: 'final'
             {
             match("final"); 
 
@@ -2026,8 +2026,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = FINALLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1393:5: ( 'finally' )
-            // .\\COMTOR.g:1393:9: 'finally'
+            // COMTOR.g:1393:5: ( 'finally' )
+            // COMTOR.g:1393:9: 'finally'
             {
             match("finally"); 
 
@@ -2047,8 +2047,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1397:5: ( 'float' )
-            // .\\COMTOR.g:1397:9: 'float'
+            // COMTOR.g:1397:5: ( 'float' )
+            // COMTOR.g:1397:9: 'float'
             {
             match("float"); 
 
@@ -2068,8 +2068,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1401:5: ( 'for' )
-            // .\\COMTOR.g:1401:9: 'for'
+            // COMTOR.g:1401:5: ( 'for' )
+            // COMTOR.g:1401:9: 'for'
             {
             match("for"); 
 
@@ -2089,8 +2089,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = GOTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1405:5: ( 'goto' )
-            // .\\COMTOR.g:1405:9: 'goto'
+            // COMTOR.g:1405:5: ( 'goto' )
+            // COMTOR.g:1405:9: 'goto'
             {
             match("goto"); 
 
@@ -2110,8 +2110,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1409:5: ( 'if' )
-            // .\\COMTOR.g:1409:9: 'if'
+            // COMTOR.g:1409:5: ( 'if' )
+            // COMTOR.g:1409:9: 'if'
             {
             match("if"); 
 
@@ -2131,8 +2131,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = IMPLEMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1413:5: ( 'implements' )
-            // .\\COMTOR.g:1413:9: 'implements'
+            // COMTOR.g:1413:5: ( 'implements' )
+            // COMTOR.g:1413:9: 'implements'
             {
             match("implements"); 
 
@@ -2152,8 +2152,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = IMPORT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1417:5: ( 'import' )
-            // .\\COMTOR.g:1417:9: 'import'
+            // COMTOR.g:1417:5: ( 'import' )
+            // COMTOR.g:1417:9: 'import'
             {
             match("import"); 
 
@@ -2173,8 +2173,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = INSTANCEOF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1421:5: ( 'instanceof' )
-            // .\\COMTOR.g:1421:9: 'instanceof'
+            // COMTOR.g:1421:5: ( 'instanceof' )
+            // COMTOR.g:1421:9: 'instanceof'
             {
             match("instanceof"); 
 
@@ -2194,8 +2194,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1425:5: ( 'int' )
-            // .\\COMTOR.g:1425:9: 'int'
+            // COMTOR.g:1425:5: ( 'int' )
+            // COMTOR.g:1425:9: 'int'
             {
             match("int"); 
 
@@ -2215,8 +2215,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = INTERFACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1429:5: ( 'interface' )
-            // .\\COMTOR.g:1429:9: 'interface'
+            // COMTOR.g:1429:5: ( 'interface' )
+            // COMTOR.g:1429:9: 'interface'
             {
             match("interface"); 
 
@@ -2236,8 +2236,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = LONG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1433:5: ( 'long' )
-            // .\\COMTOR.g:1433:9: 'long'
+            // COMTOR.g:1433:5: ( 'long' )
+            // COMTOR.g:1433:9: 'long'
             {
             match("long"); 
 
@@ -2257,8 +2257,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = NATIVE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1437:5: ( 'native' )
-            // .\\COMTOR.g:1437:9: 'native'
+            // COMTOR.g:1437:5: ( 'native' )
+            // COMTOR.g:1437:9: 'native'
             {
             match("native"); 
 
@@ -2278,8 +2278,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = NEW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1441:5: ( 'new' )
-            // .\\COMTOR.g:1441:9: 'new'
+            // COMTOR.g:1441:5: ( 'new' )
+            // COMTOR.g:1441:9: 'new'
             {
             match("new"); 
 
@@ -2299,8 +2299,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PACKAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1445:5: ( 'package' )
-            // .\\COMTOR.g:1445:9: 'package'
+            // COMTOR.g:1445:5: ( 'package' )
+            // COMTOR.g:1445:9: 'package'
             {
             match("package"); 
 
@@ -2320,8 +2320,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PRIVATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1449:5: ( 'private' )
-            // .\\COMTOR.g:1449:9: 'private'
+            // COMTOR.g:1449:5: ( 'private' )
+            // COMTOR.g:1449:9: 'private'
             {
             match("private"); 
 
@@ -2341,8 +2341,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PROTECTED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1453:5: ( 'protected' )
-            // .\\COMTOR.g:1453:9: 'protected'
+            // COMTOR.g:1453:5: ( 'protected' )
+            // COMTOR.g:1453:9: 'protected'
             {
             match("protected"); 
 
@@ -2362,8 +2362,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PUBLIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1457:5: ( 'public' )
-            // .\\COMTOR.g:1457:9: 'public'
+            // COMTOR.g:1457:5: ( 'public' )
+            // COMTOR.g:1457:9: 'public'
             {
             match("public"); 
 
@@ -2383,8 +2383,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1461:5: ( 'return' )
-            // .\\COMTOR.g:1461:9: 'return'
+            // COMTOR.g:1461:5: ( 'return' )
+            // COMTOR.g:1461:9: 'return'
             {
             match("return"); 
 
@@ -2404,8 +2404,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SHORT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1465:5: ( 'short' )
-            // .\\COMTOR.g:1465:9: 'short'
+            // COMTOR.g:1465:5: ( 'short' )
+            // COMTOR.g:1465:9: 'short'
             {
             match("short"); 
 
@@ -2425,8 +2425,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = STATIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1469:5: ( 'static' )
-            // .\\COMTOR.g:1469:9: 'static'
+            // COMTOR.g:1469:5: ( 'static' )
+            // COMTOR.g:1469:9: 'static'
             {
             match("static"); 
 
@@ -2446,8 +2446,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = STRICTFP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1473:5: ( 'strictfp' )
-            // .\\COMTOR.g:1473:9: 'strictfp'
+            // COMTOR.g:1473:5: ( 'strictfp' )
+            // COMTOR.g:1473:9: 'strictfp'
             {
             match("strictfp"); 
 
@@ -2467,8 +2467,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SUPER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1477:5: ( 'super' )
-            // .\\COMTOR.g:1477:9: 'super'
+            // COMTOR.g:1477:5: ( 'super' )
+            // COMTOR.g:1477:9: 'super'
             {
             match("super"); 
 
@@ -2488,8 +2488,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SWITCH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1481:5: ( 'switch' )
-            // .\\COMTOR.g:1481:9: 'switch'
+            // COMTOR.g:1481:5: ( 'switch' )
+            // COMTOR.g:1481:9: 'switch'
             {
             match("switch"); 
 
@@ -2509,8 +2509,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SYNCHRONIZED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1485:5: ( 'synchronized' )
-            // .\\COMTOR.g:1485:9: 'synchronized'
+            // COMTOR.g:1485:5: ( 'synchronized' )
+            // COMTOR.g:1485:9: 'synchronized'
             {
             match("synchronized"); 
 
@@ -2530,8 +2530,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = THIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1489:5: ( 'this' )
-            // .\\COMTOR.g:1489:9: 'this'
+            // COMTOR.g:1489:5: ( 'this' )
+            // COMTOR.g:1489:9: 'this'
             {
             match("this"); 
 
@@ -2551,8 +2551,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = THROW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1493:5: ( 'throw' )
-            // .\\COMTOR.g:1493:9: 'throw'
+            // COMTOR.g:1493:5: ( 'throw' )
+            // COMTOR.g:1493:9: 'throw'
             {
             match("throw"); 
 
@@ -2572,8 +2572,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = THROWS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1497:5: ( 'throws' )
-            // .\\COMTOR.g:1497:9: 'throws'
+            // COMTOR.g:1497:5: ( 'throws' )
+            // COMTOR.g:1497:9: 'throws'
             {
             match("throws"); 
 
@@ -2593,8 +2593,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = TRANSIENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1501:5: ( 'transient' )
-            // .\\COMTOR.g:1501:9: 'transient'
+            // COMTOR.g:1501:5: ( 'transient' )
+            // COMTOR.g:1501:9: 'transient'
             {
             match("transient"); 
 
@@ -2614,8 +2614,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = TRY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1505:5: ( 'try' )
-            // .\\COMTOR.g:1505:9: 'try'
+            // COMTOR.g:1505:5: ( 'try' )
+            // COMTOR.g:1505:9: 'try'
             {
             match("try"); 
 
@@ -2635,8 +2635,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = VOID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1509:5: ( 'void' )
-            // .\\COMTOR.g:1509:9: 'void'
+            // COMTOR.g:1509:5: ( 'void' )
+            // COMTOR.g:1509:9: 'void'
             {
             match("void"); 
 
@@ -2656,8 +2656,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = VOLATILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1513:5: ( 'volatile' )
-            // .\\COMTOR.g:1513:9: 'volatile'
+            // COMTOR.g:1513:5: ( 'volatile' )
+            // COMTOR.g:1513:9: 'volatile'
             {
             match("volatile"); 
 
@@ -2677,8 +2677,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1517:5: ( 'while' )
-            // .\\COMTOR.g:1517:9: 'while'
+            // COMTOR.g:1517:5: ( 'while' )
+            // COMTOR.g:1517:9: 'while'
             {
             match("while"); 
 
@@ -2698,8 +2698,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1521:5: ( 'true' )
-            // .\\COMTOR.g:1521:9: 'true'
+            // COMTOR.g:1521:5: ( 'true' )
+            // COMTOR.g:1521:9: 'true'
             {
             match("true"); 
 
@@ -2719,8 +2719,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1525:5: ( 'false' )
-            // .\\COMTOR.g:1525:9: 'false'
+            // COMTOR.g:1525:5: ( 'false' )
+            // COMTOR.g:1525:9: 'false'
             {
             match("false"); 
 
@@ -2740,8 +2740,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1529:5: ( 'null' )
-            // .\\COMTOR.g:1529:9: 'null'
+            // COMTOR.g:1529:5: ( 'null' )
+            // COMTOR.g:1529:9: 'null'
             {
             match("null"); 
 
@@ -2761,8 +2761,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = LPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1533:5: ( '(' )
-            // .\\COMTOR.g:1533:9: '('
+            // COMTOR.g:1533:5: ( '(' )
+            // COMTOR.g:1533:9: '('
             {
             match('('); 
 
@@ -2781,8 +2781,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = RPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1537:5: ( ')' )
-            // .\\COMTOR.g:1537:9: ')'
+            // COMTOR.g:1537:5: ( ')' )
+            // COMTOR.g:1537:9: ')'
             {
             match(')'); 
 
@@ -2801,8 +2801,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = LBRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1541:5: ( '{' )
-            // .\\COMTOR.g:1541:9: '{'
+            // COMTOR.g:1541:5: ( '{' )
+            // COMTOR.g:1541:9: '{'
             {
             match('{'); 
 
@@ -2821,8 +2821,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = RBRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1545:5: ( '}' )
-            // .\\COMTOR.g:1545:9: '}'
+            // COMTOR.g:1545:5: ( '}' )
+            // COMTOR.g:1545:9: '}'
             {
             match('}'); 
 
@@ -2841,8 +2841,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = LBRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1549:5: ( '[' )
-            // .\\COMTOR.g:1549:9: '['
+            // COMTOR.g:1549:5: ( '[' )
+            // COMTOR.g:1549:9: '['
             {
             match('['); 
 
@@ -2861,8 +2861,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = RBRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1553:5: ( ']' )
-            // .\\COMTOR.g:1553:9: ']'
+            // COMTOR.g:1553:5: ( ']' )
+            // COMTOR.g:1553:9: ']'
             {
             match(']'); 
 
@@ -2881,8 +2881,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SEMI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1557:5: ( ';' )
-            // .\\COMTOR.g:1557:9: ';'
+            // COMTOR.g:1557:5: ( ';' )
+            // COMTOR.g:1557:9: ';'
             {
             match(';'); 
 
@@ -2901,8 +2901,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1561:5: ( ',' )
-            // .\\COMTOR.g:1561:9: ','
+            // COMTOR.g:1561:5: ( ',' )
+            // COMTOR.g:1561:9: ','
             {
             match(','); 
 
@@ -2921,8 +2921,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = DOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1565:5: ( '.' )
-            // .\\COMTOR.g:1565:9: '.'
+            // COMTOR.g:1565:5: ( '.' )
+            // COMTOR.g:1565:9: '.'
             {
             match('.'); 
 
@@ -2941,8 +2941,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = ELLIPSIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1569:5: ( '...' )
-            // .\\COMTOR.g:1569:9: '...'
+            // COMTOR.g:1569:5: ( '...' )
+            // COMTOR.g:1569:9: '...'
             {
             match("..."); 
 
@@ -2962,8 +2962,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = EQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1573:5: ( '=' )
-            // .\\COMTOR.g:1573:9: '='
+            // COMTOR.g:1573:5: ( '=' )
+            // COMTOR.g:1573:9: '='
             {
             match('='); 
 
@@ -2982,8 +2982,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BANG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1577:5: ( '!' )
-            // .\\COMTOR.g:1577:9: '!'
+            // COMTOR.g:1577:5: ( '!' )
+            // COMTOR.g:1577:9: '!'
             {
             match('!'); 
 
@@ -3002,8 +3002,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = TILDE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1581:5: ( '~' )
-            // .\\COMTOR.g:1581:9: '~'
+            // COMTOR.g:1581:5: ( '~' )
+            // COMTOR.g:1581:9: '~'
             {
             match('~'); 
 
@@ -3022,8 +3022,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = QUES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1585:5: ( '?' )
-            // .\\COMTOR.g:1585:9: '?'
+            // COMTOR.g:1585:5: ( '?' )
+            // COMTOR.g:1585:9: '?'
             {
             match('?'); 
 
@@ -3042,8 +3042,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1589:5: ( ':' )
-            // .\\COMTOR.g:1589:9: ':'
+            // COMTOR.g:1589:5: ( ':' )
+            // COMTOR.g:1589:9: ':'
             {
             match(':'); 
 
@@ -3062,8 +3062,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = EQEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1593:5: ( '==' )
-            // .\\COMTOR.g:1593:9: '=='
+            // COMTOR.g:1593:5: ( '==' )
+            // COMTOR.g:1593:9: '=='
             {
             match("=="); 
 
@@ -3083,8 +3083,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = AMPAMP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1597:5: ( '&&' )
-            // .\\COMTOR.g:1597:9: '&&'
+            // COMTOR.g:1597:5: ( '&&' )
+            // COMTOR.g:1597:9: '&&'
             {
             match("&&"); 
 
@@ -3104,8 +3104,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BARBAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1601:5: ( '||' )
-            // .\\COMTOR.g:1601:9: '||'
+            // COMTOR.g:1601:5: ( '||' )
+            // COMTOR.g:1601:9: '||'
             {
             match("||"); 
 
@@ -3125,8 +3125,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PLUSPLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1605:5: ( '++' )
-            // .\\COMTOR.g:1605:9: '++'
+            // COMTOR.g:1605:5: ( '++' )
+            // COMTOR.g:1605:9: '++'
             {
             match("++"); 
 
@@ -3146,8 +3146,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SUBSUB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1609:5: ( '--' )
-            // .\\COMTOR.g:1609:9: '--'
+            // COMTOR.g:1609:5: ( '--' )
+            // COMTOR.g:1609:9: '--'
             {
             match("--"); 
 
@@ -3167,8 +3167,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1613:5: ( '+' )
-            // .\\COMTOR.g:1613:9: '+'
+            // COMTOR.g:1613:5: ( '+' )
+            // COMTOR.g:1613:9: '+'
             {
             match('+'); 
 
@@ -3187,8 +3187,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SUB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1617:5: ( '-' )
-            // .\\COMTOR.g:1617:9: '-'
+            // COMTOR.g:1617:5: ( '-' )
+            // COMTOR.g:1617:9: '-'
             {
             match('-'); 
 
@@ -3207,8 +3207,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = STAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1621:5: ( '*' )
-            // .\\COMTOR.g:1621:9: '*'
+            // COMTOR.g:1621:5: ( '*' )
+            // COMTOR.g:1621:9: '*'
             {
             match('*'); 
 
@@ -3227,8 +3227,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SLASH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1625:5: ( '/' )
-            // .\\COMTOR.g:1625:9: '/'
+            // COMTOR.g:1625:5: ( '/' )
+            // COMTOR.g:1625:9: '/'
             {
             match('/'); 
 
@@ -3247,8 +3247,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = AMP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1629:5: ( '&' )
-            // .\\COMTOR.g:1629:9: '&'
+            // COMTOR.g:1629:5: ( '&' )
+            // COMTOR.g:1629:9: '&'
             {
             match('&'); 
 
@@ -3267,8 +3267,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1633:5: ( '|' )
-            // .\\COMTOR.g:1633:9: '|'
+            // COMTOR.g:1633:5: ( '|' )
+            // COMTOR.g:1633:9: '|'
             {
             match('|'); 
 
@@ -3287,8 +3287,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CARET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1637:5: ( '^' )
-            // .\\COMTOR.g:1637:9: '^'
+            // COMTOR.g:1637:5: ( '^' )
+            // COMTOR.g:1637:9: '^'
             {
             match('^'); 
 
@@ -3307,8 +3307,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PERCENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1641:5: ( '%' )
-            // .\\COMTOR.g:1641:9: '%'
+            // COMTOR.g:1641:5: ( '%' )
+            // COMTOR.g:1641:9: '%'
             {
             match('%'); 
 
@@ -3327,8 +3327,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PLUSEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1645:5: ( '+=' )
-            // .\\COMTOR.g:1645:9: '+='
+            // COMTOR.g:1645:5: ( '+=' )
+            // COMTOR.g:1645:9: '+='
             {
             match("+="); 
 
@@ -3348,8 +3348,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SUBEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1649:5: ( '-=' )
-            // .\\COMTOR.g:1649:9: '-='
+            // COMTOR.g:1649:5: ( '-=' )
+            // COMTOR.g:1649:9: '-='
             {
             match("-="); 
 
@@ -3369,8 +3369,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = STAREQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1653:5: ( '*=' )
-            // .\\COMTOR.g:1653:9: '*='
+            // COMTOR.g:1653:5: ( '*=' )
+            // COMTOR.g:1653:9: '*='
             {
             match("*="); 
 
@@ -3390,8 +3390,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = SLASHEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1657:5: ( '/=' )
-            // .\\COMTOR.g:1657:9: '/='
+            // COMTOR.g:1657:5: ( '/=' )
+            // COMTOR.g:1657:9: '/='
             {
             match("/="); 
 
@@ -3411,8 +3411,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = AMPEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1661:5: ( '&=' )
-            // .\\COMTOR.g:1661:9: '&='
+            // COMTOR.g:1661:5: ( '&=' )
+            // COMTOR.g:1661:9: '&='
             {
             match("&="); 
 
@@ -3432,8 +3432,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BAREQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1665:5: ( '|=' )
-            // .\\COMTOR.g:1665:9: '|='
+            // COMTOR.g:1665:5: ( '|=' )
+            // COMTOR.g:1665:9: '|='
             {
             match("|="); 
 
@@ -3453,8 +3453,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = CARETEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1669:5: ( '^=' )
-            // .\\COMTOR.g:1669:9: '^='
+            // COMTOR.g:1669:5: ( '^=' )
+            // COMTOR.g:1669:9: '^='
             {
             match("^="); 
 
@@ -3474,8 +3474,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = PERCENTEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1673:5: ( '%=' )
-            // .\\COMTOR.g:1673:9: '%='
+            // COMTOR.g:1673:5: ( '%=' )
+            // COMTOR.g:1673:9: '%='
             {
             match("%="); 
 
@@ -3495,8 +3495,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = MONKEYS_AT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1677:5: ( '@' )
-            // .\\COMTOR.g:1677:9: '@'
+            // COMTOR.g:1677:5: ( '@' )
+            // COMTOR.g:1677:9: '@'
             {
             match('@'); 
 
@@ -3515,8 +3515,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = BANGEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1681:5: ( '!=' )
-            // .\\COMTOR.g:1681:9: '!='
+            // COMTOR.g:1681:5: ( '!=' )
+            // COMTOR.g:1681:9: '!='
             {
             match("!="); 
 
@@ -3536,8 +3536,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1685:5: ( '>' )
-            // .\\COMTOR.g:1685:9: '>'
+            // COMTOR.g:1685:5: ( '>' )
+            // COMTOR.g:1685:9: '>'
             {
             match('>'); 
 
@@ -3556,8 +3556,8 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1689:5: ( '<' )
-            // .\\COMTOR.g:1689:9: '<'
+            // COMTOR.g:1689:5: ( '<' )
+            // COMTOR.g:1689:9: '<'
             {
             match('<'); 
 
@@ -3576,11 +3576,11 @@ public class COMTORLexer extends Lexer {
         try {
             int _type = IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // .\\COMTOR.g:1693:5: ( IdentifierStart ( IdentifierPart )* )
-            // .\\COMTOR.g:1693:9: IdentifierStart ( IdentifierPart )*
+            // COMTOR.g:1693:5: ( IdentifierStart ( IdentifierPart )* )
+            // COMTOR.g:1693:9: IdentifierStart ( IdentifierPart )*
             {
             mIdentifierStart(); 
-            // .\\COMTOR.g:1693:25: ( IdentifierPart )*
+            // COMTOR.g:1693:25: ( IdentifierPart )*
             loop30:
             do {
                 int alt30=2;
@@ -3593,7 +3593,7 @@ public class COMTORLexer extends Lexer {
 
                 switch (alt30) {
             	case 1 :
-            	    // .\\COMTOR.g:1693:25: IdentifierPart
+            	    // COMTOR.g:1693:25: IdentifierPart
             	    {
             	    mIdentifierPart(); 
 
@@ -3619,18 +3619,18 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "SurrogateIdentifer"
     public final void mSurrogateIdentifer() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1698:5: ( ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' ) )
-            // .\\COMTOR.g:1698:9: ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' )
+            // COMTOR.g:1698:5: ( ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' ) )
+            // COMTOR.g:1698:9: ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' )
             {
-            // .\\COMTOR.g:1698:9: ( '\\ud800' .. '\\udbff' )
-            // .\\COMTOR.g:1698:10: '\\ud800' .. '\\udbff'
+            // COMTOR.g:1698:9: ( '\\ud800' .. '\\udbff' )
+            // COMTOR.g:1698:10: '\\ud800' .. '\\udbff'
             {
             matchRange('\uD800','\uDBFF'); 
 
             }
 
-            // .\\COMTOR.g:1698:30: ( '\\udc00' .. '\\udfff' )
-            // .\\COMTOR.g:1698:31: '\\udc00' .. '\\udfff'
+            // COMTOR.g:1698:30: ( '\\udc00' .. '\\udfff' )
+            // COMTOR.g:1698:31: '\\udc00' .. '\\udfff'
             {
             matchRange('\uDC00','\uDFFF'); 
 
@@ -3648,7 +3648,7 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "IdentifierStart"
     public final void mIdentifierStart() throws RecognitionException {
         try {
-            // .\\COMTOR.g:1703:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00a2' .. '\\u00a5' | '\\u00aa' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u0236' | '\\u0250' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u037a' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u03fb' | '\\u0400' .. '\\u0481' | '\\u048a' .. '\\u04ce' | '\\u04d0' .. '\\u04f5' | '\\u04f8' .. '\\u04f9' | '\\u0500' .. '\\u050f' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u064a' | '\\u066e' .. '\\u066f' | '\\u0671' .. '\\u06d3' | '\\u06d5' | '\\u06e5' .. '\\u06e6' | '\\u06ee' .. '\\u06ef' | '\\u06fa' .. '\\u06fc' | '\\u06ff' | '\\u0710' | '\\u0712' .. '\\u072f' | '\\u074d' .. '\\u074f' | '\\u0780' .. '\\u07a5' | '\\u07b1' | '\\u0904' .. '\\u0939' | '\\u093d' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bd' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e1' | '\\u09f0' .. '\\u09f3' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a72' .. '\\u0a74' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae1' | '\\u0af1' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3d' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b71' | '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb5' | '\\u0bb7' .. '\\u0bb9' | '\\u0bf9' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c60' .. '\\u0c61' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbd' | '\\u0cde' | '\\u0ce0' .. '\\u0ce1' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d60' .. '\\u0d61' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0e01' .. '\\u0e30' | '\\u0e32' .. '\\u0e33' | '\\u0e3f' .. '\\u0e46' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb0' | '\\u0eb2' .. '\\u0eb3' | '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f40' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f88' .. '\\u0f8b' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u1050' .. '\\u1055' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10f8' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12ae' | '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12ce' | '\\u12d0' .. '\\u12d6' | '\\u12d8' .. '\\u12ee' | '\\u12f0' .. '\\u130e' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131e' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135a' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1711' | '\\u1720' .. '\\u1731' | '\\u1740' .. '\\u1751' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1780' .. '\\u17b3' | '\\u17d7' | '\\u17db' .. '\\u17dc' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a8' | '\\u1900' .. '\\u191c' | '\\u1950' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1d00' .. '\\u1d6b' | '\\u1e00' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u203f' .. '\\u2040' | '\\u2054' | '\\u2071' | '\\u207f' | '\\u20a0' .. '\\u20b1' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u213d' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fa5' | '\\ua000' .. '\\ua48c' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' | '\\ufb1f' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfc' | '\\ufe33' .. '\\ufe34' | '\\ufe4d' .. '\\ufe4f' | '\\ufe69' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\uff04' | '\\uff21' .. '\\uff3a' | '\\uff3f' | '\\uff41' .. '\\uff5a' | '\\uff65' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' | '\\uffe0' .. '\\uffe1' | '\\uffe5' .. '\\uffe6' | ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' ) )
+            // COMTOR.g:1703:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00a2' .. '\\u00a5' | '\\u00aa' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u0236' | '\\u0250' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u037a' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u03fb' | '\\u0400' .. '\\u0481' | '\\u048a' .. '\\u04ce' | '\\u04d0' .. '\\u04f5' | '\\u04f8' .. '\\u04f9' | '\\u0500' .. '\\u050f' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u064a' | '\\u066e' .. '\\u066f' | '\\u0671' .. '\\u06d3' | '\\u06d5' | '\\u06e5' .. '\\u06e6' | '\\u06ee' .. '\\u06ef' | '\\u06fa' .. '\\u06fc' | '\\u06ff' | '\\u0710' | '\\u0712' .. '\\u072f' | '\\u074d' .. '\\u074f' | '\\u0780' .. '\\u07a5' | '\\u07b1' | '\\u0904' .. '\\u0939' | '\\u093d' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bd' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e1' | '\\u09f0' .. '\\u09f3' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a72' .. '\\u0a74' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae1' | '\\u0af1' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3d' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b71' | '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb5' | '\\u0bb7' .. '\\u0bb9' | '\\u0bf9' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c60' .. '\\u0c61' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbd' | '\\u0cde' | '\\u0ce0' .. '\\u0ce1' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d60' .. '\\u0d61' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0e01' .. '\\u0e30' | '\\u0e32' .. '\\u0e33' | '\\u0e3f' .. '\\u0e46' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb0' | '\\u0eb2' .. '\\u0eb3' | '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f40' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f88' .. '\\u0f8b' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u1050' .. '\\u1055' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10f8' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12ae' | '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12ce' | '\\u12d0' .. '\\u12d6' | '\\u12d8' .. '\\u12ee' | '\\u12f0' .. '\\u130e' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131e' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135a' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1711' | '\\u1720' .. '\\u1731' | '\\u1740' .. '\\u1751' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1780' .. '\\u17b3' | '\\u17d7' | '\\u17db' .. '\\u17dc' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a8' | '\\u1900' .. '\\u191c' | '\\u1950' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1d00' .. '\\u1d6b' | '\\u1e00' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u203f' .. '\\u2040' | '\\u2054' | '\\u2071' | '\\u207f' | '\\u20a0' .. '\\u20b1' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u213d' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fa5' | '\\ua000' .. '\\ua48c' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' | '\\ufb1f' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfc' | '\\ufe33' .. '\\ufe34' | '\\ufe4d' .. '\\ufe4f' | '\\ufe69' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\uff04' | '\\uff21' .. '\\uff3a' | '\\uff3f' | '\\uff41' .. '\\uff5a' | '\\uff65' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' | '\\uffe0' .. '\\uffe1' | '\\uffe5' .. '\\uffe6' | ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' ) )
             int alt31=294;
             int LA31_0 = input.LA(1);
 
@@ -4542,2068 +4542,2068 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt31) {
                 case 1 :
-                    // .\\COMTOR.g:1703:9: '\\u0024'
+                    // COMTOR.g:1703:9: '\\u0024'
                     {
                     match('$'); 
 
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:1704:9: '\\u0041' .. '\\u005a'
+                    // COMTOR.g:1704:9: '\\u0041' .. '\\u005a'
                     {
                     matchRange('A','Z'); 
 
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:1705:9: '\\u005f'
+                    // COMTOR.g:1705:9: '\\u005f'
                     {
                     match('_'); 
 
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:1706:9: '\\u0061' .. '\\u007a'
+                    // COMTOR.g:1706:9: '\\u0061' .. '\\u007a'
                     {
                     matchRange('a','z'); 
 
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:1707:9: '\\u00a2' .. '\\u00a5'
+                    // COMTOR.g:1707:9: '\\u00a2' .. '\\u00a5'
                     {
                     matchRange('\u00A2','\u00A5'); 
 
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:1708:9: '\\u00aa'
+                    // COMTOR.g:1708:9: '\\u00aa'
                     {
                     match('\u00AA'); 
 
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:1709:9: '\\u00b5'
+                    // COMTOR.g:1709:9: '\\u00b5'
                     {
                     match('\u00B5'); 
 
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:1710:9: '\\u00ba'
+                    // COMTOR.g:1710:9: '\\u00ba'
                     {
                     match('\u00BA'); 
 
                     }
                     break;
                 case 9 :
-                    // .\\COMTOR.g:1711:9: '\\u00c0' .. '\\u00d6'
+                    // COMTOR.g:1711:9: '\\u00c0' .. '\\u00d6'
                     {
                     matchRange('\u00C0','\u00D6'); 
 
                     }
                     break;
                 case 10 :
-                    // .\\COMTOR.g:1712:9: '\\u00d8' .. '\\u00f6'
+                    // COMTOR.g:1712:9: '\\u00d8' .. '\\u00f6'
                     {
                     matchRange('\u00D8','\u00F6'); 
 
                     }
                     break;
                 case 11 :
-                    // .\\COMTOR.g:1713:9: '\\u00f8' .. '\\u0236'
+                    // COMTOR.g:1713:9: '\\u00f8' .. '\\u0236'
                     {
                     matchRange('\u00F8','\u0236'); 
 
                     }
                     break;
                 case 12 :
-                    // .\\COMTOR.g:1714:9: '\\u0250' .. '\\u02c1'
+                    // COMTOR.g:1714:9: '\\u0250' .. '\\u02c1'
                     {
                     matchRange('\u0250','\u02C1'); 
 
                     }
                     break;
                 case 13 :
-                    // .\\COMTOR.g:1715:9: '\\u02c6' .. '\\u02d1'
+                    // COMTOR.g:1715:9: '\\u02c6' .. '\\u02d1'
                     {
                     matchRange('\u02C6','\u02D1'); 
 
                     }
                     break;
                 case 14 :
-                    // .\\COMTOR.g:1716:9: '\\u02e0' .. '\\u02e4'
+                    // COMTOR.g:1716:9: '\\u02e0' .. '\\u02e4'
                     {
                     matchRange('\u02E0','\u02E4'); 
 
                     }
                     break;
                 case 15 :
-                    // .\\COMTOR.g:1717:9: '\\u02ee'
+                    // COMTOR.g:1717:9: '\\u02ee'
                     {
                     match('\u02EE'); 
 
                     }
                     break;
                 case 16 :
-                    // .\\COMTOR.g:1718:9: '\\u037a'
+                    // COMTOR.g:1718:9: '\\u037a'
                     {
                     match('\u037A'); 
 
                     }
                     break;
                 case 17 :
-                    // .\\COMTOR.g:1719:9: '\\u0386'
+                    // COMTOR.g:1719:9: '\\u0386'
                     {
                     match('\u0386'); 
 
                     }
                     break;
                 case 18 :
-                    // .\\COMTOR.g:1720:9: '\\u0388' .. '\\u038a'
+                    // COMTOR.g:1720:9: '\\u0388' .. '\\u038a'
                     {
                     matchRange('\u0388','\u038A'); 
 
                     }
                     break;
                 case 19 :
-                    // .\\COMTOR.g:1721:9: '\\u038c'
+                    // COMTOR.g:1721:9: '\\u038c'
                     {
                     match('\u038C'); 
 
                     }
                     break;
                 case 20 :
-                    // .\\COMTOR.g:1722:9: '\\u038e' .. '\\u03a1'
+                    // COMTOR.g:1722:9: '\\u038e' .. '\\u03a1'
                     {
                     matchRange('\u038E','\u03A1'); 
 
                     }
                     break;
                 case 21 :
-                    // .\\COMTOR.g:1723:9: '\\u03a3' .. '\\u03ce'
+                    // COMTOR.g:1723:9: '\\u03a3' .. '\\u03ce'
                     {
                     matchRange('\u03A3','\u03CE'); 
 
                     }
                     break;
                 case 22 :
-                    // .\\COMTOR.g:1724:9: '\\u03d0' .. '\\u03f5'
+                    // COMTOR.g:1724:9: '\\u03d0' .. '\\u03f5'
                     {
                     matchRange('\u03D0','\u03F5'); 
 
                     }
                     break;
                 case 23 :
-                    // .\\COMTOR.g:1725:9: '\\u03f7' .. '\\u03fb'
+                    // COMTOR.g:1725:9: '\\u03f7' .. '\\u03fb'
                     {
                     matchRange('\u03F7','\u03FB'); 
 
                     }
                     break;
                 case 24 :
-                    // .\\COMTOR.g:1726:9: '\\u0400' .. '\\u0481'
+                    // COMTOR.g:1726:9: '\\u0400' .. '\\u0481'
                     {
                     matchRange('\u0400','\u0481'); 
 
                     }
                     break;
                 case 25 :
-                    // .\\COMTOR.g:1727:9: '\\u048a' .. '\\u04ce'
+                    // COMTOR.g:1727:9: '\\u048a' .. '\\u04ce'
                     {
                     matchRange('\u048A','\u04CE'); 
 
                     }
                     break;
                 case 26 :
-                    // .\\COMTOR.g:1728:9: '\\u04d0' .. '\\u04f5'
+                    // COMTOR.g:1728:9: '\\u04d0' .. '\\u04f5'
                     {
                     matchRange('\u04D0','\u04F5'); 
 
                     }
                     break;
                 case 27 :
-                    // .\\COMTOR.g:1729:9: '\\u04f8' .. '\\u04f9'
+                    // COMTOR.g:1729:9: '\\u04f8' .. '\\u04f9'
                     {
                     matchRange('\u04F8','\u04F9'); 
 
                     }
                     break;
                 case 28 :
-                    // .\\COMTOR.g:1730:9: '\\u0500' .. '\\u050f'
+                    // COMTOR.g:1730:9: '\\u0500' .. '\\u050f'
                     {
                     matchRange('\u0500','\u050F'); 
 
                     }
                     break;
                 case 29 :
-                    // .\\COMTOR.g:1731:9: '\\u0531' .. '\\u0556'
+                    // COMTOR.g:1731:9: '\\u0531' .. '\\u0556'
                     {
                     matchRange('\u0531','\u0556'); 
 
                     }
                     break;
                 case 30 :
-                    // .\\COMTOR.g:1732:9: '\\u0559'
+                    // COMTOR.g:1732:9: '\\u0559'
                     {
                     match('\u0559'); 
 
                     }
                     break;
                 case 31 :
-                    // .\\COMTOR.g:1733:9: '\\u0561' .. '\\u0587'
+                    // COMTOR.g:1733:9: '\\u0561' .. '\\u0587'
                     {
                     matchRange('\u0561','\u0587'); 
 
                     }
                     break;
                 case 32 :
-                    // .\\COMTOR.g:1734:9: '\\u05d0' .. '\\u05ea'
+                    // COMTOR.g:1734:9: '\\u05d0' .. '\\u05ea'
                     {
                     matchRange('\u05D0','\u05EA'); 
 
                     }
                     break;
                 case 33 :
-                    // .\\COMTOR.g:1735:9: '\\u05f0' .. '\\u05f2'
+                    // COMTOR.g:1735:9: '\\u05f0' .. '\\u05f2'
                     {
                     matchRange('\u05F0','\u05F2'); 
 
                     }
                     break;
                 case 34 :
-                    // .\\COMTOR.g:1736:9: '\\u0621' .. '\\u063a'
+                    // COMTOR.g:1736:9: '\\u0621' .. '\\u063a'
                     {
                     matchRange('\u0621','\u063A'); 
 
                     }
                     break;
                 case 35 :
-                    // .\\COMTOR.g:1737:9: '\\u0640' .. '\\u064a'
+                    // COMTOR.g:1737:9: '\\u0640' .. '\\u064a'
                     {
                     matchRange('\u0640','\u064A'); 
 
                     }
                     break;
                 case 36 :
-                    // .\\COMTOR.g:1738:9: '\\u066e' .. '\\u066f'
+                    // COMTOR.g:1738:9: '\\u066e' .. '\\u066f'
                     {
                     matchRange('\u066E','\u066F'); 
 
                     }
                     break;
                 case 37 :
-                    // .\\COMTOR.g:1739:9: '\\u0671' .. '\\u06d3'
+                    // COMTOR.g:1739:9: '\\u0671' .. '\\u06d3'
                     {
                     matchRange('\u0671','\u06D3'); 
 
                     }
                     break;
                 case 38 :
-                    // .\\COMTOR.g:1740:9: '\\u06d5'
+                    // COMTOR.g:1740:9: '\\u06d5'
                     {
                     match('\u06D5'); 
 
                     }
                     break;
                 case 39 :
-                    // .\\COMTOR.g:1741:9: '\\u06e5' .. '\\u06e6'
+                    // COMTOR.g:1741:9: '\\u06e5' .. '\\u06e6'
                     {
                     matchRange('\u06E5','\u06E6'); 
 
                     }
                     break;
                 case 40 :
-                    // .\\COMTOR.g:1742:9: '\\u06ee' .. '\\u06ef'
+                    // COMTOR.g:1742:9: '\\u06ee' .. '\\u06ef'
                     {
                     matchRange('\u06EE','\u06EF'); 
 
                     }
                     break;
                 case 41 :
-                    // .\\COMTOR.g:1743:9: '\\u06fa' .. '\\u06fc'
+                    // COMTOR.g:1743:9: '\\u06fa' .. '\\u06fc'
                     {
                     matchRange('\u06FA','\u06FC'); 
 
                     }
                     break;
                 case 42 :
-                    // .\\COMTOR.g:1744:9: '\\u06ff'
+                    // COMTOR.g:1744:9: '\\u06ff'
                     {
                     match('\u06FF'); 
 
                     }
                     break;
                 case 43 :
-                    // .\\COMTOR.g:1745:9: '\\u0710'
+                    // COMTOR.g:1745:9: '\\u0710'
                     {
                     match('\u0710'); 
 
                     }
                     break;
                 case 44 :
-                    // .\\COMTOR.g:1746:9: '\\u0712' .. '\\u072f'
+                    // COMTOR.g:1746:9: '\\u0712' .. '\\u072f'
                     {
                     matchRange('\u0712','\u072F'); 
 
                     }
                     break;
                 case 45 :
-                    // .\\COMTOR.g:1747:9: '\\u074d' .. '\\u074f'
+                    // COMTOR.g:1747:9: '\\u074d' .. '\\u074f'
                     {
                     matchRange('\u074D','\u074F'); 
 
                     }
                     break;
                 case 46 :
-                    // .\\COMTOR.g:1748:9: '\\u0780' .. '\\u07a5'
+                    // COMTOR.g:1748:9: '\\u0780' .. '\\u07a5'
                     {
                     matchRange('\u0780','\u07A5'); 
 
                     }
                     break;
                 case 47 :
-                    // .\\COMTOR.g:1749:9: '\\u07b1'
+                    // COMTOR.g:1749:9: '\\u07b1'
                     {
                     match('\u07B1'); 
 
                     }
                     break;
                 case 48 :
-                    // .\\COMTOR.g:1750:9: '\\u0904' .. '\\u0939'
+                    // COMTOR.g:1750:9: '\\u0904' .. '\\u0939'
                     {
                     matchRange('\u0904','\u0939'); 
 
                     }
                     break;
                 case 49 :
-                    // .\\COMTOR.g:1751:9: '\\u093d'
+                    // COMTOR.g:1751:9: '\\u093d'
                     {
                     match('\u093D'); 
 
                     }
                     break;
                 case 50 :
-                    // .\\COMTOR.g:1752:9: '\\u0950'
+                    // COMTOR.g:1752:9: '\\u0950'
                     {
                     match('\u0950'); 
 
                     }
                     break;
                 case 51 :
-                    // .\\COMTOR.g:1753:9: '\\u0958' .. '\\u0961'
+                    // COMTOR.g:1753:9: '\\u0958' .. '\\u0961'
                     {
                     matchRange('\u0958','\u0961'); 
 
                     }
                     break;
                 case 52 :
-                    // .\\COMTOR.g:1754:9: '\\u0985' .. '\\u098c'
+                    // COMTOR.g:1754:9: '\\u0985' .. '\\u098c'
                     {
                     matchRange('\u0985','\u098C'); 
 
                     }
                     break;
                 case 53 :
-                    // .\\COMTOR.g:1755:9: '\\u098f' .. '\\u0990'
+                    // COMTOR.g:1755:9: '\\u098f' .. '\\u0990'
                     {
                     matchRange('\u098F','\u0990'); 
 
                     }
                     break;
                 case 54 :
-                    // .\\COMTOR.g:1756:9: '\\u0993' .. '\\u09a8'
+                    // COMTOR.g:1756:9: '\\u0993' .. '\\u09a8'
                     {
                     matchRange('\u0993','\u09A8'); 
 
                     }
                     break;
                 case 55 :
-                    // .\\COMTOR.g:1757:9: '\\u09aa' .. '\\u09b0'
+                    // COMTOR.g:1757:9: '\\u09aa' .. '\\u09b0'
                     {
                     matchRange('\u09AA','\u09B0'); 
 
                     }
                     break;
                 case 56 :
-                    // .\\COMTOR.g:1758:9: '\\u09b2'
+                    // COMTOR.g:1758:9: '\\u09b2'
                     {
                     match('\u09B2'); 
 
                     }
                     break;
                 case 57 :
-                    // .\\COMTOR.g:1759:9: '\\u09b6' .. '\\u09b9'
+                    // COMTOR.g:1759:9: '\\u09b6' .. '\\u09b9'
                     {
                     matchRange('\u09B6','\u09B9'); 
 
                     }
                     break;
                 case 58 :
-                    // .\\COMTOR.g:1760:9: '\\u09bd'
+                    // COMTOR.g:1760:9: '\\u09bd'
                     {
                     match('\u09BD'); 
 
                     }
                     break;
                 case 59 :
-                    // .\\COMTOR.g:1761:9: '\\u09dc' .. '\\u09dd'
+                    // COMTOR.g:1761:9: '\\u09dc' .. '\\u09dd'
                     {
                     matchRange('\u09DC','\u09DD'); 
 
                     }
                     break;
                 case 60 :
-                    // .\\COMTOR.g:1762:9: '\\u09df' .. '\\u09e1'
+                    // COMTOR.g:1762:9: '\\u09df' .. '\\u09e1'
                     {
                     matchRange('\u09DF','\u09E1'); 
 
                     }
                     break;
                 case 61 :
-                    // .\\COMTOR.g:1763:9: '\\u09f0' .. '\\u09f3'
+                    // COMTOR.g:1763:9: '\\u09f0' .. '\\u09f3'
                     {
                     matchRange('\u09F0','\u09F3'); 
 
                     }
                     break;
                 case 62 :
-                    // .\\COMTOR.g:1764:9: '\\u0a05' .. '\\u0a0a'
+                    // COMTOR.g:1764:9: '\\u0a05' .. '\\u0a0a'
                     {
                     matchRange('\u0A05','\u0A0A'); 
 
                     }
                     break;
                 case 63 :
-                    // .\\COMTOR.g:1765:9: '\\u0a0f' .. '\\u0a10'
+                    // COMTOR.g:1765:9: '\\u0a0f' .. '\\u0a10'
                     {
                     matchRange('\u0A0F','\u0A10'); 
 
                     }
                     break;
                 case 64 :
-                    // .\\COMTOR.g:1766:9: '\\u0a13' .. '\\u0a28'
+                    // COMTOR.g:1766:9: '\\u0a13' .. '\\u0a28'
                     {
                     matchRange('\u0A13','\u0A28'); 
 
                     }
                     break;
                 case 65 :
-                    // .\\COMTOR.g:1767:9: '\\u0a2a' .. '\\u0a30'
+                    // COMTOR.g:1767:9: '\\u0a2a' .. '\\u0a30'
                     {
                     matchRange('\u0A2A','\u0A30'); 
 
                     }
                     break;
                 case 66 :
-                    // .\\COMTOR.g:1768:9: '\\u0a32' .. '\\u0a33'
+                    // COMTOR.g:1768:9: '\\u0a32' .. '\\u0a33'
                     {
                     matchRange('\u0A32','\u0A33'); 
 
                     }
                     break;
                 case 67 :
-                    // .\\COMTOR.g:1769:9: '\\u0a35' .. '\\u0a36'
+                    // COMTOR.g:1769:9: '\\u0a35' .. '\\u0a36'
                     {
                     matchRange('\u0A35','\u0A36'); 
 
                     }
                     break;
                 case 68 :
-                    // .\\COMTOR.g:1770:9: '\\u0a38' .. '\\u0a39'
+                    // COMTOR.g:1770:9: '\\u0a38' .. '\\u0a39'
                     {
                     matchRange('\u0A38','\u0A39'); 
 
                     }
                     break;
                 case 69 :
-                    // .\\COMTOR.g:1771:9: '\\u0a59' .. '\\u0a5c'
+                    // COMTOR.g:1771:9: '\\u0a59' .. '\\u0a5c'
                     {
                     matchRange('\u0A59','\u0A5C'); 
 
                     }
                     break;
                 case 70 :
-                    // .\\COMTOR.g:1772:9: '\\u0a5e'
+                    // COMTOR.g:1772:9: '\\u0a5e'
                     {
                     match('\u0A5E'); 
 
                     }
                     break;
                 case 71 :
-                    // .\\COMTOR.g:1773:9: '\\u0a72' .. '\\u0a74'
+                    // COMTOR.g:1773:9: '\\u0a72' .. '\\u0a74'
                     {
                     matchRange('\u0A72','\u0A74'); 
 
                     }
                     break;
                 case 72 :
-                    // .\\COMTOR.g:1774:9: '\\u0a85' .. '\\u0a8d'
+                    // COMTOR.g:1774:9: '\\u0a85' .. '\\u0a8d'
                     {
                     matchRange('\u0A85','\u0A8D'); 
 
                     }
                     break;
                 case 73 :
-                    // .\\COMTOR.g:1775:9: '\\u0a8f' .. '\\u0a91'
+                    // COMTOR.g:1775:9: '\\u0a8f' .. '\\u0a91'
                     {
                     matchRange('\u0A8F','\u0A91'); 
 
                     }
                     break;
                 case 74 :
-                    // .\\COMTOR.g:1776:9: '\\u0a93' .. '\\u0aa8'
+                    // COMTOR.g:1776:9: '\\u0a93' .. '\\u0aa8'
                     {
                     matchRange('\u0A93','\u0AA8'); 
 
                     }
                     break;
                 case 75 :
-                    // .\\COMTOR.g:1777:9: '\\u0aaa' .. '\\u0ab0'
+                    // COMTOR.g:1777:9: '\\u0aaa' .. '\\u0ab0'
                     {
                     matchRange('\u0AAA','\u0AB0'); 
 
                     }
                     break;
                 case 76 :
-                    // .\\COMTOR.g:1778:9: '\\u0ab2' .. '\\u0ab3'
+                    // COMTOR.g:1778:9: '\\u0ab2' .. '\\u0ab3'
                     {
                     matchRange('\u0AB2','\u0AB3'); 
 
                     }
                     break;
                 case 77 :
-                    // .\\COMTOR.g:1779:9: '\\u0ab5' .. '\\u0ab9'
+                    // COMTOR.g:1779:9: '\\u0ab5' .. '\\u0ab9'
                     {
                     matchRange('\u0AB5','\u0AB9'); 
 
                     }
                     break;
                 case 78 :
-                    // .\\COMTOR.g:1780:9: '\\u0abd'
+                    // COMTOR.g:1780:9: '\\u0abd'
                     {
                     match('\u0ABD'); 
 
                     }
                     break;
                 case 79 :
-                    // .\\COMTOR.g:1781:9: '\\u0ad0'
+                    // COMTOR.g:1781:9: '\\u0ad0'
                     {
                     match('\u0AD0'); 
 
                     }
                     break;
                 case 80 :
-                    // .\\COMTOR.g:1782:9: '\\u0ae0' .. '\\u0ae1'
+                    // COMTOR.g:1782:9: '\\u0ae0' .. '\\u0ae1'
                     {
                     matchRange('\u0AE0','\u0AE1'); 
 
                     }
                     break;
                 case 81 :
-                    // .\\COMTOR.g:1783:9: '\\u0af1'
+                    // COMTOR.g:1783:9: '\\u0af1'
                     {
                     match('\u0AF1'); 
 
                     }
                     break;
                 case 82 :
-                    // .\\COMTOR.g:1784:9: '\\u0b05' .. '\\u0b0c'
+                    // COMTOR.g:1784:9: '\\u0b05' .. '\\u0b0c'
                     {
                     matchRange('\u0B05','\u0B0C'); 
 
                     }
                     break;
                 case 83 :
-                    // .\\COMTOR.g:1785:9: '\\u0b0f' .. '\\u0b10'
+                    // COMTOR.g:1785:9: '\\u0b0f' .. '\\u0b10'
                     {
                     matchRange('\u0B0F','\u0B10'); 
 
                     }
                     break;
                 case 84 :
-                    // .\\COMTOR.g:1786:9: '\\u0b13' .. '\\u0b28'
+                    // COMTOR.g:1786:9: '\\u0b13' .. '\\u0b28'
                     {
                     matchRange('\u0B13','\u0B28'); 
 
                     }
                     break;
                 case 85 :
-                    // .\\COMTOR.g:1787:9: '\\u0b2a' .. '\\u0b30'
+                    // COMTOR.g:1787:9: '\\u0b2a' .. '\\u0b30'
                     {
                     matchRange('\u0B2A','\u0B30'); 
 
                     }
                     break;
                 case 86 :
-                    // .\\COMTOR.g:1788:9: '\\u0b32' .. '\\u0b33'
+                    // COMTOR.g:1788:9: '\\u0b32' .. '\\u0b33'
                     {
                     matchRange('\u0B32','\u0B33'); 
 
                     }
                     break;
                 case 87 :
-                    // .\\COMTOR.g:1789:9: '\\u0b35' .. '\\u0b39'
+                    // COMTOR.g:1789:9: '\\u0b35' .. '\\u0b39'
                     {
                     matchRange('\u0B35','\u0B39'); 
 
                     }
                     break;
                 case 88 :
-                    // .\\COMTOR.g:1790:9: '\\u0b3d'
+                    // COMTOR.g:1790:9: '\\u0b3d'
                     {
                     match('\u0B3D'); 
 
                     }
                     break;
                 case 89 :
-                    // .\\COMTOR.g:1791:9: '\\u0b5c' .. '\\u0b5d'
+                    // COMTOR.g:1791:9: '\\u0b5c' .. '\\u0b5d'
                     {
                     matchRange('\u0B5C','\u0B5D'); 
 
                     }
                     break;
                 case 90 :
-                    // .\\COMTOR.g:1792:9: '\\u0b5f' .. '\\u0b61'
+                    // COMTOR.g:1792:9: '\\u0b5f' .. '\\u0b61'
                     {
                     matchRange('\u0B5F','\u0B61'); 
 
                     }
                     break;
                 case 91 :
-                    // .\\COMTOR.g:1793:9: '\\u0b71'
+                    // COMTOR.g:1793:9: '\\u0b71'
                     {
                     match('\u0B71'); 
 
                     }
                     break;
                 case 92 :
-                    // .\\COMTOR.g:1794:9: '\\u0b83'
+                    // COMTOR.g:1794:9: '\\u0b83'
                     {
                     match('\u0B83'); 
 
                     }
                     break;
                 case 93 :
-                    // .\\COMTOR.g:1795:9: '\\u0b85' .. '\\u0b8a'
+                    // COMTOR.g:1795:9: '\\u0b85' .. '\\u0b8a'
                     {
                     matchRange('\u0B85','\u0B8A'); 
 
                     }
                     break;
                 case 94 :
-                    // .\\COMTOR.g:1796:9: '\\u0b8e' .. '\\u0b90'
+                    // COMTOR.g:1796:9: '\\u0b8e' .. '\\u0b90'
                     {
                     matchRange('\u0B8E','\u0B90'); 
 
                     }
                     break;
                 case 95 :
-                    // .\\COMTOR.g:1797:9: '\\u0b92' .. '\\u0b95'
+                    // COMTOR.g:1797:9: '\\u0b92' .. '\\u0b95'
                     {
                     matchRange('\u0B92','\u0B95'); 
 
                     }
                     break;
                 case 96 :
-                    // .\\COMTOR.g:1798:9: '\\u0b99' .. '\\u0b9a'
+                    // COMTOR.g:1798:9: '\\u0b99' .. '\\u0b9a'
                     {
                     matchRange('\u0B99','\u0B9A'); 
 
                     }
                     break;
                 case 97 :
-                    // .\\COMTOR.g:1799:9: '\\u0b9c'
+                    // COMTOR.g:1799:9: '\\u0b9c'
                     {
                     match('\u0B9C'); 
 
                     }
                     break;
                 case 98 :
-                    // .\\COMTOR.g:1800:9: '\\u0b9e' .. '\\u0b9f'
+                    // COMTOR.g:1800:9: '\\u0b9e' .. '\\u0b9f'
                     {
                     matchRange('\u0B9E','\u0B9F'); 
 
                     }
                     break;
                 case 99 :
-                    // .\\COMTOR.g:1801:9: '\\u0ba3' .. '\\u0ba4'
+                    // COMTOR.g:1801:9: '\\u0ba3' .. '\\u0ba4'
                     {
                     matchRange('\u0BA3','\u0BA4'); 
 
                     }
                     break;
                 case 100 :
-                    // .\\COMTOR.g:1802:9: '\\u0ba8' .. '\\u0baa'
+                    // COMTOR.g:1802:9: '\\u0ba8' .. '\\u0baa'
                     {
                     matchRange('\u0BA8','\u0BAA'); 
 
                     }
                     break;
                 case 101 :
-                    // .\\COMTOR.g:1803:9: '\\u0bae' .. '\\u0bb5'
+                    // COMTOR.g:1803:9: '\\u0bae' .. '\\u0bb5'
                     {
                     matchRange('\u0BAE','\u0BB5'); 
 
                     }
                     break;
                 case 102 :
-                    // .\\COMTOR.g:1804:9: '\\u0bb7' .. '\\u0bb9'
+                    // COMTOR.g:1804:9: '\\u0bb7' .. '\\u0bb9'
                     {
                     matchRange('\u0BB7','\u0BB9'); 
 
                     }
                     break;
                 case 103 :
-                    // .\\COMTOR.g:1805:9: '\\u0bf9'
+                    // COMTOR.g:1805:9: '\\u0bf9'
                     {
                     match('\u0BF9'); 
 
                     }
                     break;
                 case 104 :
-                    // .\\COMTOR.g:1806:9: '\\u0c05' .. '\\u0c0c'
+                    // COMTOR.g:1806:9: '\\u0c05' .. '\\u0c0c'
                     {
                     matchRange('\u0C05','\u0C0C'); 
 
                     }
                     break;
                 case 105 :
-                    // .\\COMTOR.g:1807:9: '\\u0c0e' .. '\\u0c10'
+                    // COMTOR.g:1807:9: '\\u0c0e' .. '\\u0c10'
                     {
                     matchRange('\u0C0E','\u0C10'); 
 
                     }
                     break;
                 case 106 :
-                    // .\\COMTOR.g:1808:9: '\\u0c12' .. '\\u0c28'
+                    // COMTOR.g:1808:9: '\\u0c12' .. '\\u0c28'
                     {
                     matchRange('\u0C12','\u0C28'); 
 
                     }
                     break;
                 case 107 :
-                    // .\\COMTOR.g:1809:9: '\\u0c2a' .. '\\u0c33'
+                    // COMTOR.g:1809:9: '\\u0c2a' .. '\\u0c33'
                     {
                     matchRange('\u0C2A','\u0C33'); 
 
                     }
                     break;
                 case 108 :
-                    // .\\COMTOR.g:1810:9: '\\u0c35' .. '\\u0c39'
+                    // COMTOR.g:1810:9: '\\u0c35' .. '\\u0c39'
                     {
                     matchRange('\u0C35','\u0C39'); 
 
                     }
                     break;
                 case 109 :
-                    // .\\COMTOR.g:1811:9: '\\u0c60' .. '\\u0c61'
+                    // COMTOR.g:1811:9: '\\u0c60' .. '\\u0c61'
                     {
                     matchRange('\u0C60','\u0C61'); 
 
                     }
                     break;
                 case 110 :
-                    // .\\COMTOR.g:1812:9: '\\u0c85' .. '\\u0c8c'
+                    // COMTOR.g:1812:9: '\\u0c85' .. '\\u0c8c'
                     {
                     matchRange('\u0C85','\u0C8C'); 
 
                     }
                     break;
                 case 111 :
-                    // .\\COMTOR.g:1813:9: '\\u0c8e' .. '\\u0c90'
+                    // COMTOR.g:1813:9: '\\u0c8e' .. '\\u0c90'
                     {
                     matchRange('\u0C8E','\u0C90'); 
 
                     }
                     break;
                 case 112 :
-                    // .\\COMTOR.g:1814:9: '\\u0c92' .. '\\u0ca8'
+                    // COMTOR.g:1814:9: '\\u0c92' .. '\\u0ca8'
                     {
                     matchRange('\u0C92','\u0CA8'); 
 
                     }
                     break;
                 case 113 :
-                    // .\\COMTOR.g:1815:9: '\\u0caa' .. '\\u0cb3'
+                    // COMTOR.g:1815:9: '\\u0caa' .. '\\u0cb3'
                     {
                     matchRange('\u0CAA','\u0CB3'); 
 
                     }
                     break;
                 case 114 :
-                    // .\\COMTOR.g:1816:9: '\\u0cb5' .. '\\u0cb9'
+                    // COMTOR.g:1816:9: '\\u0cb5' .. '\\u0cb9'
                     {
                     matchRange('\u0CB5','\u0CB9'); 
 
                     }
                     break;
                 case 115 :
-                    // .\\COMTOR.g:1817:9: '\\u0cbd'
+                    // COMTOR.g:1817:9: '\\u0cbd'
                     {
                     match('\u0CBD'); 
 
                     }
                     break;
                 case 116 :
-                    // .\\COMTOR.g:1818:9: '\\u0cde'
+                    // COMTOR.g:1818:9: '\\u0cde'
                     {
                     match('\u0CDE'); 
 
                     }
                     break;
                 case 117 :
-                    // .\\COMTOR.g:1819:9: '\\u0ce0' .. '\\u0ce1'
+                    // COMTOR.g:1819:9: '\\u0ce0' .. '\\u0ce1'
                     {
                     matchRange('\u0CE0','\u0CE1'); 
 
                     }
                     break;
                 case 118 :
-                    // .\\COMTOR.g:1820:9: '\\u0d05' .. '\\u0d0c'
+                    // COMTOR.g:1820:9: '\\u0d05' .. '\\u0d0c'
                     {
                     matchRange('\u0D05','\u0D0C'); 
 
                     }
                     break;
                 case 119 :
-                    // .\\COMTOR.g:1821:9: '\\u0d0e' .. '\\u0d10'
+                    // COMTOR.g:1821:9: '\\u0d0e' .. '\\u0d10'
                     {
                     matchRange('\u0D0E','\u0D10'); 
 
                     }
                     break;
                 case 120 :
-                    // .\\COMTOR.g:1822:9: '\\u0d12' .. '\\u0d28'
+                    // COMTOR.g:1822:9: '\\u0d12' .. '\\u0d28'
                     {
                     matchRange('\u0D12','\u0D28'); 
 
                     }
                     break;
                 case 121 :
-                    // .\\COMTOR.g:1823:9: '\\u0d2a' .. '\\u0d39'
+                    // COMTOR.g:1823:9: '\\u0d2a' .. '\\u0d39'
                     {
                     matchRange('\u0D2A','\u0D39'); 
 
                     }
                     break;
                 case 122 :
-                    // .\\COMTOR.g:1824:9: '\\u0d60' .. '\\u0d61'
+                    // COMTOR.g:1824:9: '\\u0d60' .. '\\u0d61'
                     {
                     matchRange('\u0D60','\u0D61'); 
 
                     }
                     break;
                 case 123 :
-                    // .\\COMTOR.g:1825:9: '\\u0d85' .. '\\u0d96'
+                    // COMTOR.g:1825:9: '\\u0d85' .. '\\u0d96'
                     {
                     matchRange('\u0D85','\u0D96'); 
 
                     }
                     break;
                 case 124 :
-                    // .\\COMTOR.g:1826:9: '\\u0d9a' .. '\\u0db1'
+                    // COMTOR.g:1826:9: '\\u0d9a' .. '\\u0db1'
                     {
                     matchRange('\u0D9A','\u0DB1'); 
 
                     }
                     break;
                 case 125 :
-                    // .\\COMTOR.g:1827:9: '\\u0db3' .. '\\u0dbb'
+                    // COMTOR.g:1827:9: '\\u0db3' .. '\\u0dbb'
                     {
                     matchRange('\u0DB3','\u0DBB'); 
 
                     }
                     break;
                 case 126 :
-                    // .\\COMTOR.g:1828:9: '\\u0dbd'
+                    // COMTOR.g:1828:9: '\\u0dbd'
                     {
                     match('\u0DBD'); 
 
                     }
                     break;
                 case 127 :
-                    // .\\COMTOR.g:1829:9: '\\u0dc0' .. '\\u0dc6'
+                    // COMTOR.g:1829:9: '\\u0dc0' .. '\\u0dc6'
                     {
                     matchRange('\u0DC0','\u0DC6'); 
 
                     }
                     break;
                 case 128 :
-                    // .\\COMTOR.g:1830:9: '\\u0e01' .. '\\u0e30'
+                    // COMTOR.g:1830:9: '\\u0e01' .. '\\u0e30'
                     {
                     matchRange('\u0E01','\u0E30'); 
 
                     }
                     break;
                 case 129 :
-                    // .\\COMTOR.g:1831:9: '\\u0e32' .. '\\u0e33'
+                    // COMTOR.g:1831:9: '\\u0e32' .. '\\u0e33'
                     {
                     matchRange('\u0E32','\u0E33'); 
 
                     }
                     break;
                 case 130 :
-                    // .\\COMTOR.g:1832:9: '\\u0e3f' .. '\\u0e46'
+                    // COMTOR.g:1832:9: '\\u0e3f' .. '\\u0e46'
                     {
                     matchRange('\u0E3F','\u0E46'); 
 
                     }
                     break;
                 case 131 :
-                    // .\\COMTOR.g:1833:9: '\\u0e81' .. '\\u0e82'
+                    // COMTOR.g:1833:9: '\\u0e81' .. '\\u0e82'
                     {
                     matchRange('\u0E81','\u0E82'); 
 
                     }
                     break;
                 case 132 :
-                    // .\\COMTOR.g:1834:9: '\\u0e84'
+                    // COMTOR.g:1834:9: '\\u0e84'
                     {
                     match('\u0E84'); 
 
                     }
                     break;
                 case 133 :
-                    // .\\COMTOR.g:1835:9: '\\u0e87' .. '\\u0e88'
+                    // COMTOR.g:1835:9: '\\u0e87' .. '\\u0e88'
                     {
                     matchRange('\u0E87','\u0E88'); 
 
                     }
                     break;
                 case 134 :
-                    // .\\COMTOR.g:1836:9: '\\u0e8a'
+                    // COMTOR.g:1836:9: '\\u0e8a'
                     {
                     match('\u0E8A'); 
 
                     }
                     break;
                 case 135 :
-                    // .\\COMTOR.g:1837:9: '\\u0e8d'
+                    // COMTOR.g:1837:9: '\\u0e8d'
                     {
                     match('\u0E8D'); 
 
                     }
                     break;
                 case 136 :
-                    // .\\COMTOR.g:1838:9: '\\u0e94' .. '\\u0e97'
+                    // COMTOR.g:1838:9: '\\u0e94' .. '\\u0e97'
                     {
                     matchRange('\u0E94','\u0E97'); 
 
                     }
                     break;
                 case 137 :
-                    // .\\COMTOR.g:1839:9: '\\u0e99' .. '\\u0e9f'
+                    // COMTOR.g:1839:9: '\\u0e99' .. '\\u0e9f'
                     {
                     matchRange('\u0E99','\u0E9F'); 
 
                     }
                     break;
                 case 138 :
-                    // .\\COMTOR.g:1840:9: '\\u0ea1' .. '\\u0ea3'
+                    // COMTOR.g:1840:9: '\\u0ea1' .. '\\u0ea3'
                     {
                     matchRange('\u0EA1','\u0EA3'); 
 
                     }
                     break;
                 case 139 :
-                    // .\\COMTOR.g:1841:9: '\\u0ea5'
+                    // COMTOR.g:1841:9: '\\u0ea5'
                     {
                     match('\u0EA5'); 
 
                     }
                     break;
                 case 140 :
-                    // .\\COMTOR.g:1842:9: '\\u0ea7'
+                    // COMTOR.g:1842:9: '\\u0ea7'
                     {
                     match('\u0EA7'); 
 
                     }
                     break;
                 case 141 :
-                    // .\\COMTOR.g:1843:9: '\\u0eaa' .. '\\u0eab'
+                    // COMTOR.g:1843:9: '\\u0eaa' .. '\\u0eab'
                     {
                     matchRange('\u0EAA','\u0EAB'); 
 
                     }
                     break;
                 case 142 :
-                    // .\\COMTOR.g:1844:9: '\\u0ead' .. '\\u0eb0'
+                    // COMTOR.g:1844:9: '\\u0ead' .. '\\u0eb0'
                     {
                     matchRange('\u0EAD','\u0EB0'); 
 
                     }
                     break;
                 case 143 :
-                    // .\\COMTOR.g:1845:9: '\\u0eb2' .. '\\u0eb3'
+                    // COMTOR.g:1845:9: '\\u0eb2' .. '\\u0eb3'
                     {
                     matchRange('\u0EB2','\u0EB3'); 
 
                     }
                     break;
                 case 144 :
-                    // .\\COMTOR.g:1846:9: '\\u0ebd'
+                    // COMTOR.g:1846:9: '\\u0ebd'
                     {
                     match('\u0EBD'); 
 
                     }
                     break;
                 case 145 :
-                    // .\\COMTOR.g:1847:9: '\\u0ec0' .. '\\u0ec4'
+                    // COMTOR.g:1847:9: '\\u0ec0' .. '\\u0ec4'
                     {
                     matchRange('\u0EC0','\u0EC4'); 
 
                     }
                     break;
                 case 146 :
-                    // .\\COMTOR.g:1848:9: '\\u0ec6'
+                    // COMTOR.g:1848:9: '\\u0ec6'
                     {
                     match('\u0EC6'); 
 
                     }
                     break;
                 case 147 :
-                    // .\\COMTOR.g:1849:9: '\\u0edc' .. '\\u0edd'
+                    // COMTOR.g:1849:9: '\\u0edc' .. '\\u0edd'
                     {
                     matchRange('\u0EDC','\u0EDD'); 
 
                     }
                     break;
                 case 148 :
-                    // .\\COMTOR.g:1850:9: '\\u0f00'
+                    // COMTOR.g:1850:9: '\\u0f00'
                     {
                     match('\u0F00'); 
 
                     }
                     break;
                 case 149 :
-                    // .\\COMTOR.g:1851:9: '\\u0f40' .. '\\u0f47'
+                    // COMTOR.g:1851:9: '\\u0f40' .. '\\u0f47'
                     {
                     matchRange('\u0F40','\u0F47'); 
 
                     }
                     break;
                 case 150 :
-                    // .\\COMTOR.g:1852:9: '\\u0f49' .. '\\u0f6a'
+                    // COMTOR.g:1852:9: '\\u0f49' .. '\\u0f6a'
                     {
                     matchRange('\u0F49','\u0F6A'); 
 
                     }
                     break;
                 case 151 :
-                    // .\\COMTOR.g:1853:9: '\\u0f88' .. '\\u0f8b'
+                    // COMTOR.g:1853:9: '\\u0f88' .. '\\u0f8b'
                     {
                     matchRange('\u0F88','\u0F8B'); 
 
                     }
                     break;
                 case 152 :
-                    // .\\COMTOR.g:1854:9: '\\u1000' .. '\\u1021'
+                    // COMTOR.g:1854:9: '\\u1000' .. '\\u1021'
                     {
                     matchRange('\u1000','\u1021'); 
 
                     }
                     break;
                 case 153 :
-                    // .\\COMTOR.g:1855:9: '\\u1023' .. '\\u1027'
+                    // COMTOR.g:1855:9: '\\u1023' .. '\\u1027'
                     {
                     matchRange('\u1023','\u1027'); 
 
                     }
                     break;
                 case 154 :
-                    // .\\COMTOR.g:1856:9: '\\u1029' .. '\\u102a'
+                    // COMTOR.g:1856:9: '\\u1029' .. '\\u102a'
                     {
                     matchRange('\u1029','\u102A'); 
 
                     }
                     break;
                 case 155 :
-                    // .\\COMTOR.g:1857:9: '\\u1050' .. '\\u1055'
+                    // COMTOR.g:1857:9: '\\u1050' .. '\\u1055'
                     {
                     matchRange('\u1050','\u1055'); 
 
                     }
                     break;
                 case 156 :
-                    // .\\COMTOR.g:1858:9: '\\u10a0' .. '\\u10c5'
+                    // COMTOR.g:1858:9: '\\u10a0' .. '\\u10c5'
                     {
                     matchRange('\u10A0','\u10C5'); 
 
                     }
                     break;
                 case 157 :
-                    // .\\COMTOR.g:1859:9: '\\u10d0' .. '\\u10f8'
+                    // COMTOR.g:1859:9: '\\u10d0' .. '\\u10f8'
                     {
                     matchRange('\u10D0','\u10F8'); 
 
                     }
                     break;
                 case 158 :
-                    // .\\COMTOR.g:1860:9: '\\u1100' .. '\\u1159'
+                    // COMTOR.g:1860:9: '\\u1100' .. '\\u1159'
                     {
                     matchRange('\u1100','\u1159'); 
 
                     }
                     break;
                 case 159 :
-                    // .\\COMTOR.g:1861:9: '\\u115f' .. '\\u11a2'
+                    // COMTOR.g:1861:9: '\\u115f' .. '\\u11a2'
                     {
                     matchRange('\u115F','\u11A2'); 
 
                     }
                     break;
                 case 160 :
-                    // .\\COMTOR.g:1862:9: '\\u11a8' .. '\\u11f9'
+                    // COMTOR.g:1862:9: '\\u11a8' .. '\\u11f9'
                     {
                     matchRange('\u11A8','\u11F9'); 
 
                     }
                     break;
                 case 161 :
-                    // .\\COMTOR.g:1863:9: '\\u1200' .. '\\u1206'
+                    // COMTOR.g:1863:9: '\\u1200' .. '\\u1206'
                     {
                     matchRange('\u1200','\u1206'); 
 
                     }
                     break;
                 case 162 :
-                    // .\\COMTOR.g:1864:9: '\\u1208' .. '\\u1246'
+                    // COMTOR.g:1864:9: '\\u1208' .. '\\u1246'
                     {
                     matchRange('\u1208','\u1246'); 
 
                     }
                     break;
                 case 163 :
-                    // .\\COMTOR.g:1865:9: '\\u1248'
+                    // COMTOR.g:1865:9: '\\u1248'
                     {
                     match('\u1248'); 
 
                     }
                     break;
                 case 164 :
-                    // .\\COMTOR.g:1866:9: '\\u124a' .. '\\u124d'
+                    // COMTOR.g:1866:9: '\\u124a' .. '\\u124d'
                     {
                     matchRange('\u124A','\u124D'); 
 
                     }
                     break;
                 case 165 :
-                    // .\\COMTOR.g:1867:9: '\\u1250' .. '\\u1256'
+                    // COMTOR.g:1867:9: '\\u1250' .. '\\u1256'
                     {
                     matchRange('\u1250','\u1256'); 
 
                     }
                     break;
                 case 166 :
-                    // .\\COMTOR.g:1868:9: '\\u1258'
+                    // COMTOR.g:1868:9: '\\u1258'
                     {
                     match('\u1258'); 
 
                     }
                     break;
                 case 167 :
-                    // .\\COMTOR.g:1869:9: '\\u125a' .. '\\u125d'
+                    // COMTOR.g:1869:9: '\\u125a' .. '\\u125d'
                     {
                     matchRange('\u125A','\u125D'); 
 
                     }
                     break;
                 case 168 :
-                    // .\\COMTOR.g:1870:9: '\\u1260' .. '\\u1286'
+                    // COMTOR.g:1870:9: '\\u1260' .. '\\u1286'
                     {
                     matchRange('\u1260','\u1286'); 
 
                     }
                     break;
                 case 169 :
-                    // .\\COMTOR.g:1871:9: '\\u1288'
+                    // COMTOR.g:1871:9: '\\u1288'
                     {
                     match('\u1288'); 
 
                     }
                     break;
                 case 170 :
-                    // .\\COMTOR.g:1872:9: '\\u128a' .. '\\u128d'
+                    // COMTOR.g:1872:9: '\\u128a' .. '\\u128d'
                     {
                     matchRange('\u128A','\u128D'); 
 
                     }
                     break;
                 case 171 :
-                    // .\\COMTOR.g:1873:9: '\\u1290' .. '\\u12ae'
+                    // COMTOR.g:1873:9: '\\u1290' .. '\\u12ae'
                     {
                     matchRange('\u1290','\u12AE'); 
 
                     }
                     break;
                 case 172 :
-                    // .\\COMTOR.g:1874:9: '\\u12b0'
+                    // COMTOR.g:1874:9: '\\u12b0'
                     {
                     match('\u12B0'); 
 
                     }
                     break;
                 case 173 :
-                    // .\\COMTOR.g:1875:9: '\\u12b2' .. '\\u12b5'
+                    // COMTOR.g:1875:9: '\\u12b2' .. '\\u12b5'
                     {
                     matchRange('\u12B2','\u12B5'); 
 
                     }
                     break;
                 case 174 :
-                    // .\\COMTOR.g:1876:9: '\\u12b8' .. '\\u12be'
+                    // COMTOR.g:1876:9: '\\u12b8' .. '\\u12be'
                     {
                     matchRange('\u12B8','\u12BE'); 
 
                     }
                     break;
                 case 175 :
-                    // .\\COMTOR.g:1877:9: '\\u12c0'
+                    // COMTOR.g:1877:9: '\\u12c0'
                     {
                     match('\u12C0'); 
 
                     }
                     break;
                 case 176 :
-                    // .\\COMTOR.g:1878:9: '\\u12c2' .. '\\u12c5'
+                    // COMTOR.g:1878:9: '\\u12c2' .. '\\u12c5'
                     {
                     matchRange('\u12C2','\u12C5'); 
 
                     }
                     break;
                 case 177 :
-                    // .\\COMTOR.g:1879:9: '\\u12c8' .. '\\u12ce'
+                    // COMTOR.g:1879:9: '\\u12c8' .. '\\u12ce'
                     {
                     matchRange('\u12C8','\u12CE'); 
 
                     }
                     break;
                 case 178 :
-                    // .\\COMTOR.g:1880:9: '\\u12d0' .. '\\u12d6'
+                    // COMTOR.g:1880:9: '\\u12d0' .. '\\u12d6'
                     {
                     matchRange('\u12D0','\u12D6'); 
 
                     }
                     break;
                 case 179 :
-                    // .\\COMTOR.g:1881:9: '\\u12d8' .. '\\u12ee'
+                    // COMTOR.g:1881:9: '\\u12d8' .. '\\u12ee'
                     {
                     matchRange('\u12D8','\u12EE'); 
 
                     }
                     break;
                 case 180 :
-                    // .\\COMTOR.g:1882:9: '\\u12f0' .. '\\u130e'
+                    // COMTOR.g:1882:9: '\\u12f0' .. '\\u130e'
                     {
                     matchRange('\u12F0','\u130E'); 
 
                     }
                     break;
                 case 181 :
-                    // .\\COMTOR.g:1883:9: '\\u1310'
+                    // COMTOR.g:1883:9: '\\u1310'
                     {
                     match('\u1310'); 
 
                     }
                     break;
                 case 182 :
-                    // .\\COMTOR.g:1884:9: '\\u1312' .. '\\u1315'
+                    // COMTOR.g:1884:9: '\\u1312' .. '\\u1315'
                     {
                     matchRange('\u1312','\u1315'); 
 
                     }
                     break;
                 case 183 :
-                    // .\\COMTOR.g:1885:9: '\\u1318' .. '\\u131e'
+                    // COMTOR.g:1885:9: '\\u1318' .. '\\u131e'
                     {
                     matchRange('\u1318','\u131E'); 
 
                     }
                     break;
                 case 184 :
-                    // .\\COMTOR.g:1886:9: '\\u1320' .. '\\u1346'
+                    // COMTOR.g:1886:9: '\\u1320' .. '\\u1346'
                     {
                     matchRange('\u1320','\u1346'); 
 
                     }
                     break;
                 case 185 :
-                    // .\\COMTOR.g:1887:9: '\\u1348' .. '\\u135a'
+                    // COMTOR.g:1887:9: '\\u1348' .. '\\u135a'
                     {
                     matchRange('\u1348','\u135A'); 
 
                     }
                     break;
                 case 186 :
-                    // .\\COMTOR.g:1888:9: '\\u13a0' .. '\\u13f4'
+                    // COMTOR.g:1888:9: '\\u13a0' .. '\\u13f4'
                     {
                     matchRange('\u13A0','\u13F4'); 
 
                     }
                     break;
                 case 187 :
-                    // .\\COMTOR.g:1889:9: '\\u1401' .. '\\u166c'
+                    // COMTOR.g:1889:9: '\\u1401' .. '\\u166c'
                     {
                     matchRange('\u1401','\u166C'); 
 
                     }
                     break;
                 case 188 :
-                    // .\\COMTOR.g:1890:9: '\\u166f' .. '\\u1676'
+                    // COMTOR.g:1890:9: '\\u166f' .. '\\u1676'
                     {
                     matchRange('\u166F','\u1676'); 
 
                     }
                     break;
                 case 189 :
-                    // .\\COMTOR.g:1891:9: '\\u1681' .. '\\u169a'
+                    // COMTOR.g:1891:9: '\\u1681' .. '\\u169a'
                     {
                     matchRange('\u1681','\u169A'); 
 
                     }
                     break;
                 case 190 :
-                    // .\\COMTOR.g:1892:9: '\\u16a0' .. '\\u16ea'
+                    // COMTOR.g:1892:9: '\\u16a0' .. '\\u16ea'
                     {
                     matchRange('\u16A0','\u16EA'); 
 
                     }
                     break;
                 case 191 :
-                    // .\\COMTOR.g:1893:9: '\\u16ee' .. '\\u16f0'
+                    // COMTOR.g:1893:9: '\\u16ee' .. '\\u16f0'
                     {
                     matchRange('\u16EE','\u16F0'); 
 
                     }
                     break;
                 case 192 :
-                    // .\\COMTOR.g:1894:9: '\\u1700' .. '\\u170c'
+                    // COMTOR.g:1894:9: '\\u1700' .. '\\u170c'
                     {
                     matchRange('\u1700','\u170C'); 
 
                     }
                     break;
                 case 193 :
-                    // .\\COMTOR.g:1895:9: '\\u170e' .. '\\u1711'
+                    // COMTOR.g:1895:9: '\\u170e' .. '\\u1711'
                     {
                     matchRange('\u170E','\u1711'); 
 
                     }
                     break;
                 case 194 :
-                    // .\\COMTOR.g:1896:9: '\\u1720' .. '\\u1731'
+                    // COMTOR.g:1896:9: '\\u1720' .. '\\u1731'
                     {
                     matchRange('\u1720','\u1731'); 
 
                     }
                     break;
                 case 195 :
-                    // .\\COMTOR.g:1897:9: '\\u1740' .. '\\u1751'
+                    // COMTOR.g:1897:9: '\\u1740' .. '\\u1751'
                     {
                     matchRange('\u1740','\u1751'); 
 
                     }
                     break;
                 case 196 :
-                    // .\\COMTOR.g:1898:9: '\\u1760' .. '\\u176c'
+                    // COMTOR.g:1898:9: '\\u1760' .. '\\u176c'
                     {
                     matchRange('\u1760','\u176C'); 
 
                     }
                     break;
                 case 197 :
-                    // .\\COMTOR.g:1899:9: '\\u176e' .. '\\u1770'
+                    // COMTOR.g:1899:9: '\\u176e' .. '\\u1770'
                     {
                     matchRange('\u176E','\u1770'); 
 
                     }
                     break;
                 case 198 :
-                    // .\\COMTOR.g:1900:9: '\\u1780' .. '\\u17b3'
+                    // COMTOR.g:1900:9: '\\u1780' .. '\\u17b3'
                     {
                     matchRange('\u1780','\u17B3'); 
 
                     }
                     break;
                 case 199 :
-                    // .\\COMTOR.g:1901:9: '\\u17d7'
+                    // COMTOR.g:1901:9: '\\u17d7'
                     {
                     match('\u17D7'); 
 
                     }
                     break;
                 case 200 :
-                    // .\\COMTOR.g:1902:9: '\\u17db' .. '\\u17dc'
+                    // COMTOR.g:1902:9: '\\u17db' .. '\\u17dc'
                     {
                     matchRange('\u17DB','\u17DC'); 
 
                     }
                     break;
                 case 201 :
-                    // .\\COMTOR.g:1903:9: '\\u1820' .. '\\u1877'
+                    // COMTOR.g:1903:9: '\\u1820' .. '\\u1877'
                     {
                     matchRange('\u1820','\u1877'); 
 
                     }
                     break;
                 case 202 :
-                    // .\\COMTOR.g:1904:9: '\\u1880' .. '\\u18a8'
+                    // COMTOR.g:1904:9: '\\u1880' .. '\\u18a8'
                     {
                     matchRange('\u1880','\u18A8'); 
 
                     }
                     break;
                 case 203 :
-                    // .\\COMTOR.g:1905:9: '\\u1900' .. '\\u191c'
+                    // COMTOR.g:1905:9: '\\u1900' .. '\\u191c'
                     {
                     matchRange('\u1900','\u191C'); 
 
                     }
                     break;
                 case 204 :
-                    // .\\COMTOR.g:1906:9: '\\u1950' .. '\\u196d'
+                    // COMTOR.g:1906:9: '\\u1950' .. '\\u196d'
                     {
                     matchRange('\u1950','\u196D'); 
 
                     }
                     break;
                 case 205 :
-                    // .\\COMTOR.g:1907:9: '\\u1970' .. '\\u1974'
+                    // COMTOR.g:1907:9: '\\u1970' .. '\\u1974'
                     {
                     matchRange('\u1970','\u1974'); 
 
                     }
                     break;
                 case 206 :
-                    // .\\COMTOR.g:1908:9: '\\u1d00' .. '\\u1d6b'
+                    // COMTOR.g:1908:9: '\\u1d00' .. '\\u1d6b'
                     {
                     matchRange('\u1D00','\u1D6B'); 
 
                     }
                     break;
                 case 207 :
-                    // .\\COMTOR.g:1909:9: '\\u1e00' .. '\\u1e9b'
+                    // COMTOR.g:1909:9: '\\u1e00' .. '\\u1e9b'
                     {
                     matchRange('\u1E00','\u1E9B'); 
 
                     }
                     break;
                 case 208 :
-                    // .\\COMTOR.g:1910:9: '\\u1ea0' .. '\\u1ef9'
+                    // COMTOR.g:1910:9: '\\u1ea0' .. '\\u1ef9'
                     {
                     matchRange('\u1EA0','\u1EF9'); 
 
                     }
                     break;
                 case 209 :
-                    // .\\COMTOR.g:1911:9: '\\u1f00' .. '\\u1f15'
+                    // COMTOR.g:1911:9: '\\u1f00' .. '\\u1f15'
                     {
                     matchRange('\u1F00','\u1F15'); 
 
                     }
                     break;
                 case 210 :
-                    // .\\COMTOR.g:1912:9: '\\u1f18' .. '\\u1f1d'
+                    // COMTOR.g:1912:9: '\\u1f18' .. '\\u1f1d'
                     {
                     matchRange('\u1F18','\u1F1D'); 
 
                     }
                     break;
                 case 211 :
-                    // .\\COMTOR.g:1913:9: '\\u1f20' .. '\\u1f45'
+                    // COMTOR.g:1913:9: '\\u1f20' .. '\\u1f45'
                     {
                     matchRange('\u1F20','\u1F45'); 
 
                     }
                     break;
                 case 212 :
-                    // .\\COMTOR.g:1914:9: '\\u1f48' .. '\\u1f4d'
+                    // COMTOR.g:1914:9: '\\u1f48' .. '\\u1f4d'
                     {
                     matchRange('\u1F48','\u1F4D'); 
 
                     }
                     break;
                 case 213 :
-                    // .\\COMTOR.g:1915:9: '\\u1f50' .. '\\u1f57'
+                    // COMTOR.g:1915:9: '\\u1f50' .. '\\u1f57'
                     {
                     matchRange('\u1F50','\u1F57'); 
 
                     }
                     break;
                 case 214 :
-                    // .\\COMTOR.g:1916:9: '\\u1f59'
+                    // COMTOR.g:1916:9: '\\u1f59'
                     {
                     match('\u1F59'); 
 
                     }
                     break;
                 case 215 :
-                    // .\\COMTOR.g:1917:9: '\\u1f5b'
+                    // COMTOR.g:1917:9: '\\u1f5b'
                     {
                     match('\u1F5B'); 
 
                     }
                     break;
                 case 216 :
-                    // .\\COMTOR.g:1918:9: '\\u1f5d'
+                    // COMTOR.g:1918:9: '\\u1f5d'
                     {
                     match('\u1F5D'); 
 
                     }
                     break;
                 case 217 :
-                    // .\\COMTOR.g:1919:9: '\\u1f5f' .. '\\u1f7d'
+                    // COMTOR.g:1919:9: '\\u1f5f' .. '\\u1f7d'
                     {
                     matchRange('\u1F5F','\u1F7D'); 
 
                     }
                     break;
                 case 218 :
-                    // .\\COMTOR.g:1920:9: '\\u1f80' .. '\\u1fb4'
+                    // COMTOR.g:1920:9: '\\u1f80' .. '\\u1fb4'
                     {
                     matchRange('\u1F80','\u1FB4'); 
 
                     }
                     break;
                 case 219 :
-                    // .\\COMTOR.g:1921:9: '\\u1fb6' .. '\\u1fbc'
+                    // COMTOR.g:1921:9: '\\u1fb6' .. '\\u1fbc'
                     {
                     matchRange('\u1FB6','\u1FBC'); 
 
                     }
                     break;
                 case 220 :
-                    // .\\COMTOR.g:1922:9: '\\u1fbe'
+                    // COMTOR.g:1922:9: '\\u1fbe'
                     {
                     match('\u1FBE'); 
 
                     }
                     break;
                 case 221 :
-                    // .\\COMTOR.g:1923:9: '\\u1fc2' .. '\\u1fc4'
+                    // COMTOR.g:1923:9: '\\u1fc2' .. '\\u1fc4'
                     {
                     matchRange('\u1FC2','\u1FC4'); 
 
                     }
                     break;
                 case 222 :
-                    // .\\COMTOR.g:1924:9: '\\u1fc6' .. '\\u1fcc'
+                    // COMTOR.g:1924:9: '\\u1fc6' .. '\\u1fcc'
                     {
                     matchRange('\u1FC6','\u1FCC'); 
 
                     }
                     break;
                 case 223 :
-                    // .\\COMTOR.g:1925:9: '\\u1fd0' .. '\\u1fd3'
+                    // COMTOR.g:1925:9: '\\u1fd0' .. '\\u1fd3'
                     {
                     matchRange('\u1FD0','\u1FD3'); 
 
                     }
                     break;
                 case 224 :
-                    // .\\COMTOR.g:1926:9: '\\u1fd6' .. '\\u1fdb'
+                    // COMTOR.g:1926:9: '\\u1fd6' .. '\\u1fdb'
                     {
                     matchRange('\u1FD6','\u1FDB'); 
 
                     }
                     break;
                 case 225 :
-                    // .\\COMTOR.g:1927:9: '\\u1fe0' .. '\\u1fec'
+                    // COMTOR.g:1927:9: '\\u1fe0' .. '\\u1fec'
                     {
                     matchRange('\u1FE0','\u1FEC'); 
 
                     }
                     break;
                 case 226 :
-                    // .\\COMTOR.g:1928:9: '\\u1ff2' .. '\\u1ff4'
+                    // COMTOR.g:1928:9: '\\u1ff2' .. '\\u1ff4'
                     {
                     matchRange('\u1FF2','\u1FF4'); 
 
                     }
                     break;
                 case 227 :
-                    // .\\COMTOR.g:1929:9: '\\u1ff6' .. '\\u1ffc'
+                    // COMTOR.g:1929:9: '\\u1ff6' .. '\\u1ffc'
                     {
                     matchRange('\u1FF6','\u1FFC'); 
 
                     }
                     break;
                 case 228 :
-                    // .\\COMTOR.g:1930:9: '\\u203f' .. '\\u2040'
+                    // COMTOR.g:1930:9: '\\u203f' .. '\\u2040'
                     {
                     matchRange('\u203F','\u2040'); 
 
                     }
                     break;
                 case 229 :
-                    // .\\COMTOR.g:1931:9: '\\u2054'
+                    // COMTOR.g:1931:9: '\\u2054'
                     {
                     match('\u2054'); 
 
                     }
                     break;
                 case 230 :
-                    // .\\COMTOR.g:1932:9: '\\u2071'
+                    // COMTOR.g:1932:9: '\\u2071'
                     {
                     match('\u2071'); 
 
                     }
                     break;
                 case 231 :
-                    // .\\COMTOR.g:1933:9: '\\u207f'
+                    // COMTOR.g:1933:9: '\\u207f'
                     {
                     match('\u207F'); 
 
                     }
                     break;
                 case 232 :
-                    // .\\COMTOR.g:1934:9: '\\u20a0' .. '\\u20b1'
+                    // COMTOR.g:1934:9: '\\u20a0' .. '\\u20b1'
                     {
                     matchRange('\u20A0','\u20B1'); 
 
                     }
                     break;
                 case 233 :
-                    // .\\COMTOR.g:1935:9: '\\u2102'
+                    // COMTOR.g:1935:9: '\\u2102'
                     {
                     match('\u2102'); 
 
                     }
                     break;
                 case 234 :
-                    // .\\COMTOR.g:1936:9: '\\u2107'
+                    // COMTOR.g:1936:9: '\\u2107'
                     {
                     match('\u2107'); 
 
                     }
                     break;
                 case 235 :
-                    // .\\COMTOR.g:1937:9: '\\u210a' .. '\\u2113'
+                    // COMTOR.g:1937:9: '\\u210a' .. '\\u2113'
                     {
                     matchRange('\u210A','\u2113'); 
 
                     }
                     break;
                 case 236 :
-                    // .\\COMTOR.g:1938:9: '\\u2115'
+                    // COMTOR.g:1938:9: '\\u2115'
                     {
                     match('\u2115'); 
 
                     }
                     break;
                 case 237 :
-                    // .\\COMTOR.g:1939:9: '\\u2119' .. '\\u211d'
+                    // COMTOR.g:1939:9: '\\u2119' .. '\\u211d'
                     {
                     matchRange('\u2119','\u211D'); 
 
                     }
                     break;
                 case 238 :
-                    // .\\COMTOR.g:1940:9: '\\u2124'
+                    // COMTOR.g:1940:9: '\\u2124'
                     {
                     match('\u2124'); 
 
                     }
                     break;
                 case 239 :
-                    // .\\COMTOR.g:1941:9: '\\u2126'
+                    // COMTOR.g:1941:9: '\\u2126'
                     {
                     match('\u2126'); 
 
                     }
                     break;
                 case 240 :
-                    // .\\COMTOR.g:1942:9: '\\u2128'
+                    // COMTOR.g:1942:9: '\\u2128'
                     {
                     match('\u2128'); 
 
                     }
                     break;
                 case 241 :
-                    // .\\COMTOR.g:1943:9: '\\u212a' .. '\\u212d'
+                    // COMTOR.g:1943:9: '\\u212a' .. '\\u212d'
                     {
                     matchRange('\u212A','\u212D'); 
 
                     }
                     break;
                 case 242 :
-                    // .\\COMTOR.g:1944:9: '\\u212f' .. '\\u2131'
+                    // COMTOR.g:1944:9: '\\u212f' .. '\\u2131'
                     {
                     matchRange('\u212F','\u2131'); 
 
                     }
                     break;
                 case 243 :
-                    // .\\COMTOR.g:1945:9: '\\u2133' .. '\\u2139'
+                    // COMTOR.g:1945:9: '\\u2133' .. '\\u2139'
                     {
                     matchRange('\u2133','\u2139'); 
 
                     }
                     break;
                 case 244 :
-                    // .\\COMTOR.g:1946:9: '\\u213d' .. '\\u213f'
+                    // COMTOR.g:1946:9: '\\u213d' .. '\\u213f'
                     {
                     matchRange('\u213D','\u213F'); 
 
                     }
                     break;
                 case 245 :
-                    // .\\COMTOR.g:1947:9: '\\u2145' .. '\\u2149'
+                    // COMTOR.g:1947:9: '\\u2145' .. '\\u2149'
                     {
                     matchRange('\u2145','\u2149'); 
 
                     }
                     break;
                 case 246 :
-                    // .\\COMTOR.g:1948:9: '\\u2160' .. '\\u2183'
+                    // COMTOR.g:1948:9: '\\u2160' .. '\\u2183'
                     {
                     matchRange('\u2160','\u2183'); 
 
                     }
                     break;
                 case 247 :
-                    // .\\COMTOR.g:1949:9: '\\u3005' .. '\\u3007'
+                    // COMTOR.g:1949:9: '\\u3005' .. '\\u3007'
                     {
                     matchRange('\u3005','\u3007'); 
 
                     }
                     break;
                 case 248 :
-                    // .\\COMTOR.g:1950:9: '\\u3021' .. '\\u3029'
+                    // COMTOR.g:1950:9: '\\u3021' .. '\\u3029'
                     {
                     matchRange('\u3021','\u3029'); 
 
                     }
                     break;
                 case 249 :
-                    // .\\COMTOR.g:1951:9: '\\u3031' .. '\\u3035'
+                    // COMTOR.g:1951:9: '\\u3031' .. '\\u3035'
                     {
                     matchRange('\u3031','\u3035'); 
 
                     }
                     break;
                 case 250 :
-                    // .\\COMTOR.g:1952:9: '\\u3038' .. '\\u303c'
+                    // COMTOR.g:1952:9: '\\u3038' .. '\\u303c'
                     {
                     matchRange('\u3038','\u303C'); 
 
                     }
                     break;
                 case 251 :
-                    // .\\COMTOR.g:1953:9: '\\u3041' .. '\\u3096'
+                    // COMTOR.g:1953:9: '\\u3041' .. '\\u3096'
                     {
                     matchRange('\u3041','\u3096'); 
 
                     }
                     break;
                 case 252 :
-                    // .\\COMTOR.g:1954:9: '\\u309d' .. '\\u309f'
+                    // COMTOR.g:1954:9: '\\u309d' .. '\\u309f'
                     {
                     matchRange('\u309D','\u309F'); 
 
                     }
                     break;
                 case 253 :
-                    // .\\COMTOR.g:1955:9: '\\u30a1' .. '\\u30ff'
+                    // COMTOR.g:1955:9: '\\u30a1' .. '\\u30ff'
                     {
                     matchRange('\u30A1','\u30FF'); 
 
                     }
                     break;
                 case 254 :
-                    // .\\COMTOR.g:1956:9: '\\u3105' .. '\\u312c'
+                    // COMTOR.g:1956:9: '\\u3105' .. '\\u312c'
                     {
                     matchRange('\u3105','\u312C'); 
 
                     }
                     break;
                 case 255 :
-                    // .\\COMTOR.g:1957:9: '\\u3131' .. '\\u318e'
+                    // COMTOR.g:1957:9: '\\u3131' .. '\\u318e'
                     {
                     matchRange('\u3131','\u318E'); 
 
                     }
                     break;
                 case 256 :
-                    // .\\COMTOR.g:1958:9: '\\u31a0' .. '\\u31b7'
+                    // COMTOR.g:1958:9: '\\u31a0' .. '\\u31b7'
                     {
                     matchRange('\u31A0','\u31B7'); 
 
                     }
                     break;
                 case 257 :
-                    // .\\COMTOR.g:1959:9: '\\u31f0' .. '\\u31ff'
+                    // COMTOR.g:1959:9: '\\u31f0' .. '\\u31ff'
                     {
                     matchRange('\u31F0','\u31FF'); 
 
                     }
                     break;
                 case 258 :
-                    // .\\COMTOR.g:1960:9: '\\u3400' .. '\\u4db5'
+                    // COMTOR.g:1960:9: '\\u3400' .. '\\u4db5'
                     {
                     matchRange('\u3400','\u4DB5'); 
 
                     }
                     break;
                 case 259 :
-                    // .\\COMTOR.g:1961:9: '\\u4e00' .. '\\u9fa5'
+                    // COMTOR.g:1961:9: '\\u4e00' .. '\\u9fa5'
                     {
                     matchRange('\u4E00','\u9FA5'); 
 
                     }
                     break;
                 case 260 :
-                    // .\\COMTOR.g:1962:9: '\\ua000' .. '\\ua48c'
+                    // COMTOR.g:1962:9: '\\ua000' .. '\\ua48c'
                     {
                     matchRange('\uA000','\uA48C'); 
 
                     }
                     break;
                 case 261 :
-                    // .\\COMTOR.g:1963:9: '\\uac00' .. '\\ud7a3'
+                    // COMTOR.g:1963:9: '\\uac00' .. '\\ud7a3'
                     {
                     matchRange('\uAC00','\uD7A3'); 
 
                     }
                     break;
                 case 262 :
-                    // .\\COMTOR.g:1964:9: '\\uf900' .. '\\ufa2d'
+                    // COMTOR.g:1964:9: '\\uf900' .. '\\ufa2d'
                     {
                     matchRange('\uF900','\uFA2D'); 
 
                     }
                     break;
                 case 263 :
-                    // .\\COMTOR.g:1965:9: '\\ufa30' .. '\\ufa6a'
+                    // COMTOR.g:1965:9: '\\ufa30' .. '\\ufa6a'
                     {
                     matchRange('\uFA30','\uFA6A'); 
 
                     }
                     break;
                 case 264 :
-                    // .\\COMTOR.g:1966:9: '\\ufb00' .. '\\ufb06'
+                    // COMTOR.g:1966:9: '\\ufb00' .. '\\ufb06'
                     {
                     matchRange('\uFB00','\uFB06'); 
 
                     }
                     break;
                 case 265 :
-                    // .\\COMTOR.g:1967:9: '\\ufb13' .. '\\ufb17'
+                    // COMTOR.g:1967:9: '\\ufb13' .. '\\ufb17'
                     {
                     matchRange('\uFB13','\uFB17'); 
 
                     }
                     break;
                 case 266 :
-                    // .\\COMTOR.g:1968:9: '\\ufb1d'
+                    // COMTOR.g:1968:9: '\\ufb1d'
                     {
                     match('\uFB1D'); 
 
                     }
                     break;
                 case 267 :
-                    // .\\COMTOR.g:1969:9: '\\ufb1f' .. '\\ufb28'
+                    // COMTOR.g:1969:9: '\\ufb1f' .. '\\ufb28'
                     {
                     matchRange('\uFB1F','\uFB28'); 
 
                     }
                     break;
                 case 268 :
-                    // .\\COMTOR.g:1970:9: '\\ufb2a' .. '\\ufb36'
+                    // COMTOR.g:1970:9: '\\ufb2a' .. '\\ufb36'
                     {
                     matchRange('\uFB2A','\uFB36'); 
 
                     }
                     break;
                 case 269 :
-                    // .\\COMTOR.g:1971:9: '\\ufb38' .. '\\ufb3c'
+                    // COMTOR.g:1971:9: '\\ufb38' .. '\\ufb3c'
                     {
                     matchRange('\uFB38','\uFB3C'); 
 
                     }
                     break;
                 case 270 :
-                    // .\\COMTOR.g:1972:9: '\\ufb3e'
+                    // COMTOR.g:1972:9: '\\ufb3e'
                     {
                     match('\uFB3E'); 
 
                     }
                     break;
                 case 271 :
-                    // .\\COMTOR.g:1973:9: '\\ufb40' .. '\\ufb41'
+                    // COMTOR.g:1973:9: '\\ufb40' .. '\\ufb41'
                     {
                     matchRange('\uFB40','\uFB41'); 
 
                     }
                     break;
                 case 272 :
-                    // .\\COMTOR.g:1974:9: '\\ufb43' .. '\\ufb44'
+                    // COMTOR.g:1974:9: '\\ufb43' .. '\\ufb44'
                     {
                     matchRange('\uFB43','\uFB44'); 
 
                     }
                     break;
                 case 273 :
-                    // .\\COMTOR.g:1975:9: '\\ufb46' .. '\\ufbb1'
+                    // COMTOR.g:1975:9: '\\ufb46' .. '\\ufbb1'
                     {
                     matchRange('\uFB46','\uFBB1'); 
 
                     }
                     break;
                 case 274 :
-                    // .\\COMTOR.g:1976:9: '\\ufbd3' .. '\\ufd3d'
+                    // COMTOR.g:1976:9: '\\ufbd3' .. '\\ufd3d'
                     {
                     matchRange('\uFBD3','\uFD3D'); 
 
                     }
                     break;
                 case 275 :
-                    // .\\COMTOR.g:1977:9: '\\ufd50' .. '\\ufd8f'
+                    // COMTOR.g:1977:9: '\\ufd50' .. '\\ufd8f'
                     {
                     matchRange('\uFD50','\uFD8F'); 
 
                     }
                     break;
                 case 276 :
-                    // .\\COMTOR.g:1978:9: '\\ufd92' .. '\\ufdc7'
+                    // COMTOR.g:1978:9: '\\ufd92' .. '\\ufdc7'
                     {
                     matchRange('\uFD92','\uFDC7'); 
 
                     }
                     break;
                 case 277 :
-                    // .\\COMTOR.g:1979:9: '\\ufdf0' .. '\\ufdfc'
+                    // COMTOR.g:1979:9: '\\ufdf0' .. '\\ufdfc'
                     {
                     matchRange('\uFDF0','\uFDFC'); 
 
                     }
                     break;
                 case 278 :
-                    // .\\COMTOR.g:1980:9: '\\ufe33' .. '\\ufe34'
+                    // COMTOR.g:1980:9: '\\ufe33' .. '\\ufe34'
                     {
                     matchRange('\uFE33','\uFE34'); 
 
                     }
                     break;
                 case 279 :
-                    // .\\COMTOR.g:1981:9: '\\ufe4d' .. '\\ufe4f'
+                    // COMTOR.g:1981:9: '\\ufe4d' .. '\\ufe4f'
                     {
                     matchRange('\uFE4D','\uFE4F'); 
 
                     }
                     break;
                 case 280 :
-                    // .\\COMTOR.g:1982:9: '\\ufe69'
+                    // COMTOR.g:1982:9: '\\ufe69'
                     {
                     match('\uFE69'); 
 
                     }
                     break;
                 case 281 :
-                    // .\\COMTOR.g:1983:9: '\\ufe70' .. '\\ufe74'
+                    // COMTOR.g:1983:9: '\\ufe70' .. '\\ufe74'
                     {
                     matchRange('\uFE70','\uFE74'); 
 
                     }
                     break;
                 case 282 :
-                    // .\\COMTOR.g:1984:9: '\\ufe76' .. '\\ufefc'
+                    // COMTOR.g:1984:9: '\\ufe76' .. '\\ufefc'
                     {
                     matchRange('\uFE76','\uFEFC'); 
 
                     }
                     break;
                 case 283 :
-                    // .\\COMTOR.g:1985:9: '\\uff04'
+                    // COMTOR.g:1985:9: '\\uff04'
                     {
                     match('\uFF04'); 
 
                     }
                     break;
                 case 284 :
-                    // .\\COMTOR.g:1986:9: '\\uff21' .. '\\uff3a'
+                    // COMTOR.g:1986:9: '\\uff21' .. '\\uff3a'
                     {
                     matchRange('\uFF21','\uFF3A'); 
 
                     }
                     break;
                 case 285 :
-                    // .\\COMTOR.g:1987:9: '\\uff3f'
+                    // COMTOR.g:1987:9: '\\uff3f'
                     {
                     match('\uFF3F'); 
 
                     }
                     break;
                 case 286 :
-                    // .\\COMTOR.g:1988:9: '\\uff41' .. '\\uff5a'
+                    // COMTOR.g:1988:9: '\\uff41' .. '\\uff5a'
                     {
                     matchRange('\uFF41','\uFF5A'); 
 
                     }
                     break;
                 case 287 :
-                    // .\\COMTOR.g:1989:9: '\\uff65' .. '\\uffbe'
+                    // COMTOR.g:1989:9: '\\uff65' .. '\\uffbe'
                     {
                     matchRange('\uFF65','\uFFBE'); 
 
                     }
                     break;
                 case 288 :
-                    // .\\COMTOR.g:1990:9: '\\uffc2' .. '\\uffc7'
+                    // COMTOR.g:1990:9: '\\uffc2' .. '\\uffc7'
                     {
                     matchRange('\uFFC2','\uFFC7'); 
 
                     }
                     break;
                 case 289 :
-                    // .\\COMTOR.g:1991:9: '\\uffca' .. '\\uffcf'
+                    // COMTOR.g:1991:9: '\\uffca' .. '\\uffcf'
                     {
                     matchRange('\uFFCA','\uFFCF'); 
 
                     }
                     break;
                 case 290 :
-                    // .\\COMTOR.g:1992:9: '\\uffd2' .. '\\uffd7'
+                    // COMTOR.g:1992:9: '\\uffd2' .. '\\uffd7'
                     {
                     matchRange('\uFFD2','\uFFD7'); 
 
                     }
                     break;
                 case 291 :
-                    // .\\COMTOR.g:1993:9: '\\uffda' .. '\\uffdc'
+                    // COMTOR.g:1993:9: '\\uffda' .. '\\uffdc'
                     {
                     matchRange('\uFFDA','\uFFDC'); 
 
                     }
                     break;
                 case 292 :
-                    // .\\COMTOR.g:1994:9: '\\uffe0' .. '\\uffe1'
+                    // COMTOR.g:1994:9: '\\uffe0' .. '\\uffe1'
                     {
                     matchRange('\uFFE0','\uFFE1'); 
 
                     }
                     break;
                 case 293 :
-                    // .\\COMTOR.g:1995:9: '\\uffe5' .. '\\uffe6'
+                    // COMTOR.g:1995:9: '\\uffe5' .. '\\uffe6'
                     {
                     matchRange('\uFFE5','\uFFE6'); 
 
                     }
                     break;
                 case 294 :
-                    // .\\COMTOR.g:1996:9: ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' )
+                    // COMTOR.g:1996:9: ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' )
                     {
-                    // .\\COMTOR.g:1996:9: ( '\\ud800' .. '\\udbff' )
-                    // .\\COMTOR.g:1996:10: '\\ud800' .. '\\udbff'
+                    // COMTOR.g:1996:9: ( '\\ud800' .. '\\udbff' )
+                    // COMTOR.g:1996:10: '\\ud800' .. '\\udbff'
                     {
                     matchRange('\uD800','\uDBFF'); 
 
                     }
 
-                    // .\\COMTOR.g:1996:30: ( '\\udc00' .. '\\udfff' )
-                    // .\\COMTOR.g:1996:31: '\\udc00' .. '\\udfff'
+                    // COMTOR.g:1996:30: ( '\\udc00' .. '\\udfff' )
+                    // COMTOR.g:1996:31: '\\udc00' .. '\\udfff'
                     {
                     matchRange('\uDC00','\uDFFF'); 
 
@@ -6623,7 +6623,7 @@ public class COMTORLexer extends Lexer {
     // $ANTLR start "IdentifierPart"
     public final void mIdentifierPart() throws RecognitionException {
         try {
-            // .\\COMTOR.g:2001:5: ( '\\u0000' .. '\\u0008' | '\\u000e' .. '\\u001b' | '\\u0024' | '\\u0030' .. '\\u0039' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u007f' .. '\\u009f' | '\\u00a2' .. '\\u00a5' | '\\u00aa' | '\\u00ad' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u0236' | '\\u0250' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u0300' .. '\\u0357' | '\\u035d' .. '\\u036f' | '\\u037a' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u03fb' | '\\u0400' .. '\\u0481' | '\\u0483' .. '\\u0486' | '\\u048a' .. '\\u04ce' | '\\u04d0' .. '\\u04f5' | '\\u04f8' .. '\\u04f9' | '\\u0500' .. '\\u050f' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u0591' .. '\\u05a1' | '\\u05a3' .. '\\u05b9' | '\\u05bb' .. '\\u05bd' | '\\u05bf' | '\\u05c1' .. '\\u05c2' | '\\u05c4' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0600' .. '\\u0603' | '\\u0610' .. '\\u0615' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u0658' | '\\u0660' .. '\\u0669' | '\\u066e' .. '\\u06d3' | '\\u06d5' .. '\\u06dd' | '\\u06df' .. '\\u06e8' | '\\u06ea' .. '\\u06fc' | '\\u06ff' | '\\u070f' .. '\\u074a' | '\\u074d' .. '\\u074f' | '\\u0780' .. '\\u07b1' | '\\u0901' .. '\\u0939' | '\\u093c' .. '\\u094d' | '\\u0950' .. '\\u0954' | '\\u0958' .. '\\u0963' | '\\u0966' .. '\\u096f' | '\\u0981' .. '\\u0983' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bc' .. '\\u09c4' | '\\u09c7' .. '\\u09c8' | '\\u09cb' .. '\\u09cd' | '\\u09d7' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e3' | '\\u09e6' .. '\\u09f3' | '\\u0a01' .. '\\u0a03' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a3c' | '\\u0a3e' .. '\\u0a42' | '\\u0a47' .. '\\u0a48' | '\\u0a4b' .. '\\u0a4d' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a66' .. '\\u0a74' | '\\u0a81' .. '\\u0a83' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abc' .. '\\u0ac5' | '\\u0ac7' .. '\\u0ac9' | '\\u0acb' .. '\\u0acd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae3' | '\\u0ae6' .. '\\u0aef' | '\\u0af1' | '\\u0b01' .. '\\u0b03' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3c' .. '\\u0b43' | '\\u0b47' .. '\\u0b48' | '\\u0b4b' .. '\\u0b4d' | '\\u0b56' .. '\\u0b57' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b66' .. '\\u0b6f' | '\\u0b71' | '\\u0b82' .. '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb5' | '\\u0bb7' .. '\\u0bb9' | '\\u0bbe' .. '\\u0bc2' | '\\u0bc6' .. '\\u0bc8' | '\\u0bca' .. '\\u0bcd' | '\\u0bd7' | '\\u0be7' .. '\\u0bef' | '\\u0bf9' | '\\u0c01' .. '\\u0c03' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c3e' .. '\\u0c44' | '\\u0c46' .. '\\u0c48' | '\\u0c4a' .. '\\u0c4d' | '\\u0c55' .. '\\u0c56' | '\\u0c60' .. '\\u0c61' | '\\u0c66' .. '\\u0c6f' | '\\u0c82' .. '\\u0c83' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbc' .. '\\u0cc4' | '\\u0cc6' .. '\\u0cc8' | '\\u0cca' .. '\\u0ccd' | '\\u0cd5' .. '\\u0cd6' | '\\u0cde' | '\\u0ce0' .. '\\u0ce1' | '\\u0ce6' .. '\\u0cef' | '\\u0d02' .. '\\u0d03' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d3e' .. '\\u0d43' | '\\u0d46' .. '\\u0d48' | '\\u0d4a' .. '\\u0d4d' | '\\u0d57' | '\\u0d60' .. '\\u0d61' | '\\u0d66' .. '\\u0d6f' | '\\u0d82' .. '\\u0d83' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0dca' | '\\u0dcf' .. '\\u0dd4' | '\\u0dd6' | '\\u0dd8' .. '\\u0ddf' | '\\u0df2' .. '\\u0df3' | '\\u0e01' .. '\\u0e3a' | '\\u0e3f' .. '\\u0e4e' | '\\u0e50' .. '\\u0e59' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb9' | '\\u0ebb' .. '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0ec8' .. '\\u0ecd' | '\\u0ed0' .. '\\u0ed9' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f18' .. '\\u0f19' | '\\u0f20' .. '\\u0f29' | '\\u0f35' | '\\u0f37' | '\\u0f39' | '\\u0f3e' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f71' .. '\\u0f84' | '\\u0f86' .. '\\u0f8b' | '\\u0f90' .. '\\u0f97' | '\\u0f99' .. '\\u0fbc' | '\\u0fc6' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u102c' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1040' .. '\\u1049' | '\\u1050' .. '\\u1059' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10f8' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12ae' | '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12ce' | '\\u12d0' .. '\\u12d6' | '\\u12d8' .. '\\u12ee' | '\\u12f0' .. '\\u130e' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131e' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135a' | '\\u1369' .. '\\u1371' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1714' | '\\u1720' .. '\\u1734' | '\\u1740' .. '\\u1753' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1772' .. '\\u1773' | '\\u1780' .. '\\u17d3' | '\\u17d7' | '\\u17db' .. '\\u17dd' | '\\u17e0' .. '\\u17e9' | '\\u180b' .. '\\u180d' | '\\u1810' .. '\\u1819' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a9' | '\\u1900' .. '\\u191c' | '\\u1920' .. '\\u192b' | '\\u1930' .. '\\u193b' | '\\u1946' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1d00' .. '\\u1d6b' | '\\u1e00' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u200c' .. '\\u200f' | '\\u202a' .. '\\u202e' | '\\u203f' .. '\\u2040' | '\\u2054' | '\\u2060' .. '\\u2063' | '\\u206a' .. '\\u206f' | '\\u2071' | '\\u207f' | '\\u20a0' .. '\\u20b1' | '\\u20d0' .. '\\u20dc' | '\\u20e1' | '\\u20e5' .. '\\u20ea' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u213d' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u302f' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u3099' .. '\\u309a' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fa5' | '\\ua000' .. '\\ua48c' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfc' | '\\ufe00' .. '\\ufe0f' | '\\ufe20' .. '\\ufe23' | '\\ufe33' .. '\\ufe34' | '\\ufe4d' .. '\\ufe4f' | '\\ufe69' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\ufeff' | '\\uff04' | '\\uff10' .. '\\uff19' | '\\uff21' .. '\\uff3a' | '\\uff3f' | '\\uff41' .. '\\uff5a' | '\\uff65' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' | '\\uffe0' .. '\\uffe1' | '\\uffe5' .. '\\uffe6' | '\\ufff9' .. '\\ufffb' | ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' ) )
+            // COMTOR.g:2001:5: ( '\\u0000' .. '\\u0008' | '\\u000e' .. '\\u001b' | '\\u0024' | '\\u0030' .. '\\u0039' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u007f' .. '\\u009f' | '\\u00a2' .. '\\u00a5' | '\\u00aa' | '\\u00ad' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u0236' | '\\u0250' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u0300' .. '\\u0357' | '\\u035d' .. '\\u036f' | '\\u037a' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u03fb' | '\\u0400' .. '\\u0481' | '\\u0483' .. '\\u0486' | '\\u048a' .. '\\u04ce' | '\\u04d0' .. '\\u04f5' | '\\u04f8' .. '\\u04f9' | '\\u0500' .. '\\u050f' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u0591' .. '\\u05a1' | '\\u05a3' .. '\\u05b9' | '\\u05bb' .. '\\u05bd' | '\\u05bf' | '\\u05c1' .. '\\u05c2' | '\\u05c4' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0600' .. '\\u0603' | '\\u0610' .. '\\u0615' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u0658' | '\\u0660' .. '\\u0669' | '\\u066e' .. '\\u06d3' | '\\u06d5' .. '\\u06dd' | '\\u06df' .. '\\u06e8' | '\\u06ea' .. '\\u06fc' | '\\u06ff' | '\\u070f' .. '\\u074a' | '\\u074d' .. '\\u074f' | '\\u0780' .. '\\u07b1' | '\\u0901' .. '\\u0939' | '\\u093c' .. '\\u094d' | '\\u0950' .. '\\u0954' | '\\u0958' .. '\\u0963' | '\\u0966' .. '\\u096f' | '\\u0981' .. '\\u0983' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bc' .. '\\u09c4' | '\\u09c7' .. '\\u09c8' | '\\u09cb' .. '\\u09cd' | '\\u09d7' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e3' | '\\u09e6' .. '\\u09f3' | '\\u0a01' .. '\\u0a03' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a3c' | '\\u0a3e' .. '\\u0a42' | '\\u0a47' .. '\\u0a48' | '\\u0a4b' .. '\\u0a4d' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a66' .. '\\u0a74' | '\\u0a81' .. '\\u0a83' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abc' .. '\\u0ac5' | '\\u0ac7' .. '\\u0ac9' | '\\u0acb' .. '\\u0acd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae3' | '\\u0ae6' .. '\\u0aef' | '\\u0af1' | '\\u0b01' .. '\\u0b03' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3c' .. '\\u0b43' | '\\u0b47' .. '\\u0b48' | '\\u0b4b' .. '\\u0b4d' | '\\u0b56' .. '\\u0b57' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b66' .. '\\u0b6f' | '\\u0b71' | '\\u0b82' .. '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb5' | '\\u0bb7' .. '\\u0bb9' | '\\u0bbe' .. '\\u0bc2' | '\\u0bc6' .. '\\u0bc8' | '\\u0bca' .. '\\u0bcd' | '\\u0bd7' | '\\u0be7' .. '\\u0bef' | '\\u0bf9' | '\\u0c01' .. '\\u0c03' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c3e' .. '\\u0c44' | '\\u0c46' .. '\\u0c48' | '\\u0c4a' .. '\\u0c4d' | '\\u0c55' .. '\\u0c56' | '\\u0c60' .. '\\u0c61' | '\\u0c66' .. '\\u0c6f' | '\\u0c82' .. '\\u0c83' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbc' .. '\\u0cc4' | '\\u0cc6' .. '\\u0cc8' | '\\u0cca' .. '\\u0ccd' | '\\u0cd5' .. '\\u0cd6' | '\\u0cde' | '\\u0ce0' .. '\\u0ce1' | '\\u0ce6' .. '\\u0cef' | '\\u0d02' .. '\\u0d03' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d3e' .. '\\u0d43' | '\\u0d46' .. '\\u0d48' | '\\u0d4a' .. '\\u0d4d' | '\\u0d57' | '\\u0d60' .. '\\u0d61' | '\\u0d66' .. '\\u0d6f' | '\\u0d82' .. '\\u0d83' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0dca' | '\\u0dcf' .. '\\u0dd4' | '\\u0dd6' | '\\u0dd8' .. '\\u0ddf' | '\\u0df2' .. '\\u0df3' | '\\u0e01' .. '\\u0e3a' | '\\u0e3f' .. '\\u0e4e' | '\\u0e50' .. '\\u0e59' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb9' | '\\u0ebb' .. '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0ec8' .. '\\u0ecd' | '\\u0ed0' .. '\\u0ed9' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f18' .. '\\u0f19' | '\\u0f20' .. '\\u0f29' | '\\u0f35' | '\\u0f37' | '\\u0f39' | '\\u0f3e' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f71' .. '\\u0f84' | '\\u0f86' .. '\\u0f8b' | '\\u0f90' .. '\\u0f97' | '\\u0f99' .. '\\u0fbc' | '\\u0fc6' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u102c' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1040' .. '\\u1049' | '\\u1050' .. '\\u1059' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10f8' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12ae' | '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12ce' | '\\u12d0' .. '\\u12d6' | '\\u12d8' .. '\\u12ee' | '\\u12f0' .. '\\u130e' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131e' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135a' | '\\u1369' .. '\\u1371' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1714' | '\\u1720' .. '\\u1734' | '\\u1740' .. '\\u1753' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1772' .. '\\u1773' | '\\u1780' .. '\\u17d3' | '\\u17d7' | '\\u17db' .. '\\u17dd' | '\\u17e0' .. '\\u17e9' | '\\u180b' .. '\\u180d' | '\\u1810' .. '\\u1819' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a9' | '\\u1900' .. '\\u191c' | '\\u1920' .. '\\u192b' | '\\u1930' .. '\\u193b' | '\\u1946' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1d00' .. '\\u1d6b' | '\\u1e00' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u200c' .. '\\u200f' | '\\u202a' .. '\\u202e' | '\\u203f' .. '\\u2040' | '\\u2054' | '\\u2060' .. '\\u2063' | '\\u206a' .. '\\u206f' | '\\u2071' | '\\u207f' | '\\u20a0' .. '\\u20b1' | '\\u20d0' .. '\\u20dc' | '\\u20e1' | '\\u20e5' .. '\\u20ea' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u213d' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u302f' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u3099' .. '\\u309a' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fa5' | '\\ua000' .. '\\ua48c' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfc' | '\\ufe00' .. '\\ufe0f' | '\\ufe20' .. '\\ufe23' | '\\ufe33' .. '\\ufe34' | '\\ufe4d' .. '\\ufe4f' | '\\ufe69' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\ufeff' | '\\uff04' | '\\uff10' .. '\\uff19' | '\\uff21' .. '\\uff3a' | '\\uff3f' | '\\uff41' .. '\\uff5a' | '\\uff65' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' | '\\uffe0' .. '\\uffe1' | '\\uffe5' .. '\\uffe6' | '\\ufff9' .. '\\ufffb' | ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' ) )
             int alt32=386;
             int LA32_0 = input.LA(1);
 
@@ -7793,2712 +7793,2712 @@ public class COMTORLexer extends Lexer {
             }
             switch (alt32) {
                 case 1 :
-                    // .\\COMTOR.g:2001:9: '\\u0000' .. '\\u0008'
+                    // COMTOR.g:2001:9: '\\u0000' .. '\\u0008'
                     {
                     matchRange('\u0000','\b'); 
 
                     }
                     break;
                 case 2 :
-                    // .\\COMTOR.g:2002:9: '\\u000e' .. '\\u001b'
+                    // COMTOR.g:2002:9: '\\u000e' .. '\\u001b'
                     {
                     matchRange('\u000E','\u001B'); 
 
                     }
                     break;
                 case 3 :
-                    // .\\COMTOR.g:2003:9: '\\u0024'
+                    // COMTOR.g:2003:9: '\\u0024'
                     {
                     match('$'); 
 
                     }
                     break;
                 case 4 :
-                    // .\\COMTOR.g:2004:9: '\\u0030' .. '\\u0039'
+                    // COMTOR.g:2004:9: '\\u0030' .. '\\u0039'
                     {
                     matchRange('0','9'); 
 
                     }
                     break;
                 case 5 :
-                    // .\\COMTOR.g:2005:9: '\\u0041' .. '\\u005a'
+                    // COMTOR.g:2005:9: '\\u0041' .. '\\u005a'
                     {
                     matchRange('A','Z'); 
 
                     }
                     break;
                 case 6 :
-                    // .\\COMTOR.g:2006:9: '\\u005f'
+                    // COMTOR.g:2006:9: '\\u005f'
                     {
                     match('_'); 
 
                     }
                     break;
                 case 7 :
-                    // .\\COMTOR.g:2007:9: '\\u0061' .. '\\u007a'
+                    // COMTOR.g:2007:9: '\\u0061' .. '\\u007a'
                     {
                     matchRange('a','z'); 
 
                     }
                     break;
                 case 8 :
-                    // .\\COMTOR.g:2008:9: '\\u007f' .. '\\u009f'
+                    // COMTOR.g:2008:9: '\\u007f' .. '\\u009f'
                     {
                     matchRange('\u007F','\u009F'); 
 
                     }
                     break;
                 case 9 :
-                    // .\\COMTOR.g:2009:9: '\\u00a2' .. '\\u00a5'
+                    // COMTOR.g:2009:9: '\\u00a2' .. '\\u00a5'
                     {
                     matchRange('\u00A2','\u00A5'); 
 
                     }
                     break;
                 case 10 :
-                    // .\\COMTOR.g:2010:9: '\\u00aa'
+                    // COMTOR.g:2010:9: '\\u00aa'
                     {
                     match('\u00AA'); 
 
                     }
                     break;
                 case 11 :
-                    // .\\COMTOR.g:2011:9: '\\u00ad'
+                    // COMTOR.g:2011:9: '\\u00ad'
                     {
                     match('\u00AD'); 
 
                     }
                     break;
                 case 12 :
-                    // .\\COMTOR.g:2012:9: '\\u00b5'
+                    // COMTOR.g:2012:9: '\\u00b5'
                     {
                     match('\u00B5'); 
 
                     }
                     break;
                 case 13 :
-                    // .\\COMTOR.g:2013:9: '\\u00ba'
+                    // COMTOR.g:2013:9: '\\u00ba'
                     {
                     match('\u00BA'); 
 
                     }
                     break;
                 case 14 :
-                    // .\\COMTOR.g:2014:9: '\\u00c0' .. '\\u00d6'
+                    // COMTOR.g:2014:9: '\\u00c0' .. '\\u00d6'
                     {
                     matchRange('\u00C0','\u00D6'); 
 
                     }
                     break;
                 case 15 :
-                    // .\\COMTOR.g:2015:9: '\\u00d8' .. '\\u00f6'
+                    // COMTOR.g:2015:9: '\\u00d8' .. '\\u00f6'
                     {
                     matchRange('\u00D8','\u00F6'); 
 
                     }
                     break;
                 case 16 :
-                    // .\\COMTOR.g:2016:9: '\\u00f8' .. '\\u0236'
+                    // COMTOR.g:2016:9: '\\u00f8' .. '\\u0236'
                     {
                     matchRange('\u00F8','\u0236'); 
 
                     }
                     break;
                 case 17 :
-                    // .\\COMTOR.g:2017:9: '\\u0250' .. '\\u02c1'
+                    // COMTOR.g:2017:9: '\\u0250' .. '\\u02c1'
                     {
                     matchRange('\u0250','\u02C1'); 
 
                     }
                     break;
                 case 18 :
-                    // .\\COMTOR.g:2018:9: '\\u02c6' .. '\\u02d1'
+                    // COMTOR.g:2018:9: '\\u02c6' .. '\\u02d1'
                     {
                     matchRange('\u02C6','\u02D1'); 
 
                     }
                     break;
                 case 19 :
-                    // .\\COMTOR.g:2019:9: '\\u02e0' .. '\\u02e4'
+                    // COMTOR.g:2019:9: '\\u02e0' .. '\\u02e4'
                     {
                     matchRange('\u02E0','\u02E4'); 
 
                     }
                     break;
                 case 20 :
-                    // .\\COMTOR.g:2020:9: '\\u02ee'
+                    // COMTOR.g:2020:9: '\\u02ee'
                     {
                     match('\u02EE'); 
 
                     }
                     break;
                 case 21 :
-                    // .\\COMTOR.g:2021:9: '\\u0300' .. '\\u0357'
+                    // COMTOR.g:2021:9: '\\u0300' .. '\\u0357'
                     {
                     matchRange('\u0300','\u0357'); 
 
                     }
                     break;
                 case 22 :
-                    // .\\COMTOR.g:2022:9: '\\u035d' .. '\\u036f'
+                    // COMTOR.g:2022:9: '\\u035d' .. '\\u036f'
                     {
                     matchRange('\u035D','\u036F'); 
 
                     }
                     break;
                 case 23 :
-                    // .\\COMTOR.g:2023:9: '\\u037a'
+                    // COMTOR.g:2023:9: '\\u037a'
                     {
                     match('\u037A'); 
 
                     }
                     break;
                 case 24 :
-                    // .\\COMTOR.g:2024:9: '\\u0386'
+                    // COMTOR.g:2024:9: '\\u0386'
                     {
                     match('\u0386'); 
 
                     }
                     break;
                 case 25 :
-                    // .\\COMTOR.g:2025:9: '\\u0388' .. '\\u038a'
+                    // COMTOR.g:2025:9: '\\u0388' .. '\\u038a'
                     {
                     matchRange('\u0388','\u038A'); 
 
                     }
                     break;
                 case 26 :
-                    // .\\COMTOR.g:2026:9: '\\u038c'
+                    // COMTOR.g:2026:9: '\\u038c'
                     {
                     match('\u038C'); 
 
                     }
                     break;
                 case 27 :
-                    // .\\COMTOR.g:2027:9: '\\u038e' .. '\\u03a1'
+                    // COMTOR.g:2027:9: '\\u038e' .. '\\u03a1'
                     {
                     matchRange('\u038E','\u03A1'); 
 
                     }
                     break;
                 case 28 :
-                    // .\\COMTOR.g:2028:9: '\\u03a3' .. '\\u03ce'
+                    // COMTOR.g:2028:9: '\\u03a3' .. '\\u03ce'
                     {
                     matchRange('\u03A3','\u03CE'); 
 
                     }
                     break;
                 case 29 :
-                    // .\\COMTOR.g:2029:9: '\\u03d0' .. '\\u03f5'
+                    // COMTOR.g:2029:9: '\\u03d0' .. '\\u03f5'
                     {
                     matchRange('\u03D0','\u03F5'); 
 
                     }
                     break;
                 case 30 :
-                    // .\\COMTOR.g:2030:9: '\\u03f7' .. '\\u03fb'
+                    // COMTOR.g:2030:9: '\\u03f7' .. '\\u03fb'
                     {
                     matchRange('\u03F7','\u03FB'); 
 
                     }
                     break;
                 case 31 :
-                    // .\\COMTOR.g:2031:9: '\\u0400' .. '\\u0481'
+                    // COMTOR.g:2031:9: '\\u0400' .. '\\u0481'
                     {
                     matchRange('\u0400','\u0481'); 
 
                     }
                     break;
                 case 32 :
-                    // .\\COMTOR.g:2032:9: '\\u0483' .. '\\u0486'
+                    // COMTOR.g:2032:9: '\\u0483' .. '\\u0486'
                     {
                     matchRange('\u0483','\u0486'); 
 
                     }
                     break;
                 case 33 :
-                    // .\\COMTOR.g:2033:9: '\\u048a' .. '\\u04ce'
+                    // COMTOR.g:2033:9: '\\u048a' .. '\\u04ce'
                     {
                     matchRange('\u048A','\u04CE'); 
 
                     }
                     break;
                 case 34 :
-                    // .\\COMTOR.g:2034:9: '\\u04d0' .. '\\u04f5'
+                    // COMTOR.g:2034:9: '\\u04d0' .. '\\u04f5'
                     {
                     matchRange('\u04D0','\u04F5'); 
 
                     }
                     break;
                 case 35 :
-                    // .\\COMTOR.g:2035:9: '\\u04f8' .. '\\u04f9'
+                    // COMTOR.g:2035:9: '\\u04f8' .. '\\u04f9'
                     {
                     matchRange('\u04F8','\u04F9'); 
 
                     }
                     break;
                 case 36 :
-                    // .\\COMTOR.g:2036:9: '\\u0500' .. '\\u050f'
+                    // COMTOR.g:2036:9: '\\u0500' .. '\\u050f'
                     {
                     matchRange('\u0500','\u050F'); 
 
                     }
                     break;
                 case 37 :
-                    // .\\COMTOR.g:2037:9: '\\u0531' .. '\\u0556'
+                    // COMTOR.g:2037:9: '\\u0531' .. '\\u0556'
                     {
                     matchRange('\u0531','\u0556'); 
 
                     }
                     break;
                 case 38 :
-                    // .\\COMTOR.g:2038:9: '\\u0559'
+                    // COMTOR.g:2038:9: '\\u0559'
                     {
                     match('\u0559'); 
 
                     }
                     break;
                 case 39 :
-                    // .\\COMTOR.g:2039:9: '\\u0561' .. '\\u0587'
+                    // COMTOR.g:2039:9: '\\u0561' .. '\\u0587'
                     {
                     matchRange('\u0561','\u0587'); 
 
                     }
                     break;
                 case 40 :
-                    // .\\COMTOR.g:2040:9: '\\u0591' .. '\\u05a1'
+                    // COMTOR.g:2040:9: '\\u0591' .. '\\u05a1'
                     {
                     matchRange('\u0591','\u05A1'); 
 
                     }
                     break;
                 case 41 :
-                    // .\\COMTOR.g:2041:9: '\\u05a3' .. '\\u05b9'
+                    // COMTOR.g:2041:9: '\\u05a3' .. '\\u05b9'
                     {
                     matchRange('\u05A3','\u05B9'); 
 
                     }
                     break;
                 case 42 :
-                    // .\\COMTOR.g:2042:9: '\\u05bb' .. '\\u05bd'
+                    // COMTOR.g:2042:9: '\\u05bb' .. '\\u05bd'
                     {
                     matchRange('\u05BB','\u05BD'); 
 
                     }
                     break;
                 case 43 :
-                    // .\\COMTOR.g:2043:9: '\\u05bf'
+                    // COMTOR.g:2043:9: '\\u05bf'
                     {
                     match('\u05BF'); 
 
                     }
                     break;
                 case 44 :
-                    // .\\COMTOR.g:2044:9: '\\u05c1' .. '\\u05c2'
+                    // COMTOR.g:2044:9: '\\u05c1' .. '\\u05c2'
                     {
                     matchRange('\u05C1','\u05C2'); 
 
                     }
                     break;
                 case 45 :
-                    // .\\COMTOR.g:2045:9: '\\u05c4'
+                    // COMTOR.g:2045:9: '\\u05c4'
                     {
                     match('\u05C4'); 
 
                     }
                     break;
                 case 46 :
-                    // .\\COMTOR.g:2046:9: '\\u05d0' .. '\\u05ea'
+                    // COMTOR.g:2046:9: '\\u05d0' .. '\\u05ea'
                     {
                     matchRange('\u05D0','\u05EA'); 
 
                     }
                     break;
                 case 47 :
-                    // .\\COMTOR.g:2047:9: '\\u05f0' .. '\\u05f2'
+                    // COMTOR.g:2047:9: '\\u05f0' .. '\\u05f2'
                     {
                     matchRange('\u05F0','\u05F2'); 
 
                     }
                     break;
                 case 48 :
-                    // .\\COMTOR.g:2048:9: '\\u0600' .. '\\u0603'
+                    // COMTOR.g:2048:9: '\\u0600' .. '\\u0603'
                     {
                     matchRange('\u0600','\u0603'); 
 
                     }
                     break;
                 case 49 :
-                    // .\\COMTOR.g:2049:9: '\\u0610' .. '\\u0615'
+                    // COMTOR.g:2049:9: '\\u0610' .. '\\u0615'
                     {
                     matchRange('\u0610','\u0615'); 
 
                     }
                     break;
                 case 50 :
-                    // .\\COMTOR.g:2050:9: '\\u0621' .. '\\u063a'
+                    // COMTOR.g:2050:9: '\\u0621' .. '\\u063a'
                     {
                     matchRange('\u0621','\u063A'); 
 
                     }
                     break;
                 case 51 :
-                    // .\\COMTOR.g:2051:9: '\\u0640' .. '\\u0658'
+                    // COMTOR.g:2051:9: '\\u0640' .. '\\u0658'
                     {
                     matchRange('\u0640','\u0658'); 
 
                     }
                     break;
                 case 52 :
-                    // .\\COMTOR.g:2052:9: '\\u0660' .. '\\u0669'
+                    // COMTOR.g:2052:9: '\\u0660' .. '\\u0669'
                     {
                     matchRange('\u0660','\u0669'); 
 
                     }
                     break;
                 case 53 :
-                    // .\\COMTOR.g:2053:9: '\\u066e' .. '\\u06d3'
+                    // COMTOR.g:2053:9: '\\u066e' .. '\\u06d3'
                     {
                     matchRange('\u066E','\u06D3'); 
 
                     }
                     break;
                 case 54 :
-                    // .\\COMTOR.g:2054:9: '\\u06d5' .. '\\u06dd'
+                    // COMTOR.g:2054:9: '\\u06d5' .. '\\u06dd'
                     {
                     matchRange('\u06D5','\u06DD'); 
 
                     }
                     break;
                 case 55 :
-                    // .\\COMTOR.g:2055:9: '\\u06df' .. '\\u06e8'
+                    // COMTOR.g:2055:9: '\\u06df' .. '\\u06e8'
                     {
                     matchRange('\u06DF','\u06E8'); 
 
                     }
                     break;
                 case 56 :
-                    // .\\COMTOR.g:2056:9: '\\u06ea' .. '\\u06fc'
+                    // COMTOR.g:2056:9: '\\u06ea' .. '\\u06fc'
                     {
                     matchRange('\u06EA','\u06FC'); 
 
                     }
                     break;
                 case 57 :
-                    // .\\COMTOR.g:2057:9: '\\u06ff'
+                    // COMTOR.g:2057:9: '\\u06ff'
                     {
                     match('\u06FF'); 
 
                     }
                     break;
                 case 58 :
-                    // .\\COMTOR.g:2058:9: '\\u070f' .. '\\u074a'
+                    // COMTOR.g:2058:9: '\\u070f' .. '\\u074a'
                     {
                     matchRange('\u070F','\u074A'); 
 
                     }
                     break;
                 case 59 :
-                    // .\\COMTOR.g:2059:9: '\\u074d' .. '\\u074f'
+                    // COMTOR.g:2059:9: '\\u074d' .. '\\u074f'
                     {
                     matchRange('\u074D','\u074F'); 
 
                     }
                     break;
                 case 60 :
-                    // .\\COMTOR.g:2060:9: '\\u0780' .. '\\u07b1'
+                    // COMTOR.g:2060:9: '\\u0780' .. '\\u07b1'
                     {
                     matchRange('\u0780','\u07B1'); 
 
                     }
                     break;
                 case 61 :
-                    // .\\COMTOR.g:2061:9: '\\u0901' .. '\\u0939'
+                    // COMTOR.g:2061:9: '\\u0901' .. '\\u0939'
                     {
                     matchRange('\u0901','\u0939'); 
 
                     }
                     break;
                 case 62 :
-                    // .\\COMTOR.g:2062:9: '\\u093c' .. '\\u094d'
+                    // COMTOR.g:2062:9: '\\u093c' .. '\\u094d'
                     {
                     matchRange('\u093C','\u094D'); 
 
                     }
                     break;
                 case 63 :
-                    // .\\COMTOR.g:2063:9: '\\u0950' .. '\\u0954'
+                    // COMTOR.g:2063:9: '\\u0950' .. '\\u0954'
                     {
                     matchRange('\u0950','\u0954'); 
 
                     }
                     break;
                 case 64 :
-                    // .\\COMTOR.g:2064:9: '\\u0958' .. '\\u0963'
+                    // COMTOR.g:2064:9: '\\u0958' .. '\\u0963'
                     {
                     matchRange('\u0958','\u0963'); 
 
                     }
                     break;
                 case 65 :
-                    // .\\COMTOR.g:2065:9: '\\u0966' .. '\\u096f'
+                    // COMTOR.g:2065:9: '\\u0966' .. '\\u096f'
                     {
                     matchRange('\u0966','\u096F'); 
 
                     }
                     break;
                 case 66 :
-                    // .\\COMTOR.g:2066:9: '\\u0981' .. '\\u0983'
+                    // COMTOR.g:2066:9: '\\u0981' .. '\\u0983'
                     {
                     matchRange('\u0981','\u0983'); 
 
                     }
                     break;
                 case 67 :
-                    // .\\COMTOR.g:2067:9: '\\u0985' .. '\\u098c'
+                    // COMTOR.g:2067:9: '\\u0985' .. '\\u098c'
                     {
                     matchRange('\u0985','\u098C'); 
 
                     }
                     break;
                 case 68 :
-                    // .\\COMTOR.g:2068:9: '\\u098f' .. '\\u0990'
+                    // COMTOR.g:2068:9: '\\u098f' .. '\\u0990'
                     {
                     matchRange('\u098F','\u0990'); 
 
                     }
                     break;
                 case 69 :
-                    // .\\COMTOR.g:2069:9: '\\u0993' .. '\\u09a8'
+                    // COMTOR.g:2069:9: '\\u0993' .. '\\u09a8'
                     {
                     matchRange('\u0993','\u09A8'); 
 
                     }
                     break;
                 case 70 :
-                    // .\\COMTOR.g:2070:9: '\\u09aa' .. '\\u09b0'
+                    // COMTOR.g:2070:9: '\\u09aa' .. '\\u09b0'
                     {
                     matchRange('\u09AA','\u09B0'); 
 
                     }
                     break;
                 case 71 :
-                    // .\\COMTOR.g:2071:9: '\\u09b2'
+                    // COMTOR.g:2071:9: '\\u09b2'
                     {
                     match('\u09B2'); 
 
                     }
                     break;
                 case 72 :
-                    // .\\COMTOR.g:2072:9: '\\u09b6' .. '\\u09b9'
+                    // COMTOR.g:2072:9: '\\u09b6' .. '\\u09b9'
                     {
                     matchRange('\u09B6','\u09B9'); 
 
                     }
                     break;
                 case 73 :
-                    // .\\COMTOR.g:2073:9: '\\u09bc' .. '\\u09c4'
+                    // COMTOR.g:2073:9: '\\u09bc' .. '\\u09c4'
                     {
                     matchRange('\u09BC','\u09C4'); 
 
                     }
                     break;
                 case 74 :
-                    // .\\COMTOR.g:2074:9: '\\u09c7' .. '\\u09c8'
+                    // COMTOR.g:2074:9: '\\u09c7' .. '\\u09c8'
                     {
                     matchRange('\u09C7','\u09C8'); 
 
                     }
                     break;
                 case 75 :
-                    // .\\COMTOR.g:2075:9: '\\u09cb' .. '\\u09cd'
+                    // COMTOR.g:2075:9: '\\u09cb' .. '\\u09cd'
                     {
                     matchRange('\u09CB','\u09CD'); 
 
                     }
                     break;
                 case 76 :
-                    // .\\COMTOR.g:2076:9: '\\u09d7'
+                    // COMTOR.g:2076:9: '\\u09d7'
                     {
                     match('\u09D7'); 
 
                     }
                     break;
                 case 77 :
-                    // .\\COMTOR.g:2077:9: '\\u09dc' .. '\\u09dd'
+                    // COMTOR.g:2077:9: '\\u09dc' .. '\\u09dd'
                     {
                     matchRange('\u09DC','\u09DD'); 
 
                     }
                     break;
                 case 78 :
-                    // .\\COMTOR.g:2078:9: '\\u09df' .. '\\u09e3'
+                    // COMTOR.g:2078:9: '\\u09df' .. '\\u09e3'
                     {
                     matchRange('\u09DF','\u09E3'); 
 
                     }
                     break;
                 case 79 :
-                    // .\\COMTOR.g:2079:9: '\\u09e6' .. '\\u09f3'
+                    // COMTOR.g:2079:9: '\\u09e6' .. '\\u09f3'
                     {
                     matchRange('\u09E6','\u09F3'); 
 
                     }
                     break;
                 case 80 :
-                    // .\\COMTOR.g:2080:9: '\\u0a01' .. '\\u0a03'
+                    // COMTOR.g:2080:9: '\\u0a01' .. '\\u0a03'
                     {
                     matchRange('\u0A01','\u0A03'); 
 
                     }
                     break;
                 case 81 :
-                    // .\\COMTOR.g:2081:9: '\\u0a05' .. '\\u0a0a'
+                    // COMTOR.g:2081:9: '\\u0a05' .. '\\u0a0a'
                     {
                     matchRange('\u0A05','\u0A0A'); 
 
                     }
                     break;
                 case 82 :
-                    // .\\COMTOR.g:2082:9: '\\u0a0f' .. '\\u0a10'
+                    // COMTOR.g:2082:9: '\\u0a0f' .. '\\u0a10'
                     {
                     matchRange('\u0A0F','\u0A10'); 
 
                     }
                     break;
                 case 83 :
-                    // .\\COMTOR.g:2083:9: '\\u0a13' .. '\\u0a28'
+                    // COMTOR.g:2083:9: '\\u0a13' .. '\\u0a28'
                     {
                     matchRange('\u0A13','\u0A28'); 
 
                     }
                     break;
                 case 84 :
-                    // .\\COMTOR.g:2084:9: '\\u0a2a' .. '\\u0a30'
+                    // COMTOR.g:2084:9: '\\u0a2a' .. '\\u0a30'
                     {
                     matchRange('\u0A2A','\u0A30'); 
 
                     }
                     break;
                 case 85 :
-                    // .\\COMTOR.g:2085:9: '\\u0a32' .. '\\u0a33'
+                    // COMTOR.g:2085:9: '\\u0a32' .. '\\u0a33'
                     {
                     matchRange('\u0A32','\u0A33'); 
 
                     }
                     break;
                 case 86 :
-                    // .\\COMTOR.g:2086:9: '\\u0a35' .. '\\u0a36'
+                    // COMTOR.g:2086:9: '\\u0a35' .. '\\u0a36'
                     {
                     matchRange('\u0A35','\u0A36'); 
 
                     }
                     break;
                 case 87 :
-                    // .\\COMTOR.g:2087:9: '\\u0a38' .. '\\u0a39'
+                    // COMTOR.g:2087:9: '\\u0a38' .. '\\u0a39'
                     {
                     matchRange('\u0A38','\u0A39'); 
 
                     }
                     break;
                 case 88 :
-                    // .\\COMTOR.g:2088:9: '\\u0a3c'
+                    // COMTOR.g:2088:9: '\\u0a3c'
                     {
                     match('\u0A3C'); 
 
                     }
                     break;
                 case 89 :
-                    // .\\COMTOR.g:2089:9: '\\u0a3e' .. '\\u0a42'
+                    // COMTOR.g:2089:9: '\\u0a3e' .. '\\u0a42'
                     {
                     matchRange('\u0A3E','\u0A42'); 
 
                     }
                     break;
                 case 90 :
-                    // .\\COMTOR.g:2090:9: '\\u0a47' .. '\\u0a48'
+                    // COMTOR.g:2090:9: '\\u0a47' .. '\\u0a48'
                     {
                     matchRange('\u0A47','\u0A48'); 
 
                     }
                     break;
                 case 91 :
-                    // .\\COMTOR.g:2091:9: '\\u0a4b' .. '\\u0a4d'
+                    // COMTOR.g:2091:9: '\\u0a4b' .. '\\u0a4d'
                     {
                     matchRange('\u0A4B','\u0A4D'); 
 
                     }
                     break;
                 case 92 :
-                    // .\\COMTOR.g:2092:9: '\\u0a59' .. '\\u0a5c'
+                    // COMTOR.g:2092:9: '\\u0a59' .. '\\u0a5c'
                     {
                     matchRange('\u0A59','\u0A5C'); 
 
                     }
                     break;
                 case 93 :
-                    // .\\COMTOR.g:2093:9: '\\u0a5e'
+                    // COMTOR.g:2093:9: '\\u0a5e'
                     {
                     match('\u0A5E'); 
 
                     }
                     break;
                 case 94 :
-                    // .\\COMTOR.g:2094:9: '\\u0a66' .. '\\u0a74'
+                    // COMTOR.g:2094:9: '\\u0a66' .. '\\u0a74'
                     {
                     matchRange('\u0A66','\u0A74'); 
 
                     }
                     break;
                 case 95 :
-                    // .\\COMTOR.g:2095:9: '\\u0a81' .. '\\u0a83'
+                    // COMTOR.g:2095:9: '\\u0a81' .. '\\u0a83'
                     {
                     matchRange('\u0A81','\u0A83'); 
 
                     }
                     break;
                 case 96 :
-                    // .\\COMTOR.g:2096:9: '\\u0a85' .. '\\u0a8d'
+                    // COMTOR.g:2096:9: '\\u0a85' .. '\\u0a8d'
                     {
                     matchRange('\u0A85','\u0A8D'); 
 
                     }
                     break;
                 case 97 :
-                    // .\\COMTOR.g:2097:9: '\\u0a8f' .. '\\u0a91'
+                    // COMTOR.g:2097:9: '\\u0a8f' .. '\\u0a91'
                     {
                     matchRange('\u0A8F','\u0A91'); 
 
                     }
                     break;
                 case 98 :
-                    // .\\COMTOR.g:2098:9: '\\u0a93' .. '\\u0aa8'
+                    // COMTOR.g:2098:9: '\\u0a93' .. '\\u0aa8'
                     {
                     matchRange('\u0A93','\u0AA8'); 
 
                     }
                     break;
                 case 99 :
-                    // .\\COMTOR.g:2099:9: '\\u0aaa' .. '\\u0ab0'
+                    // COMTOR.g:2099:9: '\\u0aaa' .. '\\u0ab0'
                     {
                     matchRange('\u0AAA','\u0AB0'); 
 
                     }
                     break;
                 case 100 :
-                    // .\\COMTOR.g:2100:9: '\\u0ab2' .. '\\u0ab3'
+                    // COMTOR.g:2100:9: '\\u0ab2' .. '\\u0ab3'
                     {
                     matchRange('\u0AB2','\u0AB3'); 
 
                     }
                     break;
                 case 101 :
-                    // .\\COMTOR.g:2101:9: '\\u0ab5' .. '\\u0ab9'
+                    // COMTOR.g:2101:9: '\\u0ab5' .. '\\u0ab9'
                     {
                     matchRange('\u0AB5','\u0AB9'); 
 
                     }
                     break;
                 case 102 :
-                    // .\\COMTOR.g:2102:9: '\\u0abc' .. '\\u0ac5'
+                    // COMTOR.g:2102:9: '\\u0abc' .. '\\u0ac5'
                     {
                     matchRange('\u0ABC','\u0AC5'); 
 
                     }
                     break;
                 case 103 :
-                    // .\\COMTOR.g:2103:9: '\\u0ac7' .. '\\u0ac9'
+                    // COMTOR.g:2103:9: '\\u0ac7' .. '\\u0ac9'
                     {
                     matchRange('\u0AC7','\u0AC9'); 
 
                     }
                     break;
                 case 104 :
-                    // .\\COMTOR.g:2104:9: '\\u0acb' .. '\\u0acd'
+                    // COMTOR.g:2104:9: '\\u0acb' .. '\\u0acd'
                     {
                     matchRange('\u0ACB','\u0ACD'); 
 
                     }
                     break;
                 case 105 :
-                    // .\\COMTOR.g:2105:9: '\\u0ad0'
+                    // COMTOR.g:2105:9: '\\u0ad0'
                     {
                     match('\u0AD0'); 
 
                     }
                     break;
                 case 106 :
-                    // .\\COMTOR.g:2106:9: '\\u0ae0' .. '\\u0ae3'
+                    // COMTOR.g:2106:9: '\\u0ae0' .. '\\u0ae3'
                     {
                     matchRange('\u0AE0','\u0AE3'); 
 
                     }
                     break;
                 case 107 :
-                    // .\\COMTOR.g:2107:9: '\\u0ae6' .. '\\u0aef'
+                    // COMTOR.g:2107:9: '\\u0ae6' .. '\\u0aef'
                     {
                     matchRange('\u0AE6','\u0AEF'); 
 
                     }
                     break;
                 case 108 :
-                    // .\\COMTOR.g:2108:9: '\\u0af1'
+                    // COMTOR.g:2108:9: '\\u0af1'
                     {
                     match('\u0AF1'); 
 
                     }
                     break;
                 case 109 :
-                    // .\\COMTOR.g:2109:9: '\\u0b01' .. '\\u0b03'
+                    // COMTOR.g:2109:9: '\\u0b01' .. '\\u0b03'
                     {
                     matchRange('\u0B01','\u0B03'); 
 
                     }
                     break;
                 case 110 :
-                    // .\\COMTOR.g:2110:9: '\\u0b05' .. '\\u0b0c'
+                    // COMTOR.g:2110:9: '\\u0b05' .. '\\u0b0c'
                     {
                     matchRange('\u0B05','\u0B0C'); 
 
                     }
                     break;
                 case 111 :
-                    // .\\COMTOR.g:2111:9: '\\u0b0f' .. '\\u0b10'
+                    // COMTOR.g:2111:9: '\\u0b0f' .. '\\u0b10'
                     {
                     matchRange('\u0B0F','\u0B10'); 
 
                     }
                     break;
                 case 112 :
-                    // .\\COMTOR.g:2112:9: '\\u0b13' .. '\\u0b28'
+                    // COMTOR.g:2112:9: '\\u0b13' .. '\\u0b28'
                     {
                     matchRange('\u0B13','\u0B28'); 
 
                     }
                     break;
                 case 113 :
-                    // .\\COMTOR.g:2113:9: '\\u0b2a' .. '\\u0b30'
+                    // COMTOR.g:2113:9: '\\u0b2a' .. '\\u0b30'
                     {
                     matchRange('\u0B2A','\u0B30'); 
 
                     }
                     break;
                 case 114 :
-                    // .\\COMTOR.g:2114:9: '\\u0b32' .. '\\u0b33'
+                    // COMTOR.g:2114:9: '\\u0b32' .. '\\u0b33'
                     {
                     matchRange('\u0B32','\u0B33'); 
 
                     }
                     break;
                 case 115 :
-                    // .\\COMTOR.g:2115:9: '\\u0b35' .. '\\u0b39'
+                    // COMTOR.g:2115:9: '\\u0b35' .. '\\u0b39'
                     {
                     matchRange('\u0B35','\u0B39'); 
 
                     }
                     break;
                 case 116 :
-                    // .\\COMTOR.g:2116:9: '\\u0b3c' .. '\\u0b43'
+                    // COMTOR.g:2116:9: '\\u0b3c' .. '\\u0b43'
                     {
                     matchRange('\u0B3C','\u0B43'); 
 
                     }
                     break;
                 case 117 :
-                    // .\\COMTOR.g:2117:9: '\\u0b47' .. '\\u0b48'
+                    // COMTOR.g:2117:9: '\\u0b47' .. '\\u0b48'
                     {
                     matchRange('\u0B47','\u0B48'); 
 
                     }
                     break;
                 case 118 :
-                    // .\\COMTOR.g:2118:9: '\\u0b4b' .. '\\u0b4d'
+                    // COMTOR.g:2118:9: '\\u0b4b' .. '\\u0b4d'
                     {
                     matchRange('\u0B4B','\u0B4D'); 
 
                     }
                     break;
                 case 119 :
-                    // .\\COMTOR.g:2119:9: '\\u0b56' .. '\\u0b57'
+                    // COMTOR.g:2119:9: '\\u0b56' .. '\\u0b57'
                     {
                     matchRange('\u0B56','\u0B57'); 
 
                     }
                     break;
                 case 120 :
-                    // .\\COMTOR.g:2120:9: '\\u0b5c' .. '\\u0b5d'
+                    // COMTOR.g:2120:9: '\\u0b5c' .. '\\u0b5d'
                     {
                     matchRange('\u0B5C','\u0B5D'); 
 
                     }
                     break;
                 case 121 :
-                    // .\\COMTOR.g:2121:9: '\\u0b5f' .. '\\u0b61'
+                    // COMTOR.g:2121:9: '\\u0b5f' .. '\\u0b61'
                     {
                     matchRange('\u0B5F','\u0B61'); 
 
                     }
                     break;
                 case 122 :
-                    // .\\COMTOR.g:2122:9: '\\u0b66' .. '\\u0b6f'
+                    // COMTOR.g:2122:9: '\\u0b66' .. '\\u0b6f'
                     {
                     matchRange('\u0B66','\u0B6F'); 
 
                     }
                     break;
                 case 123 :
-                    // .\\COMTOR.g:2123:9: '\\u0b71'
+                    // COMTOR.g:2123:9: '\\u0b71'
                     {
                     match('\u0B71'); 
 
                     }
                     break;
                 case 124 :
-                    // .\\COMTOR.g:2124:9: '\\u0b82' .. '\\u0b83'
+                    // COMTOR.g:2124:9: '\\u0b82' .. '\\u0b83'
                     {
                     matchRange('\u0B82','\u0B83'); 
 
                     }
                     break;
                 case 125 :
-                    // .\\COMTOR.g:2125:9: '\\u0b85' .. '\\u0b8a'
+                    // COMTOR.g:2125:9: '\\u0b85' .. '\\u0b8a'
                     {
                     matchRange('\u0B85','\u0B8A'); 
 
                     }
                     break;
                 case 126 :
-                    // .\\COMTOR.g:2126:9: '\\u0b8e' .. '\\u0b90'
+                    // COMTOR.g:2126:9: '\\u0b8e' .. '\\u0b90'
                     {
                     matchRange('\u0B8E','\u0B90'); 
 
                     }
                     break;
                 case 127 :
-                    // .\\COMTOR.g:2127:9: '\\u0b92' .. '\\u0b95'
+                    // COMTOR.g:2127:9: '\\u0b92' .. '\\u0b95'
                     {
                     matchRange('\u0B92','\u0B95'); 
 
                     }
                     break;
                 case 128 :
-                    // .\\COMTOR.g:2128:9: '\\u0b99' .. '\\u0b9a'
+                    // COMTOR.g:2128:9: '\\u0b99' .. '\\u0b9a'
                     {
                     matchRange('\u0B99','\u0B9A'); 
 
                     }
                     break;
                 case 129 :
-                    // .\\COMTOR.g:2129:9: '\\u0b9c'
+                    // COMTOR.g:2129:9: '\\u0b9c'
                     {
                     match('\u0B9C'); 
 
                     }
                     break;
                 case 130 :
-                    // .\\COMTOR.g:2130:9: '\\u0b9e' .. '\\u0b9f'
+                    // COMTOR.g:2130:9: '\\u0b9e' .. '\\u0b9f'
                     {
                     matchRange('\u0B9E','\u0B9F'); 
 
                     }
                     break;
                 case 131 :
-                    // .\\COMTOR.g:2131:9: '\\u0ba3' .. '\\u0ba4'
+                    // COMTOR.g:2131:9: '\\u0ba3' .. '\\u0ba4'
                     {
                     matchRange('\u0BA3','\u0BA4'); 
 
                     }
                     break;
                 case 132 :
-                    // .\\COMTOR.g:2132:9: '\\u0ba8' .. '\\u0baa'
+                    // COMTOR.g:2132:9: '\\u0ba8' .. '\\u0baa'
                     {
                     matchRange('\u0BA8','\u0BAA'); 
 
                     }
                     break;
                 case 133 :
-                    // .\\COMTOR.g:2133:9: '\\u0bae' .. '\\u0bb5'
+                    // COMTOR.g:2133:9: '\\u0bae' .. '\\u0bb5'
                     {
                     matchRange('\u0BAE','\u0BB5'); 
 
                     }
                     break;
                 case 134 :
-                    // .\\COMTOR.g:2134:9: '\\u0bb7' .. '\\u0bb9'
+                    // COMTOR.g:2134:9: '\\u0bb7' .. '\\u0bb9'
                     {
                     matchRange('\u0BB7','\u0BB9'); 
 
                     }
                     break;
                 case 135 :
-                    // .\\COMTOR.g:2135:9: '\\u0bbe' .. '\\u0bc2'
+                    // COMTOR.g:2135:9: '\\u0bbe' .. '\\u0bc2'
                     {
                     matchRange('\u0BBE','\u0BC2'); 
 
                     }
                     break;
                 case 136 :
-                    // .\\COMTOR.g:2136:9: '\\u0bc6' .. '\\u0bc8'
+                    // COMTOR.g:2136:9: '\\u0bc6' .. '\\u0bc8'
                     {
                     matchRange('\u0BC6','\u0BC8'); 
 
                     }
                     break;
                 case 137 :
-                    // .\\COMTOR.g:2137:9: '\\u0bca' .. '\\u0bcd'
+                    // COMTOR.g:2137:9: '\\u0bca' .. '\\u0bcd'
                     {
                     matchRange('\u0BCA','\u0BCD'); 
 
                     }
                     break;
                 case 138 :
-                    // .\\COMTOR.g:2138:9: '\\u0bd7'
+                    // COMTOR.g:2138:9: '\\u0bd7'
                     {
                     match('\u0BD7'); 
 
                     }
                     break;
                 case 139 :
-                    // .\\COMTOR.g:2139:9: '\\u0be7' .. '\\u0bef'
+                    // COMTOR.g:2139:9: '\\u0be7' .. '\\u0bef'
                     {
                     matchRange('\u0BE7','\u0BEF'); 
 
                     }
                     break;
                 case 140 :
-                    // .\\COMTOR.g:2140:9: '\\u0bf9'
+                    // COMTOR.g:2140:9: '\\u0bf9'
                     {
                     match('\u0BF9'); 
 
                     }
                     break;
                 case 141 :
-                    // .\\COMTOR.g:2141:9: '\\u0c01' .. '\\u0c03'
+                    // COMTOR.g:2141:9: '\\u0c01' .. '\\u0c03'
                     {
                     matchRange('\u0C01','\u0C03'); 
 
                     }
                     break;
                 case 142 :
-                    // .\\COMTOR.g:2142:9: '\\u0c05' .. '\\u0c0c'
+                    // COMTOR.g:2142:9: '\\u0c05' .. '\\u0c0c'
                     {
                     matchRange('\u0C05','\u0C0C'); 
 
                     }
                     break;
                 case 143 :
-                    // .\\COMTOR.g:2143:9: '\\u0c0e' .. '\\u0c10'
+                    // COMTOR.g:2143:9: '\\u0c0e' .. '\\u0c10'
                     {
                     matchRange('\u0C0E','\u0C10'); 
 
                     }
                     break;
                 case 144 :
-                    // .\\COMTOR.g:2144:9: '\\u0c12' .. '\\u0c28'
+                    // COMTOR.g:2144:9: '\\u0c12' .. '\\u0c28'
                     {
                     matchRange('\u0C12','\u0C28'); 
 
                     }
                     break;
                 case 145 :
-                    // .\\COMTOR.g:2145:9: '\\u0c2a' .. '\\u0c33'
+                    // COMTOR.g:2145:9: '\\u0c2a' .. '\\u0c33'
                     {
                     matchRange('\u0C2A','\u0C33'); 
 
                     }
                     break;
                 case 146 :
-                    // .\\COMTOR.g:2146:9: '\\u0c35' .. '\\u0c39'
+                    // COMTOR.g:2146:9: '\\u0c35' .. '\\u0c39'
                     {
                     matchRange('\u0C35','\u0C39'); 
 
                     }
                     break;
                 case 147 :
-                    // .\\COMTOR.g:2147:9: '\\u0c3e' .. '\\u0c44'
+                    // COMTOR.g:2147:9: '\\u0c3e' .. '\\u0c44'
                     {
                     matchRange('\u0C3E','\u0C44'); 
 
                     }
                     break;
                 case 148 :
-                    // .\\COMTOR.g:2148:9: '\\u0c46' .. '\\u0c48'
+                    // COMTOR.g:2148:9: '\\u0c46' .. '\\u0c48'
                     {
                     matchRange('\u0C46','\u0C48'); 
 
                     }
                     break;
                 case 149 :
-                    // .\\COMTOR.g:2149:9: '\\u0c4a' .. '\\u0c4d'
+                    // COMTOR.g:2149:9: '\\u0c4a' .. '\\u0c4d'
                     {
                     matchRange('\u0C4A','\u0C4D'); 
 
                     }
                     break;
                 case 150 :
-                    // .\\COMTOR.g:2150:9: '\\u0c55' .. '\\u0c56'
+                    // COMTOR.g:2150:9: '\\u0c55' .. '\\u0c56'
                     {
                     matchRange('\u0C55','\u0C56'); 
 
                     }
                     break;
                 case 151 :
-                    // .\\COMTOR.g:2151:9: '\\u0c60' .. '\\u0c61'
+                    // COMTOR.g:2151:9: '\\u0c60' .. '\\u0c61'
                     {
                     matchRange('\u0C60','\u0C61'); 
 
                     }
                     break;
                 case 152 :
-                    // .\\COMTOR.g:2152:9: '\\u0c66' .. '\\u0c6f'
+                    // COMTOR.g:2152:9: '\\u0c66' .. '\\u0c6f'
                     {
                     matchRange('\u0C66','\u0C6F'); 
 
                     }
                     break;
                 case 153 :
-                    // .\\COMTOR.g:2153:9: '\\u0c82' .. '\\u0c83'
+                    // COMTOR.g:2153:9: '\\u0c82' .. '\\u0c83'
                     {
                     matchRange('\u0C82','\u0C83'); 
 
                     }
                     break;
                 case 154 :
-                    // .\\COMTOR.g:2154:9: '\\u0c85' .. '\\u0c8c'
+                    // COMTOR.g:2154:9: '\\u0c85' .. '\\u0c8c'
                     {
                     matchRange('\u0C85','\u0C8C'); 
 
                     }
                     break;
                 case 155 :
-                    // .\\COMTOR.g:2155:9: '\\u0c8e' .. '\\u0c90'
+                    // COMTOR.g:2155:9: '\\u0c8e' .. '\\u0c90'
                     {
                     matchRange('\u0C8E','\u0C90'); 
 
                     }
                     break;
                 case 156 :
-                    // .\\COMTOR.g:2156:9: '\\u0c92' .. '\\u0ca8'
+                    // COMTOR.g:2156:9: '\\u0c92' .. '\\u0ca8'
                     {
                     matchRange('\u0C92','\u0CA8'); 
 
                     }
                     break;
                 case 157 :
-                    // .\\COMTOR.g:2157:9: '\\u0caa' .. '\\u0cb3'
+                    // COMTOR.g:2157:9: '\\u0caa' .. '\\u0cb3'
                     {
                     matchRange('\u0CAA','\u0CB3'); 
 
                     }
                     break;
                 case 158 :
-                    // .\\COMTOR.g:2158:9: '\\u0cb5' .. '\\u0cb9'
+                    // COMTOR.g:2158:9: '\\u0cb5' .. '\\u0cb9'
                     {
                     matchRange('\u0CB5','\u0CB9'); 
 
                     }
                     break;
                 case 159 :
-                    // .\\COMTOR.g:2159:9: '\\u0cbc' .. '\\u0cc4'
+                    // COMTOR.g:2159:9: '\\u0cbc' .. '\\u0cc4'
                     {
                     matchRange('\u0CBC','\u0CC4'); 
 
                     }
                     break;
                 case 160 :
-                    // .\\COMTOR.g:2160:9: '\\u0cc6' .. '\\u0cc8'
+                    // COMTOR.g:2160:9: '\\u0cc6' .. '\\u0cc8'
                     {
                     matchRange('\u0CC6','\u0CC8'); 
 
                     }
                     break;
                 case 161 :
-                    // .\\COMTOR.g:2161:9: '\\u0cca' .. '\\u0ccd'
+                    // COMTOR.g:2161:9: '\\u0cca' .. '\\u0ccd'
                     {
                     matchRange('\u0CCA','\u0CCD'); 
 
                     }
                     break;
                 case 162 :
-                    // .\\COMTOR.g:2162:9: '\\u0cd5' .. '\\u0cd6'
+                    // COMTOR.g:2162:9: '\\u0cd5' .. '\\u0cd6'
                     {
                     matchRange('\u0CD5','\u0CD6'); 
 
                     }
                     break;
                 case 163 :
-                    // .\\COMTOR.g:2163:9: '\\u0cde'
+                    // COMTOR.g:2163:9: '\\u0cde'
                     {
                     match('\u0CDE'); 
 
                     }
                     break;
                 case 164 :
-                    // .\\COMTOR.g:2164:9: '\\u0ce0' .. '\\u0ce1'
+                    // COMTOR.g:2164:9: '\\u0ce0' .. '\\u0ce1'
                     {
                     matchRange('\u0CE0','\u0CE1'); 
 
                     }
                     break;
                 case 165 :
-                    // .\\COMTOR.g:2165:9: '\\u0ce6' .. '\\u0cef'
+                    // COMTOR.g:2165:9: '\\u0ce6' .. '\\u0cef'
                     {
                     matchRange('\u0CE6','\u0CEF'); 
 
                     }
                     break;
                 case 166 :
-                    // .\\COMTOR.g:2166:9: '\\u0d02' .. '\\u0d03'
+                    // COMTOR.g:2166:9: '\\u0d02' .. '\\u0d03'
                     {
                     matchRange('\u0D02','\u0D03'); 
 
                     }
                     break;
                 case 167 :
-                    // .\\COMTOR.g:2167:9: '\\u0d05' .. '\\u0d0c'
+                    // COMTOR.g:2167:9: '\\u0d05' .. '\\u0d0c'
                     {
                     matchRange('\u0D05','\u0D0C'); 
 
                     }
                     break;
                 case 168 :
-                    // .\\COMTOR.g:2168:9: '\\u0d0e' .. '\\u0d10'
+                    // COMTOR.g:2168:9: '\\u0d0e' .. '\\u0d10'
                     {
                     matchRange('\u0D0E','\u0D10'); 
 
                     }
                     break;
                 case 169 :
-                    // .\\COMTOR.g:2169:9: '\\u0d12' .. '\\u0d28'
+                    // COMTOR.g:2169:9: '\\u0d12' .. '\\u0d28'
                     {
                     matchRange('\u0D12','\u0D28'); 
 
                     }
                     break;
                 case 170 :
-                    // .\\COMTOR.g:2170:9: '\\u0d2a' .. '\\u0d39'
+                    // COMTOR.g:2170:9: '\\u0d2a' .. '\\u0d39'
                     {
                     matchRange('\u0D2A','\u0D39'); 
 
                     }
                     break;
                 case 171 :
-                    // .\\COMTOR.g:2171:9: '\\u0d3e' .. '\\u0d43'
+                    // COMTOR.g:2171:9: '\\u0d3e' .. '\\u0d43'
                     {
                     matchRange('\u0D3E','\u0D43'); 
 
                     }
                     break;
                 case 172 :
-                    // .\\COMTOR.g:2172:9: '\\u0d46' .. '\\u0d48'
+                    // COMTOR.g:2172:9: '\\u0d46' .. '\\u0d48'
                     {
                     matchRange('\u0D46','\u0D48'); 
 
                     }
                     break;
                 case 173 :
-                    // .\\COMTOR.g:2173:9: '\\u0d4a' .. '\\u0d4d'
+                    // COMTOR.g:2173:9: '\\u0d4a' .. '\\u0d4d'
                     {
                     matchRange('\u0D4A','\u0D4D'); 
 
                     }
                     break;
                 case 174 :
-                    // .\\COMTOR.g:2174:9: '\\u0d57'
+                    // COMTOR.g:2174:9: '\\u0d57'
                     {
                     match('\u0D57'); 
 
                     }
                     break;
                 case 175 :
-                    // .\\COMTOR.g:2175:9: '\\u0d60' .. '\\u0d61'
+                    // COMTOR.g:2175:9: '\\u0d60' .. '\\u0d61'
                     {
                     matchRange('\u0D60','\u0D61'); 
 
                     }
                     break;
                 case 176 :
-                    // .\\COMTOR.g:2176:9: '\\u0d66' .. '\\u0d6f'
+                    // COMTOR.g:2176:9: '\\u0d66' .. '\\u0d6f'
                     {
                     matchRange('\u0D66','\u0D6F'); 
 
                     }
                     break;
                 case 177 :
-                    // .\\COMTOR.g:2177:9: '\\u0d82' .. '\\u0d83'
+                    // COMTOR.g:2177:9: '\\u0d82' .. '\\u0d83'
                     {
                     matchRange('\u0D82','\u0D83'); 
 
                     }
                     break;
                 case 178 :
-                    // .\\COMTOR.g:2178:9: '\\u0d85' .. '\\u0d96'
+                    // COMTOR.g:2178:9: '\\u0d85' .. '\\u0d96'
                     {
                     matchRange('\u0D85','\u0D96'); 
 
                     }
                     break;
                 case 179 :
-                    // .\\COMTOR.g:2179:9: '\\u0d9a' .. '\\u0db1'
+                    // COMTOR.g:2179:9: '\\u0d9a' .. '\\u0db1'
                     {
                     matchRange('\u0D9A','\u0DB1'); 
 
                     }
                     break;
                 case 180 :
-                    // .\\COMTOR.g:2180:9: '\\u0db3' .. '\\u0dbb'
+                    // COMTOR.g:2180:9: '\\u0db3' .. '\\u0dbb'
                     {
                     matchRange('\u0DB3','\u0DBB'); 
 
                     }
                     break;
                 case 181 :
-                    // .\\COMTOR.g:2181:9: '\\u0dbd'
+                    // COMTOR.g:2181:9: '\\u0dbd'
                     {
                     match('\u0DBD'); 
 
                     }
                     break;
                 case 182 :
-                    // .\\COMTOR.g:2182:9: '\\u0dc0' .. '\\u0dc6'
+                    // COMTOR.g:2182:9: '\\u0dc0' .. '\\u0dc6'
                     {
                     matchRange('\u0DC0','\u0DC6'); 
 
                     }
                     break;
                 case 183 :
-                    // .\\COMTOR.g:2183:9: '\\u0dca'
+                    // COMTOR.g:2183:9: '\\u0dca'
                     {
                     match('\u0DCA'); 
 
                     }
                     break;
                 case 184 :
-                    // .\\COMTOR.g:2184:9: '\\u0dcf' .. '\\u0dd4'
+                    // COMTOR.g:2184:9: '\\u0dcf' .. '\\u0dd4'
                     {
                     matchRange('\u0DCF','\u0DD4'); 
 
                     }
                     break;
                 case 185 :
-                    // .\\COMTOR.g:2185:9: '\\u0dd6'
+                    // COMTOR.g:2185:9: '\\u0dd6'
                     {
                     match('\u0DD6'); 
 
                     }
                     break;
                 case 186 :
-                    // .\\COMTOR.g:2186:9: '\\u0dd8' .. '\\u0ddf'
+                    // COMTOR.g:2186:9: '\\u0dd8' .. '\\u0ddf'
                     {
                     matchRange('\u0DD8','\u0DDF'); 
 
                     }
                     break;
                 case 187 :
-                    // .\\COMTOR.g:2187:9: '\\u0df2' .. '\\u0df3'
+                    // COMTOR.g:2187:9: '\\u0df2' .. '\\u0df3'
                     {
                     matchRange('\u0DF2','\u0DF3'); 
 
                     }
                     break;
                 case 188 :
-                    // .\\COMTOR.g:2188:9: '\\u0e01' .. '\\u0e3a'
+                    // COMTOR.g:2188:9: '\\u0e01' .. '\\u0e3a'
                     {
                     matchRange('\u0E01','\u0E3A'); 
 
                     }
                     break;
                 case 189 :
-                    // .\\COMTOR.g:2189:9: '\\u0e3f' .. '\\u0e4e'
+                    // COMTOR.g:2189:9: '\\u0e3f' .. '\\u0e4e'
                     {
                     matchRange('\u0E3F','\u0E4E'); 
 
                     }
                     break;
                 case 190 :
-                    // .\\COMTOR.g:2190:9: '\\u0e50' .. '\\u0e59'
+                    // COMTOR.g:2190:9: '\\u0e50' .. '\\u0e59'
                     {
                     matchRange('\u0E50','\u0E59'); 
 
                     }
                     break;
                 case 191 :
-                    // .\\COMTOR.g:2191:9: '\\u0e81' .. '\\u0e82'
+                    // COMTOR.g:2191:9: '\\u0e81' .. '\\u0e82'
                     {
                     matchRange('\u0E81','\u0E82'); 
 
                     }
                     break;
                 case 192 :
-                    // .\\COMTOR.g:2192:9: '\\u0e84'
+                    // COMTOR.g:2192:9: '\\u0e84'
                     {
                     match('\u0E84'); 
 
                     }
                     break;
                 case 193 :
-                    // .\\COMTOR.g:2193:9: '\\u0e87' .. '\\u0e88'
+                    // COMTOR.g:2193:9: '\\u0e87' .. '\\u0e88'
                     {
                     matchRange('\u0E87','\u0E88'); 
 
                     }
                     break;
                 case 194 :
-                    // .\\COMTOR.g:2194:9: '\\u0e8a'
+                    // COMTOR.g:2194:9: '\\u0e8a'
                     {
                     match('\u0E8A'); 
 
                     }
                     break;
                 case 195 :
-                    // .\\COMTOR.g:2195:9: '\\u0e8d'
+                    // COMTOR.g:2195:9: '\\u0e8d'
                     {
                     match('\u0E8D'); 
 
                     }
                     break;
                 case 196 :
-                    // .\\COMTOR.g:2196:9: '\\u0e94' .. '\\u0e97'
+                    // COMTOR.g:2196:9: '\\u0e94' .. '\\u0e97'
                     {
                     matchRange('\u0E94','\u0E97'); 
 
                     }
                     break;
                 case 197 :
-                    // .\\COMTOR.g:2197:9: '\\u0e99' .. '\\u0e9f'
+                    // COMTOR.g:2197:9: '\\u0e99' .. '\\u0e9f'
                     {
                     matchRange('\u0E99','\u0E9F'); 
 
                     }
                     break;
                 case 198 :
-                    // .\\COMTOR.g:2198:9: '\\u0ea1' .. '\\u0ea3'
+                    // COMTOR.g:2198:9: '\\u0ea1' .. '\\u0ea3'
                     {
                     matchRange('\u0EA1','\u0EA3'); 
 
                     }
                     break;
                 case 199 :
-                    // .\\COMTOR.g:2199:9: '\\u0ea5'
+                    // COMTOR.g:2199:9: '\\u0ea5'
                     {
                     match('\u0EA5'); 
 
                     }
                     break;
                 case 200 :
-                    // .\\COMTOR.g:2200:9: '\\u0ea7'
+                    // COMTOR.g:2200:9: '\\u0ea7'
                     {
                     match('\u0EA7'); 
 
                     }
                     break;
                 case 201 :
-                    // .\\COMTOR.g:2201:9: '\\u0eaa' .. '\\u0eab'
+                    // COMTOR.g:2201:9: '\\u0eaa' .. '\\u0eab'
                     {
                     matchRange('\u0EAA','\u0EAB'); 
 
                     }
                     break;
                 case 202 :
-                    // .\\COMTOR.g:2202:9: '\\u0ead' .. '\\u0eb9'
+                    // COMTOR.g:2202:9: '\\u0ead' .. '\\u0eb9'
                     {
                     matchRange('\u0EAD','\u0EB9'); 
 
                     }
                     break;
                 case 203 :
-                    // .\\COMTOR.g:2203:9: '\\u0ebb' .. '\\u0ebd'
+                    // COMTOR.g:2203:9: '\\u0ebb' .. '\\u0ebd'
                     {
                     matchRange('\u0EBB','\u0EBD'); 
 
                     }
                     break;
                 case 204 :
-                    // .\\COMTOR.g:2204:9: '\\u0ec0' .. '\\u0ec4'
+                    // COMTOR.g:2204:9: '\\u0ec0' .. '\\u0ec4'
                     {
                     matchRange('\u0EC0','\u0EC4'); 
 
                     }
                     break;
                 case 205 :
-                    // .\\COMTOR.g:2205:9: '\\u0ec6'
+                    // COMTOR.g:2205:9: '\\u0ec6'
                     {
                     match('\u0EC6'); 
 
                     }
                     break;
                 case 206 :
-                    // .\\COMTOR.g:2206:9: '\\u0ec8' .. '\\u0ecd'
+                    // COMTOR.g:2206:9: '\\u0ec8' .. '\\u0ecd'
                     {
                     matchRange('\u0EC8','\u0ECD'); 
 
                     }
                     break;
                 case 207 :
-                    // .\\COMTOR.g:2207:9: '\\u0ed0' .. '\\u0ed9'
+                    // COMTOR.g:2207:9: '\\u0ed0' .. '\\u0ed9'
                     {
                     matchRange('\u0ED0','\u0ED9'); 
 
                     }
                     break;
                 case 208 :
-                    // .\\COMTOR.g:2208:9: '\\u0edc' .. '\\u0edd'
+                    // COMTOR.g:2208:9: '\\u0edc' .. '\\u0edd'
                     {
                     matchRange('\u0EDC','\u0EDD'); 
 
                     }
                     break;
                 case 209 :
-                    // .\\COMTOR.g:2209:9: '\\u0f00'
+                    // COMTOR.g:2209:9: '\\u0f00'
                     {
                     match('\u0F00'); 
 
                     }
                     break;
                 case 210 :
-                    // .\\COMTOR.g:2210:9: '\\u0f18' .. '\\u0f19'
+                    // COMTOR.g:2210:9: '\\u0f18' .. '\\u0f19'
                     {
                     matchRange('\u0F18','\u0F19'); 
 
                     }
                     break;
                 case 211 :
-                    // .\\COMTOR.g:2211:9: '\\u0f20' .. '\\u0f29'
+                    // COMTOR.g:2211:9: '\\u0f20' .. '\\u0f29'
                     {
                     matchRange('\u0F20','\u0F29'); 
 
                     }
                     break;
                 case 212 :
-                    // .\\COMTOR.g:2212:9: '\\u0f35'
+                    // COMTOR.g:2212:9: '\\u0f35'
                     {
                     match('\u0F35'); 
 
                     }
                     break;
                 case 213 :
-                    // .\\COMTOR.g:2213:9: '\\u0f37'
+                    // COMTOR.g:2213:9: '\\u0f37'
                     {
                     match('\u0F37'); 
 
                     }
                     break;
                 case 214 :
-                    // .\\COMTOR.g:2214:9: '\\u0f39'
+                    // COMTOR.g:2214:9: '\\u0f39'
                     {
                     match('\u0F39'); 
 
                     }
                     break;
                 case 215 :
-                    // .\\COMTOR.g:2215:9: '\\u0f3e' .. '\\u0f47'
+                    // COMTOR.g:2215:9: '\\u0f3e' .. '\\u0f47'
                     {
                     matchRange('\u0F3E','\u0F47'); 
 
                     }
                     break;
                 case 216 :
-                    // .\\COMTOR.g:2216:9: '\\u0f49' .. '\\u0f6a'
+                    // COMTOR.g:2216:9: '\\u0f49' .. '\\u0f6a'
                     {
                     matchRange('\u0F49','\u0F6A'); 
 
                     }
                     break;
                 case 217 :
-                    // .\\COMTOR.g:2217:9: '\\u0f71' .. '\\u0f84'
+                    // COMTOR.g:2217:9: '\\u0f71' .. '\\u0f84'
                     {
                     matchRange('\u0F71','\u0F84'); 
 
                     }
                     break;
                 case 218 :
-                    // .\\COMTOR.g:2218:9: '\\u0f86' .. '\\u0f8b'
+                    // COMTOR.g:2218:9: '\\u0f86' .. '\\u0f8b'
                     {
                     matchRange('\u0F86','\u0F8B'); 
 
                     }
                     break;
                 case 219 :
-                    // .\\COMTOR.g:2219:9: '\\u0f90' .. '\\u0f97'
+                    // COMTOR.g:2219:9: '\\u0f90' .. '\\u0f97'
                     {
                     matchRange('\u0F90','\u0F97'); 
 
                     }
                     break;
                 case 220 :
-                    // .\\COMTOR.g:2220:9: '\\u0f99' .. '\\u0fbc'
+                    // COMTOR.g:2220:9: '\\u0f99' .. '\\u0fbc'
                     {
                     matchRange('\u0F99','\u0FBC'); 
 
                     }
                     break;
                 case 221 :
-                    // .\\COMTOR.g:2221:9: '\\u0fc6'
+                    // COMTOR.g:2221:9: '\\u0fc6'
                     {
                     match('\u0FC6'); 
 
                     }
                     break;
                 case 222 :
-                    // .\\COMTOR.g:2222:9: '\\u1000' .. '\\u1021'
+                    // COMTOR.g:2222:9: '\\u1000' .. '\\u1021'
                     {
                     matchRange('\u1000','\u1021'); 
 
                     }
                     break;
                 case 223 :
-                    // .\\COMTOR.g:2223:9: '\\u1023' .. '\\u1027'
+                    // COMTOR.g:2223:9: '\\u1023' .. '\\u1027'
                     {
                     matchRange('\u1023','\u1027'); 
 
                     }
                     break;
                 case 224 :
-                    // .\\COMTOR.g:2224:9: '\\u1029' .. '\\u102a'
+                    // COMTOR.g:2224:9: '\\u1029' .. '\\u102a'
                     {
                     matchRange('\u1029','\u102A'); 
 
                     }
                     break;
                 case 225 :
-                    // .\\COMTOR.g:2225:9: '\\u102c' .. '\\u1032'
+                    // COMTOR.g:2225:9: '\\u102c' .. '\\u1032'
                     {
                     matchRange('\u102C','\u1032'); 
 
                     }
                     break;
                 case 226 :
-                    // .\\COMTOR.g:2226:9: '\\u1036' .. '\\u1039'
+                    // COMTOR.g:2226:9: '\\u1036' .. '\\u1039'
                     {
                     matchRange('\u1036','\u1039'); 
 
                     }
                     break;
                 case 227 :
-                    // .\\COMTOR.g:2227:9: '\\u1040' .. '\\u1049'
+                    // COMTOR.g:2227:9: '\\u1040' .. '\\u1049'
                     {
                     matchRange('\u1040','\u1049'); 
 
                     }
                     break;
                 case 228 :
-                    // .\\COMTOR.g:2228:9: '\\u1050' .. '\\u1059'
+                    // COMTOR.g:2228:9: '\\u1050' .. '\\u1059'
                     {
                     matchRange('\u1050','\u1059'); 
 
                     }
                     break;
                 case 229 :
-                    // .\\COMTOR.g:2229:9: '\\u10a0' .. '\\u10c5'
+                    // COMTOR.g:2229:9: '\\u10a0' .. '\\u10c5'
                     {
                     matchRange('\u10A0','\u10C5'); 
 
                     }
                     break;
                 case 230 :
-                    // .\\COMTOR.g:2230:9: '\\u10d0' .. '\\u10f8'
+                    // COMTOR.g:2230:9: '\\u10d0' .. '\\u10f8'
                     {
                     matchRange('\u10D0','\u10F8'); 
 
                     }
                     break;
                 case 231 :
-                    // .\\COMTOR.g:2231:9: '\\u1100' .. '\\u1159'
+                    // COMTOR.g:2231:9: '\\u1100' .. '\\u1159'
                     {
                     matchRange('\u1100','\u1159'); 
 
                     }
                     break;
                 case 232 :
-                    // .\\COMTOR.g:2232:9: '\\u115f' .. '\\u11a2'
+                    // COMTOR.g:2232:9: '\\u115f' .. '\\u11a2'
                     {
                     matchRange('\u115F','\u11A2'); 
 
                     }
                     break;
                 case 233 :
-                    // .\\COMTOR.g:2233:9: '\\u11a8' .. '\\u11f9'
+                    // COMTOR.g:2233:9: '\\u11a8' .. '\\u11f9'
                     {
                     matchRange('\u11A8','\u11F9'); 
 
                     }
                     break;
                 case 234 :
-                    // .\\COMTOR.g:2234:9: '\\u1200' .. '\\u1206'
+                    // COMTOR.g:2234:9: '\\u1200' .. '\\u1206'
                     {
                     matchRange('\u1200','\u1206'); 
 
                     }
                     break;
                 case 235 :
-                    // .\\COMTOR.g:2235:9: '\\u1208' .. '\\u1246'
+                    // COMTOR.g:2235:9: '\\u1208' .. '\\u1246'
                     {
                     matchRange('\u1208','\u1246'); 
 
                     }
                     break;
                 case 236 :
-                    // .\\COMTOR.g:2236:9: '\\u1248'
+                    // COMTOR.g:2236:9: '\\u1248'
                     {
                     match('\u1248'); 
 
                     }
                     break;
                 case 237 :
-                    // .\\COMTOR.g:2237:9: '\\u124a' .. '\\u124d'
+                    // COMTOR.g:2237:9: '\\u124a' .. '\\u124d'
                     {
                     matchRange('\u124A','\u124D'); 
 
                     }
                     break;
                 case 238 :
-                    // .\\COMTOR.g:2238:9: '\\u1250' .. '\\u1256'
+                    // COMTOR.g:2238:9: '\\u1250' .. '\\u1256'
                     {
                     matchRange('\u1250','\u1256'); 
 
                     }
                     break;
                 case 239 :
-                    // .\\COMTOR.g:2239:9: '\\u1258'
+                    // COMTOR.g:2239:9: '\\u1258'
                     {
                     match('\u1258'); 
 
                     }
                     break;
                 case 240 :
-                    // .\\COMTOR.g:2240:9: '\\u125a' .. '\\u125d'
+                    // COMTOR.g:2240:9: '\\u125a' .. '\\u125d'
                     {
                     matchRange('\u125A','\u125D'); 
 
                     }
                     break;
                 case 241 :
-                    // .\\COMTOR.g:2241:9: '\\u1260' .. '\\u1286'
+                    // COMTOR.g:2241:9: '\\u1260' .. '\\u1286'
                     {
                     matchRange('\u1260','\u1286'); 
 
                     }
                     break;
                 case 242 :
-                    // .\\COMTOR.g:2242:9: '\\u1288'
+                    // COMTOR.g:2242:9: '\\u1288'
                     {
                     match('\u1288'); 
 
                     }
                     break;
                 case 243 :
-                    // .\\COMTOR.g:2243:9: '\\u128a' .. '\\u128d'
+                    // COMTOR.g:2243:9: '\\u128a' .. '\\u128d'
                     {
                     matchRange('\u128A','\u128D'); 
 
                     }
                     break;
                 case 244 :
-                    // .\\COMTOR.g:2244:9: '\\u1290' .. '\\u12ae'
+                    // COMTOR.g:2244:9: '\\u1290' .. '\\u12ae'
                     {
                     matchRange('\u1290','\u12AE'); 
 
                     }
                     break;
                 case 245 :
-                    // .\\COMTOR.g:2245:9: '\\u12b0'
+                    // COMTOR.g:2245:9: '\\u12b0'
                     {
                     match('\u12B0'); 
 
                     }
                     break;
                 case 246 :
-                    // .\\COMTOR.g:2246:9: '\\u12b2' .. '\\u12b5'
+                    // COMTOR.g:2246:9: '\\u12b2' .. '\\u12b5'
                     {
                     matchRange('\u12B2','\u12B5'); 
 
                     }
                     break;
                 case 247 :
-                    // .\\COMTOR.g:2247:9: '\\u12b8' .. '\\u12be'
+                    // COMTOR.g:2247:9: '\\u12b8' .. '\\u12be'
                     {
                     matchRange('\u12B8','\u12BE'); 
 
                     }
                     break;
                 case 248 :
-                    // .\\COMTOR.g:2248:9: '\\u12c0'
+                    // COMTOR.g:2248:9: '\\u12c0'
                     {
                     match('\u12C0'); 
 
                     }
                     break;
                 case 249 :
-                    // .\\COMTOR.g:2249:9: '\\u12c2' .. '\\u12c5'
+                    // COMTOR.g:2249:9: '\\u12c2' .. '\\u12c5'
                     {
                     matchRange('\u12C2','\u12C5'); 
 
                     }
                     break;
                 case 250 :
-                    // .\\COMTOR.g:2250:9: '\\u12c8' .. '\\u12ce'
+                    // COMTOR.g:2250:9: '\\u12c8' .. '\\u12ce'
                     {
                     matchRange('\u12C8','\u12CE'); 
 
                     }
                     break;
                 case 251 :
-                    // .\\COMTOR.g:2251:9: '\\u12d0' .. '\\u12d6'
+                    // COMTOR.g:2251:9: '\\u12d0' .. '\\u12d6'
                     {
                     matchRange('\u12D0','\u12D6'); 
 
                     }
                     break;
                 case 252 :
-                    // .\\COMTOR.g:2252:9: '\\u12d8' .. '\\u12ee'
+                    // COMTOR.g:2252:9: '\\u12d8' .. '\\u12ee'
                     {
                     matchRange('\u12D8','\u12EE'); 
 
                     }
                     break;
                 case 253 :
-                    // .\\COMTOR.g:2253:9: '\\u12f0' .. '\\u130e'
+                    // COMTOR.g:2253:9: '\\u12f0' .. '\\u130e'
                     {
                     matchRange('\u12F0','\u130E'); 
 
                     }
                     break;
                 case 254 :
-                    // .\\COMTOR.g:2254:9: '\\u1310'
+                    // COMTOR.g:2254:9: '\\u1310'
                     {
                     match('\u1310'); 
 
                     }
                     break;
                 case 255 :
-                    // .\\COMTOR.g:2255:9: '\\u1312' .. '\\u1315'
+                    // COMTOR.g:2255:9: '\\u1312' .. '\\u1315'
                     {
                     matchRange('\u1312','\u1315'); 
 
                     }
                     break;
                 case 256 :
-                    // .\\COMTOR.g:2256:9: '\\u1318' .. '\\u131e'
+                    // COMTOR.g:2256:9: '\\u1318' .. '\\u131e'
                     {
                     matchRange('\u1318','\u131E'); 
 
                     }
                     break;
                 case 257 :
-                    // .\\COMTOR.g:2257:9: '\\u1320' .. '\\u1346'
+                    // COMTOR.g:2257:9: '\\u1320' .. '\\u1346'
                     {
                     matchRange('\u1320','\u1346'); 
 
                     }
                     break;
                 case 258 :
-                    // .\\COMTOR.g:2258:9: '\\u1348' .. '\\u135a'
+                    // COMTOR.g:2258:9: '\\u1348' .. '\\u135a'
                     {
                     matchRange('\u1348','\u135A'); 
 
                     }
                     break;
                 case 259 :
-                    // .\\COMTOR.g:2259:9: '\\u1369' .. '\\u1371'
+                    // COMTOR.g:2259:9: '\\u1369' .. '\\u1371'
                     {
                     matchRange('\u1369','\u1371'); 
 
                     }
                     break;
                 case 260 :
-                    // .\\COMTOR.g:2260:9: '\\u13a0' .. '\\u13f4'
+                    // COMTOR.g:2260:9: '\\u13a0' .. '\\u13f4'
                     {
                     matchRange('\u13A0','\u13F4'); 
 
                     }
                     break;
                 case 261 :
-                    // .\\COMTOR.g:2261:9: '\\u1401' .. '\\u166c'
+                    // COMTOR.g:2261:9: '\\u1401' .. '\\u166c'
                     {
                     matchRange('\u1401','\u166C'); 
 
                     }
                     break;
                 case 262 :
-                    // .\\COMTOR.g:2262:9: '\\u166f' .. '\\u1676'
+                    // COMTOR.g:2262:9: '\\u166f' .. '\\u1676'
                     {
                     matchRange('\u166F','\u1676'); 
 
                     }
                     break;
                 case 263 :
-                    // .\\COMTOR.g:2263:9: '\\u1681' .. '\\u169a'
+                    // COMTOR.g:2263:9: '\\u1681' .. '\\u169a'
                     {
                     matchRange('\u1681','\u169A'); 
 
                     }
                     break;
                 case 264 :
-                    // .\\COMTOR.g:2264:9: '\\u16a0' .. '\\u16ea'
+                    // COMTOR.g:2264:9: '\\u16a0' .. '\\u16ea'
                     {
                     matchRange('\u16A0','\u16EA'); 
 
                     }
                     break;
                 case 265 :
-                    // .\\COMTOR.g:2265:9: '\\u16ee' .. '\\u16f0'
+                    // COMTOR.g:2265:9: '\\u16ee' .. '\\u16f0'
                     {
                     matchRange('\u16EE','\u16F0'); 
 
                     }
                     break;
                 case 266 :
-                    // .\\COMTOR.g:2266:9: '\\u1700' .. '\\u170c'
+                    // COMTOR.g:2266:9: '\\u1700' .. '\\u170c'
                     {
                     matchRange('\u1700','\u170C'); 
 
                     }
                     break;
                 case 267 :
-                    // .\\COMTOR.g:2267:9: '\\u170e' .. '\\u1714'
+                    // COMTOR.g:2267:9: '\\u170e' .. '\\u1714'
                     {
                     matchRange('\u170E','\u1714'); 
 
                     }
                     break;
                 case 268 :
-                    // .\\COMTOR.g:2268:9: '\\u1720' .. '\\u1734'
+                    // COMTOR.g:2268:9: '\\u1720' .. '\\u1734'
                     {
                     matchRange('\u1720','\u1734'); 
 
                     }
                     break;
                 case 269 :
-                    // .\\COMTOR.g:2269:9: '\\u1740' .. '\\u1753'
+                    // COMTOR.g:2269:9: '\\u1740' .. '\\u1753'
                     {
                     matchRange('\u1740','\u1753'); 
 
                     }
                     break;
                 case 270 :
-                    // .\\COMTOR.g:2270:9: '\\u1760' .. '\\u176c'
+                    // COMTOR.g:2270:9: '\\u1760' .. '\\u176c'
                     {
                     matchRange('\u1760','\u176C'); 
 
                     }
                     break;
                 case 271 :
-                    // .\\COMTOR.g:2271:9: '\\u176e' .. '\\u1770'
+                    // COMTOR.g:2271:9: '\\u176e' .. '\\u1770'
                     {
                     matchRange('\u176E','\u1770'); 
 
                     }
                     break;
                 case 272 :
-                    // .\\COMTOR.g:2272:9: '\\u1772' .. '\\u1773'
+                    // COMTOR.g:2272:9: '\\u1772' .. '\\u1773'
                     {
                     matchRange('\u1772','\u1773'); 
 
                     }
                     break;
                 case 273 :
-                    // .\\COMTOR.g:2273:9: '\\u1780' .. '\\u17d3'
+                    // COMTOR.g:2273:9: '\\u1780' .. '\\u17d3'
                     {
                     matchRange('\u1780','\u17D3'); 
 
                     }
                     break;
                 case 274 :
-                    // .\\COMTOR.g:2274:9: '\\u17d7'
+                    // COMTOR.g:2274:9: '\\u17d7'
                     {
                     match('\u17D7'); 
 
                     }
                     break;
                 case 275 :
-                    // .\\COMTOR.g:2275:9: '\\u17db' .. '\\u17dd'
+                    // COMTOR.g:2275:9: '\\u17db' .. '\\u17dd'
                     {
                     matchRange('\u17DB','\u17DD'); 
 
                     }
                     break;
                 case 276 :
-                    // .\\COMTOR.g:2276:9: '\\u17e0' .. '\\u17e9'
+                    // COMTOR.g:2276:9: '\\u17e0' .. '\\u17e9'
                     {
                     matchRange('\u17E0','\u17E9'); 
 
                     }
                     break;
                 case 277 :
-                    // .\\COMTOR.g:2277:9: '\\u180b' .. '\\u180d'
+                    // COMTOR.g:2277:9: '\\u180b' .. '\\u180d'
                     {
                     matchRange('\u180B','\u180D'); 
 
                     }
                     break;
                 case 278 :
-                    // .\\COMTOR.g:2278:9: '\\u1810' .. '\\u1819'
+                    // COMTOR.g:2278:9: '\\u1810' .. '\\u1819'
                     {
                     matchRange('\u1810','\u1819'); 
 
                     }
                     break;
                 case 279 :
-                    // .\\COMTOR.g:2279:9: '\\u1820' .. '\\u1877'
+                    // COMTOR.g:2279:9: '\\u1820' .. '\\u1877'
                     {
                     matchRange('\u1820','\u1877'); 
 
                     }
                     break;
                 case 280 :
-                    // .\\COMTOR.g:2280:9: '\\u1880' .. '\\u18a9'
+                    // COMTOR.g:2280:9: '\\u1880' .. '\\u18a9'
                     {
                     matchRange('\u1880','\u18A9'); 
 
                     }
                     break;
                 case 281 :
-                    // .\\COMTOR.g:2281:9: '\\u1900' .. '\\u191c'
+                    // COMTOR.g:2281:9: '\\u1900' .. '\\u191c'
                     {
                     matchRange('\u1900','\u191C'); 
 
                     }
                     break;
                 case 282 :
-                    // .\\COMTOR.g:2282:9: '\\u1920' .. '\\u192b'
+                    // COMTOR.g:2282:9: '\\u1920' .. '\\u192b'
                     {
                     matchRange('\u1920','\u192B'); 
 
                     }
                     break;
                 case 283 :
-                    // .\\COMTOR.g:2283:9: '\\u1930' .. '\\u193b'
+                    // COMTOR.g:2283:9: '\\u1930' .. '\\u193b'
                     {
                     matchRange('\u1930','\u193B'); 
 
                     }
                     break;
                 case 284 :
-                    // .\\COMTOR.g:2284:9: '\\u1946' .. '\\u196d'
+                    // COMTOR.g:2284:9: '\\u1946' .. '\\u196d'
                     {
                     matchRange('\u1946','\u196D'); 
 
                     }
                     break;
                 case 285 :
-                    // .\\COMTOR.g:2285:9: '\\u1970' .. '\\u1974'
+                    // COMTOR.g:2285:9: '\\u1970' .. '\\u1974'
                     {
                     matchRange('\u1970','\u1974'); 
 
                     }
                     break;
                 case 286 :
-                    // .\\COMTOR.g:2286:9: '\\u1d00' .. '\\u1d6b'
+                    // COMTOR.g:2286:9: '\\u1d00' .. '\\u1d6b'
                     {
                     matchRange('\u1D00','\u1D6B'); 
 
                     }
                     break;
                 case 287 :
-                    // .\\COMTOR.g:2287:9: '\\u1e00' .. '\\u1e9b'
+                    // COMTOR.g:2287:9: '\\u1e00' .. '\\u1e9b'
                     {
                     matchRange('\u1E00','\u1E9B'); 
 
                     }
                     break;
                 case 288 :
-                    // .\\COMTOR.g:2288:9: '\\u1ea0' .. '\\u1ef9'
+                    // COMTOR.g:2288:9: '\\u1ea0' .. '\\u1ef9'
                     {
                     matchRange('\u1EA0','\u1EF9'); 
 
                     }
                     break;
                 case 289 :
-                    // .\\COMTOR.g:2289:9: '\\u1f00' .. '\\u1f15'
+                    // COMTOR.g:2289:9: '\\u1f00' .. '\\u1f15'
                     {
                     matchRange('\u1F00','\u1F15'); 
 
                     }
                     break;
                 case 290 :
-                    // .\\COMTOR.g:2290:9: '\\u1f18' .. '\\u1f1d'
+                    // COMTOR.g:2290:9: '\\u1f18' .. '\\u1f1d'
                     {
                     matchRange('\u1F18','\u1F1D'); 
 
                     }
                     break;
                 case 291 :
-                    // .\\COMTOR.g:2291:9: '\\u1f20' .. '\\u1f45'
+                    // COMTOR.g:2291:9: '\\u1f20' .. '\\u1f45'
                     {
                     matchRange('\u1F20','\u1F45'); 
 
                     }
                     break;
                 case 292 :
-                    // .\\COMTOR.g:2292:9: '\\u1f48' .. '\\u1f4d'
+                    // COMTOR.g:2292:9: '\\u1f48' .. '\\u1f4d'
                     {
                     matchRange('\u1F48','\u1F4D'); 
 
                     }
                     break;
                 case 293 :
-                    // .\\COMTOR.g:2293:9: '\\u1f50' .. '\\u1f57'
+                    // COMTOR.g:2293:9: '\\u1f50' .. '\\u1f57'
                     {
                     matchRange('\u1F50','\u1F57'); 
 
                     }
                     break;
                 case 294 :
-                    // .\\COMTOR.g:2294:9: '\\u1f59'
+                    // COMTOR.g:2294:9: '\\u1f59'
                     {
                     match('\u1F59'); 
 
                     }
                     break;
                 case 295 :
-                    // .\\COMTOR.g:2295:9: '\\u1f5b'
+                    // COMTOR.g:2295:9: '\\u1f5b'
                     {
                     match('\u1F5B'); 
 
                     }
                     break;
                 case 296 :
-                    // .\\COMTOR.g:2296:9: '\\u1f5d'
+                    // COMTOR.g:2296:9: '\\u1f5d'
                     {
                     match('\u1F5D'); 
 
                     }
                     break;
                 case 297 :
-                    // .\\COMTOR.g:2297:9: '\\u1f5f' .. '\\u1f7d'
+                    // COMTOR.g:2297:9: '\\u1f5f' .. '\\u1f7d'
                     {
                     matchRange('\u1F5F','\u1F7D'); 
 
                     }
                     break;
                 case 298 :
-                    // .\\COMTOR.g:2298:9: '\\u1f80' .. '\\u1fb4'
+                    // COMTOR.g:2298:9: '\\u1f80' .. '\\u1fb4'
                     {
                     matchRange('\u1F80','\u1FB4'); 
 
                     }
                     break;
                 case 299 :
-                    // .\\COMTOR.g:2299:9: '\\u1fb6' .. '\\u1fbc'
+                    // COMTOR.g:2299:9: '\\u1fb6' .. '\\u1fbc'
                     {
                     matchRange('\u1FB6','\u1FBC'); 
 
                     }
                     break;
                 case 300 :
-                    // .\\COMTOR.g:2300:9: '\\u1fbe'
+                    // COMTOR.g:2300:9: '\\u1fbe'
                     {
                     match('\u1FBE'); 
 
                     }
                     break;
                 case 301 :
-                    // .\\COMTOR.g:2301:9: '\\u1fc2' .. '\\u1fc4'
+                    // COMTOR.g:2301:9: '\\u1fc2' .. '\\u1fc4'
                     {
                     matchRange('\u1FC2','\u1FC4'); 
 
                     }
                     break;
                 case 302 :
-                    // .\\COMTOR.g:2302:9: '\\u1fc6' .. '\\u1fcc'
+                    // COMTOR.g:2302:9: '\\u1fc6' .. '\\u1fcc'
                     {
                     matchRange('\u1FC6','\u1FCC'); 
 
                     }
                     break;
                 case 303 :
-                    // .\\COMTOR.g:2303:9: '\\u1fd0' .. '\\u1fd3'
+                    // COMTOR.g:2303:9: '\\u1fd0' .. '\\u1fd3'
                     {
                     matchRange('\u1FD0','\u1FD3'); 
 
                     }
                     break;
                 case 304 :
-                    // .\\COMTOR.g:2304:9: '\\u1fd6' .. '\\u1fdb'
+                    // COMTOR.g:2304:9: '\\u1fd6' .. '\\u1fdb'
                     {
                     matchRange('\u1FD6','\u1FDB'); 
 
                     }
                     break;
                 case 305 :
-                    // .\\COMTOR.g:2305:9: '\\u1fe0' .. '\\u1fec'
+                    // COMTOR.g:2305:9: '\\u1fe0' .. '\\u1fec'
                     {
                     matchRange('\u1FE0','\u1FEC'); 
 
                     }
                     break;
                 case 306 :
-                    // .\\COMTOR.g:2306:9: '\\u1ff2' .. '\\u1ff4'
+                    // COMTOR.g:2306:9: '\\u1ff2' .. '\\u1ff4'
                     {
                     matchRange('\u1FF2','\u1FF4'); 
 
                     }
                     break;
                 case 307 :
-                    // .\\COMTOR.g:2307:9: '\\u1ff6' .. '\\u1ffc'
+                    // COMTOR.g:2307:9: '\\u1ff6' .. '\\u1ffc'
                     {
                     matchRange('\u1FF6','\u1FFC'); 
 
                     }
                     break;
                 case 308 :
-                    // .\\COMTOR.g:2308:9: '\\u200c' .. '\\u200f'
+                    // COMTOR.g:2308:9: '\\u200c' .. '\\u200f'
                     {
                     matchRange('\u200C','\u200F'); 
 
                     }
                     break;
                 case 309 :
-                    // .\\COMTOR.g:2309:9: '\\u202a' .. '\\u202e'
+                    // COMTOR.g:2309:9: '\\u202a' .. '\\u202e'
                     {
                     matchRange('\u202A','\u202E'); 
 
                     }
                     break;
                 case 310 :
-                    // .\\COMTOR.g:2310:9: '\\u203f' .. '\\u2040'
+                    // COMTOR.g:2310:9: '\\u203f' .. '\\u2040'
                     {
                     matchRange('\u203F','\u2040'); 
 
                     }
                     break;
                 case 311 :
-                    // .\\COMTOR.g:2311:9: '\\u2054'
+                    // COMTOR.g:2311:9: '\\u2054'
                     {
                     match('\u2054'); 
 
                     }
                     break;
                 case 312 :
-                    // .\\COMTOR.g:2312:9: '\\u2060' .. '\\u2063'
+                    // COMTOR.g:2312:9: '\\u2060' .. '\\u2063'
                     {
                     matchRange('\u2060','\u2063'); 
 
                     }
                     break;
                 case 313 :
-                    // .\\COMTOR.g:2313:9: '\\u206a' .. '\\u206f'
+                    // COMTOR.g:2313:9: '\\u206a' .. '\\u206f'
                     {
                     matchRange('\u206A','\u206F'); 
 
                     }
                     break;
                 case 314 :
-                    // .\\COMTOR.g:2314:9: '\\u2071'
+                    // COMTOR.g:2314:9: '\\u2071'
                     {
                     match('\u2071'); 
 
                     }
                     break;
                 case 315 :
-                    // .\\COMTOR.g:2315:9: '\\u207f'
+                    // COMTOR.g:2315:9: '\\u207f'
                     {
                     match('\u207F'); 
 
                     }
                     break;
                 case 316 :
-                    // .\\COMTOR.g:2316:9: '\\u20a0' .. '\\u20b1'
+                    // COMTOR.g:2316:9: '\\u20a0' .. '\\u20b1'
                     {
                     matchRange('\u20A0','\u20B1'); 
 
                     }
                     break;
                 case 317 :
-                    // .\\COMTOR.g:2317:9: '\\u20d0' .. '\\u20dc'
+                    // COMTOR.g:2317:9: '\\u20d0' .. '\\u20dc'
                     {
                     matchRange('\u20D0','\u20DC'); 
 
                     }
                     break;
                 case 318 :
-                    // .\\COMTOR.g:2318:9: '\\u20e1'
+                    // COMTOR.g:2318:9: '\\u20e1'
                     {
                     match('\u20E1'); 
 
                     }
                     break;
                 case 319 :
-                    // .\\COMTOR.g:2319:9: '\\u20e5' .. '\\u20ea'
+                    // COMTOR.g:2319:9: '\\u20e5' .. '\\u20ea'
                     {
                     matchRange('\u20E5','\u20EA'); 
 
                     }
                     break;
                 case 320 :
-                    // .\\COMTOR.g:2320:9: '\\u2102'
+                    // COMTOR.g:2320:9: '\\u2102'
                     {
                     match('\u2102'); 
 
                     }
                     break;
                 case 321 :
-                    // .\\COMTOR.g:2321:9: '\\u2107'
+                    // COMTOR.g:2321:9: '\\u2107'
                     {
                     match('\u2107'); 
 
                     }
                     break;
                 case 322 :
-                    // .\\COMTOR.g:2322:9: '\\u210a' .. '\\u2113'
+                    // COMTOR.g:2322:9: '\\u210a' .. '\\u2113'
                     {
                     matchRange('\u210A','\u2113'); 
 
                     }
                     break;
                 case 323 :
-                    // .\\COMTOR.g:2323:9: '\\u2115'
+                    // COMTOR.g:2323:9: '\\u2115'
                     {
                     match('\u2115'); 
 
                     }
                     break;
                 case 324 :
-                    // .\\COMTOR.g:2324:9: '\\u2119' .. '\\u211d'
+                    // COMTOR.g:2324:9: '\\u2119' .. '\\u211d'
                     {
                     matchRange('\u2119','\u211D'); 
 
                     }
                     break;
                 case 325 :
-                    // .\\COMTOR.g:2325:9: '\\u2124'
+                    // COMTOR.g:2325:9: '\\u2124'
                     {
                     match('\u2124'); 
 
                     }
                     break;
                 case 326 :
-                    // .\\COMTOR.g:2326:9: '\\u2126'
+                    // COMTOR.g:2326:9: '\\u2126'
                     {
                     match('\u2126'); 
 
                     }
                     break;
                 case 327 :
-                    // .\\COMTOR.g:2327:9: '\\u2128'
+                    // COMTOR.g:2327:9: '\\u2128'
                     {
                     match('\u2128'); 
 
                     }
                     break;
                 case 328 :
-                    // .\\COMTOR.g:2328:9: '\\u212a' .. '\\u212d'
+                    // COMTOR.g:2328:9: '\\u212a' .. '\\u212d'
                     {
                     matchRange('\u212A','\u212D'); 
 
                     }
                     break;
                 case 329 :
-                    // .\\COMTOR.g:2329:9: '\\u212f' .. '\\u2131'
+                    // COMTOR.g:2329:9: '\\u212f' .. '\\u2131'
                     {
                     matchRange('\u212F','\u2131'); 
 
                     }
                     break;
                 case 330 :
-                    // .\\COMTOR.g:2330:9: '\\u2133' .. '\\u2139'
+                    // COMTOR.g:2330:9: '\\u2133' .. '\\u2139'
                     {
                     matchRange('\u2133','\u2139'); 
 
                     }
                     break;
                 case 331 :
-                    // .\\COMTOR.g:2331:9: '\\u213d' .. '\\u213f'
+                    // COMTOR.g:2331:9: '\\u213d' .. '\\u213f'
                     {
                     matchRange('\u213D','\u213F'); 
 
                     }
                     break;
                 case 332 :
-                    // .\\COMTOR.g:2332:9: '\\u2145' .. '\\u2149'
+                    // COMTOR.g:2332:9: '\\u2145' .. '\\u2149'
                     {
                     matchRange('\u2145','\u2149'); 
 
                     }
                     break;
                 case 333 :
-                    // .\\COMTOR.g:2333:9: '\\u2160' .. '\\u2183'
+                    // COMTOR.g:2333:9: '\\u2160' .. '\\u2183'
                     {
                     matchRange('\u2160','\u2183'); 
 
                     }
                     break;
                 case 334 :
-                    // .\\COMTOR.g:2334:9: '\\u3005' .. '\\u3007'
+                    // COMTOR.g:2334:9: '\\u3005' .. '\\u3007'
                     {
                     matchRange('\u3005','\u3007'); 
 
                     }
                     break;
                 case 335 :
-                    // .\\COMTOR.g:2335:9: '\\u3021' .. '\\u302f'
+                    // COMTOR.g:2335:9: '\\u3021' .. '\\u302f'
                     {
                     matchRange('\u3021','\u302F'); 
 
                     }
                     break;
                 case 336 :
-                    // .\\COMTOR.g:2336:9: '\\u3031' .. '\\u3035'
+                    // COMTOR.g:2336:9: '\\u3031' .. '\\u3035'
                     {
                     matchRange('\u3031','\u3035'); 
 
                     }
                     break;
                 case 337 :
-                    // .\\COMTOR.g:2337:9: '\\u3038' .. '\\u303c'
+                    // COMTOR.g:2337:9: '\\u3038' .. '\\u303c'
                     {
                     matchRange('\u3038','\u303C'); 
 
                     }
                     break;
                 case 338 :
-                    // .\\COMTOR.g:2338:9: '\\u3041' .. '\\u3096'
+                    // COMTOR.g:2338:9: '\\u3041' .. '\\u3096'
                     {
                     matchRange('\u3041','\u3096'); 
 
                     }
                     break;
                 case 339 :
-                    // .\\COMTOR.g:2339:9: '\\u3099' .. '\\u309a'
+                    // COMTOR.g:2339:9: '\\u3099' .. '\\u309a'
                     {
                     matchRange('\u3099','\u309A'); 
 
                     }
                     break;
                 case 340 :
-                    // .\\COMTOR.g:2340:9: '\\u309d' .. '\\u309f'
+                    // COMTOR.g:2340:9: '\\u309d' .. '\\u309f'
                     {
                     matchRange('\u309D','\u309F'); 
 
                     }
                     break;
                 case 341 :
-                    // .\\COMTOR.g:2341:9: '\\u30a1' .. '\\u30ff'
+                    // COMTOR.g:2341:9: '\\u30a1' .. '\\u30ff'
                     {
                     matchRange('\u30A1','\u30FF'); 
 
                     }
                     break;
                 case 342 :
-                    // .\\COMTOR.g:2342:9: '\\u3105' .. '\\u312c'
+                    // COMTOR.g:2342:9: '\\u3105' .. '\\u312c'
                     {
                     matchRange('\u3105','\u312C'); 
 
                     }
                     break;
                 case 343 :
-                    // .\\COMTOR.g:2343:9: '\\u3131' .. '\\u318e'
+                    // COMTOR.g:2343:9: '\\u3131' .. '\\u318e'
                     {
                     matchRange('\u3131','\u318E'); 
 
                     }
                     break;
                 case 344 :
-                    // .\\COMTOR.g:2344:9: '\\u31a0' .. '\\u31b7'
+                    // COMTOR.g:2344:9: '\\u31a0' .. '\\u31b7'
                     {
                     matchRange('\u31A0','\u31B7'); 
 
                     }
                     break;
                 case 345 :
-                    // .\\COMTOR.g:2345:9: '\\u31f0' .. '\\u31ff'
+                    // COMTOR.g:2345:9: '\\u31f0' .. '\\u31ff'
                     {
                     matchRange('\u31F0','\u31FF'); 
 
                     }
                     break;
                 case 346 :
-                    // .\\COMTOR.g:2346:9: '\\u3400' .. '\\u4db5'
+                    // COMTOR.g:2346:9: '\\u3400' .. '\\u4db5'
                     {
                     matchRange('\u3400','\u4DB5'); 
 
                     }
                     break;
                 case 347 :
-                    // .\\COMTOR.g:2347:9: '\\u4e00' .. '\\u9fa5'
+                    // COMTOR.g:2347:9: '\\u4e00' .. '\\u9fa5'
                     {
                     matchRange('\u4E00','\u9FA5'); 
 
                     }
                     break;
                 case 348 :
-                    // .\\COMTOR.g:2348:9: '\\ua000' .. '\\ua48c'
+                    // COMTOR.g:2348:9: '\\ua000' .. '\\ua48c'
                     {
                     matchRange('\uA000','\uA48C'); 
 
                     }
                     break;
                 case 349 :
-                    // .\\COMTOR.g:2349:9: '\\uac00' .. '\\ud7a3'
+                    // COMTOR.g:2349:9: '\\uac00' .. '\\ud7a3'
                     {
                     matchRange('\uAC00','\uD7A3'); 
 
                     }
                     break;
                 case 350 :
-                    // .\\COMTOR.g:2350:9: '\\uf900' .. '\\ufa2d'
+                    // COMTOR.g:2350:9: '\\uf900' .. '\\ufa2d'
                     {
                     matchRange('\uF900','\uFA2D'); 
 
                     }
                     break;
                 case 351 :
-                    // .\\COMTOR.g:2351:9: '\\ufa30' .. '\\ufa6a'
+                    // COMTOR.g:2351:9: '\\ufa30' .. '\\ufa6a'
                     {
                     matchRange('\uFA30','\uFA6A'); 
 
                     }
                     break;
                 case 352 :
-                    // .\\COMTOR.g:2352:9: '\\ufb00' .. '\\ufb06'
+                    // COMTOR.g:2352:9: '\\ufb00' .. '\\ufb06'
                     {
                     matchRange('\uFB00','\uFB06'); 
 
                     }
                     break;
                 case 353 :
-                    // .\\COMTOR.g:2353:9: '\\ufb13' .. '\\ufb17'
+                    // COMTOR.g:2353:9: '\\ufb13' .. '\\ufb17'
                     {
                     matchRange('\uFB13','\uFB17'); 
 
                     }
                     break;
                 case 354 :
-                    // .\\COMTOR.g:2354:9: '\\ufb1d' .. '\\ufb28'
+                    // COMTOR.g:2354:9: '\\ufb1d' .. '\\ufb28'
                     {
                     matchRange('\uFB1D','\uFB28'); 
 
                     }
                     break;
                 case 355 :
-                    // .\\COMTOR.g:2355:9: '\\ufb2a' .. '\\ufb36'
+                    // COMTOR.g:2355:9: '\\ufb2a' .. '\\ufb36'
                     {
                     matchRange('\uFB2A','\uFB36'); 
 
                     }
                     break;
                 case 356 :
-                    // .\\COMTOR.g:2356:9: '\\ufb38' .. '\\ufb3c'
+                    // COMTOR.g:2356:9: '\\ufb38' .. '\\ufb3c'
                     {
                     matchRange('\uFB38','\uFB3C'); 
 
                     }
                     break;
                 case 357 :
-                    // .\\COMTOR.g:2357:9: '\\ufb3e'
+                    // COMTOR.g:2357:9: '\\ufb3e'
                     {
                     match('\uFB3E'); 
 
                     }
                     break;
                 case 358 :
-                    // .\\COMTOR.g:2358:9: '\\ufb40' .. '\\ufb41'
+                    // COMTOR.g:2358:9: '\\ufb40' .. '\\ufb41'
                     {
                     matchRange('\uFB40','\uFB41'); 
 
                     }
                     break;
                 case 359 :
-                    // .\\COMTOR.g:2359:9: '\\ufb43' .. '\\ufb44'
+                    // COMTOR.g:2359:9: '\\ufb43' .. '\\ufb44'
                     {
                     matchRange('\uFB43','\uFB44'); 
 
                     }
                     break;
                 case 360 :
-                    // .\\COMTOR.g:2360:9: '\\ufb46' .. '\\ufbb1'
+                    // COMTOR.g:2360:9: '\\ufb46' .. '\\ufbb1'
                     {
                     matchRange('\uFB46','\uFBB1'); 
 
                     }
                     break;
                 case 361 :
-                    // .\\COMTOR.g:2361:9: '\\ufbd3' .. '\\ufd3d'
+                    // COMTOR.g:2361:9: '\\ufbd3' .. '\\ufd3d'
                     {
                     matchRange('\uFBD3','\uFD3D'); 
 
                     }
                     break;
                 case 362 :
-                    // .\\COMTOR.g:2362:9: '\\ufd50' .. '\\ufd8f'
+                    // COMTOR.g:2362:9: '\\ufd50' .. '\\ufd8f'
                     {
                     matchRange('\uFD50','\uFD8F'); 
 
                     }
                     break;
                 case 363 :
-                    // .\\COMTOR.g:2363:9: '\\ufd92' .. '\\ufdc7'
+                    // COMTOR.g:2363:9: '\\ufd92' .. '\\ufdc7'
                     {
                     matchRange('\uFD92','\uFDC7'); 
 
                     }
                     break;
                 case 364 :
-                    // .\\COMTOR.g:2364:9: '\\ufdf0' .. '\\ufdfc'
+                    // COMTOR.g:2364:9: '\\ufdf0' .. '\\ufdfc'
                     {
                     matchRange('\uFDF0','\uFDFC'); 
 
                     }
                     break;
                 case 365 :
-                    // .\\COMTOR.g:2365:9: '\\ufe00' .. '\\ufe0f'
+                    // COMTOR.g:2365:9: '\\ufe00' .. '\\ufe0f'
                     {
                     matchRange('\uFE00','\uFE0F'); 
 
                     }
                     break;
                 case 366 :
-                    // .\\COMTOR.g:2366:9: '\\ufe20' .. '\\ufe23'
+                    // COMTOR.g:2366:9: '\\ufe20' .. '\\ufe23'
                     {
                     matchRange('\uFE20','\uFE23'); 
 
                     }
                     break;
                 case 367 :
-                    // .\\COMTOR.g:2367:9: '\\ufe33' .. '\\ufe34'
+                    // COMTOR.g:2367:9: '\\ufe33' .. '\\ufe34'
                     {
                     matchRange('\uFE33','\uFE34'); 
 
                     }
                     break;
                 case 368 :
-                    // .\\COMTOR.g:2368:9: '\\ufe4d' .. '\\ufe4f'
+                    // COMTOR.g:2368:9: '\\ufe4d' .. '\\ufe4f'
                     {
                     matchRange('\uFE4D','\uFE4F'); 
 
                     }
                     break;
                 case 369 :
-                    // .\\COMTOR.g:2369:9: '\\ufe69'
+                    // COMTOR.g:2369:9: '\\ufe69'
                     {
                     match('\uFE69'); 
 
                     }
                     break;
                 case 370 :
-                    // .\\COMTOR.g:2370:9: '\\ufe70' .. '\\ufe74'
+                    // COMTOR.g:2370:9: '\\ufe70' .. '\\ufe74'
                     {
                     matchRange('\uFE70','\uFE74'); 
 
                     }
                     break;
                 case 371 :
-                    // .\\COMTOR.g:2371:9: '\\ufe76' .. '\\ufefc'
+                    // COMTOR.g:2371:9: '\\ufe76' .. '\\ufefc'
                     {
                     matchRange('\uFE76','\uFEFC'); 
 
                     }
                     break;
                 case 372 :
-                    // .\\COMTOR.g:2372:9: '\\ufeff'
+                    // COMTOR.g:2372:9: '\\ufeff'
                     {
                     match('\uFEFF'); 
 
                     }
                     break;
                 case 373 :
-                    // .\\COMTOR.g:2373:9: '\\uff04'
+                    // COMTOR.g:2373:9: '\\uff04'
                     {
                     match('\uFF04'); 
 
                     }
                     break;
                 case 374 :
-                    // .\\COMTOR.g:2374:9: '\\uff10' .. '\\uff19'
+                    // COMTOR.g:2374:9: '\\uff10' .. '\\uff19'
                     {
                     matchRange('\uFF10','\uFF19'); 
 
                     }
                     break;
                 case 375 :
-                    // .\\COMTOR.g:2375:9: '\\uff21' .. '\\uff3a'
+                    // COMTOR.g:2375:9: '\\uff21' .. '\\uff3a'
                     {
                     matchRange('\uFF21','\uFF3A'); 
 
                     }
                     break;
                 case 376 :
-                    // .\\COMTOR.g:2376:9: '\\uff3f'
+                    // COMTOR.g:2376:9: '\\uff3f'
                     {
                     match('\uFF3F'); 
 
                     }
                     break;
                 case 377 :
-                    // .\\COMTOR.g:2377:9: '\\uff41' .. '\\uff5a'
+                    // COMTOR.g:2377:9: '\\uff41' .. '\\uff5a'
                     {
                     matchRange('\uFF41','\uFF5A'); 
 
                     }
                     break;
                 case 378 :
-                    // .\\COMTOR.g:2378:9: '\\uff65' .. '\\uffbe'
+                    // COMTOR.g:2378:9: '\\uff65' .. '\\uffbe'
                     {
                     matchRange('\uFF65','\uFFBE'); 
 
                     }
                     break;
                 case 379 :
-                    // .\\COMTOR.g:2379:9: '\\uffc2' .. '\\uffc7'
+                    // COMTOR.g:2379:9: '\\uffc2' .. '\\uffc7'
                     {
                     matchRange('\uFFC2','\uFFC7'); 
 
                     }
                     break;
                 case 380 :
-                    // .\\COMTOR.g:2380:9: '\\uffca' .. '\\uffcf'
+                    // COMTOR.g:2380:9: '\\uffca' .. '\\uffcf'
                     {
                     matchRange('\uFFCA','\uFFCF'); 
 
                     }
                     break;
                 case 381 :
-                    // .\\COMTOR.g:2381:9: '\\uffd2' .. '\\uffd7'
+                    // COMTOR.g:2381:9: '\\uffd2' .. '\\uffd7'
                     {
                     matchRange('\uFFD2','\uFFD7'); 
 
                     }
                     break;
                 case 382 :
-                    // .\\COMTOR.g:2382:9: '\\uffda' .. '\\uffdc'
+                    // COMTOR.g:2382:9: '\\uffda' .. '\\uffdc'
                     {
                     matchRange('\uFFDA','\uFFDC'); 
 
                     }
                     break;
                 case 383 :
-                    // .\\COMTOR.g:2383:9: '\\uffe0' .. '\\uffe1'
+                    // COMTOR.g:2383:9: '\\uffe0' .. '\\uffe1'
                     {
                     matchRange('\uFFE0','\uFFE1'); 
 
                     }
                     break;
                 case 384 :
-                    // .\\COMTOR.g:2384:9: '\\uffe5' .. '\\uffe6'
+                    // COMTOR.g:2384:9: '\\uffe5' .. '\\uffe6'
                     {
                     matchRange('\uFFE5','\uFFE6'); 
 
                     }
                     break;
                 case 385 :
-                    // .\\COMTOR.g:2385:9: '\\ufff9' .. '\\ufffb'
+                    // COMTOR.g:2385:9: '\\ufff9' .. '\\ufffb'
                     {
                     matchRange('\uFFF9','\uFFFB'); 
 
                     }
                     break;
                 case 386 :
-                    // .\\COMTOR.g:2386:9: ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' )
+                    // COMTOR.g:2386:9: ( '\\ud800' .. '\\udbff' ) ( '\\udc00' .. '\\udfff' )
                     {
-                    // .\\COMTOR.g:2386:9: ( '\\ud800' .. '\\udbff' )
-                    // .\\COMTOR.g:2386:10: '\\ud800' .. '\\udbff'
+                    // COMTOR.g:2386:9: ( '\\ud800' .. '\\udbff' )
+                    // COMTOR.g:2386:10: '\\ud800' .. '\\udbff'
                     {
                     matchRange('\uD800','\uDBFF'); 
 
                     }
 
-                    // .\\COMTOR.g:2386:30: ( '\\udc00' .. '\\udfff' )
-                    // .\\COMTOR.g:2386:31: '\\udc00' .. '\\udfff'
+                    // COMTOR.g:2386:30: ( '\\udc00' .. '\\udfff' )
+                    // COMTOR.g:2386:31: '\\udc00' .. '\\udfff'
                     {
                     matchRange('\uDC00','\uDFFF'); 
 
@@ -10516,740 +10516,740 @@ public class COMTORLexer extends Lexer {
     // $ANTLR end "IdentifierPart"
 
     public void mTokens() throws RecognitionException {
-        // .\\COMTOR.g:1:8: ( LONGLITERAL | INTLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | UNICODECHARLITERAL | UNICODECHAR | STRINGLITERAL | WS | LINE_COMMENT | COMMENT | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONST | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FINAL | FINALLY | FLOAT | FOR | GOTO | IF | IMPLEMENTS | IMPORT | INSTANCEOF | INT | INTERFACE | LONG | NATIVE | NEW | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRY | VOID | VOLATILE | WHILE | TRUE | FALSE | NULL | LPAREN | RPAREN | LBRACE | RBRACE | LBRACKET | RBRACKET | SEMI | COMMA | DOT | ELLIPSIS | EQ | BANG | TILDE | QUES | COLON | EQEQ | AMPAMP | BARBAR | PLUSPLUS | SUBSUB | PLUS | SUB | STAR | SLASH | AMP | BAR | CARET | PERCENT | PLUSEQ | SUBEQ | STAREQ | SLASHEQ | AMPEQ | BAREQ | CARETEQ | PERCENTEQ | MONKEYS_AT | BANGEQ | GT | LT | IDENTIFIER )
+        // COMTOR.g:1:8: ( LONGLITERAL | INTLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | UNICODECHARLITERAL | UNICODECHAR | STRINGLITERAL | WS | LINE_COMMENT | COMMENT | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONST | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FINAL | FINALLY | FLOAT | FOR | GOTO | IF | IMPLEMENTS | IMPORT | INSTANCEOF | INT | INTERFACE | LONG | NATIVE | NEW | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRY | VOID | VOLATILE | WHILE | TRUE | FALSE | NULL | LPAREN | RPAREN | LBRACE | RBRACE | LBRACKET | RBRACKET | SEMI | COMMA | DOT | ELLIPSIS | EQ | BANG | TILDE | QUES | COLON | EQEQ | AMPAMP | BARBAR | PLUSPLUS | SUBSUB | PLUS | SUB | STAR | SLASH | AMP | BAR | CARET | PERCENT | PLUSEQ | SUBEQ | STAREQ | SLASHEQ | AMPEQ | BAREQ | CARETEQ | PERCENTEQ | MONKEYS_AT | BANGEQ | GT | LT | IDENTIFIER )
         int alt33=105;
         alt33 = dfa33.predict(input);
         switch (alt33) {
             case 1 :
-                // .\\COMTOR.g:1:10: LONGLITERAL
+                // COMTOR.g:1:10: LONGLITERAL
                 {
                 mLONGLITERAL(); 
 
                 }
                 break;
             case 2 :
-                // .\\COMTOR.g:1:22: INTLITERAL
+                // COMTOR.g:1:22: INTLITERAL
                 {
                 mINTLITERAL(); 
 
                 }
                 break;
             case 3 :
-                // .\\COMTOR.g:1:33: FLOATLITERAL
+                // COMTOR.g:1:33: FLOATLITERAL
                 {
                 mFLOATLITERAL(); 
 
                 }
                 break;
             case 4 :
-                // .\\COMTOR.g:1:46: DOUBLELITERAL
+                // COMTOR.g:1:46: DOUBLELITERAL
                 {
                 mDOUBLELITERAL(); 
 
                 }
                 break;
             case 5 :
-                // .\\COMTOR.g:1:60: CHARLITERAL
+                // COMTOR.g:1:60: CHARLITERAL
                 {
                 mCHARLITERAL(); 
 
                 }
                 break;
             case 6 :
-                // .\\COMTOR.g:1:72: UNICODECHARLITERAL
+                // COMTOR.g:1:72: UNICODECHARLITERAL
                 {
                 mUNICODECHARLITERAL(); 
 
                 }
                 break;
             case 7 :
-                // .\\COMTOR.g:1:91: UNICODECHAR
+                // COMTOR.g:1:91: UNICODECHAR
                 {
                 mUNICODECHAR(); 
 
                 }
                 break;
             case 8 :
-                // .\\COMTOR.g:1:103: STRINGLITERAL
+                // COMTOR.g:1:103: STRINGLITERAL
                 {
                 mSTRINGLITERAL(); 
 
                 }
                 break;
             case 9 :
-                // .\\COMTOR.g:1:117: WS
+                // COMTOR.g:1:117: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 10 :
-                // .\\COMTOR.g:1:120: LINE_COMMENT
+                // COMTOR.g:1:120: LINE_COMMENT
                 {
                 mLINE_COMMENT(); 
 
                 }
                 break;
             case 11 :
-                // .\\COMTOR.g:1:133: COMMENT
+                // COMTOR.g:1:133: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
             case 12 :
-                // .\\COMTOR.g:1:141: ABSTRACT
+                // COMTOR.g:1:141: ABSTRACT
                 {
                 mABSTRACT(); 
 
                 }
                 break;
             case 13 :
-                // .\\COMTOR.g:1:150: ASSERT
+                // COMTOR.g:1:150: ASSERT
                 {
                 mASSERT(); 
 
                 }
                 break;
             case 14 :
-                // .\\COMTOR.g:1:157: BOOLEAN
+                // COMTOR.g:1:157: BOOLEAN
                 {
                 mBOOLEAN(); 
 
                 }
                 break;
             case 15 :
-                // .\\COMTOR.g:1:165: BREAK
+                // COMTOR.g:1:165: BREAK
                 {
                 mBREAK(); 
 
                 }
                 break;
             case 16 :
-                // .\\COMTOR.g:1:171: BYTE
+                // COMTOR.g:1:171: BYTE
                 {
                 mBYTE(); 
 
                 }
                 break;
             case 17 :
-                // .\\COMTOR.g:1:176: CASE
+                // COMTOR.g:1:176: CASE
                 {
                 mCASE(); 
 
                 }
                 break;
             case 18 :
-                // .\\COMTOR.g:1:181: CATCH
+                // COMTOR.g:1:181: CATCH
                 {
                 mCATCH(); 
 
                 }
                 break;
             case 19 :
-                // .\\COMTOR.g:1:187: CHAR
+                // COMTOR.g:1:187: CHAR
                 {
                 mCHAR(); 
 
                 }
                 break;
             case 20 :
-                // .\\COMTOR.g:1:192: CLASS
+                // COMTOR.g:1:192: CLASS
                 {
                 mCLASS(); 
 
                 }
                 break;
             case 21 :
-                // .\\COMTOR.g:1:198: CONST
+                // COMTOR.g:1:198: CONST
                 {
                 mCONST(); 
 
                 }
                 break;
             case 22 :
-                // .\\COMTOR.g:1:204: CONTINUE
+                // COMTOR.g:1:204: CONTINUE
                 {
                 mCONTINUE(); 
 
                 }
                 break;
             case 23 :
-                // .\\COMTOR.g:1:213: DEFAULT
+                // COMTOR.g:1:213: DEFAULT
                 {
                 mDEFAULT(); 
 
                 }
                 break;
             case 24 :
-                // .\\COMTOR.g:1:221: DO
+                // COMTOR.g:1:221: DO
                 {
                 mDO(); 
 
                 }
                 break;
             case 25 :
-                // .\\COMTOR.g:1:224: DOUBLE
+                // COMTOR.g:1:224: DOUBLE
                 {
                 mDOUBLE(); 
 
                 }
                 break;
             case 26 :
-                // .\\COMTOR.g:1:231: ELSE
+                // COMTOR.g:1:231: ELSE
                 {
                 mELSE(); 
 
                 }
                 break;
             case 27 :
-                // .\\COMTOR.g:1:236: ENUM
+                // COMTOR.g:1:236: ENUM
                 {
                 mENUM(); 
 
                 }
                 break;
             case 28 :
-                // .\\COMTOR.g:1:241: EXTENDS
+                // COMTOR.g:1:241: EXTENDS
                 {
                 mEXTENDS(); 
 
                 }
                 break;
             case 29 :
-                // .\\COMTOR.g:1:249: FINAL
+                // COMTOR.g:1:249: FINAL
                 {
                 mFINAL(); 
 
                 }
                 break;
             case 30 :
-                // .\\COMTOR.g:1:255: FINALLY
+                // COMTOR.g:1:255: FINALLY
                 {
                 mFINALLY(); 
 
                 }
                 break;
             case 31 :
-                // .\\COMTOR.g:1:263: FLOAT
+                // COMTOR.g:1:263: FLOAT
                 {
                 mFLOAT(); 
 
                 }
                 break;
             case 32 :
-                // .\\COMTOR.g:1:269: FOR
+                // COMTOR.g:1:269: FOR
                 {
                 mFOR(); 
 
                 }
                 break;
             case 33 :
-                // .\\COMTOR.g:1:273: GOTO
+                // COMTOR.g:1:273: GOTO
                 {
                 mGOTO(); 
 
                 }
                 break;
             case 34 :
-                // .\\COMTOR.g:1:278: IF
+                // COMTOR.g:1:278: IF
                 {
                 mIF(); 
 
                 }
                 break;
             case 35 :
-                // .\\COMTOR.g:1:281: IMPLEMENTS
+                // COMTOR.g:1:281: IMPLEMENTS
                 {
                 mIMPLEMENTS(); 
 
                 }
                 break;
             case 36 :
-                // .\\COMTOR.g:1:292: IMPORT
+                // COMTOR.g:1:292: IMPORT
                 {
                 mIMPORT(); 
 
                 }
                 break;
             case 37 :
-                // .\\COMTOR.g:1:299: INSTANCEOF
+                // COMTOR.g:1:299: INSTANCEOF
                 {
                 mINSTANCEOF(); 
 
                 }
                 break;
             case 38 :
-                // .\\COMTOR.g:1:310: INT
+                // COMTOR.g:1:310: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 39 :
-                // .\\COMTOR.g:1:314: INTERFACE
+                // COMTOR.g:1:314: INTERFACE
                 {
                 mINTERFACE(); 
 
                 }
                 break;
             case 40 :
-                // .\\COMTOR.g:1:324: LONG
+                // COMTOR.g:1:324: LONG
                 {
                 mLONG(); 
 
                 }
                 break;
             case 41 :
-                // .\\COMTOR.g:1:329: NATIVE
+                // COMTOR.g:1:329: NATIVE
                 {
                 mNATIVE(); 
 
                 }
                 break;
             case 42 :
-                // .\\COMTOR.g:1:336: NEW
+                // COMTOR.g:1:336: NEW
                 {
                 mNEW(); 
 
                 }
                 break;
             case 43 :
-                // .\\COMTOR.g:1:340: PACKAGE
+                // COMTOR.g:1:340: PACKAGE
                 {
                 mPACKAGE(); 
 
                 }
                 break;
             case 44 :
-                // .\\COMTOR.g:1:348: PRIVATE
+                // COMTOR.g:1:348: PRIVATE
                 {
                 mPRIVATE(); 
 
                 }
                 break;
             case 45 :
-                // .\\COMTOR.g:1:356: PROTECTED
+                // COMTOR.g:1:356: PROTECTED
                 {
                 mPROTECTED(); 
 
                 }
                 break;
             case 46 :
-                // .\\COMTOR.g:1:366: PUBLIC
+                // COMTOR.g:1:366: PUBLIC
                 {
                 mPUBLIC(); 
 
                 }
                 break;
             case 47 :
-                // .\\COMTOR.g:1:373: RETURN
+                // COMTOR.g:1:373: RETURN
                 {
                 mRETURN(); 
 
                 }
                 break;
             case 48 :
-                // .\\COMTOR.g:1:380: SHORT
+                // COMTOR.g:1:380: SHORT
                 {
                 mSHORT(); 
 
                 }
                 break;
             case 49 :
-                // .\\COMTOR.g:1:386: STATIC
+                // COMTOR.g:1:386: STATIC
                 {
                 mSTATIC(); 
 
                 }
                 break;
             case 50 :
-                // .\\COMTOR.g:1:393: STRICTFP
+                // COMTOR.g:1:393: STRICTFP
                 {
                 mSTRICTFP(); 
 
                 }
                 break;
             case 51 :
-                // .\\COMTOR.g:1:402: SUPER
+                // COMTOR.g:1:402: SUPER
                 {
                 mSUPER(); 
 
                 }
                 break;
             case 52 :
-                // .\\COMTOR.g:1:408: SWITCH
+                // COMTOR.g:1:408: SWITCH
                 {
                 mSWITCH(); 
 
                 }
                 break;
             case 53 :
-                // .\\COMTOR.g:1:415: SYNCHRONIZED
+                // COMTOR.g:1:415: SYNCHRONIZED
                 {
                 mSYNCHRONIZED(); 
 
                 }
                 break;
             case 54 :
-                // .\\COMTOR.g:1:428: THIS
+                // COMTOR.g:1:428: THIS
                 {
                 mTHIS(); 
 
                 }
                 break;
             case 55 :
-                // .\\COMTOR.g:1:433: THROW
+                // COMTOR.g:1:433: THROW
                 {
                 mTHROW(); 
 
                 }
                 break;
             case 56 :
-                // .\\COMTOR.g:1:439: THROWS
+                // COMTOR.g:1:439: THROWS
                 {
                 mTHROWS(); 
 
                 }
                 break;
             case 57 :
-                // .\\COMTOR.g:1:446: TRANSIENT
+                // COMTOR.g:1:446: TRANSIENT
                 {
                 mTRANSIENT(); 
 
                 }
                 break;
             case 58 :
-                // .\\COMTOR.g:1:456: TRY
+                // COMTOR.g:1:456: TRY
                 {
                 mTRY(); 
 
                 }
                 break;
             case 59 :
-                // .\\COMTOR.g:1:460: VOID
+                // COMTOR.g:1:460: VOID
                 {
                 mVOID(); 
 
                 }
                 break;
             case 60 :
-                // .\\COMTOR.g:1:465: VOLATILE
+                // COMTOR.g:1:465: VOLATILE
                 {
                 mVOLATILE(); 
 
                 }
                 break;
             case 61 :
-                // .\\COMTOR.g:1:474: WHILE
+                // COMTOR.g:1:474: WHILE
                 {
                 mWHILE(); 
 
                 }
                 break;
             case 62 :
-                // .\\COMTOR.g:1:480: TRUE
+                // COMTOR.g:1:480: TRUE
                 {
                 mTRUE(); 
 
                 }
                 break;
             case 63 :
-                // .\\COMTOR.g:1:485: FALSE
+                // COMTOR.g:1:485: FALSE
                 {
                 mFALSE(); 
 
                 }
                 break;
             case 64 :
-                // .\\COMTOR.g:1:491: NULL
+                // COMTOR.g:1:491: NULL
                 {
                 mNULL(); 
 
                 }
                 break;
             case 65 :
-                // .\\COMTOR.g:1:496: LPAREN
+                // COMTOR.g:1:496: LPAREN
                 {
                 mLPAREN(); 
 
                 }
                 break;
             case 66 :
-                // .\\COMTOR.g:1:503: RPAREN
+                // COMTOR.g:1:503: RPAREN
                 {
                 mRPAREN(); 
 
                 }
                 break;
             case 67 :
-                // .\\COMTOR.g:1:510: LBRACE
+                // COMTOR.g:1:510: LBRACE
                 {
                 mLBRACE(); 
 
                 }
                 break;
             case 68 :
-                // .\\COMTOR.g:1:517: RBRACE
+                // COMTOR.g:1:517: RBRACE
                 {
                 mRBRACE(); 
 
                 }
                 break;
             case 69 :
-                // .\\COMTOR.g:1:524: LBRACKET
+                // COMTOR.g:1:524: LBRACKET
                 {
                 mLBRACKET(); 
 
                 }
                 break;
             case 70 :
-                // .\\COMTOR.g:1:533: RBRACKET
+                // COMTOR.g:1:533: RBRACKET
                 {
                 mRBRACKET(); 
 
                 }
                 break;
             case 71 :
-                // .\\COMTOR.g:1:542: SEMI
+                // COMTOR.g:1:542: SEMI
                 {
                 mSEMI(); 
 
                 }
                 break;
             case 72 :
-                // .\\COMTOR.g:1:547: COMMA
+                // COMTOR.g:1:547: COMMA
                 {
                 mCOMMA(); 
 
                 }
                 break;
             case 73 :
-                // .\\COMTOR.g:1:553: DOT
+                // COMTOR.g:1:553: DOT
                 {
                 mDOT(); 
 
                 }
                 break;
             case 74 :
-                // .\\COMTOR.g:1:557: ELLIPSIS
+                // COMTOR.g:1:557: ELLIPSIS
                 {
                 mELLIPSIS(); 
 
                 }
                 break;
             case 75 :
-                // .\\COMTOR.g:1:566: EQ
+                // COMTOR.g:1:566: EQ
                 {
                 mEQ(); 
 
                 }
                 break;
             case 76 :
-                // .\\COMTOR.g:1:569: BANG
+                // COMTOR.g:1:569: BANG
                 {
                 mBANG(); 
 
                 }
                 break;
             case 77 :
-                // .\\COMTOR.g:1:574: TILDE
+                // COMTOR.g:1:574: TILDE
                 {
                 mTILDE(); 
 
                 }
                 break;
             case 78 :
-                // .\\COMTOR.g:1:580: QUES
+                // COMTOR.g:1:580: QUES
                 {
                 mQUES(); 
 
                 }
                 break;
             case 79 :
-                // .\\COMTOR.g:1:585: COLON
+                // COMTOR.g:1:585: COLON
                 {
                 mCOLON(); 
 
                 }
                 break;
             case 80 :
-                // .\\COMTOR.g:1:591: EQEQ
+                // COMTOR.g:1:591: EQEQ
                 {
                 mEQEQ(); 
 
                 }
                 break;
             case 81 :
-                // .\\COMTOR.g:1:596: AMPAMP
+                // COMTOR.g:1:596: AMPAMP
                 {
                 mAMPAMP(); 
 
                 }
                 break;
             case 82 :
-                // .\\COMTOR.g:1:603: BARBAR
+                // COMTOR.g:1:603: BARBAR
                 {
                 mBARBAR(); 
 
                 }
                 break;
             case 83 :
-                // .\\COMTOR.g:1:610: PLUSPLUS
+                // COMTOR.g:1:610: PLUSPLUS
                 {
                 mPLUSPLUS(); 
 
                 }
                 break;
             case 84 :
-                // .\\COMTOR.g:1:619: SUBSUB
+                // COMTOR.g:1:619: SUBSUB
                 {
                 mSUBSUB(); 
 
                 }
                 break;
             case 85 :
-                // .\\COMTOR.g:1:626: PLUS
+                // COMTOR.g:1:626: PLUS
                 {
                 mPLUS(); 
 
                 }
                 break;
             case 86 :
-                // .\\COMTOR.g:1:631: SUB
+                // COMTOR.g:1:631: SUB
                 {
                 mSUB(); 
 
                 }
                 break;
             case 87 :
-                // .\\COMTOR.g:1:635: STAR
+                // COMTOR.g:1:635: STAR
                 {
                 mSTAR(); 
 
                 }
                 break;
             case 88 :
-                // .\\COMTOR.g:1:640: SLASH
+                // COMTOR.g:1:640: SLASH
                 {
                 mSLASH(); 
 
                 }
                 break;
             case 89 :
-                // .\\COMTOR.g:1:646: AMP
+                // COMTOR.g:1:646: AMP
                 {
                 mAMP(); 
 
                 }
                 break;
             case 90 :
-                // .\\COMTOR.g:1:650: BAR
+                // COMTOR.g:1:650: BAR
                 {
                 mBAR(); 
 
                 }
                 break;
             case 91 :
-                // .\\COMTOR.g:1:654: CARET
+                // COMTOR.g:1:654: CARET
                 {
                 mCARET(); 
 
                 }
                 break;
             case 92 :
-                // .\\COMTOR.g:1:660: PERCENT
+                // COMTOR.g:1:660: PERCENT
                 {
                 mPERCENT(); 
 
                 }
                 break;
             case 93 :
-                // .\\COMTOR.g:1:668: PLUSEQ
+                // COMTOR.g:1:668: PLUSEQ
                 {
                 mPLUSEQ(); 
 
                 }
                 break;
             case 94 :
-                // .\\COMTOR.g:1:675: SUBEQ
+                // COMTOR.g:1:675: SUBEQ
                 {
                 mSUBEQ(); 
 
                 }
                 break;
             case 95 :
-                // .\\COMTOR.g:1:681: STAREQ
+                // COMTOR.g:1:681: STAREQ
                 {
                 mSTAREQ(); 
 
                 }
                 break;
             case 96 :
-                // .\\COMTOR.g:1:688: SLASHEQ
+                // COMTOR.g:1:688: SLASHEQ
                 {
                 mSLASHEQ(); 
 
                 }
                 break;
             case 97 :
-                // .\\COMTOR.g:1:696: AMPEQ
+                // COMTOR.g:1:696: AMPEQ
                 {
                 mAMPEQ(); 
 
                 }
                 break;
             case 98 :
-                // .\\COMTOR.g:1:702: BAREQ
+                // COMTOR.g:1:702: BAREQ
                 {
                 mBAREQ(); 
 
                 }
                 break;
             case 99 :
-                // .\\COMTOR.g:1:708: CARETEQ
+                // COMTOR.g:1:708: CARETEQ
                 {
                 mCARETEQ(); 
 
                 }
                 break;
             case 100 :
-                // .\\COMTOR.g:1:716: PERCENTEQ
+                // COMTOR.g:1:716: PERCENTEQ
                 {
                 mPERCENTEQ(); 
 
                 }
                 break;
             case 101 :
-                // .\\COMTOR.g:1:726: MONKEYS_AT
+                // COMTOR.g:1:726: MONKEYS_AT
                 {
                 mMONKEYS_AT(); 
 
                 }
                 break;
             case 102 :
-                // .\\COMTOR.g:1:737: BANGEQ
+                // COMTOR.g:1:737: BANGEQ
                 {
                 mBANGEQ(); 
 
                 }
                 break;
             case 103 :
-                // .\\COMTOR.g:1:744: GT
+                // COMTOR.g:1:744: GT
                 {
                 mGT(); 
 
                 }
                 break;
             case 104 :
-                // .\\COMTOR.g:1:747: LT
+                // COMTOR.g:1:747: LT
                 {
                 mLT(); 
 
                 }
                 break;
             case 105 :
-                // .\\COMTOR.g:1:750: IDENTIFIER
+                // COMTOR.g:1:750: IDENTIFIER
                 {
                 mIDENTIFIER(); 
 

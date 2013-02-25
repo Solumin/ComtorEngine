@@ -2,7 +2,8 @@ grammar JavaComments;
 
 options {
 	output=AST;
-	ASTLabelType=CommonTree; // type of $stat.tree, etc.
+	// type of $stat.tree, etc.
+	ASTLabelType=CommonTree;
 	backtrack=true;
 }
 
@@ -37,12 +38,11 @@ BLOCK_COMMENT
 	//remove JavaDoc '*' (leftover from '/**')
 	if (s.charAt(0) == '*')
 		s = s.substring(1);
-	//replace all '*' at the beginning on lines.
-	s = s.replaceAll("[\n\r]\\s*\\*", "");
-	//remove whitespace at the ends of lines and replace with just a space
-	s = s.replaceAll("\\s+$", " ");
+	//remove all '*' at the beginning on lines.
+	s = s.replaceAll("[\n\r]\\s*\\*\\s*", "\n");
 	//remove leading and trailing whitespace
 	s = s.trim();
+	//Finally, set the text of this node to the formatted comment.
 	setText(s);
 }
     :   ({!inString}? => '/*' (options {greedy=false;} : . )* '*/')

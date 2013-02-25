@@ -22,7 +22,13 @@ public class CRDriver {
 			for (ClassDoc c : classes) {
 				System.out.println(c.getName());
 			}
-			System.out.println("Found " + rd.findClass("Features<Square, Circle>"));
+			ClassDoc features = rd.findClass("Features<Square, Circle>");
+			System.out.println("Found " + features);
+
+			ArrayList<MethodDoc> methods = features.getMethods();
+			for (MethodDoc m : methods) {
+				System.out.println(m.getName() + ": " + m.getComment().getTags());
+			}
 		}
 	}
 }

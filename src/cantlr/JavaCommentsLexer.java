@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 JavaComments.g 2012-11-20 12:18:02
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 JavaComments.g 2013-02-18 09:01:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -31,21 +31,21 @@ public class JavaCommentsLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // JavaComments.g:29:5: ( ({...}? => '//' ( (~ ( '\\n' | '\\r' ) )* ) ) )
-            // JavaComments.g:29:9: ({...}? => '//' ( (~ ( '\\n' | '\\r' ) )* ) )
+            // JavaComments.g:30:5: ( ({...}? => '//' ( (~ ( '\\n' | '\\r' ) )* ) ) )
+            // JavaComments.g:30:9: ({...}? => '//' ( (~ ( '\\n' | '\\r' ) )* ) )
             {
-            // JavaComments.g:29:9: ({...}? => '//' ( (~ ( '\\n' | '\\r' ) )* ) )
-            // JavaComments.g:29:10: {...}? => '//' ( (~ ( '\\n' | '\\r' ) )* )
+            // JavaComments.g:30:9: ({...}? => '//' ( (~ ( '\\n' | '\\r' ) )* ) )
+            // JavaComments.g:30:10: {...}? => '//' ( (~ ( '\\n' | '\\r' ) )* )
             {
             if ( !((!inString)) ) {
                 throw new FailedPredicateException(input, "LINE_COMMENT", "!inString");
             }
             match("//"); 
 
-            // JavaComments.g:29:31: ( (~ ( '\\n' | '\\r' ) )* )
-            // JavaComments.g:29:32: (~ ( '\\n' | '\\r' ) )*
+            // JavaComments.g:30:31: ( (~ ( '\\n' | '\\r' ) )* )
+            // JavaComments.g:30:32: (~ ( '\\n' | '\\r' ) )*
             {
-            // JavaComments.g:29:32: (~ ( '\\n' | '\\r' ) )*
+            // JavaComments.g:30:32: (~ ( '\\n' | '\\r' ) )*
             loop1:
             do {
                 int alt1=2;
@@ -58,7 +58,7 @@ public class JavaCommentsLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // JavaComments.g:29:32: ~ ( '\\n' | '\\r' )
+            	    // JavaComments.g:30:32: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -172,12 +172,11 @@ public class JavaCommentsLexer extends Lexer {
             	//remove JavaDoc '*' (leftover from '/**')
             	if (s.charAt(0) == '*')
             		s = s.substring(1);
-            	//replace all '*' at the beginning on lines.
-            	s = s.replaceAll("[\n\r]\\s*\\*", "");
-            	//remove whitespace at the ends of lines and replace with just a space
-            	s = s.replaceAll("\\s+$", " ");
+            	//remove all '*' at the beginning on lines.
+            	s = s.replaceAll("[\n\r]\\s*\\*\\s*", "\n");
             	//remove leading and trailing whitespace
             	s = s.trim();
+            	//Finally, set the text of this node to the formatted comment.
             	setText(s);
         }
         finally {
