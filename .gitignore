@@ -6,6 +6,8 @@ difficult/
 modules/
 output/
 test/
+lib/
+*.jar
 
 #################
 ## Sublime Text 2

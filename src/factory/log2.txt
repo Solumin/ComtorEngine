@@ -1,0 +1,12 @@
+(RootDoc (bar (NORMAL_CLASS Features (ACCESS_MODIFIER public) (TYPE_PARAMS Square Circle) (extends ParentClass) (implements InterfaceClass InterfaceInterface) (VAR_DEF fieldStr (ACCESS_MODIFIER private) (TYPE String)) (VAR_DEF fieldInt (INITIAL_VALUE 0) (ACCESS_MODIFIER private) (TYPE int)) (VAR_DEF fieldFlot1 (ACCESS_MODIFIER private) (TYPE double)) (VAR_DEF fieldDouble1 (ACCESS_MODIFIER private) (TYPE double)) (VAR_DEF fieldObj (ACCESS_MODIFIER public) (TYPE Thing) (COMMENT_STATEMENT Here's a comment on a local variable.)) (CONSTRUCTOR Features (ACCESS_MODIFIER public) (PARAMS arg1 (TYPE String) arg2 (TYPE int)) (BODY fieldStr = arg1 fieldInt = arg2) (COMMENT_STATEMENT Constructor comment. Arghablargawoo)) (CONSTRUCTOR Features (ACCESS_MODIFIER public) (PARAMS argObj (TYPE Thing)) (BODY (CONSTRUCTOR_CALL super (ARGUMENTS ( argObl ))) Thing = argObj)) (METHOD_DEC methodInt (ACCESS_MODIFIER private static) (TYPE int) (THROWS Exception1 Exception2) (BODY (VAR_DEF locVar (INITIAL_VALUE 1) (TYPE int)) (RETURN_STATEMENT locVar)) (COMMENT_STATEMENT Method comment with tag(s)
+@return integer -- local variable.
+@throws 2 different exceptions, except it doesn't actually.)) (METHOD_DEC pubMethod (ACCESS_MODIFIER public) (TYPE void) (PARAMS argStr (TYPE String) argDouble (TYPE double)) (BODY (RETURN_STATEMENT null) (COMMENT_STATEMENT Like this method, this comment does jack)) (COMMENT_STATEMENT Method comment, to see if we can guess where a tag is.
+For example, the following tag should be at line 44:
+@line this is at line 44!)) (COMMENT_STATEMENT The purpose of this class is to test as many features as possible.
+Obviously, I'm not going to catch everything. {@inline-tag}
+But I can try!)) (IMPORTS (IMPORT java . util . ArrayList) (IMPORT org . antlr . runtime . *))))
+Classes in rootdoc:
+Features<Square, Circle>
+Found Features<Square, Circle>
+methodInt: [33: return integer -- local variable., 34: throws 2 different exceptions, except it doesn't actually.]
+pubMethod: [44: line this is at line 44!]

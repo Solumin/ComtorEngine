@@ -265,6 +265,7 @@ typeList
     :   type
         (',' type
         )*
+        -> type+
     ;
 
 classBody 
@@ -1092,6 +1093,7 @@ nonWildcardTypeArguments
 arguments 
     :   '(' (expressionList
         )? ')'
+        -> expressionList?
     ;
 
 literal 
